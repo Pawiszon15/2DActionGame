@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ShotgunBullet : MonoBehaviour
 {
-    public float speed = 20f;
+    private float speed = 20f;
+    private float bulletLifeTime = 0.3f;
+
     private Rigidbody2D rigidbody2d;
 
     private void Awake()
@@ -15,6 +17,7 @@ public class ShotgunBullet : MonoBehaviour
     private void Start()
     {
         rigidbody2d.velocity = transform.right * speed;
+        Destroy(gameObject, bulletLifeTime);
     }
 
 

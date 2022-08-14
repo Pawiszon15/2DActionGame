@@ -11,18 +11,23 @@ public class ShootingMechanic : MonoBehaviour
 
     private bool canShoot;
     
-    [SerializeField] Transform firePoint;
+    [SerializeField] Transform firePoint1;
+    [SerializeField] Transform firePoint2;
+    [SerializeField] Transform firePoint3;
+    [SerializeField] Transform gunPivot;
+
+
     [SerializeField] AudioClip shootSound;
     [SerializeField] GameObject shootgunBullet;
 
     public Vector2 playerVelocity;
-    private float bulletSpeed;
+    private Rigidbody2D rb2d;
 
     // Start is called before the first frame update
     void Start()
     {
         canShoot = true;
-        bulletSpeed = 100f;
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,12 +41,33 @@ public class ShootingMechanic : MonoBehaviour
 
     void ShootShotgun()
     {
-        GameObject bullet = Instantiate(shootgunBullet, firePoint.position, firePoint.rotation);
+        GameObject bullet1 = Instantiate(shootgunBullet, firePoint1.position, firePoint1.rotation);
+        GameObject bullet2 = Instantiate(shootgunBullet, firePoint2.position, firePoint1.rotation);
+        GameObject bullet3 = Instantiate(shootgunBullet, firePoint3.position, firePoint1.rotation);
+        Recoil();
+        canShoot = false;
+        StartCoroutine(ShootingCooldown());
     }
-/*
-    IEnumerator TimeBetweenShoots()
+
+    void Recoil()
+    {
+        //need direction
+        Vector2 recoilDir = new Vector2(gunPivot.position.x, gunPivot.position.y);
+
+        //need to add impluse force
+        rb2d.AddForce(-gunPivot.transform.right * recoilForce, ForceMode2D.Impulse);
+       
+    }
+
+    void BulletSpread()
+    {
+        //LATER
+    }
+
+
+    IEnumerator ShootingCooldown()
     {
         yield return new WaitForSeconds(timeBetweenShoots);
         canShoot = true;
-    }*/
+    }
 }

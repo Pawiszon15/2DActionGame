@@ -29,6 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7231682128266977376}
+  - {fileID: 530164146915073844}
   m_Father: {fileID: 7231682128556672893}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -225,6 +226,7 @@ GameObject:
   - component: {fileID: 7231682128556672889}
   - component: {fileID: 7231682128556672883}
   - component: {fileID: 7231682128556672882}
+  - component: {fileID: 861292762}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -400,6 +402,27 @@ MonoBehaviour:
   accelerationSpeed: 0.1
   maxNumberOfJumps: 2
   jumpForce: 8
+--- !u!114 &861292762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231682128556672888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d9e6604abc8314cab12354c2007a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoilForce: 0
+  timeBetweenShoots: 1
+  speedOfBullets: 0
+  timeOnScreenBullets: 0
+  rigidbody2d: {fileID: 1350060124646025929, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+  firePoint: {fileID: 7231682128501101236}
+  shootSound: {fileID: 0}
+  shootgunBullet: {fileID: 1235635171295464583, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+  playerVelocity: {x: 0, y: 0}
 --- !u!1 &7231682128609942352
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,3 +767,34 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &8659974235803749633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 530164146915073844}
+  m_Layer: 0
+  m_Name: Shotgun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &530164146915073844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659974235803749633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.974, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7231682128251272155}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

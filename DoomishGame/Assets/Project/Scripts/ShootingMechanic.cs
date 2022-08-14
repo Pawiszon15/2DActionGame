@@ -10,19 +10,19 @@ public class ShootingMechanic : MonoBehaviour
     [SerializeField] private float timeOnScreenBullets;
 
     private bool canShoot;
-
-    private Rigidbody2D rigidbody2d;
-
+    
     [SerializeField] Transform firePoint;
     [SerializeField] AudioClip shootSound;
+    [SerializeField] GameObject shootgunBullet;
 
-
+    public Vector2 playerVelocity;
+    private float bulletSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
         canShoot = true;
+        bulletSpeed = 100f;
     }
 
     // Update is called once per frame
@@ -36,13 +36,12 @@ public class ShootingMechanic : MonoBehaviour
 
     void ShootShotgun()
     {
-        
+        GameObject bullet = Instantiate(shootgunBullet, firePoint.position, firePoint.rotation);
     }
-
+/*
     IEnumerator TimeBetweenShoots()
     {
         yield return new WaitForSeconds(timeBetweenShoots);
         canShoot = true;
-    }
-
+    }*/
 }

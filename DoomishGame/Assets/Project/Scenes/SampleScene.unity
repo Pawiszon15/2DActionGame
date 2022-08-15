@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &29851811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8660206802928993394, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
+  m_PrefabInstance: {fileID: 1697142059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &61741412
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +798,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &615143274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8660206802928993394, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
+  m_PrefabInstance: {fileID: 1300165476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &647595810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1816,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1487277478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8660206802928993394, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
+  m_PrefabInstance: {fileID: 8660206802708379119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1549479002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,6 +1954,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1560001372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8660206802928993394, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
+  m_PrefabInstance: {fileID: 1688488830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1688488830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1952,7 +1972,7 @@ PrefabInstance:
       objectReference: {fileID: 1385125152}
     - target: {fileID: 8660206802928993358, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8660206802928993358, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2259,7 +2279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935076674}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: EnemiesAll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2277,8 +2297,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 680925749}
   - {fileID: 383496609}
+  - {fileID: 680925749}
   - {fileID: 1856983845}
   - {fileID: 1425047310}
   m_Father: {fileID: 0}
@@ -3027,7 +3047,7 @@ PrefabInstance:
       objectReference: {fileID: 1385125152}
     - target: {fileID: 8660206802928993358, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8660206802928993358, guid: 6d0f641b6d814c346897919b68c474b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3130,5 +3150,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8897905150233994743, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}
+      propertyPath: allEnemies.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897905150233994743, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}
+      propertyPath: allEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1487277478}
+    - target: {fileID: 8897905150233994743, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}
+      propertyPath: allEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 1560001372}
+    - target: {fileID: 8897905150233994743, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}
+      propertyPath: allEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 615143274}
+    - target: {fileID: 8897905150233994743, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}
+      propertyPath: allEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 29851811}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}

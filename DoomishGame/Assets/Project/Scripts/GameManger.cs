@@ -2,24 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameManger : MonoBehaviour
 {
     private float time;
-    private int numberOfEnemies;
-    private int numberOfKilledEnemies;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        BasicEnemy[] enemies = FindObjectsOfType<BasicEnemy>();
-        
-        numberOfEnemies = enemies.Length;
-        numberOfKilledEnemies = 0;
-
-        Debug.Log("enmies on map" + numberOfEnemies);
-        Debug.Log("How many enemies you've killed" + numberOfKilledEnemies);
-    }
+    private int numbersOfEnemies;
+    [SerializeField] private List<GameObject> allEnemies;
 
     // Update is called once per frame
     void Update()
@@ -27,18 +16,19 @@ public class GameManger : MonoBehaviour
         time = Time.time;
     }
 
-    public void KilledEnemy()
+    public void KilledEnemy(string enemyName)
     {
-        numberOfKilledEnemies = numberOfKilledEnemies + 1;
-        Debug.Log("How many enemies you've killed" + numberOfKilledEnemies);
+        GameObject temp = allEnemies.Where(obj => obj.name == enemyName).SingleOrDefault();
+        allEnemies.Remove(temp);
+        Debug.Log(allEnemies.Count);
         CheckForWin();    
     }
 
     private void CheckForWin()
     {
-        if(numberOfKilledEnemies >= numberOfEnemies)
+        if(0 >= allEnemies.Count)
         {
-            Debug.Log("Good job! Your time is" + time);
+            Debug.Log("Good job! Your time is " + time);
             Time.timeScale = 0;
         }
     }

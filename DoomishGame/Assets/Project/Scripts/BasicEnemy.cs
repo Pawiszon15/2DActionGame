@@ -12,9 +12,11 @@ public class BasicEnemy : MonoBehaviour
         Debug.Log("tigger");
         if (collision.gameObject.tag == "Bullet")
         {
-            gameManger.KilledEnemy();
+            string objectName = gameObject.name;
+            gameManger.KilledEnemy(objectName);
             Destroy(gameObject);
         }
     }
+
 
 }

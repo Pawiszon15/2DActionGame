@@ -31,7 +31,7 @@ public class ShootingMechanic : MonoBehaviour
 
     //Dash private variable
     private bool canMelee;
-    private CircleCollider2D circleCollider;
+    private CapsuleCollider2D capsuleCollider;
 
     //General variables
     private Rigidbody2D rb2d;
@@ -45,6 +45,7 @@ public class ShootingMechanic : MonoBehaviour
         canMelee = true;
 
         rb2d = GetComponent<Rigidbody2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -82,11 +83,12 @@ public class ShootingMechanic : MonoBehaviour
 
     void MeleeAttack()
     {
+        capsuleCollider.enabled = true;
         rb2d.AddForce(gunPivot.transform.right * DashForce, ForceMode2D.Impulse);
-        circleCollider.isTrigger = true;
         canMelee = false;
 
         StartCoroutine(DashCooldown());
+        StartCoroutine(DashDuration());
     }
 
 
@@ -134,4 +136,15 @@ public class ShootingMechanic : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenDashes);
         canMelee = true;
     }    
+
+    IEnumerator DashDuration()
+    {
+        yield return new WaitForSeconds(durationOfDash);
+        capsuleCollider.enabled = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("I've triggered something");
+    }
 }

@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 67168699595267209}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Bullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,6 +522,8 @@ MonoBehaviour:
   DashForce: 15
   durationOfDash: 0.5
   timeBetweenDashes: 1
+  spriteRenderer: {fileID: 7231682128556672892}
+  capsuleCollider: {fileID: 67168699595267209}
 --- !u!70 &67168699595267209
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -535,8 +537,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0047826767, y: 0.009566665}
-  m_Size: {x: 1.1434994, y: 1.1530669}
+  m_Offset: {x: 0.02750206, y: 0.03437829}
+  m_Size: {x: 1.6125412, y: 1.6262939}
   m_Direction: 0
 --- !u!1 &7231682128609942352
 GameObject:

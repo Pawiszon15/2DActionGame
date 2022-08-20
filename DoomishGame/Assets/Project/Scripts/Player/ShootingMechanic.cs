@@ -31,11 +31,11 @@ public class ShootingMechanic : MonoBehaviour
 
     //Dash private variable
     private bool canMelee;
-    private CapsuleCollider2D capsuleCollider;
 
     //General variables
     private Rigidbody2D rb2d;
-    
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] CapsuleCollider2D capsuleCollider;
     
     void Start()
     {
@@ -45,7 +45,6 @@ public class ShootingMechanic : MonoBehaviour
         canMelee = true;
 
         rb2d = GetComponent<Rigidbody2D>();
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -83,6 +82,8 @@ public class ShootingMechanic : MonoBehaviour
 
     void MeleeAttack()
     {
+        spriteRenderer.color = Color.red;
+        gameObject.tag = "Bullet";
         capsuleCollider.enabled = true;
         rb2d.AddForce(gunPivot.transform.right * DashForce, ForceMode2D.Impulse);
         canMelee = false;
@@ -141,10 +142,7 @@ public class ShootingMechanic : MonoBehaviour
     {
         yield return new WaitForSeconds(durationOfDash);
         capsuleCollider.enabled = false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("I've triggered something");
+        gameObject.tag = "Untagged";
+        spriteRenderer.color = Color.white;
     }
 }

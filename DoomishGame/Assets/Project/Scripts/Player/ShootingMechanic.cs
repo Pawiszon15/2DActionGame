@@ -142,7 +142,7 @@ public class ShootingMechanic : MonoBehaviour
     {
         yield return new WaitForSeconds(durationOfDash);
         capsuleCollider.enabled = false;
-        gameObject.tag = "Untagged";
+        gameObject.tag = "Player";
         spriteRenderer.color = Color.white;
     }
 }

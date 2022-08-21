@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
-    [SerializeField] GameManger gameManger;
+    private GameManger gameManger;
+
+    private void Start()
+    {
+        gameManger = FindObjectOfType<GameManger>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

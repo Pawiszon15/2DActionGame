@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManger : MonoBehaviour
 {
@@ -31,5 +32,10 @@ public class GameManger : MonoBehaviour
             Debug.Log("Good job! Your time is " + time);
             Time.timeScale = 0;
         }
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }

@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Enemy_RocketLuncher : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float timeBetweenShoots;
+    [SerializeField] Transform rocketSpawnPoint;
+    [SerializeField] GameObject rocket;
+
     void Start()
     {
-        
+        SpawnRocket();
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnRocket()
     {
-        
+        Instantiate(rocket, rocketSpawnPoint.position, Quaternion.identity);
+        StartCoroutine(TimeBetweenRocketSpawn());
+    }
+
+    IEnumerator TimeBetweenRocketSpawn()
+    {
+        yield return new WaitForSeconds(timeBetweenShoots);
+        SpawnRocket();
     }
 }

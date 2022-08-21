@@ -6,6 +6,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 {
     [Header("Scripts Ref:")]
     public Tutorial_GrapplingRope grappleRope;
+    [SerializeField] Canvas canvas;
 
     [Header("Layers Settings:")]
     [SerializeField] private bool grappleToAll = false;
@@ -59,6 +60,22 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Update()
     {
+        // Temporarly to see if having 2 diffrent hooks is somehow beneficial for the gameplay
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(launchToPoint == false)
+            {
+                launchToPoint = true;
+                canvas.enabled = false;
+            }
+
+            else if (launchToPoint == true)
+            {
+                launchToPoint = false;
+                canvas.enabled = true;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SetGrapplePoint();

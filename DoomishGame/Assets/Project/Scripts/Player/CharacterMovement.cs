@@ -58,13 +58,13 @@ public class CharacterMovement : MonoBehaviour
             }
         }*/
 
-/*        if(isGrounded)
-        {*/
+        if(isGrounded)
+        {
             moveHorizontal = Input.GetAxisRaw("Horizontal");
             Vector2 movement = new Vector2(moveHorizontal * maxMovementSpeed, rb2D.velocity.y);
             rb2D.velocity = Vector2.Lerp(rb2D.velocity, movement, accelerationSpeed);
-/*
-        }*/
+        }
+       
     }
 
 

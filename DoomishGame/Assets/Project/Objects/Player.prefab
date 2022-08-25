@@ -153,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7231682128266977379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.63, y: 0, z: -14.50411}
+  m_LocalPosition: {x: 0.63, y: 0, z: 1}
   m_LocalScale: {x: 0.6, y: 0.4555371, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -252,9 +252,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grappleRope: {fileID: 7231682128609942358}
+  canvas: {fileID: 0}
   grappleToAll: 1
   grappableLayerNumber: 9
-  m_camera: {fileID: 7569401048241139407}
+  m_camera: {fileID: 0}
   gunHolder: {fileID: 7231682128556672893}
   gunPivot: {fileID: 7231682128251272155}
   firePoint: {fileID: 7231682128501101236}
@@ -266,7 +267,7 @@ MonoBehaviour:
   maxDistnace: 10
   launchToPoint: 0
   launchType: 1
-  launchSpeed: 3
+  launchSpeed: 1.2
   autoConfigureDistance: 0
   targetDistance: 3
   targetFrequncy: 1
@@ -321,9 +322,11 @@ GameObject:
   - component: {fileID: 7231682128556672882}
   - component: {fileID: 861292762}
   - component: {fileID: 67168699595267209}
+  - component: {fileID: 293962155}
+  - component: {fileID: 293962165}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,7 +464,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7231682128556672888}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -487,7 +490,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7231682128556672888}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f5792bc9a41d4643bd0ad8782cbc487, type: 3}
   m_Name: 
@@ -519,7 +522,7 @@ MonoBehaviour:
   shootSound: {fileID: 0}
   shootgunBullet: {fileID: 1235635171295464583, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
   canvas: {fileID: 0}
-  DashForce: 15
+  DashForce: 7
   durationOfDash: 0.5
   timeBetweenDashes: 1
   spriteRenderer: {fileID: 7231682128556672892}
@@ -540,6 +543,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0.02750206, y: 0.03437829}
   m_Size: {x: 1.6125412, y: 1.6262939}
   m_Direction: 0
+--- !u!114 &293962155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231682128556672888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ce7dcaf8ba26249988ba9062866507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &293962165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231682128556672888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f554179c6ef93c409e708dbf973dd27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunPosition: {fileID: 1950601902}
+  Bullet: {fileID: 110440187526137843, guid: 24a0ce42d6d79e44a95071c26dabc75d, type: 3}
+  bulletLifeTime: 3
 --- !u!1 &7231682128609942352
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7569401048241139248
 Transform:
   m_ObjectHideFlags: 0

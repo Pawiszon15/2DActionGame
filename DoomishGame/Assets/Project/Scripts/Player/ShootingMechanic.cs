@@ -18,7 +18,6 @@ public class ShootingMechanic : MonoBehaviour
 
     [SerializeField] AudioClip shootSound;
     [SerializeField] GameObject shootgunBullet;
-    [SerializeField] Canvas canvas;
 
     [Header("MeleeAttack")]
     [SerializeField] float DashForce;
@@ -111,14 +110,12 @@ public class ShootingMechanic : MonoBehaviour
         if (usingShotgun)
         {
             usingShotgun = false;
-            canvas.enabled = false;
             Debug.Log("isShotgunActive" + usingShotgun);
         }
 
         else
         {
             usingShotgun = true;
-            canvas.enabled = true;
             Debug.Log("isShotgunActive" + usingShotgun);
         }
     }

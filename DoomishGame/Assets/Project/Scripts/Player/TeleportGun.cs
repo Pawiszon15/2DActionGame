@@ -10,26 +10,25 @@ public class TeleportGun : MonoBehaviour
     [SerializeField] float bulletLifeTime;
 
     private Vector2 bulletPos;
-    private bool isBulletActive;
+    private GameObject activeBullet;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        activeBullet = null;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.F) && !isBulletActive)
+        if (Input.GetKeyDown(KeyCode.F) && activeBullet == null)
         {
-            GameObject thisBullet = Instantiate(Bullet, gunPosition.position, gunPosition.rotation);
-            Destroy(thisBullet, bulletLifeTime);
-
+            activeBullet = Instantiate(Bullet, gunPosition.position, gunPosition.rotation);
+            Destroy(activeBullet, bulletLifeTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && isBulletActive)
+        else if (Input.GetKeyDown(KeyCode.F) && activeBullet != null)
         {
             TeleportPlayer();
         }
@@ -37,6 +36,8 @@ public class TeleportGun : MonoBehaviour
 
     void TeleportPlayer()
     {
-/*        gameObject.transform.position;
-*/    }
+        gameObject.transform.position = activeBullet.transform.position;
+        Destroy(activeBullet);
+        activeBullet = null;
+    }
 }

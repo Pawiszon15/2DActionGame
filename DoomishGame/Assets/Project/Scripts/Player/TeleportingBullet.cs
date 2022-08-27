@@ -6,13 +6,13 @@ public class TeleportingBullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed;
 
-    private PolygonCollider2D collider2D;
+    private PolygonCollider2D collider2d;
     private Rigidbody2D rb;
 
     private void Awake()
     {
-        collider2D = GetComponent<PolygonCollider2D>();
-        rb = collider2D.GetComponent<Rigidbody2D>();
+        collider2d = GetComponent<PolygonCollider2D>();
+        rb = collider2d.GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update

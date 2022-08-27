@@ -2531,20 +2531,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: aerialMovMulti
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: accelerationSpeed
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672883, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_Size.x
-      value: 0.5
+    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: maxPlayerVelocity
+      value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672883, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_Size.y
-      value: 0.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672883, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.57
+    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: maxAerialMovementThroughInput
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7231682128556672888, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_Name

@@ -6,7 +6,6 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 {
     [Header("Scripts Ref:")]
     public Tutorial_GrapplingRope grappleRope;
-    [SerializeField] Canvas canvas;
 
     [Header("Layers Settings:")]
     [SerializeField] private bool grappleToAll = false;
@@ -66,13 +65,11 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             if(launchToPoint == false)
             {
                 launchToPoint = true;
-                canvas.enabled = false;
             }
 
             else if (launchToPoint == true)
             {
                 launchToPoint = false;
-                canvas.enabled = true;
             }
         }
 

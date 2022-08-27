@@ -24,10 +24,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-
         isGrounded = true;
-
-        maxNumberOfJumps = 2;
         jumpsAvailable = maxNumberOfJumps;
     }
 
@@ -35,6 +32,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         moveVertical = Input.GetAxisRaw("Vertical");
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space))
         {            
@@ -49,22 +47,19 @@ public class CharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        /*//Physical movement
-        if (moveHorizontal > 0.1f || moveHorizontal < 0.1f)
-        {
-            if (rb2D.velocity.x < maxMovementSpeed && rb2D.velocity.x > -maxMovementSpeed)
-            {
-                rb2D.AddForce(new Vector2(moveHorizontal * movementSpeed, 0), ForceMode2D.Force);
-            }
-        }*/
-
         if(isGrounded)
         {
-            moveHorizontal = Input.GetAxisRaw("Horizontal");
             Vector2 movement = new Vector2(moveHorizontal * maxMovementSpeed, rb2D.velocity.y);
             rb2D.velocity = Vector2.Lerp(rb2D.velocity, movement, accelerationSpeed);
         }
-       
+     
+        if(!isGrounded && moveHorizontal != 0)
+        {
+            //rb2D.velocity = Vector2.Lerp(rb2D.velocity, movement, accelerationSpeed);
+
+            Vector2 movement = new Vector2(moveHorizontal * maxMovementSpeed * 0.5f, 0);
+            rb2D.AddForce(movement); 
+        }
     }
 
 
@@ -72,9 +67,9 @@ public class CharacterMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Platform")
         {
-            Debug.Log("hitting ground");
             isGrounded = true;
             jumpsAvailable = maxNumberOfJumps;
+            Debug.Log(isGrounded);
         }
     }
 
@@ -83,6 +78,7 @@ public class CharacterMovement : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             isGrounded = false;
+            Debug.Log(isGrounded);
         }
     }
 

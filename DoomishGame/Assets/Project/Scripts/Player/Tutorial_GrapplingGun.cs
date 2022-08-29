@@ -49,9 +49,11 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     [HideInInspector] public Vector2 grapplePoint;
     [HideInInspector] public Vector2 grappleDistanceVector;
+    [HideInInspector] private bool isGraplingRopeUsed;
 
     private void Start()
     {
+        isGraplingRopeUsed = false;
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
 
@@ -59,25 +61,25 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Update()
     {
-        // Temporarly to see if having 2 diffrent hooks is somehow beneficial for the gameplay
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            if(launchToPoint == false)
-            {
-                launchToPoint = true;
-            }
-
-            else if (launchToPoint == true)
-            {
-                launchToPoint = false;
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isGraplingRopeUsed)
         {
             SetGrapplePoint();
+            isGraplingRopeUsed = true;
         }
-        else if (Input.GetKey(KeyCode.Mouse0))
+
+      
+
+        //else if (Input.GetKeyUp(KeyCode.Mouse0))
+        else if (isGraplingRopeUsed && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            grappleRope.enabled = false;
+            m_springJoint2D.enabled = false;
+            m_rigidbody.gravityScale = 1;
+            isGraplingRopeUsed = false;
+        }
+
+        //else if (Input.GetKey(KeyCode.Mouse0))
+        else if (isGraplingRopeUsed)
         {
             if (grappleRope.enabled)
             {
@@ -99,12 +101,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            grappleRope.enabled = false;
-            m_springJoint2D.enabled = false;
-            m_rigidbody.gravityScale = 1;
-        }
+
         else
         {
             Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);

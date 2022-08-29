@@ -33,9 +33,12 @@ public class ShootingMechanic : MonoBehaviour
 
     //General variables
     private Rigidbody2D rb2d;
+    private float rotateOverTime;
+    private float rotationSpeed;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] CapsuleCollider2D capsuleCollider;
-    
+    [SerializeField] Camera m_camera;
+
     void Start()
     {
         
@@ -62,7 +65,10 @@ public class ShootingMechanic : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse1) && canMelee && !usingShotgun)
         {
             MeleeAttack();
-        }    
+        }
+
+        //Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
+        //RotateGun(mousePos);
     }
 
 
@@ -120,7 +126,20 @@ public class ShootingMechanic : MonoBehaviour
         }
     }
 
+    //void RotateGun(Vector3 lookPoint/*, bool allowRotationOverTime*/)
+    //{
+    //    Vector3 distanceVector = lookPoint - gunPivot.position;
 
+    //    float angle = Mathf.Atan2(distanceVector.y, distanceVector.x) * Mathf.Rad2Deg;
+    //    //if (rotateOverTime && allowRotationOverTime)
+    //    {
+    //        gunPivot.rotation = Quaternion.Lerp(gunPivot.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * rotationSpeed);
+    //    }
+    //    //else
+    //    //{
+    //    //    gunPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    //    //}
+    //}
 
     //Couroutines
     IEnumerator ShootingCooldown()

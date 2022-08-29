@@ -13,8 +13,6 @@ public class BasicEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Debug.Log("tigger");
         if (collision.gameObject.tag == "Bullet")
         {
             string objectName = gameObject.name;

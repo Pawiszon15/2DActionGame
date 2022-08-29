@@ -11,6 +11,11 @@ public class GameManger : MonoBehaviour
     private int numbersOfEnemies;
     [SerializeField] private List<GameObject> allEnemies;
 
+    private void Start()
+    {
+        time = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,7 +26,6 @@ public class GameManger : MonoBehaviour
     {
         GameObject temp = allEnemies.Where(obj => obj.name == enemyName).SingleOrDefault();
         allEnemies.Remove(temp);
-        Debug.Log(allEnemies.Count);
         CheckForWin();    
     }
 

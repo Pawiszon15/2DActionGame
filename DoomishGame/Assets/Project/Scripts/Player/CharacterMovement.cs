@@ -34,6 +34,7 @@ public class CharacterMovement : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         isGrounded = true;
         jumpsAvailable = maxNumberOfJumps;
+        StartCoroutine(CheckVelocity());
     }
 
     // Update is called once per frame
@@ -48,7 +49,6 @@ public class CharacterMovement : MonoBehaviour
             {
                 rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 jumpsAvailable = jumpsAvailable - 1;
-                Debug.Log(jumpsAvailable);
             }
         }
 
@@ -120,10 +120,11 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    private void CheckVelocity()
+    IEnumerator CheckVelocity()
     {
+        yield return new WaitForSeconds(1f);
         Debug.Log(rb2D.velocity.x);
-        Debug.Log(isGrounded);
+        StartCoroutine(CheckVelocity());
     }
 
 }

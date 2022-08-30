@@ -14,15 +14,10 @@ public class PivotWeapon : MonoBehaviour
         RotateGun(mousePos);
     }
 
-    void RotateGun(Vector3 lookPoint/*, bool allowRotationOverTime*/)
+    void RotateGun(Vector3 lookPoint)
     {
         Vector3 distanceVector = lookPoint - gunPivot.position;
         float angle = Mathf.Atan2(distanceVector.y, distanceVector.x) * Mathf.Rad2Deg;
         gunPivot.rotation = Quaternion.Lerp(gunPivot.rotation, Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * rotationSpeed);
-        
-        //else
-        //{
-        //    gunPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        //}
     }
 }

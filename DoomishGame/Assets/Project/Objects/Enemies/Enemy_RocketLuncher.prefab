@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5740077906868307080}
   - component: {fileID: 5740077906868307081}
   m_Layer: 0
-  m_Name: RocketLuncher
+  m_Name: Enemy_RocketLuncher
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -24,6 +24,10 @@ public class Bullet_RailGun : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.WriteLine("sth");
+        Debug.WriteLine("Railgun hit");
+        if (collision.gameObject.tag == "Player")
+        {
+            manger.ResetScene();
+        }
     }
 }

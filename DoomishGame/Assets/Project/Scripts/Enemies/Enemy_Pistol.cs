@@ -14,7 +14,7 @@ public class Enemy_Pistol : MonoBehaviour
 
     private void Start()
     {
-        Shot();
+        StartCoroutine(WaitForAnotherShot());
     }
 
     private void Shot()

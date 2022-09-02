@@ -4,15 +4,52 @@ using UnityEngine;
 
 public class Enemy_FloorDeneyer_GuradedGround : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] GameObject floorGuard;
+
+    private Enemuy_FloorDeneyer floorGuardScript;
+    private bool canCheckPlayerPos;
+    private float timeBetweenCheckPlayerPos;
+
+    private void Start()
     {
-        
+        canCheckPlayerPos = true;
+        timeBetweenCheckPlayerPos = 0.1f;
+        floorGuardScript = floorGuard.GetComponent<Enemuy_FloorDeneyer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.gameObject.tag == "Player" && canCheckPlayerPos)
+        {
+            canCheckPlayerPos = false;
+            floorGuardScript.StartChase(collision.gameObject.transform.position);
+            StartCoroutine(WaitBeforeCheckingPlayerPos());
+        }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && canCheckPlayerPos)
+        {
+            canCheckPlayerPos = false;
+            floorGuardScript.StartChase(collision.gameObject.transform.position);
+            StartCoroutine(WaitBeforeCheckingPlayerPos());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            floorGuardScript.StopChase();
+        }
+    }
+
+    IEnumerator WaitBeforeCheckingPlayerPos()
+    {
+        yield return new WaitForSeconds(timeBetweenCheckPlayerPos);
+        canCheckPlayerPos = true;
+    }
+
 }

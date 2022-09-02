@@ -9,16 +9,9 @@ public class Enemy_FloorChangeDir : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(isRightChecker)
+        if(collision.gameObject.tag == "Platform")
         {
-            floorDeneyer.ChangeDirectionToLeft();
-        }
-
-        if(!isRightChecker)
-        {
-            floorDeneyer.ChangeDirectionToRight();
+            floorDeneyer.ChangeDirectionToOpposite();
         }
     }
-
-
 }

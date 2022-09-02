@@ -5,22 +5,19 @@ using UnityEngine;
 public class Enemuy_FloorDeneyer : MonoBehaviour
 {
     [Header("Enemy properties")]
-    [SerializeField] float movementSpeed;
+    [SerializeField] float movementSpeedDuringPatrol;
     [SerializeField] float movementSpeedDuringChase;
-
-    [Header("References")]
-    [SerializeField] BoxCollider2D leftObstacleChecker;
-    [SerializeField] BoxCollider2D rightObstacleChecker;
-    [SerializeField] BoxCollider2D guardedGround;
 
     private Vector3 dirOfMovement;
     private Vector2 floorDeneyerPos;
     private float currentMovmenetSpeed;
+    private GameManger gameManger;
 
     private void Start()
     {
         dirOfMovement = -transform.right;
-        currentMovmenetSpeed = movementSpeed;
+        currentMovmenetSpeed = movementSpeedDuringPatrol;
+        gameManger = FindObjectOfType<GameManger>();
     }
 
     // Update is called once per frame
@@ -39,18 +36,31 @@ public class Enemuy_FloorDeneyer : MonoBehaviour
         dirOfMovement = -transform.right;
     }
 
+    public void ChangeDirectionToOpposite()
+    {
+        if(dirOfMovement == transform.right)
+        {
+            dirOfMovement = -transform.right;
+        }
+
+        else if(dirOfMovement == -transform.right)
+        {
+            dirOfMovement = transform.right;
+        }
+    }
+
     public void StartChase(Vector2 playerPos)
     {
         floorDeneyerPos = gameObject.transform.position;
         float playerPosRelativeToEnemy = -floorDeneyerPos.x * playerPos.y + floorDeneyerPos.y * playerPos.x;
         currentMovmenetSpeed = movementSpeedDuringChase;
 
-        if(playerPosRelativeToEnemy > 0)
+        if(playerPosRelativeToEnemy < 0)
         {
             ChangeDirectionToRight();
         }
 
-        else if(playerPosRelativeToEnemy < 0)
+        else if(playerPosRelativeToEnemy > 0)
         {
             ChangeDirectionToLeft();
         }
@@ -59,8 +69,15 @@ public class Enemuy_FloorDeneyer : MonoBehaviour
 
     public void StopChase()
     {
-
+        currentMovmenetSpeed = movementSpeedDuringPatrol;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            gameManger.ResetScene();
+        }
+    }
 
 }

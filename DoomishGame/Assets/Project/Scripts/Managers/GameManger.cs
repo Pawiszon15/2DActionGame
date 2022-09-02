@@ -20,6 +20,11 @@ public class GameManger : MonoBehaviour
     void Update()
     {
         time = Time.time;
+        
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            ResetScene();
+        }
     }
 
     public void KilledEnemy(string enemyName)

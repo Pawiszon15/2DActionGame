@@ -6,9 +6,14 @@ public class RotateEnemyWeapon : MonoBehaviour
 {
     [SerializeField] Transform gunPivot;
     [SerializeField] float rotationSpeed;
-    [SerializeField] GameObject player;
 
+    private Player player;
     private Vector2 playerPos;
+
+    private void Awake()
+    {
+        player = FindObjectOfType<Player>();
+    }
 
     private void Update()
     {

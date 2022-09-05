@@ -7,20 +7,48 @@ using UnityEngine.SceneManagement;
 
 public class GameManger : MonoBehaviour
 {
-    private float time;
-    private int numbersOfEnemies;
     [SerializeField] private List<GameObject> allEnemies;
+
+    [SerializeField] List<Enemuy_FloorDeneyer> allFloorDenayers;
+    [SerializeField] List<Enemy_Pistol> allPistols;
+    [SerializeField] List<Enemy_RocketLuncher> allRocketLunchers;
+    [SerializeField] List<RailGunner> allRailGunners;
+
+    private bool isFirstEnemy;
+    private TimeDisplay timeDisplay;
+
+    private void Awake()
+    {
+        foreach (Enemuy_FloorDeneyer denayer in allFloorDenayers)
+        {
+            denayer.enabled = false;
+        }
+
+        foreach (Enemy_Pistol pistol in allPistols)
+        {
+            pistol.enabled = false;
+        }
+
+        foreach (Enemy_RocketLuncher RocketLuncher in allRocketLunchers)
+        {
+            RocketLuncher.enabled = false;
+        }
+
+        foreach (RailGunner railGunner in allRailGunners)
+        {
+            railGunner.enabled = false;
+        }
+
+        isFirstEnemy = true;
+    }
 
     private void Start()
     {
-        time = 0;
+        timeDisplay = FindObjectOfType<TimeDisplay>();
     }
-
     // Update is called once per frame
     void Update()
-    {
-        time = Time.time;
-        
+    {        
         if(Input.GetKeyDown(KeyCode.R))
         {
             ResetScene();
@@ -29,6 +57,13 @@ public class GameManger : MonoBehaviour
 
     public void KilledEnemy(string enemyName)
     {
+        if(isFirstEnemy)
+        {
+            ActivateEnemies();
+            timeDisplay.TurnOffTimerBeforeAlarm();
+            isFirstEnemy = false;
+        }
+
         GameObject temp = allEnemies.Where(obj => obj.name == enemyName).SingleOrDefault();
         allEnemies.Remove(temp);
         CheckForWin();    
@@ -38,8 +73,7 @@ public class GameManger : MonoBehaviour
     {
         if(0 >= allEnemies.Count)
         {
-            Debug.Log("Good job! Your time is " + time);
-            Time.timeScale = 0;
+            Time.timeScale = 0f;
         }
     }
 
@@ -47,5 +81,28 @@ public class GameManger : MonoBehaviour
     {
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ActivateEnemies()
+    {
+        foreach (Enemuy_FloorDeneyer denayer in allFloorDenayers)
+        {
+            denayer.enabled = true;
+        }
+
+        foreach (Enemy_Pistol pistol in allPistols)
+        {
+            pistol.enabled = true;
+        }
+
+        foreach (Enemy_RocketLuncher RocketLuncher in allRocketLunchers)
+        {
+            RocketLuncher.enabled = true;
+        }
+
+        foreach (RailGunner railGunner in allRailGunners)
+        {
+            railGunner.enabled = true;
+        }
     }
 }

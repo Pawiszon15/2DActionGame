@@ -10,7 +10,7 @@ public class Enemy_RocketLuncher : MonoBehaviour
 
     void Start()
     {
-        SpawnRocket();
+        StartCoroutine(TimeBetweenRocketSpawn());
     }
 
     void SpawnRocket()

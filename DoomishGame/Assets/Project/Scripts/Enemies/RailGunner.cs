@@ -57,6 +57,7 @@ public class RailGunner : MonoBehaviour
 
     IEnumerator PreaperingForTheShot()
     {
+        LineSpriteRenderer.enabled = true;
         rotatingWeapon.enabled = true;
 
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / timeOfShootPreparation)
@@ -73,6 +74,7 @@ public class RailGunner : MonoBehaviour
 
     IEnumerator TimeBetweenShoots()
     {
+        LineSpriteRenderer.enabled = false;
         yield return new WaitForSeconds(timeOfRailgunShoot);
         LineSpriteRenderer.material.color = new Color(1, 1, 1, 0f);
         yield return new WaitForSeconds(timeBetweenShoots);

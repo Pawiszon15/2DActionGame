@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeedDuringPatrol: 3
-  movementSpeedDuringChase: 6
+  movementSpeedDuringChase: 8.04
 --- !u!1 &4990678907260143127
 GameObject:
   m_ObjectHideFlags: 0

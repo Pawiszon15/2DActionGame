@@ -16,6 +16,7 @@ public class GameManger : MonoBehaviour
 
     private bool isFirstEnemy;
     private TimeDisplay timeDisplay;
+    private Tutorial_GrapplingGun grapplingHook;
 
     private void Awake()
     {
@@ -45,7 +46,9 @@ public class GameManger : MonoBehaviour
     private void Start()
     {
         timeDisplay = FindObjectOfType<TimeDisplay>();
+        grapplingHook = FindObjectOfType<Tutorial_GrapplingGun>();    
     }
+
     // Update is called once per frame
     void Update()
     {        
@@ -66,7 +69,9 @@ public class GameManger : MonoBehaviour
 
         GameObject temp = allEnemies.Where(obj => obj.name == enemyName).SingleOrDefault();
         allEnemies.Remove(temp);
-        CheckForWin();    
+
+        grapplingHook.RenewRopes(1);
+        CheckForWin();
     }
 
     private void CheckForWin()

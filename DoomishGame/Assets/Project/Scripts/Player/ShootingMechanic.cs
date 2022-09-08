@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class ShootingMechanic : MonoBehaviour
 {
+    [Header("Energy")]
+    [SerializeField] private int maxEnergy;
+    public static int currentEnergy;
+
     [Header("Shotgun")]
     [SerializeField] private float recoilForce;
     [SerializeField] private float timeBetweenShoots;
     [SerializeField] private float speedOfBullets;
     [SerializeField] private float timeOnScreenBullets;
+    [SerializeField] private int shotgunEnergyCost;
 
     [SerializeField] Transform firePoint1;
     [SerializeField] Transform firePoint2;
@@ -31,22 +36,24 @@ public class ShootingMechanic : MonoBehaviour
     //Dash private variable
     private bool canMelee;
 
-    //General variables
+    [Header("References")]
+    [SerializeField] ResourceDisplayer energyDisplayer;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] CapsuleCollider2D capsuleCollider;
     private Rigidbody2D rb2d;
     private float rotateOverTime;
     private float rotationSpeed;
-    [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] CapsuleCollider2D capsuleCollider;
-    [SerializeField] Camera m_camera;
 
     void Start()
     {
-        
+        currentEnergy = maxEnergy;
+
         usingShotgun = true;
         canShoot = true;
         canMelee = true;
 
         rb2d = GetComponent<Rigidbody2D>();
+        energyDisplayer.ChangeResourceAmount(currentEnergy);
     }
 
     // Update is called once per frame
@@ -57,7 +64,7 @@ public class ShootingMechanic : MonoBehaviour
             ChangeActiveWeapon();
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse1) && canShoot && usingShotgun)
+        if(Input.GetKeyDown(KeyCode.Mouse1) && canShoot && usingShotgun && currentEnergy >= shotgunEnergyCost)
         {
             ShootShotgun();       
         }         
@@ -71,11 +78,21 @@ public class ShootingMechanic : MonoBehaviour
         //RotateGun(mousePos);
     }
 
+    public void RenewEnergy(int amountOfEnergy)
+    {
+        if(currentEnergy < maxEnergy)
+        {
+            currentEnergy += amountOfEnergy;
+            energyDisplayer.ChangeResourceAmount(currentEnergy);
+        }
 
+    }
 
     //Main functionalites
     void ShootShotgun()
     {
+        currentEnergy -= shotgunEnergyCost;
+        energyDisplayer.ChangeResourceAmount(currentEnergy);
         GameObject bullet1 = Instantiate(shootgunBullet, firePoint1.position, firePoint1.rotation);
         GameObject bullet2 = Instantiate(shootgunBullet, firePoint2.position, firePoint1.rotation);
         GameObject bullet3 = Instantiate(shootgunBullet, firePoint3.position, firePoint1.rotation);

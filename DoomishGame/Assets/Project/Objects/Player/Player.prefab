@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140075082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.44, y: 0.08, z: 0}
+  m_LocalPosition: {x: 0.48, y: 1.1, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460379431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28, y: 0.08, z: 0}
+  m_LocalPosition: {x: 0.5, y: -1.1, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950601901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.96, y: -0.6, z: 0}
+  m_LocalPosition: {x: 1, y: -0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 3575001464398417896}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4974491479585189296}
@@ -184,7 +184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7231682128266977379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.63, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.6, y: 0.4555371, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7231682128266977379}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -291,11 +291,13 @@ MonoBehaviour:
   firePoint: {fileID: 7231682128501101236}
   m_springJoint2D: {fileID: 7231682128556672894}
   m_rigidbody: {fileID: 7231682128556672895}
+  ropesDisplay: {fileID: 0}
+  maxAmountofRopes: 3
   rotateOverTime: 1
   rotationSpeed: 11
   hasMaxDistance: 1
   maxDistnace: 10
-  launchToPoint: 1
+  launchToPoint: 0
   launchType: 1
   launchSpeed: 1.2
   autoConfigureDistance: 0
@@ -327,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7231682128501101239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94, y: 0, z: 0}
+  m_LocalPosition: {x: 1.47, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -504,12 +506,12 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.8
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -528,10 +530,10 @@ MonoBehaviour:
   maxMovementSpeed: 12
   accelerationSpeed: 0.05
   maxPlayerVelocity: 20
-  aerialMovMulti: 0.5
+  aerialMovMulti: 0.3
   maxAerialMovementThroughInput: 8
   maxNumberOfJumps: 1
-  jumpForce: 8
+  jumpForce: 15
 --- !u!114 &861292762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,22 +546,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d9e6604abc8314cab12354c2007a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoilForce: 7
+  maxEnergy: 5
+  recoilForce: 12
   timeBetweenShoots: 1
   speedOfBullets: 0
   timeOnScreenBullets: 0
+  shotgunEnergyCost: 2
   firePoint1: {fileID: 1950601902}
   firePoint2: {fileID: 1140075083}
   firePoint3: {fileID: 1460379432}
   gunPivot: {fileID: 4448891328530097419}
   shootSound: {fileID: 0}
   shootgunBullet: {fileID: 1235635171295464583, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
-  DashForce: 7
+  DashForce: 15
   durationOfDash: 0.5
   timeBetweenDashes: 1
+  energyDisplayer: {fileID: 0}
   spriteRenderer: {fileID: 7231682128556672892}
   capsuleCollider: {fileID: 67168699595267209}
-  m_camera: {fileID: 0}
 --- !u!70 &67168699595267209
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -589,8 +593,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPosition: {fileID: 1950601902}
+  resourceDisplayer: {fileID: 0}
   Bullet: {fileID: 110440187526137843, guid: 24a0ce42d6d79e44a95071c26dabc75d, type: 3}
   bulletLifeTime: 3
+  teleporterEnergyCost: 3
 --- !u!114 &293962155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,7 +756,7 @@ MonoBehaviour:
   grapplingGun: {fileID: 7231682128266977377}
   m_lineRenderer: {fileID: 7231682128609942359}
   percision: 40
-  straightenLineSpeed: 0
+  straightenLineSpeed: 5
   ropeAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -854,9 +860,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8882786026403403170}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 12.94, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.66, y: 0, z: 0}
+  m_LocalScale: {x: 0.428125, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1950601902}
@@ -864,7 +870,7 @@ Transform:
   - {fileID: 1460379432}
   m_Father: {fileID: 4448891328530097419}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2128060403154433102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -906,7 +912,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.6752825, g: 0.44868279, b: 0.8584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0

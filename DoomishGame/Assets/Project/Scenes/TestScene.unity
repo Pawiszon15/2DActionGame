@@ -996,6 +996,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1445802842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1392867729, guid: d221f32f2146df2498935680bd19d6eb, type: 3}
+  m_PrefabInstance: {fileID: 4231546265949016060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f25e757472fa2b4d89cbd534de5a9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499778746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1459,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1854685638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 975520158, guid: d221f32f2146df2498935680bd19d6eb, type: 3}
+  m_PrefabInstance: {fileID: 4231546265949016060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f25e757472fa2b4d89cbd534de5a9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889619455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,14 +1763,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 293962165, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: resourceDisplayer
+      value: 
+      objectReference: {fileID: 1445802842}
     - target: {fileID: 861292762, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: DashForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 861292762, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: recoilForce
-      value: 12
-      objectReference: {fileID: 0}
+      propertyPath: energyDisplayer
+      value: 
+      objectReference: {fileID: 1445802842}
     - target: {fileID: 1140075083, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.48
@@ -1850,6 +1872,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1499778749}
     - target: {fileID: 7231682128266977377, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: ropesDisplay
+      value: 
+      objectReference: {fileID: 1854685638}
+    - target: {fileID: 7231682128266977377, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: launchToPoint
       value: 0
       objectReference: {fileID: 0}
@@ -1868,18 +1894,6 @@ PrefabInstance:
     - target: {fileID: 7231682128501101236, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: aerialMovMulti
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: maxNumberOfJumps
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: maxPlayerVelocity
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7231682128556672888, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_Name
@@ -1928,22 +1942,6 @@ PrefabInstance:
     - target: {fileID: 7231682128556672893, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672895, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672895, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672895, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672895, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7231682128609942358, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: straightenLineSpeed

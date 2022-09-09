@@ -465,7 +465,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.42343736}
+  m_Offset: {x: 0, y: -0.49}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -509,7 +509,7 @@ Rigidbody2D:
   m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -527,13 +527,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f5792bc9a41d4643bd0ad8782cbc487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMovementSpeed: 12
-  accelerationSpeed: 0.05
-  maxPlayerVelocity: 20
-  aerialMovMulti: 0.3
-  maxAerialMovementThroughInput: 8
+  maxMovementSpeed: 15
+  accelerationSpeed: 0.08
+  maxPlayerVelocity: 25
+  aerialMovMulti: 2
+  maxAerialMovementThroughInput: 12
   maxNumberOfJumps: 1
-  jumpForce: 15
+  jumpForce: 22
 --- !u!114 &861292762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 5
-  recoilForce: 12
+  recoilForce: 16
   timeBetweenShoots: 1
   speedOfBullets: 0
   timeOnScreenBullets: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
   gunPivot: {fileID: 4448891328530097419}
   shootSound: {fileID: 0}
   shootgunBullet: {fileID: 1235635171295464583, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
-  DashForce: 15
+  DashForce: 20
   durationOfDash: 0.5
   timeBetweenDashes: 1
   energyDisplayer: {fileID: 0}

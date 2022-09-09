@@ -57,6 +57,8 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     [HideInInspector] public Vector2 grappleDistanceVector;
     [HideInInspector] private bool isGraplingRopeUsed;
 
+    [HideInInspector] private float startingGravityScale;
+
     private void Start()
     {
         currentAmountOfRopes = maxAmountofRopes;
@@ -64,6 +66,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
         ropesDisplay.ChangeResourceAmount(currentAmountOfRopes);
+        startingGravityScale = m_rigidbody.gravityScale;
     }
 
     private void Update()
@@ -81,7 +84,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
-            m_rigidbody.gravityScale = 1;
+            m_rigidbody.gravityScale = startingGravityScale;
             isGraplingRopeUsed = false;
         }
 

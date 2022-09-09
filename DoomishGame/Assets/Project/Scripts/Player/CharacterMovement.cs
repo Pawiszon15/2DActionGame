@@ -34,8 +34,7 @@ public class CharacterMovement : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         isGrounded = true;
         jumpsAvailable = maxNumberOfJumps;
-/*        StartCoroutine(CheckVelocity());
-*/    }
+    }
 
     // Update is called once per frame
     void Update()
@@ -51,36 +50,6 @@ public class CharacterMovement : MonoBehaviour
                 jumpsAvailable = jumpsAvailable - 1;
             }
         }
-
-       /* if(Input.GetKeyDown(KeyCode.G))
-        {
-            CheckVelocity();
-        }*/
-
-
-/*        if (rb2D.velocity.x < Mathf.Abs(7f) || rb2D.velocity.y < Mathf.Abs(7f))
-        {
-            rb2D.drag = 0f;
-            Debug.Log("reset to normal speed");
-        }
-
-        if (rb2D.velocity.x > Mathf.Abs(7f) || rb2D.velocity.y > Mathf.Abs(7f))
-        {
-            rb2D.drag = 0.5f;
-            Debug.Log("1 slowdown");
-        }
-
-        if (rb2D.velocity.x > Mathf.Abs(10f) || rb2D.velocity.y > Mathf.Abs(10f))
-        {
-            rb2D.drag = 1f;
-            Debug.Log("2 slowdown");
-        }
-
-        if (rb2D.velocity.x > Mathf.Abs(13f) || rb2D.velocity.y > Mathf.Abs(13f))
-        {
-            rb2D.drag = 1.4f;
-            Debug.Log("3 slowdown");
-        }*/
     }
 
     void FixedUpdate()
@@ -109,6 +78,7 @@ public class CharacterMovement : MonoBehaviour
         {
             isGrounded = true;
             jumpsAvailable = maxNumberOfJumps;
+            Debug.Log(isGrounded);
         }
     }
 
@@ -117,14 +87,8 @@ public class CharacterMovement : MonoBehaviour
         if (collision.gameObject.tag == "Platform")
         {
             isGrounded = false;
+            Debug.Log(isGrounded);
         }
     }
-
-   /* IEnumerator CheckVelocity()
-    {
-        yield return new WaitForSeconds(1f);
-        Debug.Log(rb2D.velocity.x);
-        StartCoroutine(CheckVelocity());
-    }*/
 
 }

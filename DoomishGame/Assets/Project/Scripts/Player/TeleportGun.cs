@@ -26,6 +26,7 @@ public class TeleportGun : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.F) && activeBullet == null && currentEnergy >= teleporterEnergyCost)
         {
+            Debug.Log("hello");
             currentEnergy -= teleporterEnergyCost;
             resourceDisplayer.ChangeResourceAmount(currentEnergy);
 

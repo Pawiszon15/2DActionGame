@@ -38,6 +38,8 @@ public class ShootingMechanic : MonoBehaviour
 
     [Header("References")]
     [SerializeField] ResourceDisplayer energyDisplayer;
+    [SerializeField] ResourceDisplayer weaponNameDisplayer;
+
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] CapsuleCollider2D capsuleCollider;
     private Rigidbody2D rb2d;
@@ -54,6 +56,7 @@ public class ShootingMechanic : MonoBehaviour
 
         rb2d = GetComponent<Rigidbody2D>();
         energyDisplayer.ChangeResourceAmount(currentEnergy);
+        weaponNameDisplayer.ChangeResourceName("Shotgun", Color.green);
     }
 
     // Update is called once per frame
@@ -134,12 +137,14 @@ public class ShootingMechanic : MonoBehaviour
         {
             usingShotgun = false;
             Debug.Log("isShotgunActive" + usingShotgun);
+            weaponNameDisplayer.ChangeResourceName("Sword", Color.red);
         }
 
         else
         {
             usingShotgun = true;
             Debug.Log("isShotgunActive" + usingShotgun);
+            weaponNameDisplayer.ChangeResourceName("Shotgun", Color.green);
         }
     }
 

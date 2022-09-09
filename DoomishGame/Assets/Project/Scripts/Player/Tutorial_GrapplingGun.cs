@@ -190,7 +190,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
                 case LaunchType.Physics_Launch:
                     m_springJoint2D.connectedAnchor = grapplePoint;
 
-                    Vector2 distanceVector = firePoint.position - gunHolder.position;
+                    Vector2 distanceVector = firePoint.position - gunHolder.position - (0.5f * (firePoint.position - gunHolder.position));
 
                     m_springJoint2D.distance = distanceVector.magnitude;
                     m_springJoint2D.frequency = launchSpeed;

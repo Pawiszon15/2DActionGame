@@ -18,4 +18,10 @@ public class ResourceDisplayer : MonoBehaviour
     {
         textMesh.text = resourceName + " - " + resource.ToString();
     }
+
+    public void ChangeResourceName(string name, Color color)
+    {
+        textMesh.text = name;
+        textMesh.color = color;
+    }
 }

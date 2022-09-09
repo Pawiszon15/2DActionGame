@@ -532,6 +532,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9134971184871748696, guid: e265064207f1a914098a858ae8c8b9df, type: 3}
   m_PrefabInstance: {fileID: 9134971185935405949}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1111312344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1111312344, guid: d221f32f2146df2498935680bd19d6eb, type: 3}
+  m_PrefabInstance: {fileID: 4231546265949016060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f25e757472fa2b4d89cbd534de5a9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1128847505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +1782,10 @@ PrefabInstance:
       propertyPath: energyDisplayer
       value: 
       objectReference: {fileID: 1445802842}
+    - target: {fileID: 861292762, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: weaponNameDisplayer
+      value: 
+      objectReference: {fileID: 1111312344}
     - target: {fileID: 1140075083, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.48

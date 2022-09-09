@@ -44,7 +44,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (jumpsAvailable > 0)
+            if (isGrounded)
             {
                 rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 jumpsAvailable = jumpsAvailable - 1;

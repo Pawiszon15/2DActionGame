@@ -434,6 +434,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9134971184871748696, guid: e265064207f1a914098a858ae8c8b9df, type: 3}
   m_PrefabInstance: {fileID: 392146394}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &574954928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1392867729, guid: d221f32f2146df2498935680bd19d6eb, type: 3}
+  m_PrefabInstance: {fileID: 21516267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f25e757472fa2b4d89cbd534de5a9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &628507371 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 975520158, guid: d221f32f2146df2498935680bd19d6eb, type: 3}
@@ -539,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1350748564792725369, guid: 985aac5204dfd2f42bda74918558b5a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9948087
+      value: 3.42
       objectReference: {fileID: 0}
     - target: {fileID: 1350748564792725369, guid: 985aac5204dfd2f42bda74918558b5a2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2048,6 +2059,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 293962165, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: resourceDisplayer
+      value: 
+      objectReference: {fileID: 574954928}
+    - target: {fileID: 861292762, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: energyDisplayer
+      value: 
+      objectReference: {fileID: 574954928}
     - target: {fileID: 5276860506216401103, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_camera
       value: 

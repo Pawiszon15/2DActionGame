@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -18,14 +19,29 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private int maxNumberOfJumps;
     [SerializeField] private float jumpForce;
 
+    [Header("Wall slide")]
+    [SerializeField] float wallSlidingSpeed;
+    [SerializeField] Transform frontChecker;
+    private bool isFrontTouchingWall;
+    private bool wallSliding;
+    private bool facingRight = true;
+
+    [Header("Is Grounded Check")]
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
 
+
+    [Header("Wall jumping")]
+    [SerializeField] float wallJumpTime;
+    [SerializeField] float xWallForce;
+    [SerializeField] float yWallForce;
+    private bool walljumping;
+    
+
     private float moveHorizontal;
     private float moveVertical;
 
-    
     private bool isGrounded;
     private int jumpsAvailable;
 
@@ -44,7 +60,6 @@ public class CharacterMovement : MonoBehaviour
     {
         moveVertical = Input.GetAxisRaw("Vertical");
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -53,6 +68,45 @@ public class CharacterMovement : MonoBehaviour
                 rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 jumpsAvailable = jumpsAvailable - 1;
             }
+        }
+
+        if (moveHorizontal > 0f && facingRight == false)
+        {
+            Flip();
+        }
+        else if(moveHorizontal < 0f && facingRight == true)
+        {
+            Flip();
+        }
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isFrontTouchingWall = Physics2D.OverlapCircle(frontChecker.position, checkRadius, whatIsGround);
+
+        if (isFrontTouchingWall == true && isGrounded == false && moveHorizontal != 0)
+        {
+            wallSliding = true;
+        }    
+        else
+        {
+            wallSliding = false;
+        }
+
+        if(wallSliding == true)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            Debug.Log("wall sliding");
+        }
+
+        if(wallSliding && Input.GetKeyDown(KeyCode.Space))
+        {
+            walljumping = true;
+            Invoke("setWallJumpingToFalse", wallJumpTime);
+        }
+
+        if(walljumping)
+        {
+            rb2D.velocity = new Vector2(-moveHorizontal * xWallForce, yWallForce);
+
         }
     }
 
@@ -73,5 +127,16 @@ public class CharacterMovement : MonoBehaviour
         }
 
         rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, maxPlayerVelocity);
+    }
+
+    private void Flip()
+    {
+        frontChecker.transform.localPosition = new Vector3(-frontChecker.transform.localPosition.x, frontChecker.transform.localPosition.y, frontChecker.transform.localPosition.z);
+        facingRight = !facingRight;
+    }
+
+    void setWallJumpingToFalse()
+    {
+        walljumping = false;
     }
 }

@@ -18,6 +18,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private int maxNumberOfJumps;
     [SerializeField] private float jumpForce;
 
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask whatIsGround;
 
     private float moveHorizontal;
     private float moveVertical;
@@ -41,6 +44,7 @@ public class CharacterMovement : MonoBehaviour
     {
         moveVertical = Input.GetAxisRaw("Vertical");
         moveHorizontal = Input.GetAxisRaw("Horizontal");
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -70,25 +74,4 @@ public class CharacterMovement : MonoBehaviour
 
         rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, maxPlayerVelocity);
     }
-
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Platform")
-        {
-            isGrounded = true;
-            jumpsAvailable = maxNumberOfJumps;
-            Debug.Log(isGrounded);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Platform")
-        {
-            isGrounded = false;
-            Debug.Log(isGrounded);
-        }
-    }
-
 }

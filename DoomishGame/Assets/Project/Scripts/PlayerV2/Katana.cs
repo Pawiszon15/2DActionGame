@@ -4,7 +4,7 @@ using System.Net.NetworkInformation;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class MeleeAttack : MonoBehaviour
+public class Katana : MonoBehaviour
 {
     [Header("Attack properties")]
     [SerializeField] float slashDuration;

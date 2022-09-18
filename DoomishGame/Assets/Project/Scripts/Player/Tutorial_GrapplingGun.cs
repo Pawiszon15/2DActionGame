@@ -71,7 +71,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isGraplingRopeUsed && currentAmountOfRopes > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isGraplingRopeUsed && currentAmountOfRopes > 0)
         {
             SetGrapplePoint();
             isGraplingRopeUsed = true;
@@ -79,8 +79,8 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
       
 
-        //else if (Input.GetKeyUp(KeyCode.Mouse0))
-        else if (isGraplingRopeUsed && Input.GetKeyDown(KeyCode.Mouse0))
+        //else if (Input.GetKeyUp(KeyCode.Mouse1))
+        else if (isGraplingRopeUsed && Input.GetKeyDown(KeyCode.Mouse1))
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
@@ -88,7 +88,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             isGraplingRopeUsed = false;
         }
 
-        //else if (Input.GetKey(KeyCode.Mouse0))
+        //else if (Input.GetKey(KeyCode.Mouse1))
         else if (isGraplingRopeUsed)
         {
             if (grappleRope.enabled)

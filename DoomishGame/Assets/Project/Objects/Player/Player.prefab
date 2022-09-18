@@ -31,68 +31,6 @@ Transform:
   m_Father: {fileID: 7231682128556672893}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1140075082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1140075083}
-  m_Layer: 0
-  m_Name: FirePointShotgun2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1140075083
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140075082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 1.1, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4974491479585189296}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1460379431
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1460379432}
-  m_Layer: 0
-  m_Name: FirePointShotgun3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1460379432
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460379431}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -1.1, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4974491479585189296}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1950601901
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,9 +40,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1950601902}
+  - component: {fileID: 6821711946577659527}
   m_Layer: 0
   m_Name: FirePointShotgun1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,13 +56,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950601901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -0, z: 0}
+  m_LocalPosition: {x: 1.26, y: -0.1, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4974491479585189296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &6821711946577659527
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950601901}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.110989474, y: 0.07370613}
+  m_Size: {x: 0.72199273, y: 1.549998}
+  m_Direction: 0
 --- !u!1 &2092065851
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +186,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3575001464398417896}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0.8241262, w: 0.56640637}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -239,7 +194,7 @@ Transform:
   - {fileID: 4974491479585189296}
   m_Father: {fileID: 7231682128556672893}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 111}
 --- !u!1 &7231682128251272154
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,8 +353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grappleRope: {fileID: 7231682128609942358}
-  grappleToAll: 1
-  grappableLayerNumber: 9
+  grappleToAll: 0
+  grappableLayerNumber: 6
   m_camera: {fileID: 0}
   gunHolder: {fileID: 7231682128556672893}
   gunPivot: {fileID: 7231682128251272155}
@@ -467,6 +422,7 @@ GameObject:
   - component: {fileID: 7231682128556672889}
   - component: {fileID: 7231682128556672895}
   - component: {fileID: 7231682128556672882}
+  - component: {fileID: 7231682127773765569}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -608,7 +564,7 @@ Rigidbody2D:
   m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -626,14 +582,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f5792bc9a41d4643bd0ad8782cbc487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMovementSpeed: 15
+  maxMovementSpeed: 20
   accelerationSpeed: 0.08
   maxPlayerVelocity: 25
   aerialMovMulti: 2
   maxAerialMovementThroughInput: 12
   maxNumberOfJumps: 1
-  jumpForce: 22
-  wallSlidingSpeed: 2
+  jumpForce: 30
+  wallSlidingSpeed: 3
   frontChecker: {fileID: 2092065852}
   groundCheck: {fileID: 464259905}
   checkRadius: 0.25
@@ -641,8 +597,27 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   wallJumpTime: 0.05
-  xWallForce: 4
-  yWallForce: 10
+  xWallForce: 5
+  yWallForce: 14
+--- !u!114 &7231682127773765569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231682128556672888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32bb53a628381f4fbf3bee093d688c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slashDuration: 0.2
+  dashDuration: 0
+  dashSpeed: 33
+  VFXEffect: {fileID: 0}
+  firePoint: {fileID: 1950601902}
+  capsuleCollider2D: {fileID: 6821711946577659527}
+  gunPivot: {fileID: 4448891328530097419}
 --- !u!1 &7231682128609942352
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,8 +875,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1950601902}
-  - {fileID: 1140075083}
-  - {fileID: 1460379432}
   m_Father: {fileID: 4448891328530097419}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

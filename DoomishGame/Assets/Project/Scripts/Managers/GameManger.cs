@@ -73,8 +73,6 @@ public class GameManger : MonoBehaviour
         GameObject temp = allEnemies.Where(obj => obj.name == enemyName).SingleOrDefault();
         allEnemies.Remove(temp);
 
-        grapplingHook.RenewRopes(1);
-        shootingMechanic.RenewEnergy(1);
         CheckForWin();
     }
 

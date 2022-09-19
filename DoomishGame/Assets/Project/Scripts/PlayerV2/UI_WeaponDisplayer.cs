@@ -5,34 +5,37 @@ using UnityEngine.UI;
 
 public class UI_WeaponDisplayer : MonoBehaviour
 {
-    [SerializeField] Image weaponImage;
-    [SerializeField] Image skillImage;
-    [SerializeField] Image frameImage;
+    [SerializeField] Image[] tools;
+    private Transform[] toolsImagePos;
+
+    [SerializeField] Image marker;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        foreach(Transform imagePos in toolsImagePos)
+        {
+            int x = 0;
+            toolsImagePos[x].transform.position = tools[x].transform.position;
+            x++;
+        }
     }
 
-    public void AvaiableNotUsed()
+    public void moveMarker(int currentTool)
     {
-
+        marker.transform.position = tools[currentTool].transform.position;
     }
 
-    public void AvaiableUsed()
+    public void makeToolAvaiable(int toolAgainAvaiable)
     {
-
+        tools[toolAgainAvaiable].color = Color.white;
     }
 
-    public void NotAvaiableNotUsed()
+    public void makeToolUnavaiable(int usedTool)
     {
-
-    }
-
-    public void NotAvaiableUsed()
-    {
-
+        tools[usedTool].color = Color.red;
     }
 
 }

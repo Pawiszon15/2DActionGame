@@ -28,7 +28,7 @@ public class Katana : MonoBehaviour
 
     private void Awake()
     {
-        rb2d = GetComponent<Rigidbody2D>();        
+        rb2d = GetComponentInParent<Rigidbody2D>();        
     }
 
     void Start()

@@ -94,7 +94,6 @@ public class CharacterMovement : MonoBehaviour
         if(wallSliding == true)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -wallSlidingSpeed, float.MaxValue));
-            Debug.Log("wall sliding");
         }
 
         if(wallSliding && Input.GetKeyDown(KeyCode.Space))

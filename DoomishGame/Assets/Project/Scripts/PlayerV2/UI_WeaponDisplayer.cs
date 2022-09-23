@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UI_WeaponDisplayer : MonoBehaviour
 {
     [SerializeField] Image[] tools;
-    private Transform[] toolsImagePos;
+    [SerializeField] Transform[] toolsImagePos;
 
     [SerializeField] Image marker;
 
@@ -15,12 +15,7 @@ public class UI_WeaponDisplayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(Transform imagePos in toolsImagePos)
-        {
-            int x = 0;
-            toolsImagePos[x].transform.position = tools[x].transform.position;
-            x++;
-        }
+
     }
 
     public void moveMarker(int currentTool)
@@ -30,7 +25,7 @@ public class UI_WeaponDisplayer : MonoBehaviour
 
     public void makeToolAvaiable(int toolAgainAvaiable)
     {
-        tools[toolAgainAvaiable].color = Color.white;
+        tools[toolAgainAvaiable].color = Color.green;
     }
 
     public void makeToolUnavaiable(int usedTool)

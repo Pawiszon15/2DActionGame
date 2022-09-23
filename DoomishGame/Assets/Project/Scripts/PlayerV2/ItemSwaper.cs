@@ -5,9 +5,9 @@ using UnityEngine;
 public class ItemSwaper : MonoBehaviour
 {
     [SerializeField] GameObject[] allTools;
-    [SerializeField] float[] toolCooldowns;
+    [SerializeField] float[] allToolsCooldown;
     [SerializeField] UI_WeaponDisplayer weaponDisplayer;
-
+    [SerializeField] bool[] weaponAvaiability;
     private int currentTool;
 
     // Start is called before the first frame update
@@ -32,8 +32,12 @@ public class ItemSwaper : MonoBehaviour
             {
                 allTools[currentTool].SetActive(false);
                 currentTool++;
-                allTools[currentTool].SetActive(true);
                 weaponDisplayer.moveMarker(currentTool);
+
+                if (weaponAvaiability[currentTool])
+                {
+                    allTools[currentTool].SetActive(true);
+                }
             }
         }
         
@@ -43,30 +47,36 @@ public class ItemSwaper : MonoBehaviour
             {
                 allTools[currentTool].SetActive(false);
                 currentTool--;
-                allTools[currentTool].SetActive(true);
                 weaponDisplayer.moveMarker(currentTool);
+
+                if (weaponAvaiability[currentTool])
+                {
+                    allTools[currentTool].SetActive(true);
+                }
             }
         }
     }
 
-
-    public void StartCooldownOnTool(float cooldownTime)
+    public void startCooldown(float cooldownTime)
     {
-
+        StartCoroutine(CooldownCutdown(cooldownTime));
     }
 
-    public void MakeToolAvaiableAgain()
+    public IEnumerator CooldownCutdown(float cooldownTime)
     {
+        Debug.Log("sth");
+        int usedWeapon = currentTool;
+        weaponAvaiability[usedWeapon] = false;
+        weaponDisplayer.makeToolUnavaiable(usedWeapon);
+        allTools[usedWeapon].SetActive(false);
 
-    }
+        yield return new WaitForSeconds(cooldownTime);
 
-    public void DeactivateUsedSkill()
-    {
-
-    }
-
-    private void ChangeWeapon()
-    {
-
+        weaponAvaiability[usedWeapon] = true;
+        weaponDisplayer.makeToolAvaiable(usedWeapon);
+        if(usedWeapon == currentTool)
+        {
+            allTools[usedWeapon].SetActive(true);
+        }
     }
 }

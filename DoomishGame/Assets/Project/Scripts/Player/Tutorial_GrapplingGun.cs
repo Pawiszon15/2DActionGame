@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tutorial_GrapplingGun : MonoBehaviour
 {
+    [SerializeField] float cooldown;
+
     [Header("Scripts Ref:")]
     public Tutorial_GrapplingRope grappleRope;
 
@@ -27,7 +29,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     [SerializeField] ResourceDisplayer ropesDisplay;
     [SerializeField] int maxAmountofRopes;
     private int currentAmountOfRopes;
-    
+    private ItemSwaper ItemSwaper;
 
     [Header("Rotation:")]
     [SerializeField] private bool rotateOverTime = true;
@@ -61,6 +63,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Start()
     {
+        ItemSwaper = GetComponentInParent<ItemSwaper>();
         currentAmountOfRopes = maxAmountofRopes;
         isGraplingRopeUsed = false;
         grappleRope.enabled = false;
@@ -86,6 +89,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = startingGravityScale;
             isGraplingRopeUsed = false;
+            ItemSwaper.startCooldown(cooldown);
         }
 
         //else if (Input.GetKey(KeyCode.Mouse1))

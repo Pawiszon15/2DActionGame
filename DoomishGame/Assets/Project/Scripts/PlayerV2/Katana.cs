@@ -68,7 +68,7 @@ public class Katana : MonoBehaviour
         canSlash = true;
         capsuleCollider2D.enabled = false;
         rb2d.gravityScale = deafaultGravityScale;
-        ItemSwaper.startCooldown(cooldown);
+        ItemSwaper.StartCooldown(cooldown);
         //StartCoroutine(ItemSwaper.CooldownCutdown(cooldown));
     }
 

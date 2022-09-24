@@ -57,7 +57,7 @@ public class ItemSwaper : MonoBehaviour
         }
     }
 
-    public void startCooldown(float cooldownTime)
+    public void StartCooldown(float cooldownTime)
     {
         StartCoroutine(CooldownCutdown(cooldownTime));
     }

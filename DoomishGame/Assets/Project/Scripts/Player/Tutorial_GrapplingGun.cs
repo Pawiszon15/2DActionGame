@@ -89,7 +89,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = startingGravityScale;
             isGraplingRopeUsed = false;
-            ItemSwaper.startCooldown(cooldown);
+            ItemSwaper.StartCooldown(cooldown);
         }
 
         //else if (Input.GetKey(KeyCode.Mouse1))

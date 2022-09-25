@@ -5,10 +5,15 @@ using UnityEngine;
 public class ItemSwaper : MonoBehaviour
 {
     [SerializeField] GameObject[] allTools;
-    [SerializeField] float[] allToolsCooldown;
-    [SerializeField] UI_WeaponDisplayer weaponDisplayer;
     [SerializeField] bool[] weaponAvaiability;
+
+    private UI_WeaponDisplayer weaponDisplayer;
     private int currentTool;
+
+    private void Awake()
+    {
+        weaponDisplayer = FindObjectOfType<UI_WeaponDisplayer>();
+    }
 
     // Start is called before the first frame update
     void Start()

@@ -13,6 +13,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] float velocity;
 
     [Header("References")]
+    [SerializeField] CircleCollider2D explosionTrigger;
     private Rigidbody2D rb;
 
     private void Awake()
@@ -40,21 +41,25 @@ public class Grenade : MonoBehaviour
     IEnumerator Explode()
     {
         yield return new WaitForSeconds(timeToExplode);
+        explosionTrigger.radius = explosionRadius + 1;
+        explosionTrigger.enabled = true;
+        yield return new WaitForSeconds(0.05f);
         var inExplosionRadius = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
-        foreach(Collider2D collider2d in inExplosionRadius)
+        foreach (Collider2D collider2d in inExplosionRadius)
         {
             Rigidbody2D rigidbody2D = collider2d.GetComponent<Rigidbody2D>();
-            if(rigidbody2D != null)
+
+            if (rigidbody2D != null)
             {
                 //other effect for the player, and other effect for the enemies
                 Vector2 distanceVector = collider2d.transform.position - transform.position;
                 if(distanceVector.magnitude > 0)
                 {
-                    float explosionPower = explosionForce/distanceVector.magnitude;
+                    //rigidbody2D.velocity = Vector2.zero;
+                    float explosionPower = explosionForce; /*/distanceVector.magnitude;*/
                     rigidbody2D.AddForce(explosionPower * distanceVector.normalized, ForceMode2D.Impulse);
                 }
-
             }
         }
 

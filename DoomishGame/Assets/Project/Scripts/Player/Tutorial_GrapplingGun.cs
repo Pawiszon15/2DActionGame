@@ -25,10 +25,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     public SpringJoint2D m_springJoint2D;
     public Rigidbody2D m_rigidbody;
 
-    [Header("Ropes available:")]
-    [SerializeField] ResourceDisplayer ropesDisplay;
-    [SerializeField] int maxAmountofRopes;
-    private int currentAmountOfRopes;
+    [Header("Tool available:")]
     private ItemSwaper ItemSwaper;
 
     [Header("Rotation:")]
@@ -64,17 +61,15 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     private void Start()
     {
         ItemSwaper = GetComponentInParent<ItemSwaper>();
-        currentAmountOfRopes = maxAmountofRopes;
         isGraplingRopeUsed = false;
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
-        ropesDisplay.ChangeResourceAmount(currentAmountOfRopes);
         startingGravityScale = m_rigidbody.gravityScale;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !isGraplingRopeUsed && currentAmountOfRopes > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isGraplingRopeUsed)
         {
             SetGrapplePoint();
             isGraplingRopeUsed = true;
@@ -123,15 +118,6 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         }
     }
 
-    public void RenewRopes(int amountOfRopes)
-    {
-        if(currentAmountOfRopes < maxAmountofRopes)
-        {
-            currentAmountOfRopes += amountOfRopes;
-            ropesDisplay.ChangeResourceAmount(currentAmountOfRopes);
-        }
-    }
-
     void RotateGun(Vector3 lookPoint, bool allowRotationOverTime)
     {
         Vector3 distanceVector = lookPoint - gunPivot.position;
@@ -167,9 +153,6 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     public void Grapple()
     {
-        currentAmountOfRopes--;
-        ropesDisplay.ChangeResourceAmount(currentAmountOfRopes);
-
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {

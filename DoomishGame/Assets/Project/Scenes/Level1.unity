@@ -1684,6 +1684,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2901483747606244663, guid: aca06dea1aea2b04cafd49cfc7b52c93, type: 3}
+      propertyPath: gameManger
+      value: 
+      objectReference: {fileID: 1385125152}
     - target: {fileID: 2901483748420697492, guid: aca06dea1aea2b04cafd49cfc7b52c93, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2878,6 +2882,18 @@ PrefabInstance:
       propertyPath: resourceDisplayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 713494488, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: cooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 736714153, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: cooldown
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 736714153, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: VFXEffect
+      value: 
+      objectReference: {fileID: 1586562077}
     - target: {fileID: 861292762, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: energyDisplayer
       value: 

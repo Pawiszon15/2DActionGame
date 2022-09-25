@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class AirCorridor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Properties of air corridor")]
+    [SerializeField] float airForce;
+
+    [Header("References")]
+    private BoxCollider2D boxCollider;
+
+    private void Awake()
     {
-        
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        Debug.Log("sth on trigger stay");
+        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+        rb.AddForce(gameObject.transform.up * airForce);
     }
 }

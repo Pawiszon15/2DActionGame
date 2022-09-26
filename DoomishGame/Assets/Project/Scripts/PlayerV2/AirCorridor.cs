@@ -17,8 +17,11 @@ public class AirCorridor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("sth on trigger stay");
-        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        rb.AddForce(gameObject.transform.up * airForce);
+        if(collision != null)
+        {
+            Debug.Log("sth on trigger stay");
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            rb.AddForce(gameObject.transform.up * airForce);
+        }
     }
 }

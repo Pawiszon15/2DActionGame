@@ -39,21 +39,46 @@ public class AirCorridorLuncher : MonoBehaviour
     {
         Vector2 placeOfSpawn;
         Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
-        float corridorRotation;
+        float corridorRotation = 0f;
         
-
         RaycastHit2D hit = Physics2D.Linecast(firePoint1.transform.position, firePoint1.transform.right * distanceOfRayCast);
         RaycastHit2D hit2 = Physics2D.Linecast(firePoint2.transform.position, firePoint2.transform.right * distanceOfRayCast);
 
+        
+
         placeOfSpawn = hit2.point;
 
-        var hitX_1 =Mathf.Round(hit.point.x * 10f) * 0.1f; var hitY_1 = Mathf.Round(hit.point.y * 10f) *0.1f; 
-        var hitX_2 = Mathf.Round(hit2.point.x * 10f) * 0.1f; var hitY_2 = Mathf.Round(hit2.point.y * 10f) * 0.1f;
-       
-        if (hitY_1 == hitY_2 && playerPos.y < hitY_2) {corridorRotation = 180f; StartCoroutine(UseOfCorridorLuncher(placeOfSpawn, corridorRotation));}
-        if (hitX_1 == hitX_2 && playerPos.x <= hitX_2) { corridorRotation = 90f; StartCoroutine(UseOfCorridorLuncher(placeOfSpawn, corridorRotation));}
-        if (hitX_1 == hitX_2 && playerPos.x > hitX_2) { corridorRotation = 270f; StartCoroutine(UseOfCorridorLuncher(placeOfSpawn, corridorRotation));}
-        else { corridorRotation = 0f; StartCoroutine(UseOfCorridorLuncher(placeOfSpawn, corridorRotation)); }
+        float hitX_1 = Mathf.Round(hit.point.x * 10f) * 0.1f;
+        float hitY_1 = Mathf.Round(hit.point.y * 10f) *0.1f;
+        float hitX_2 = Mathf.Round(hit2.point.x * 10f) * 0.1f;
+        float hitY_2 = Mathf.Round(hit2.point.y * 10f) * 0.1f;
+
+        Debug.Log(" Hit 1X -" + hitX_1.ToString());
+        Debug.Log(" Hit 2X - " + hitX_2.ToString());
+        Debug.Log("Hit 1Y -" + hitY_1.ToString());
+        Debug.Log(" Hit 2y - " + hitY_2.ToString());
+
+        if (hitY_1 == hitY_2 && playerPos.y < hitY_2) 
+        {
+            corridorRotation = 180f;
+        }
+
+        if (hitX_1 == hitX_2 && playerPos.x <= hitX_2) 
+        { 
+            corridorRotation = 90f;
+        }
+
+        if (hitX_1 == hitX_2 && playerPos.x > hitX_2) 
+        { 
+            corridorRotation = 270f;
+        }
+
+        if (hitY_1 == hitY_2 && playerPos.y >= hitY_2)
+        { 
+            corridorRotation = 0f; 
+        }
+
+        StartCoroutine(UseOfCorridorLuncher(placeOfSpawn, corridorRotation));
     }
 
     IEnumerator UseOfCorridorLuncher(Vector2 corridorSpawnPos, float corridorRotation)

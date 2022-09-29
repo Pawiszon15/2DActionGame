@@ -16,6 +16,7 @@ public class Railgun : MonoBehaviour
     [SerializeField] GameObject railGunLine;
     [SerializeField] Transform firePoint;
     private ItemSwaper itemSwaper;
+    private ToolCooldown toolCooldown;
 
 
 
@@ -23,6 +24,7 @@ public class Railgun : MonoBehaviour
     void Start()
     {
         itemSwaper = FindObjectOfType<ItemSwaper>();
+        toolCooldown = GetComponent<ToolCooldown>();
         time = 0f;
         playerReachedMaxTime = false;
     }
@@ -30,7 +32,7 @@ public class Railgun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Mouse0))
+        if(Input.GetKey(KeyCode.Mouse0) && toolCooldown.leftMouseUse > 0)
         {
             time = time + Time.deltaTime;
             if(time >= maxTimeOfCharging)
@@ -61,5 +63,7 @@ public class Railgun : MonoBehaviour
         bullet.transform.localScale = new Vector3(rangeOfShot, bullet.transform.localScale.x, bullet.transform.localScale.y);
         bullet.transform.parent = firePoint.transform;
         Destroy(bullet, lineLifeTime);
+        itemSwaper.TryToStartCooldown();
+        --toolCooldown.leftMouseUse;
     }
 }

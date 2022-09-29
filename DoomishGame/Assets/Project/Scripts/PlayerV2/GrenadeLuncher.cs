@@ -5,24 +5,23 @@ using UnityEngine;
 
 public class GrenadeLuncher : MonoBehaviour
 {
-    [Header("Grenade Luncher Properties")]
-    [SerializeField] float cooldown;
-
     [Header("References")]
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject grenade;
 
     private ItemSwaper itemSwaper;
-    private bool canShot = true;
+    private ToolCooldown toolCooldown;
+    private float cooldown;
 
     private void Awake()
     {
+        toolCooldown = GetComponent<ToolCooldown>();
         itemSwaper = FindObjectOfType<ItemSwaper>();  
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0) && canShot)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && toolCooldown.leftMouseUse > 0)
         {
             ShootGrenade();
         }
@@ -30,9 +29,8 @@ public class GrenadeLuncher : MonoBehaviour
 
     private void ShootGrenade()
     {
-        canShot = false;
+        --toolCooldown.leftMouseUse;  
         Instantiate(grenade, firePoint.transform.position, firePoint.rotation);
-        canShot = true;
-        itemSwaper.StartCooldown(cooldown);
+        itemSwaper.TryToStartCooldown();
     }
 }

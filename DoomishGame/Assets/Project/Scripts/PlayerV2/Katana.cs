@@ -27,6 +27,7 @@ public class Katana : MonoBehaviour
     private Rigidbody2D rb2d;
     private Transform playerTransform;
     private ItemSwaper ItemSwaper;
+    private ToolCooldown toolCooldown;
 
     private void Awake()
     {
@@ -35,13 +36,14 @@ public class Katana : MonoBehaviour
 
     void Start()
     {
+        toolCooldown = GetComponent<ToolCooldown>();
         ItemSwaper = GetComponentInParent<ItemSwaper>();
         deafaultGravityScale = rb2d.gravityScale;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && canSlash)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && canSlash && toolCooldown.leftMouseUse > 0)
         {
             Slash();
         }
@@ -68,8 +70,8 @@ public class Katana : MonoBehaviour
         canSlash = true;
         capsuleCollider2D.enabled = false;
         rb2d.gravityScale = deafaultGravityScale;
-        ItemSwaper.StartCooldown(cooldown);
-        //StartCoroutine(ItemSwaper.CooldownCutdown(cooldown));
+        ItemSwaper.TryToStartCooldown();
+        --toolCooldown.leftMouseUse;
     }
 
 }

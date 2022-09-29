@@ -6,6 +6,8 @@ public class ItemSwaper : MonoBehaviour
 {
     [SerializeField] GameObject[] allTools;
     [SerializeField] bool[] weaponAvaiability;
+    [SerializeField] int[] howManyTimeUsed;
+    [SerializeField] float[] toolCooldown;
 
     private UI_WeaponDisplayer weaponDisplayer;
     private int currentTool;
@@ -13,9 +15,13 @@ public class ItemSwaper : MonoBehaviour
     private void Awake()
     {
         weaponDisplayer = FindObjectOfType<UI_WeaponDisplayer>();
+
+        for (int i = 0; i < allTools.Length; i++)
+        {
+            toolCooldown[i] = allTools[i].GetComponent<ToolCooldown>().cooldown;
+        }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         foreach(var tool in allTools)
@@ -28,13 +34,13 @@ public class ItemSwaper : MonoBehaviour
         weaponDisplayer.moveMarker(currentTool);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (currentTool != 2)
             {
+                IfSthUsedStartCooldown(currentTool);
                 allTools[currentTool].SetActive(false);
                 currentTool++;
                 weaponDisplayer.moveMarker(currentTool);
@@ -50,6 +56,7 @@ public class ItemSwaper : MonoBehaviour
         {
             if(currentTool != 0)
             {
+                IfSthUsedStartCooldown(currentTool);
                 allTools[currentTool].SetActive(false);
                 currentTool--;
                 weaponDisplayer.moveMarker(currentTool);
@@ -62,9 +69,23 @@ public class ItemSwaper : MonoBehaviour
         }
     }
 
-    public void StartCooldown(float cooldownTime)
+
+    public void TryToStartCooldown()
     {
-        StartCoroutine(CooldownCutdown(cooldownTime));
+        if (howManyTimeUsed[currentTool] > 0)
+        {
+            StartCoroutine(CooldownCutdown(toolCooldown[currentTool]));
+        }
+        ++howManyTimeUsed[currentTool];
+    }
+
+    private void IfSthUsedStartCooldown(int usedTool)
+    {
+        if(howManyTimeUsed[currentTool] > 0)
+        {
+            StartCoroutine(CooldownCutdown(toolCooldown[usedTool]));
+        }
+        howManyTimeUsed[usedTool] = 0;
     }
 
     public IEnumerator CooldownCutdown(float cooldownTime)
@@ -78,6 +99,7 @@ public class ItemSwaper : MonoBehaviour
         yield return new WaitForSeconds(cooldownTime);
 
         weaponAvaiability[usedWeapon] = true;
+        howManyTimeUsed[usedWeapon] = 0;
         weaponDisplayer.makeToolAvaiable(usedWeapon);
         if(usedWeapon == currentTool)
         {

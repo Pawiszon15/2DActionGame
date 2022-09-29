@@ -807,6 +807,21 @@ MonoBehaviour:
   firePoint2: {fileID: 2146681317}
   airCorridor: {fileID: 255840838}
   player: {fileID: 1857850896}
+--- !u!114 &750718719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750718712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e1efe2fecfe4ab4c2fd07850bca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  leftMouseUse: 0
+  rightMouseUse: 0
 --- !u!1 &763811486
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +955,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &819403212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 713494485, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+  m_PrefabInstance: {fileID: 7231682127773765546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &819403216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819403212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e1efe2fecfe4ab4c2fd07850bca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  leftMouseUse: 2
+  rightMouseUse: 1
 --- !u!1 &839652907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3229,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1831427739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7231682128266977379, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+  m_PrefabInstance: {fileID: 7231682127773765546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1831427743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831427739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e1efe2fecfe4ab4c2fd07850bca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  leftMouseUse: 1
+  rightMouseUse: 1
 --- !u!1 &1857850896 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7231682128556672888, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
@@ -3795,6 +3850,26 @@ PrefabInstance:
       propertyPath: weaponDisplayer
       value: 
       objectReference: {fileID: 1475819838}
+    - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: toolCooldown.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: howManyTimeUsed.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: toolCooldown.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: toolCooldown.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: toolCooldown.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2030043732, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: firePoint
       value: 

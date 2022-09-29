@@ -819,9 +819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708e1efe2fecfe4ab4c2fd07850bca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0
-  leftMouseUse: 0
-  rightMouseUse: 0
+  cooldown: 4
+  leftMouseUse: 1
+  rightMouseUse: 1
 --- !u!1 &763811486
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,8 +972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708e1efe2fecfe4ab4c2fd07850bca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
-  leftMouseUse: 2
+  cooldown: 4
+  leftMouseUse: 1
   rightMouseUse: 1
 --- !u!1 &839652907
 GameObject:
@@ -2283,8 +2283,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307513363}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -4.5, y: 3.62, z: 0}
-  m_LocalScale: {x: 0.9727921, y: 3.5836232, z: 0.54038}
+  m_LocalPosition: {x: -5.23, y: 4.53, z: 0}
+  m_LocalScale: {x: 6.7689805, y: 1.2990634, z: 0.54038}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1889619456}
@@ -2549,7 +2549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472355585}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -11.21, y: 7.4, z: 0}
+  m_LocalPosition: {x: -13.46, y: 7.4, z: 0}
   m_LocalScale: {x: 1.8002, y: 6.6316724, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3860,15 +3860,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: toolCooldown.Array.data[0]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: toolCooldown.Array.data[1]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1490224227, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: toolCooldown.Array.data[2]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2030043732, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: firePoint

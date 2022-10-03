@@ -18,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float maxAerialMovementThroughInput;
     [SerializeField] private int maxNumberOfJumps;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float temJumpForceAfterSlide;
+    private float defJumpForce;
 
     [Header("Wall slide")]
     [SerializeField] float wallSlidingSpeed;
@@ -37,12 +39,12 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float xWallForce;
     [SerializeField] float yWallForce;
     private bool walljumping;
-    
+
 
     private float moveHorizontal;
     private float moveVertical;
 
-    private bool isGrounded;
+    public bool isGrounded;
     private int jumpsAvailable;
 
 
@@ -53,6 +55,7 @@ public class CharacterMovement : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         isGrounded = true;
         jumpsAvailable = maxNumberOfJumps;
+        defJumpForce = jumpForce;
     }
 
     // Update is called once per frame
@@ -74,7 +77,7 @@ public class CharacterMovement : MonoBehaviour
         {
             Flip();
         }
-        else if(moveHorizontal < 0f && facingRight == true)
+        else if (moveHorizontal < 0f && facingRight == true)
         {
             Flip();
         }
@@ -85,24 +88,24 @@ public class CharacterMovement : MonoBehaviour
         if (isFrontTouchingWall == true && isGrounded == false && moveHorizontal != 0)
         {
             wallSliding = true;
-        }    
+        }
         else
         {
             wallSliding = false;
         }
 
-        if(wallSliding == true)
+        if (wallSliding == true)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, Mathf.Clamp(rb2D.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if(wallSliding && Input.GetKeyDown(KeyCode.Space))
+        if (wallSliding && Input.GetKeyDown(KeyCode.Space))
         {
             walljumping = true;
             Invoke("setWallJumpingToFalse", wallJumpTime);
         }
 
-        if(walljumping)
+        if (walljumping)
         {
             rb2D.velocity = new Vector2(-moveHorizontal * xWallForce, yWallForce);
 
@@ -111,7 +114,7 @@ public class CharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(isGrounded)
+        if (isGrounded)
         {
             Vector2 movement = new Vector2(moveHorizontal * maxMovementSpeed, rb2D.velocity.y);
             rb2D.velocity = Vector2.Lerp(rb2D.velocity, movement, accelerationSpeed);
@@ -120,9 +123,9 @@ public class CharacterMovement : MonoBehaviour
         if (!isGrounded && moveHorizontal != 0 && Mathf.Abs(rb2D.velocity.x) < Mathf.Abs(maxAerialMovementThroughInput))
         {
             //Make it work so more velocity player has less it will change that
-            Vector2 movement = new Vector2(moveHorizontal * maxMovementSpeed * aerialMovMulti , 0);
-//            if (max < rb2D.velocity.x + movement.x)
-                rb2D.AddForce(movement); 
+            Vector2 movement = new Vector2(moveHorizontal * maxMovementSpeed * aerialMovMulti, 0);
+            //            if (max < rb2D.velocity.x + movement.x)
+            rb2D.AddForce(movement);
         }
 
         rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, maxPlayerVelocity);
@@ -138,4 +141,18 @@ public class CharacterMovement : MonoBehaviour
     {
         walljumping = false;
     }
+
+    public void StartJumpBoost(float timeOfBoost)
+    {
+        StartCoroutine(TempHigherJump(timeOfBoost));
+    }
+
+    IEnumerator TempHigherJump(float timeOfBoost)
+    {
+        jumpForce = temJumpForceAfterSlide;
+        yield return new WaitForSeconds(timeOfBoost);
+        jumpForce = defJumpForce;
+    }
+
+
 }

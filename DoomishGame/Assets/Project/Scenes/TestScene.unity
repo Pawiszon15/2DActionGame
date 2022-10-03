@@ -972,7 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708e1efe2fecfe4ab4c2fd07850bca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 4
+  cooldown: 1
   leftMouseUse: 1
   rightMouseUse: 1
 --- !u!1 &839652907
@@ -3254,6 +3254,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7231682128556672888, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
   m_PrefabInstance: {fileID: 7231682127773765546}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1857850899 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7231682128556672895, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+  m_PrefabInstance: {fileID: 7231682127773765546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1879604766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3842,6 +3847,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 713494485, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1857850896}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: invTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: dashTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: playerRb
+      value: 
+      objectReference: {fileID: 1857850899}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: dashSpeed
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: playerMaxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: accelerationValue
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 713494489, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: howMuchItChangePlayerSize
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 736714153, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: VFXEffect
       value: 
@@ -3921,6 +3962,14 @@ PrefabInstance:
     - target: {fileID: 7231682128266977377, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: ropesDisplay
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: maxPlayerVelocity
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: temJumpForceAfterSlide
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7231682128556672888, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_Name

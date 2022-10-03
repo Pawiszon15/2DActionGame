@@ -14,7 +14,7 @@ public class ToolCooldown : MonoBehaviour
     private int rightMouseUseDefault;
     private bool doOnce = true;
 
-    private void Start()
+    private void Awake()
     {
         leftMouseUseDefault = leftMouseUse;
         rightMouseUseDefault = rightMouseUse;

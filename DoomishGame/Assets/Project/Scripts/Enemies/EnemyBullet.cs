@@ -28,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
             manger.ResetScene();
         }
 
-        else
+        else if(collision.gameObject.tag == "Platform")
         {
             Destroy(this.gameObject);
         }

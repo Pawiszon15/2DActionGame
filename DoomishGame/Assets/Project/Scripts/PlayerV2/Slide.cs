@@ -42,10 +42,12 @@ public class Slide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerInput = Input.GetAxis("Horizontal");
+
         Vector2 slideVector = Vector2.zero;
         bool isGroundedLocally = CharacterMovement.isGrounded;         
 
-        if (Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.rightMouseUse > 0 && isGroundedLocally)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.rightMouseUse > 0 && isGroundedLocally && playerInput != 0)
         {
             StartCoroutine(SlideDash());
         }
@@ -65,10 +67,8 @@ public class Slide : MonoBehaviour
 
     IEnumerator SlideDash()
     {
-        playerInput = Input.GetAxis("Horizontal");
-
         CharacterMovement.StartJumpBoost(2 * dashTime);
-        player.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+        player.transform.localScale = new Vector3(1f, 0.6f, 0.7f);
         invTimeActive = true;
         yield return new WaitForSeconds(invTime);
         invTimeActive = false;

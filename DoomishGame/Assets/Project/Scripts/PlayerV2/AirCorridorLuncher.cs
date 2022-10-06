@@ -69,12 +69,12 @@ public class AirCorridorLuncher : MonoBehaviour
             corridorRotation = 90f;
         }
 
-        if (hitX_1 == hitX_2 && playerPos.x > hitX_2) 
-        { 
+        if (hitX_1 == hitX_2 && playerPos.x > hitX_2)
+        {
             corridorRotation = 270f;
         }
 
-        if (hitY_1 == hitY_2 && playerPos.y >= hitY_2)
+        else //(hitY_1 == hitY_2 && playerPos.y >= hitY_2)
         { 
             corridorRotation = 0f; 
         }

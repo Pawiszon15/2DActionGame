@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Tutorial_GrapplingGun : MonoBehaviour
 {
@@ -74,13 +75,12 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) && !isGraplingRopeUsed && toolCooldown.rightMouseUse > 0)
         {
             SetGrapplePoint();
-            isGraplingRopeUsed = true;
         }
 
       
 
         //else if (Input.GetKeyUp(KeyCode.Mouse1))
-        else if (isGraplingRopeUsed && Input.GetKeyDown(KeyCode.Mouse1))
+        else if (isGraplingRopeUsed && Input.GetKeyUp(KeyCode.Mouse1))
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
@@ -88,6 +88,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             isGraplingRopeUsed = false;
             ItemSwaper.TryToStartCooldown();
             --toolCooldown.rightMouseUse;
+            Debug.Log("sth rope");
         }
 
         //else if (Input.GetKey(KeyCode.Mouse1))
@@ -149,6 +150,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
                     grapplePoint = _hit.point;
                     grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
                     grappleRope.enabled = true;
+                    isGraplingRopeUsed = true;
                 }
             }
         }

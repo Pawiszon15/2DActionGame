@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
 {
 
     Rigidbody2D rb2D = null;
+    [Header("")]
 
     [Header("Grounded movement")]
     [SerializeField] private float maxMovementSpeed;
@@ -46,7 +47,7 @@ public class CharacterMovement : MonoBehaviour
 
     public bool isGrounded;
     private int jumpsAvailable;
-
+    private float maxDefaultVelocity;
 
 
     // Start is called before the first frame update
@@ -56,6 +57,7 @@ public class CharacterMovement : MonoBehaviour
         isGrounded = true;
         jumpsAvailable = maxNumberOfJumps;
         defJumpForce = jumpForce;
+        maxDefaultVelocity = maxPlayerVelocity;
     }
 
     // Update is called once per frame
@@ -129,6 +131,11 @@ public class CharacterMovement : MonoBehaviour
         }
 
         rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, maxPlayerVelocity);
+
+        if(rb2D.velocity.magnitude >= maxPlayerVelocity)
+        {
+
+        }
     }
 
     private void Flip()
@@ -147,6 +154,11 @@ public class CharacterMovement : MonoBehaviour
         StartCoroutine(TempHigherJump(timeOfBoost));
     }
 
+    public void StartVelocityBoost(float maxTempVelocity, float timeOfBost)
+    {
+        StartCoroutine(TempHigherVelocity(maxTempVelocity, timeOfBost));
+    }
+
     IEnumerator TempHigherJump(float timeOfBoost)
     {
         jumpForce = temJumpForceAfterSlide;
@@ -154,5 +166,11 @@ public class CharacterMovement : MonoBehaviour
         jumpForce = defJumpForce;
     }
 
+    IEnumerator TempHigherVelocity(float maxTempVelocity, float timeOfBoost)
+    {
+        maxPlayerVelocity = maxTempVelocity;
+        yield return new WaitForSeconds(timeOfBoost);
+        maxPlayerVelocity = maxDefaultVelocity;
+    }
 
 }

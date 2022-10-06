@@ -22,6 +22,7 @@ public class Katana : MonoBehaviour
 
     [Header("References")]
     [SerializeField] CapsuleCollider2D capsuleCollider2D;
+    [SerializeField] CharacterMovement chMovement;
     [SerializeField] Transform gunPivot;
 
     private Rigidbody2D rb2d;
@@ -32,6 +33,7 @@ public class Katana : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponentInParent<Rigidbody2D>();
+        chMovement = GetComponentInParent<CharacterMovement>();
     }
 
     void Start()
@@ -60,7 +62,6 @@ public class Katana : MonoBehaviour
         rb2d.velocity = Vector2.zero;
         Vector2 vector2 = gunPivot.transform.right;
         rb2d.AddForce(vector2 * dashSpeed, ForceMode2D.Impulse);
-        
         StartCoroutine(SlashDuration());
     }
 

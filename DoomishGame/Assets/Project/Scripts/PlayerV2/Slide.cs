@@ -68,7 +68,8 @@ public class Slide : MonoBehaviour
     IEnumerator SlideDash()
     {
         CharacterMovement.StartJumpBoost(2 * dashTime);
-        player.transform.localScale = new Vector3(1f, 0.6f, 0.7f);
+        player.transform.localScale = new Vector3(1f, 0.6f, 1);
+        playerRb.AddForce(new Vector2(0, -5f));
         invTimeActive = true;
         yield return new WaitForSeconds(invTime);
         invTimeActive = false;

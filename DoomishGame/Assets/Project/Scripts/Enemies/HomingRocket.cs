@@ -39,9 +39,8 @@ public class HomingRocket : MonoBehaviour
             gameManger.ResetScene();             
         }
 
-        else if(collision.gameObject.tag != "Enemy")
+        else if(collision.gameObject.tag == "Platform")
         {
-            Debug.Log("Rocket has been destroyed");
             Destroy(gameObject);
         }
     }

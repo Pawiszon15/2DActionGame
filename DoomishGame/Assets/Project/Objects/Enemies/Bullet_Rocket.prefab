@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207ad6bbf41a07e46aed6773fbcfafa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketSpeed: 5
-  rotateSpeed: 522
+  rocketSpeed: 11
+  rotateSpeed: 240

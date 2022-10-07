@@ -210,3 +210,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airForce: 150
+  liveTime: 3
+  airCorridor: {fileID: 1327576670026011756}

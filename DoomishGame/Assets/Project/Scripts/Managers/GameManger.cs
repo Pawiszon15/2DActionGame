@@ -14,7 +14,7 @@ public class GameManger : MonoBehaviour
     [SerializeField] List<Enemy_RocketLuncher> allRocketLunchers;
     [SerializeField] List<RailGunner> allRailGunners;
 
-    private bool isFirstEnemy;
+    //private bool isFirstEnemy;
     private TimeDisplay timeDisplay;
     
     private Tutorial_GrapplingGun grapplingHook;
@@ -22,7 +22,7 @@ public class GameManger : MonoBehaviour
 
     private void Awake()
     {
-        foreach (Enemuy_FloorDeneyer denayer in allFloorDenayers)
+/*        foreach (Enemuy_FloorDeneyer denayer in allFloorDenayers)
         {
             denayer.enabled = false;
         }
@@ -41,8 +41,7 @@ public class GameManger : MonoBehaviour
         {
             railGunner.enabled = false;
         }
-
-        isFirstEnemy = true;
+*/
     }
 
     private void Start()
@@ -63,12 +62,12 @@ public class GameManger : MonoBehaviour
 
     public void KilledEnemy(string enemyName)
     {
-        if(isFirstEnemy)
+/*        if(isFirstEnemy)
         {
             ActivateEnemies();
             timeDisplay.TurnOffTimerBeforeAlarm();
             isFirstEnemy = false;
-        }
+        }*/
 
         GameObject temp = allEnemies.Where(obj => obj.name == enemyName).SingleOrDefault();
         allEnemies.Remove(temp);
@@ -90,7 +89,7 @@ public class GameManger : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void ActivateEnemies()
+/*    public void ActivateEnemies()
     {
         foreach (Enemuy_FloorDeneyer denayer in allFloorDenayers)
         {
@@ -111,5 +110,5 @@ public class GameManger : MonoBehaviour
         {
             railGunner.enabled = true;
         }
-    }
+    }*/
 }

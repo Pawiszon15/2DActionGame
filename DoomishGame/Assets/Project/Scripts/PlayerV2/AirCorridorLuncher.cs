@@ -86,7 +86,7 @@ public class AirCorridorLuncher : MonoBehaviour
     {
         yield return new WaitForSeconds(setupTime);
         Instantiate(airCorridor, corridorSpawnPos, Quaternion.Euler(gameObject.transform.rotation.x, gameObject.transform.rotation.y, corridorRotation));
-        itemSwaper.TryToStartCooldown();
         --toolCooldown.rightMouseUse;
+        itemSwaper.TryToStartCooldown();
     }
 }

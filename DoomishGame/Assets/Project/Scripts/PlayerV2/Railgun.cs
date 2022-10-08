@@ -63,7 +63,7 @@ public class Railgun : MonoBehaviour
         bullet.transform.localScale = new Vector3(rangeOfShot, bullet.transform.localScale.x, bullet.transform.localScale.y);
         bullet.transform.parent = firePoint.transform;
         Destroy(bullet, lineLifeTime);
-        itemSwaper.TryToStartCooldown();
         --toolCooldown.leftMouseUse;
+        itemSwaper.TryToStartCooldown();
     }
 }

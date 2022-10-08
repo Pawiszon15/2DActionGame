@@ -10,11 +10,13 @@ public class ItemSwaper : MonoBehaviour
     [SerializeField] float[] toolCooldown;
 
     private UI_WeaponDisplayer weaponDisplayer;
+    private Crosshair crosshair;
     private int currentTool;
 
     private void Awake()
     {
         weaponDisplayer = FindObjectOfType<UI_WeaponDisplayer>();
+        crosshair = FindObjectOfType<Crosshair>();
 
         for (int i = 0; i < allTools.Length; i++)
         {
@@ -32,6 +34,7 @@ public class ItemSwaper : MonoBehaviour
         allTools[1].SetActive(true);
         currentTool = 1;
         weaponDisplayer.moveMarker(currentTool);
+        crosshair.ShowAvaiability(currentTool);
     }
 
     void Update()
@@ -44,6 +47,7 @@ public class ItemSwaper : MonoBehaviour
                 allTools[currentTool].SetActive(false);
                 currentTool++;
                 weaponDisplayer.moveMarker(currentTool);
+                crosshair.ShowAvaiability(currentTool);
 
                 if (weaponAvaiability[currentTool])
                 {
@@ -60,6 +64,7 @@ public class ItemSwaper : MonoBehaviour
                 allTools[currentTool].SetActive(false);
                 currentTool--;
                 weaponDisplayer.moveMarker(currentTool);
+                crosshair.ShowAvaiability(currentTool);
 
                 if (weaponAvaiability[currentTool])
                 {
@@ -72,6 +77,8 @@ public class ItemSwaper : MonoBehaviour
 
     public void TryToStartCooldown()
     {
+        crosshair.ShowAvaiability(currentTool);
+
         if (howManyTimeUsed[currentTool] > 0)
         {
             StartCoroutine(CooldownCutdown(toolCooldown[currentTool]));
@@ -95,6 +102,7 @@ public class ItemSwaper : MonoBehaviour
         weaponAvaiability[usedWeapon] = false;
         weaponDisplayer.makeToolUnavaiable(usedWeapon);
         allTools[usedWeapon].SetActive(false);
+        crosshair.ShowAvaiability(usedWeapon);
 
         yield return new WaitForSeconds(cooldownTime);
 
@@ -104,6 +112,7 @@ public class ItemSwaper : MonoBehaviour
         if(usedWeapon == currentTool)
         {
             allTools[usedWeapon].SetActive(true);
+            crosshair.ShowAvaiability(usedWeapon);
         }
     }
 }

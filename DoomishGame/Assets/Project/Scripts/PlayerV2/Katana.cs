@@ -71,8 +71,8 @@ public class Katana : MonoBehaviour
         canSlash = true;
         capsuleCollider2D.enabled = false;
         rb2d.gravityScale = deafaultGravityScale;
-        ItemSwaper.TryToStartCooldown();
         --toolCooldown.leftMouseUse;
+        ItemSwaper.TryToStartCooldown();
     }
 
 }

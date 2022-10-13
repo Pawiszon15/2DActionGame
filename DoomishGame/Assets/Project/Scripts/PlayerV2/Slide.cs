@@ -45,7 +45,7 @@ public class Slide : MonoBehaviour
         playerInput = Input.GetAxis("Horizontal");
 
         Vector2 slideVector = Vector2.zero;
-        bool isGroundedLocally = CharacterMovement.isGrounded;         
+        bool isGroundedLocally = CharacterMovement.isGrounded;
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.rightMouseUse > 0 && isGroundedLocally && playerInput != 0)
         {

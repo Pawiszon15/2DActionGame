@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
@@ -13,6 +14,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float maxMovementSpeed;
     [SerializeField] private float accelerationSpeed;
     [SerializeField] private float maxPlayerVelocity;
+    private float moveHorizontal;
+    private float moveVertical;
+    private float maxDefaultVelocity;
 
     [Header("Aerial movement")]
     [SerializeField] private float aerialMovMulti;
@@ -20,7 +24,12 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private int maxNumberOfJumps;
     [SerializeField] private float jumpForce;
     [SerializeField] private float temJumpForceAfterSlide;
+    private float defGravityScale;
     private float defJumpForce;
+    private float defAerialMovMulti;
+    public bool isGrounded;
+    private int jumpsAvailable;
+    private bool isGroundSlaming;
 
     [Header("Wall slide")]
     [SerializeField] float wallSlidingSpeed;
@@ -28,6 +37,11 @@ public class CharacterMovement : MonoBehaviour
     private bool isFrontTouchingWall;
     private bool wallSliding;
     private bool facingRight = true;
+
+    [Header("Sliding")]
+    [SerializeField] float slideDecressSpeed;
+    [SerializeField] float playerHeightDuringSlide;
+    private bool isSliding;
 
     [Header("Is Grounded Check")]
     public Transform groundCheck;
@@ -42,22 +56,17 @@ public class CharacterMovement : MonoBehaviour
     private bool walljumping;
 
 
-    private float moveHorizontal;
-    private float moveVertical;
-
-    public bool isGrounded;
-    private int jumpsAvailable;
-    private float maxDefaultVelocity;
-
-
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         isGrounded = true;
+        isGroundSlaming = false;
         jumpsAvailable = maxNumberOfJumps;
         defJumpForce = jumpForce;
+        defAerialMovMulti = aerialMovMulti;
         maxDefaultVelocity = maxPlayerVelocity;
+        defGravityScale = rb2D.gravityScale;
     }
 
     // Update is called once per frame
@@ -91,6 +100,7 @@ public class CharacterMovement : MonoBehaviour
         {
             wallSliding = true;
         }
+        
         else
         {
             wallSliding = false;
@@ -111,6 +121,20 @@ public class CharacterMovement : MonoBehaviour
         {
             rb2D.velocity = new Vector2(-moveHorizontal * xWallForce, yWallForce);
 
+        }
+
+        if(isGroundSlaming && isGrounded)
+        {
+            IsGroundSlaming();
+        }
+
+        if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        {
+            rb2D.velocity = new Vector2(Mathf.Lerp(rb2D.velocity.x, 0, slideDecressSpeed), rb2D.velocity.y);
+        }
+        else if(Input.GetKeyUp(KeyCode.LeftControl) && isSliding)
+        {
+            isSliding = false;
         }
     }
 
@@ -158,6 +182,25 @@ public class CharacterMovement : MonoBehaviour
     {
         StartCoroutine(TempHigherVelocity(maxTempVelocity, timeOfBost));
     }
+
+    public void IsGroundSlaming()
+    {
+        if(!isGrounded)
+        {
+            isGroundSlaming = true;
+ 
+            rb2D.gravityScale = 0;
+            aerialMovMulti = 0;
+        }
+
+        else
+        {
+            isGroundSlaming = false;
+            rb2D.gravityScale = defGravityScale;
+            aerialMovMulti = defAerialMovMulti;
+        }
+    }
+
 
     IEnumerator TempHigherJump(float timeOfBoost)
     {

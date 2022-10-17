@@ -3233,6 +3233,14 @@ PrefabInstance:
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 1499778749}
+    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: slideDecressSpeed
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: playerHeightDuringSlide
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7231682128556672888, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_Name
       value: Player

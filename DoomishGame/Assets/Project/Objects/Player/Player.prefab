@@ -41,10 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 713494486}
   - component: {fileID: 713494488}
-  - component: {fileID: 713494489}
   - component: {fileID: 819403216}
+  - component: {fileID: 905737439}
   m_Layer: 0
-  m_Name: GrenadeLuncher_Slide
+  m_Name: GrenadeLuncher_GroundSlam
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,26 +79,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1950601902}
   grenade: {fileID: 1809446704913160074, guid: 13a22823e5e5ad842a03f2c6e4fd7a03, type: 3}
---- !u!114 &713494489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713494485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bac79a7482c434e8e8e1eae9505258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashSpeed: 26
-  dashTime: 0.4
-  accelerationValue: 0.15
-  invTime: 0.2
-  howMuchItChangePlayerSize: 0.5
-  player: {fileID: 7231682128556672888}
-  playerRb: {fileID: 7231682128556672895}
-  playerMaxSpeed: 20
 --- !u!114 &819403216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +94,21 @@ MonoBehaviour:
   cooldown: 1
   leftMouseUse: 1
   rightMouseUse: 1
+--- !u!114 &905737439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713494485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f42d5fc8a7bfe49b84936762f977f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slamSpeed: 30
+  rb2d: {fileID: 7231682128556672895}
+  toolCooldown: {fileID: 819403216}
 --- !u!1 &839652907
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunPivot: {fileID: 4448891328530097419}
   rotationSpeed: 11
-  m_camera: {fileID: 0}
+  m_camera: {fileID: 1499778749}
 --- !u!1 &952812332
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +259,124 @@ CapsuleCollider2D:
   m_Offset: {x: 0.110989474, y: 0.07370613}
   m_Size: {x: 0.72199273, y: 1.549998}
   m_Direction: 0
+--- !u!1 &1499778746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499778750}
+  - component: {fileID: 1499778749}
+  - component: {fileID: 1499778748}
+  - component: {fileID: 1499778747}
+  m_Layer: 0
+  m_Name: Main Camera (1)
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1499778750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499778746}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 2.8400002, z: -0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7231682128556672893}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1499778749
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499778746}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0.099056594, b: 0.254717, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 34
+  orthographic: 1
+  orthographic size: 16
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 0
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &1499778748
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499778746}
+  m_Enabled: 1
+--- !u!114 &1499778747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499778746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1950601901
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c708e1efe2fecfe4ab4c2fd07850bca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 4
+  cooldown: 2
   leftMouseUse: 1
   rightMouseUse: 1
 --- !u!1 &2092065851
@@ -646,7 +759,7 @@ MonoBehaviour:
   grappleRope: {fileID: 7231682128609942358}
   grappleToAll: 0
   grappableLayerNumber: 6
-  m_camera: {fileID: 0}
+  m_camera: {fileID: 1499778749}
   gunHolder: {fileID: 7231682128556672893}
   gunPivot: {fileID: 7231682128251272155}
   firePoint: {fileID: 7231682128501101236}
@@ -676,13 +789,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32bb53a628381f4fbf3bee093d688c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashDuration: 0.2
-  cooldown: 2
+  slashDuration: 0.08
+  cooldown: 0.6
   dashDuration: 0
-  dashSpeed: 33
+  dashSpeed: 34
   VFXEffect: {fileID: 0}
   firePoint: {fileID: 1950601902}
   capsuleCollider2D: {fileID: 6821711946577659527}
+  chMovement: {fileID: 0}
   gunPivot: {fileID: 4448891328530097419}
 --- !u!114 &1831427743
 MonoBehaviour:
@@ -772,6 +886,7 @@ Transform:
   - {fileID: 2092065852}
   - {fileID: 2030043731}
   - {fileID: 713494486}
+  - {fileID: 1499778750}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -856,7 +971,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 29.586496
+  m_Distance: 27.713146
   m_DampingRatio: 1
   m_Frequency: 1
 --- !u!58 &7231682128556672889
@@ -916,8 +1031,11 @@ MonoBehaviour:
   maxNumberOfJumps: 1
   jumpForce: 30
   temJumpForceAfterSlide: 50
+  isGrounded: 0
   wallSlidingSpeed: 3
   frontChecker: {fileID: 2092065852}
+  slideDecressSpeed: 0.1
+  playerHeightDuringSlide: 0
   groundCheck: {fileID: 464259905}
   checkRadius: 0.25
   whatIsGround:
@@ -926,7 +1044,6 @@ MonoBehaviour:
   wallJumpTime: 0.05
   xWallForce: 5
   yWallForce: 14
-  isGrounded: 0
 --- !u!114 &1490224227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,4 +1392,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunPivot: {fileID: 4448891328530097419}
   rotationSpeed: 11
-  m_camera: {fileID: 0}
+  m_camera: {fileID: 1499778749}

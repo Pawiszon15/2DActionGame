@@ -130,17 +130,31 @@ public class CharacterMovement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftControl) && isGrounded)
         {
-            rb2D.velocity = new Vector2(Mathf.Lerp(rb2D.velocity.x, 0, slideDecressSpeed), rb2D.velocity.y);
+            if(!isSliding)
+            {
+                gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x, playerHeightDuringSlide);  
+            }
+
+            isSliding = true;
         }
         else if(Input.GetKeyUp(KeyCode.LeftControl) && isSliding)
         {
+            if(isSliding)
+            {
+                gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x, 1f);
+            }
+
             isSliding = false;
         }
     }
 
     void FixedUpdate()
-    {
-        if (isGrounded)
+    {   if(isSliding)
+        {
+            rb2D.velocity = new Vector2(Mathf.Lerp(rb2D.velocity.x, 0, slideDecressSpeed), rb2D.velocity.y);
+        }
+
+        if (isGrounded && !isSliding)
         {
             Vector2 movement = new Vector2(moveHorizontal * maxMovementSpeed, rb2D.velocity.y);
             rb2D.velocity = Vector2.Lerp(rb2D.velocity, movement, accelerationSpeed);

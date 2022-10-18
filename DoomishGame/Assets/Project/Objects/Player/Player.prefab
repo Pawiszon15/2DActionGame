@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunPivot: {fileID: 4448891328530097419}
   rotationSpeed: 11
-  m_camera: {fileID: 1499778749}
+  m_camera: {fileID: 0}
 --- !u!1 &952812332
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +759,7 @@ MonoBehaviour:
   grappleRope: {fileID: 7231682128609942358}
   grappleToAll: 0
   grappableLayerNumber: 6
-  m_camera: {fileID: 1499778749}
+  m_camera: {fileID: 0}
   gunHolder: {fileID: 7231682128556672893}
   gunPivot: {fileID: 7231682128251272155}
   firePoint: {fileID: 7231682128501101236}
@@ -971,7 +971,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 27.713146
+  m_Distance: 29.586496
   m_DampingRatio: 1
   m_Frequency: 1
 --- !u!58 &7231682128556672889
@@ -1034,8 +1034,8 @@ MonoBehaviour:
   isGrounded: 0
   wallSlidingSpeed: 3
   frontChecker: {fileID: 2092065852}
-  slideDecressSpeed: 0.1
-  playerHeightDuringSlide: 0
+  slideDecressSpeed: 0.001
+  playerHeightDuringSlide: 0.4
   groundCheck: {fileID: 464259905}
   checkRadius: 0.25
   whatIsGround:
@@ -1044,6 +1044,7 @@ MonoBehaviour:
   wallJumpTime: 0.05
   xWallForce: 5
   yWallForce: 14
+  player: {fileID: 7231682128556672888}
 --- !u!114 &1490224227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1392,4 +1393,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunPivot: {fileID: 4448891328530097419}
   rotationSpeed: 11
-  m_camera: {fileID: 1499778749}
+  m_camera: {fileID: 0}

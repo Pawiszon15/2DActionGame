@@ -46,8 +46,5 @@ public class Crosshair : MonoBehaviour
         {
             utilityImage.color = Color.white;
         }
-
-        Debug.Log("left use" + toolCooldown[currentTool].leftMouseUse);
-        Debug.Log("left use" + toolCooldown[currentTool].rightMouseUse);
     }
 }

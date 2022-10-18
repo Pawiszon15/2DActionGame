@@ -55,10 +55,14 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float yWallForce;
     private bool walljumping;
 
+    [Header("References")]
+    [SerializeField] GameObject player;
+    private CircleCollider2D circle2D;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {       
+        circle2D = GetComponent<CircleCollider2D>();
         rb2D = GetComponent<Rigidbody2D>();
         isGrounded = true;
         isGroundSlaming = false;
@@ -132,7 +136,9 @@ public class CharacterMovement : MonoBehaviour
         {
             if(!isSliding)
             {
-                gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x, playerHeightDuringSlide);  
+                player.transform.localScale = new Vector3(1f, 0.5f, 1f);
+                circle2D.radius = 0.25f;
+                rb2D.AddForce(new Vector2(0, -5f));
             }
 
             isSliding = true;
@@ -141,7 +147,8 @@ public class CharacterMovement : MonoBehaviour
         {
             if(isSliding)
             {
-                gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x, 1f);
+                player.transform.localScale = new Vector3(1f, 1f, 1f);
+                circle2D.radius = 0.5f;
             }
 
             isSliding = false;

@@ -97,7 +97,6 @@ public class ItemSwaper : MonoBehaviour
 
     public IEnumerator CooldownCutdown(float cooldownTime)
     {
-        Debug.Log("sth");
         int usedWeapon = currentTool;
         weaponAvaiability[usedWeapon] = false;
         weaponDisplayer.makeToolUnavaiable(usedWeapon);

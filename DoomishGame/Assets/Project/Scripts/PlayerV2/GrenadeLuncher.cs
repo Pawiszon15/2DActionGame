@@ -11,7 +11,6 @@ public class GrenadeLuncher : MonoBehaviour
 
     private ItemSwaper itemSwaper;
     private ToolCooldown toolCooldown;
-    private float cooldown;
 
     private void Awake()
     {

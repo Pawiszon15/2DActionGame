@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShotgunBullet : MonoBehaviour
 {
-    private float speed = 20f;
-    private float bulletLifeTime = 0.3f;
+    [SerializeField] float speed = 20f;
+    [SerializeField] float bulletLifeTime = 0.3f;
 
     private Rigidbody2D rigidbody2d;
 

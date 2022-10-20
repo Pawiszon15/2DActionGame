@@ -22,8 +22,7 @@ public class GateLauncher : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(1) && toolCooldown.rightMouseUse > 0)
         {
-            Instantiate(gate, gatePos.transform.position, gate.transform.rotation);
-
+            Instantiate(gate, gatePos.transform.position, gatePos.transform.rotation);
             --toolCooldown.rightMouseUse;
             itemSwaper.TryToStartCooldown();
         }    

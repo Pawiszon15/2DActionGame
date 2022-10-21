@@ -56,6 +56,7 @@ public class CharacterMovement : MonoBehaviour
     private bool walljumping;
 
     [Header("References")]
+    [SerializeField] CircleCollider2D groundSlamCollider;
     [SerializeField] GameObject player;
     private CircleCollider2D circle2D;
 
@@ -209,7 +210,7 @@ public class CharacterMovement : MonoBehaviour
         if(!isGrounded)
         {
             isGroundSlaming = true;
- 
+            groundSlamCollider.enabled = true;
             rb2D.gravityScale = 0;
             aerialMovMulti = 0;
         }
@@ -217,6 +218,7 @@ public class CharacterMovement : MonoBehaviour
         else
         {
             isGroundSlaming = false;
+            groundSlamCollider.enabled = false;
             rb2D.gravityScale = defGravityScale;
             aerialMovMulti = defAerialMovMulti;
         }

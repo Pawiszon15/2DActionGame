@@ -2392,6 +2392,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1350398389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1950601901, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+  m_PrefabInstance: {fileID: 7231682127773765546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1350398392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350398389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2c9eb699985644adcc251fd99c069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1358911768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4266,6 +4283,10 @@ PrefabInstance:
       propertyPath: weaponNameDisplayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1950601901, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
     - target: {fileID: 5276860506216401103, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_camera
       value: 
@@ -4285,6 +4306,10 @@ PrefabInstance:
     - target: {fileID: 7231682128266977377, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: ropesDisplay
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231682128266977377, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: targetFrequncy
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7231682128266977377, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: autoConfigureDistance

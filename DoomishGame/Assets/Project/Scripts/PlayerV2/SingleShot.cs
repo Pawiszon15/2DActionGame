@@ -23,17 +23,16 @@ public class SingleShot : MonoBehaviour
         Destroy(gameObject, bulletLifeTime);
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Player" && collision.gameObject.tag != "Enemy")
+        if (collision.gameObject.tag == "Platform")
         {
             Destroy(gameObject);
         }
 
-        else
+        else if(collision.gameObject.tag == "Enemy")
         {
-            if(!canPierceEnemies)
+            if (!canPierceEnemies)
             {
                 Destroy(gameObject);
             }

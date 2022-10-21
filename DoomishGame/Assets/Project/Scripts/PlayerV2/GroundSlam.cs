@@ -40,4 +40,5 @@ public class GroundSlam : MonoBehaviour
         --toolCooldown.rightMouseUse;
         itemSwaper.TryToStartCooldown();
     }
+
 }

@@ -176,12 +176,7 @@ public class CharacterMovement : MonoBehaviour
             rb2D.AddForce(movement);
         }
 
-        rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, maxPlayerVelocity);
-
-        if(rb2D.velocity.magnitude >= maxPlayerVelocity)
-        {
-
-        }
+        //rb2D.velocity = Vector2.ClampMagnitude(rb2D.velocity, maxPlayerVelocity);
     }
 
     private void Flip()

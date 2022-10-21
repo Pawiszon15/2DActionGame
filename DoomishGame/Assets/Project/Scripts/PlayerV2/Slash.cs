@@ -10,5 +10,11 @@ public class Slash : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+
+        if(collision.gameObject.GetComponent<Grenade>())
+        {
+            Grenade grenade = collision.gameObject.GetComponent<Grenade>();
+            //grenade.ThrowInDirection(gameObject.transform.right);
+        }
     }
 }

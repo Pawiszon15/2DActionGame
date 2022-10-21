@@ -38,11 +38,20 @@ public class SingleShot : MonoBehaviour
             }
         }
 
+        else if(collision.gameObject.GetComponent<Grenade>())
+        {
+            BoostByGate();
+        }
     }
 
     public void BoostByGate()
     {
         rigidbody2d.velocity = rigidbody2d.velocity * speedMultiplayerByGate;
         canPierceEnemies = true;
+    }
+
+    private void BoostByGrenade()
+    {
+
     }
 }

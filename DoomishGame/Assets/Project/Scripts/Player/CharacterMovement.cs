@@ -56,6 +56,8 @@ public class CharacterMovement : MonoBehaviour
     private bool walljumping;
 
     [Header("References")]
+    [SerializeField] float timeOfGateBoost;
+    [HideInInspector] public bool isPlayerBoosted;
     [SerializeField] CircleCollider2D groundSlamCollider;
     [SerializeField] GameObject player;
     private CircleCollider2D circle2D;
@@ -219,6 +221,20 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    public void BoostByGate()
+    {
+        StartCoroutine(TempBoostByGate());
+    }
+
+    IEnumerator TempBoostByGate()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.blue;
+        isPlayerBoosted = true;
+        yield return new WaitForSeconds(timeOfGateBoost);
+        isPlayerBoosted = false;
+        spriteRenderer.color = Color.white;
+    }
 
     IEnumerator TempHigherJump(float timeOfBoost)
     {

@@ -316,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950601902}
   - component: {fileID: 6821711946577659527}
+  - component: {fileID: 105550619}
   m_Layer: 0
   m_Name: Katan&FirePoiny
   m_TagString: Bullet
@@ -354,6 +355,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.110989474, y: 0.07370613}
   m_Size: {x: 0.72199273, y: 1.549998}
   m_Direction: 0
+--- !u!114 &105550619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950601901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f2c9eb699985644adcc251fd99c069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2092065851
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,8 +632,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slashDuration: 0.08
+  slashDurMultiplayer: 3
   cooldown: 0.6
-  dashDuration: 0
+  isSlashing: 0
   dashSpeed: 34
   VFXEffect: {fileID: 0}
   firePoint: {fileID: 1950601902}
@@ -871,6 +885,8 @@ MonoBehaviour:
   wallJumpTime: 0.05
   xWallForce: 5
   yWallForce: 14
+  timeOfGateBoost: 2
+  isPlayerBoosted: 0
   groundSlamCollider: {fileID: 1502560922}
   player: {fileID: 7231682128556672888}
 --- !u!114 &1490224227

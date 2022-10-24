@@ -11,9 +11,11 @@ public class Grenade : MonoBehaviour
 
     [Header("Grenade properties")]
     [SerializeField] float velocity;
+    [SerializeField] float explosionRangeMulti;
 
     [Header("References")]
     [SerializeField] CircleCollider2D explosionTrigger;
+    private bool stickToSth = false;
     private Rigidbody2D rb;
 
     private void Awake()
@@ -28,16 +30,17 @@ public class Grenade : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag != "Player")
+        if(collision.gameObject.tag == "Platform")
         {
             Debug.Log("enter collision");
             rb.velocity = Vector2.zero;
             rb.gravityScale = 0;
             rb.bodyType = RigidbodyType2D.Kinematic;
+            stickToSth = true;
             StartCoroutine(ExplodeAfterTime());
         }
 
-        else if(collision.gameObject.tag == "Player")
+        else if(collision.gameObject.tag == "Player" && stickToSth)
         {
             StopAllCoroutines();
             Explode();
@@ -99,4 +102,19 @@ public class Grenade : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    public void ThrowInDirection(Vector2 slashDir)
+    {
+        rb.gravityScale = 0f;
+        rb.velocity = Vector2.zero;
+        rb.AddForce(slashDir * 2 * velocity, ForceMode2D.Impulse);
+    }
+
+    public void BoostByGate()
+    {
+        explosionRadius = explosionRadius * explosionRangeMulti;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.blue;
+    }
+
 }

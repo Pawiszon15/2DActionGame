@@ -8,11 +8,12 @@ public class Katana : MonoBehaviour
 {
     [Header("Attack properties")]
     [SerializeField] float slashDuration;
+    [SerializeField] float slashDurMultiplayer;
     [SerializeField] float cooldown;
-    private bool canSlash = true;
+    private float defSlashDuration;
+    public bool isSlashing = false;
 
     [Header("Dash properties")]
-    [SerializeField] float dashDuration;
     [SerializeField] float dashSpeed;
     private float deafaultGravityScale;
 
@@ -45,35 +46,52 @@ public class Katana : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && canSlash && toolCooldown.leftMouseUse > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSlashing && toolCooldown.leftMouseUse > 0)
         {
-            Slash();
+            if(chMovement.isPlayerBoosted)
+            {
+                Slash(slashDurMultiplayer * slashDuration);
+                chMovement.isPlayerBoosted = false;
+                Debug.Log("Enchanced katana slash has been done");
+            }
+
+            else
+            {
+                Slash(slashDuration);
+            }
         }
     }
 
-    public void Slash()
+    public void Slash(float customSlashDuration)
     {
-        canSlash = false;
+        isSlashing = true;
 
         var newSlash = Instantiate(VFXEffect, firePoint.transform.position, VFXEffect.transform.localRotation, gameObject.transform);
         Destroy(newSlash, 0.3f);
         capsuleCollider2D.enabled = true;
 
         rb2d.velocity = Vector2.zero;
+        rb2d.gravityScale = 0;
         Vector2 vector2 = gunPivot.transform.right;
         rb2d.AddForce(vector2 * dashSpeed, ForceMode2D.Impulse);
-        StartCoroutine(SlashDuration());
+        StartCoroutine(SlashDuration(customSlashDuration));
     }
 
-    IEnumerator SlashDuration()
+    IEnumerator SlashDuration(float customSlashDuration)
     {
-        yield return new WaitForSeconds(slashDuration);
-        canSlash = true;
+        yield return new WaitForSeconds(customSlashDuration);
+        isSlashing = false;
         capsuleCollider2D.enabled = false;
         rb2d.gravityScale = deafaultGravityScale;
         --toolCooldown.leftMouseUse;
         ItemSwaper.TryToStartCooldown();
     }
 
+    public void BoostByGate()
+    {
+        Debug.Log("Slash through gate");
+        StopCoroutine(SlashDuration(slashDuration));
+        Slash(slashDuration * 3);
+    }
 }
     

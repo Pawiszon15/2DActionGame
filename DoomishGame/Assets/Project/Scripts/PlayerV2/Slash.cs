@@ -13,8 +13,9 @@ public class Slash : MonoBehaviour
 
         if(collision.gameObject.GetComponent<Grenade>())
         {
+            Debug.Log("Grenade was hit by katana slash");
             Grenade grenade = collision.gameObject.GetComponent<Grenade>();
-            //grenade.ThrowInDirection(gameObject.transform.right);
+            grenade.ThrowInDirection(gameObject.transform.right);
         }
     }
 }

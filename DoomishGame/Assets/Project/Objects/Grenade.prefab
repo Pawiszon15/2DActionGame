@@ -141,6 +141,7 @@ MonoBehaviour:
   explosionForce: 80
   timeToExplode: 1
   velocity: 3
+  explosionRangeMulti: 1.5
   explosionTrigger: {fileID: 3550071520540981959}
 --- !u!1 &1979401210207280747
 GameObject:

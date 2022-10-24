@@ -256,23 +256,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &105550616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1950601901, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-  m_PrefabInstance: {fileID: 7231682127773765546}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &105550619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105550616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f2c9eb699985644adcc251fd99c069, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &174156413
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +670,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1566979036665332546, guid: 5f7307a56e25771458b66d4b4d0808e3, type: 3}
   m_PrefabInstance: {fileID: 1566979036525548044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &527971715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8882786026403403170, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+  m_PrefabInstance: {fileID: 7231682127773765546}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &610842721 stripped
 Transform:
@@ -1976,11 +1964,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1309719415 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 1502560922, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-  m_PrefabInstance: {fileID: 7231682127773765546}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1321916020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,37 +3104,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 105550619, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 527971715}
     - target: {fileID: 736714153, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: VFXEffect
       value: 
       objectReference: {fileID: 410849614}
-    - target: {fileID: 905737439, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: slamSpeed
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1950601901, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_Name
-      value: Katan&FirePoiny
-      objectReference: {fileID: 0}
-    - target: {fileID: 76651452540243320, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: maxPlayerVelocity
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672882, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: groundSlamCollider
-      value: 
-      objectReference: {fileID: 1309719415}
     - target: {fileID: 7231682128556672888, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231682128556672889, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7231682128556672893, guid: 7a05b2b3b24a3a048a268c1d968d4565, type: 3}
       propertyPath: m_RootOrder

@@ -35,7 +35,18 @@ public class GroundSlam : MonoBehaviour
     private void SlamGetDown()
     {
         rb2d.velocity = Vector2.zero;
-        rb2d.velocity = new Vector2(0, -slamSpeed);
+        if(chMovement.isPlayerBoosted)
+        {
+            rb2d.velocity = new Vector2(0, 2 * -slamSpeed);
+            Debug.Log("Enchanced ground slam has been done");
+            chMovement.isPlayerBoosted = false;
+        }
+
+        else
+        {
+            rb2d.velocity = new Vector2(0, -slamSpeed);
+        }
+
         chMovement.IsGroundSlaming();
         --toolCooldown.rightMouseUse;
         itemSwaper.TryToStartCooldown();

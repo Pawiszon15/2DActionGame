@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
-    [SerializeField] bool hasShiled;
+    //[SerializeField] bool hasShiled;
     private GameManger gameManger;
     private bool firstDMG;
 
@@ -16,15 +16,19 @@ public class BasicEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bullet" && firstDMG && !hasShiled)
+        if (collision.gameObject.tag == "Bullet" && firstDMG/* && !hasShiled*/)
         {
             KillEnemy();
         }
 
-        else if(collision.gameObject.tag == "ShiledBreaker" && hasShiled)
-        {
-            KillEnemy();
-        }
+        //else if(hasShiled)
+        //{
+        //    SingleShot singleShot = GetComponent<SingleShot>();
+        //    if(singleShot.isShiledBreaker)
+        //    {
+        //        KillEnemy();
+        //    }
+        //}
     }
 
     private void KillEnemy()

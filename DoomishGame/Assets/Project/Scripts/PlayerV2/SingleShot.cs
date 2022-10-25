@@ -7,6 +7,7 @@ public class SingleShot : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float bulletLifeTime;
     [SerializeField] float speedMultiplayerByGate;
+    [HideInInspector] public bool isShiledBreaker = false;
 
     private bool canPierceEnemies;
     private Rigidbody2D rigidbody2d;
@@ -40,7 +41,8 @@ public class SingleShot : MonoBehaviour
 
         else if(collision.gameObject.GetComponent<Grenade>())
         {
-            BoostByGate();
+            BoostByGrenade();
+            Destroy(collision.gameObject);
         }
     }
 
@@ -52,6 +54,7 @@ public class SingleShot : MonoBehaviour
 
     private void BoostByGrenade()
     {
-
+        isShiledBreaker = true;
+        Debug.Log("extra propertiy for bullet thanks to grenade");
     }
 }

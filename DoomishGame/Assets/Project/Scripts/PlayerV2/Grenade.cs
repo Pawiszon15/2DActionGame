@@ -49,30 +49,11 @@ public class Grenade : MonoBehaviour
 
 
 
-    private void Explode()
+    public void Explode()
     {
         explosionTrigger.radius = explosionRadius + 1;
         explosionTrigger.enabled = true;
-        var inExplosionRadius = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
-
-        foreach (Collider2D collider2d in inExplosionRadius)
-        {
-            Rigidbody2D rigidbody2D = collider2d.GetComponent<Rigidbody2D>();
-
-            if (rigidbody2D != null)
-            {
-                //other effect for the player, and other effect for the enemies
-                Vector2 distanceVector = collider2d.transform.position - transform.position;
-                if (distanceVector.magnitude > 0)
-                {
-                    //rigidbody2D.velocity = Vector2.zero;
-                    float explosionPower = explosionForce; /*/distanceVector.magnitude;*/
-                    rigidbody2D.AddForce(explosionPower * distanceVector.normalized, ForceMode2D.Impulse);
-                }
-            }
-        }
-
-        Destroy(gameObject);
+        StartCoroutine(WaitForMomement());
     }
 
     IEnumerator ExplodeAfterTime()
@@ -92,6 +73,31 @@ public class Grenade : MonoBehaviour
                 //other effect for the player, and other effect for the enemies
                 Vector2 distanceVector = collider2d.transform.position - transform.position;
                 if(distanceVector.magnitude > 0)
+                {
+                    //rigidbody2D.velocity = Vector2.zero;
+                    float explosionPower = explosionForce; /*/distanceVector.magnitude;*/
+                    rigidbody2D.AddForce(explosionPower * distanceVector.normalized, ForceMode2D.Impulse);
+                }
+            }
+        }
+
+        Destroy(gameObject);
+    }
+
+    IEnumerator WaitForMomement()
+    {
+        yield return new WaitForSeconds(0.05f);
+        var inExplosionRadius = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+
+        foreach (Collider2D collider2d in inExplosionRadius)
+        {
+            Rigidbody2D rigidbody2D = collider2d.GetComponent<Rigidbody2D>();
+
+            if (rigidbody2D != null)
+            {
+                //other effect for the player, and other effect for the enemies
+                Vector2 distanceVector = collider2d.transform.position - transform.position;
+                if (distanceVector.magnitude > 0)
                 {
                     //rigidbody2D.velocity = Vector2.zero;
                     float explosionPower = explosionForce; /*/distanceVector.magnitude;*/

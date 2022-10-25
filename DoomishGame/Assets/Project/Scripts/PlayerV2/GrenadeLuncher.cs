@@ -11,6 +11,7 @@ public class GrenadeLuncher : MonoBehaviour
 
     private ItemSwaper itemSwaper;
     private ToolCooldown toolCooldown;
+    private GameObject grenadeCreated;
 
     private void Awake()
     {
@@ -24,12 +25,18 @@ public class GrenadeLuncher : MonoBehaviour
         {
             ShootGrenade();
         }
+
+        else if(Input.GetKeyDown(KeyCode.Mouse0) && toolCooldown.leftMouseUse == 0)
+        {
+            Grenade tempGrenade = grenadeCreated.GetComponent<Grenade>();
+            tempGrenade.Explode();
+        }
     }
 
     private void ShootGrenade()
     {
         --toolCooldown.leftMouseUse;  
-        Instantiate(grenade, firePoint.transform.position, firePoint.rotation);
+        grenadeCreated = Instantiate(grenade, firePoint.transform.position, firePoint.rotation);
         itemSwaper.TryToStartCooldown();
     }
 }

@@ -21,12 +21,12 @@ public class GrenadeLuncher : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && toolCooldown.leftMouseUse > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.leftMouseUse > 0)
         {
             ShootGrenade();
         }
 
-        else if(Input.GetKeyDown(KeyCode.Mouse0) && toolCooldown.leftMouseUse == 0)
+        else if(Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.leftMouseUse == 0)
         {
             Grenade tempGrenade = grenadeCreated.GetComponent<Grenade>();
             tempGrenade.Explode();

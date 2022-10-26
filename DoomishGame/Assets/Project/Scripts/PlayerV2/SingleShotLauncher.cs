@@ -20,7 +20,7 @@ public class SingleShotLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && toolCooldown.leftMouseUse > 0)
+        if (Input.GetMouseButtonDown(2) && toolCooldown.leftMouseUse > 0)
         {
             Instantiate(singleBullet,  firePoint.transform.position, firePoint.transform.rotation);
             --toolCooldown.leftMouseUse;

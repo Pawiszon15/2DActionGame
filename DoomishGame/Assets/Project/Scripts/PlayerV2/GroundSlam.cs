@@ -26,7 +26,7 @@ public class GroundSlam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.rightMouseUse > 0)
+        if(Input.GetKeyDown(KeyCode.S) && toolCooldown.rightMouseUse > 0)
         {
             SlamGetDown();
         }

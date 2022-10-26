@@ -20,7 +20,7 @@ public class GateLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(1) && toolCooldown.rightMouseUse > 0)
+        if(Input.GetKeyDown(KeyCode.Q) && toolCooldown.rightMouseUse > 0)
         {
             Instantiate(gate, gatePos.transform.position, gatePos.transform.rotation);
             --toolCooldown.rightMouseUse;

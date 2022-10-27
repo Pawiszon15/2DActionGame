@@ -22,7 +22,7 @@ public class Slide : MonoBehaviour
     [SerializeField] float playerMaxSpeed;
 
     private ItemSwaper itemSwaper;
-    private ToolCooldown toolCooldown;
+    private AbilitiyCooldown toolCooldown;
     private Vector2 maxSpeed;
 
     float playerInput = 0f;
@@ -35,7 +35,7 @@ public class Slide : MonoBehaviour
     void Start()
     {
         itemSwaper = FindObjectOfType<ItemSwaper>();
-        toolCooldown = GetComponent<ToolCooldown>();
+        toolCooldown = GetComponent<AbilitiyCooldown>();
         CharacterMovement = FindObjectOfType<CharacterMovement>();
     }
 
@@ -47,10 +47,10 @@ public class Slide : MonoBehaviour
         Vector2 slideVector = Vector2.zero;
         bool isGroundedLocally = CharacterMovement.isGrounded;
 
-        if (Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.rightMouseUse > 0 && isGroundedLocally && playerInput != 0)
-        {
-            StartCoroutine(SlideDash());
-        }
+        //if (Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.rightMouseUse > 0 && isGroundedLocally && playerInput != 0)
+        //{
+        //    StartCoroutine(SlideDash());
+        //}
     
         if(invTimeActive)
         {
@@ -72,16 +72,16 @@ public class Slide : MonoBehaviour
         playerRb.AddForce(new Vector2(0, -5f));
         invTimeActive = true;
         yield return new WaitForSeconds(invTime);
-        invTimeActive = false;
+        //invTimeActive = false;
 
-        yield return new WaitForEndOfFrame();
+        //yield return new WaitForEndOfFrame();
 
-        dashTimeActive = true;
-        yield return new WaitForSeconds(dashTime - invTime);
-        dashTimeActive = false;
+        //dashTimeActive = true;
+        //yield return new WaitForSeconds(dashTime - invTime);
+        //dashTimeActive = false;
 
-        player.transform.localScale = new Vector3(1f, 1f, 1f);
-        --toolCooldown.rightMouseUse;
-        itemSwaper.TryToStartCooldown();
+        //player.transform.localScale = new Vector3(1f, 1f, 1f);
+        //--toolCooldown.rightMouseUse;
+        //itemSwaper.TryToStartCooldown();
     }
 }

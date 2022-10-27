@@ -27,8 +27,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     public Rigidbody2D m_rigidbody;
 
     [Header("Tool available:")]
-    private ItemSwaper ItemSwaper;
-    private ToolCooldown toolCooldown;
+    private AbilitiyCooldown abilityCooldown;
 
     [Header("Rotation:")]
     [SerializeField] private bool rotateOverTime = true;
@@ -62,17 +61,20 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Start()
     {
-        toolCooldown = GetComponent<ToolCooldown>();
-        ItemSwaper = GetComponentInParent<ItemSwaper>();
+        abilityCooldown = GetComponent<AbilitiyCooldown>();
         isGraplingRopeUsed = false;
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
         startingGravityScale = m_rigidbody.gravityScale;
+        if(abilityCooldown == null)
+        {
+            Debug.Log("is null");
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !isGraplingRopeUsed && toolCooldown.rightMouseUse > 0)
+        if (Input.GetKeyDown(KeyCode.E) && !isGraplingRopeUsed && abilityCooldown.numberOfUses > 0)
         {
             SetGrapplePoint();
         }
@@ -86,8 +88,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = startingGravityScale;
             isGraplingRopeUsed = false;
-            --toolCooldown.rightMouseUse;
-            ItemSwaper.TryToStartCooldown();
+            abilityCooldown.UseAbility();
             Debug.Log("sth rope");
         }
 

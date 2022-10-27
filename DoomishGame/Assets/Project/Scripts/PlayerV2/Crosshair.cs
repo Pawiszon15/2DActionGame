@@ -7,7 +7,7 @@ public class Crosshair : MonoBehaviour
 {
     [SerializeField] Image offensiveImage;
     [SerializeField] Image utilityImage;
-    [SerializeField] ToolCooldown[] toolCooldown;
+    [SerializeField] AbilitiyCooldown[] toolCooldown;
     private ItemSwaper itemSwaper;
 
     // Start is called before the first frame update
@@ -23,28 +23,28 @@ public class Crosshair : MonoBehaviour
         transform.position = mouseCursorPos;
     }
 
-    public void ShowAvaiability(int currentTool)
-    {
-        if (toolCooldown[currentTool].leftMouseUse > 0 && toolCooldown[currentTool].enabled)
-        {
-            offensiveImage.color = Color.red;
-        }
+    //public void ShowAvaiability(int currentTool)
+    //{
+    //    if (toolCooldown[currentTool].leftMouseUse > 0 && toolCooldown[currentTool].enabled)
+    //    {
+    //        offensiveImage.color = Color.red;
+    //    }
 
-        if (toolCooldown[currentTool].rightMouseUse > 0 && toolCooldown[currentTool].enabled)
-        {
-            utilityImage.color = Color.green;
-        }
-
-
-        if (toolCooldown[currentTool].leftMouseUse <= 0)
-        {
-            offensiveImage.color = Color.white;
-        }
+    //    if (toolCooldown[currentTool].rightMouseUse > 0 && toolCooldown[currentTool].enabled)
+    //    {
+    //        utilityImage.color = Color.green;
+    //    }
 
 
-        if (toolCooldown[currentTool].rightMouseUse <= 0)
-        {
-            utilityImage.color = Color.white;
-        }
-    }
+    //    if (toolCooldown[currentTool].leftMouseUse <= 0)
+    //    {
+    //        offensiveImage.color = Color.white;
+    //    }
+
+
+    //    if (toolCooldown[currentTool].rightMouseUse <= 0)
+    //    {
+    //        utilityImage.color = Color.white;
+    //    }
+    //}
 }

@@ -10,23 +10,19 @@ public class GroundSlam : MonoBehaviour
     [Header("Properties")]
     [SerializeField] Rigidbody2D rb2d;
 
-    [SerializeField] 
-    private ToolCooldown toolCooldown;
-    private ItemSwaper itemSwaper;
+    private AbilitiyCooldown abilityCooldown;
     private CharacterMovement chMovement;
 
     // Start is called before the first frame update
-    void Awake()
+    private void Start()
     {
-        chMovement = FindObjectOfType<CharacterMovement>();
-        toolCooldown = GetComponent<ToolCooldown>();
-        itemSwaper = FindObjectOfType<ItemSwaper>();
+        chMovement = GetComponentInParent<CharacterMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S) && toolCooldown.rightMouseUse > 0)
+        if(Input.GetKeyDown(KeyCode.S))
         {
             SlamGetDown();
         }
@@ -48,8 +44,7 @@ public class GroundSlam : MonoBehaviour
         }
 
         chMovement.IsGroundSlaming();
-        --toolCooldown.rightMouseUse;
-        itemSwaper.TryToStartCooldown();
+        abilityCooldown.UseAbility();
     }
 
 }

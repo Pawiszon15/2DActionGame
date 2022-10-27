@@ -9,24 +9,22 @@ public class GrenadeLuncher : MonoBehaviour
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject grenade;
 
-    private ItemSwaper itemSwaper;
-    private ToolCooldown toolCooldown;
+    private AbilitiyCooldown abilityCooldown;
     private GameObject grenadeCreated;
 
     private void Awake()
     {
-        toolCooldown = GetComponent<ToolCooldown>();
-        itemSwaper = FindObjectOfType<ItemSwaper>();  
+        abilityCooldown = GetComponent<AbilitiyCooldown>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.leftMouseUse > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && abilityCooldown.numberOfUses > 0)
         {
             ShootGrenade();
         }
 
-        else if(Input.GetKeyDown(KeyCode.Mouse1) && toolCooldown.leftMouseUse == 0)
+        else if(Input.GetKeyDown(KeyCode.Mouse1) && abilityCooldown.numberOfUses == 0)
         {
             Grenade tempGrenade = grenadeCreated.GetComponent<Grenade>();
             tempGrenade.Explode();
@@ -35,8 +33,7 @@ public class GrenadeLuncher : MonoBehaviour
 
     private void ShootGrenade()
     {
-        --toolCooldown.leftMouseUse;  
+        abilityCooldown.UseAbility();  
         grenadeCreated = Instantiate(grenade, firePoint.transform.position, firePoint.rotation);
-        itemSwaper.TryToStartCooldown();
     }
 }

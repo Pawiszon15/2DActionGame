@@ -18,22 +18,22 @@ public class AirCorridorLuncher : MonoBehaviour
     [SerializeField] GameObject player;
 
     private ItemSwaper itemSwaper;
-    private ToolCooldown toolCooldown;
+    private AbilitiyCooldown toolCooldown;
     private float distanceOfRayCast = 1000f;
 
     private void Awake()
     {
         itemSwaper = FindObjectOfType<ItemSwaper>();
-        toolCooldown = GetComponent<ToolCooldown>();
+        toolCooldown = GetComponent<AbilitiyCooldown>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) && toolCooldown.rightMouseUse > 0)
-        {
-            ChosePlaceOfSpawn();
-        }
+        //if (Input.GetMouseButtonDown(1) && toolCooldown.rightMouseUse > 0)
+        //{
+        //    ChosePlaceOfSpawn();
+        //}
     }
 
     private void ChosePlaceOfSpawn()
@@ -86,7 +86,7 @@ public class AirCorridorLuncher : MonoBehaviour
     {
         yield return new WaitForSeconds(setupTime);
         Instantiate(airCorridor, corridorSpawnPos, Quaternion.Euler(gameObject.transform.rotation.x, gameObject.transform.rotation.y, corridorRotation));
-        --toolCooldown.rightMouseUse;
-        itemSwaper.TryToStartCooldown();
+        //--toolCooldown.rightMouseUse;
+        //itemSwaper.TryToStartCooldown();
     }
 }

@@ -16,7 +16,7 @@ public class HomingRocket : MonoBehaviour
     {
         gameManger = FindObjectOfType<GameManger>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.Find("Player").transform;
+        target = GameObject.FindObjectOfType<Player>().transform;
     }
 
     void FixedUpdate()

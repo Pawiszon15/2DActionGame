@@ -29,7 +29,7 @@ public class Katana : MonoBehaviour
     private Rigidbody2D rb2d;
     private Transform playerTransform;
     private ItemSwaper ItemSwaper;
-    private ToolCooldown toolCooldown;
+    private AbilitiyCooldown abilityCooldown;
 
     private void Awake()
     {
@@ -39,14 +39,14 @@ public class Katana : MonoBehaviour
 
     void Start()
     {
-        toolCooldown = GetComponent<ToolCooldown>();
+        abilityCooldown = GetComponent<AbilitiyCooldown>();
         ItemSwaper = GetComponentInParent<ItemSwaper>();
         deafaultGravityScale = rb2d.gravityScale;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSlashing && toolCooldown.leftMouseUse > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSlashing && abilityCooldown.numberOfUses > 0)
         {
             if(chMovement.isPlayerBoosted)
             {
@@ -83,8 +83,7 @@ public class Katana : MonoBehaviour
         isSlashing = false;
         capsuleCollider2D.enabled = false;
         rb2d.gravityScale = deafaultGravityScale;
-        --toolCooldown.leftMouseUse;
-        ItemSwaper.TryToStartCooldown();
+        abilityCooldown.UseAbility();
     }
 
     public void BoostByGate()

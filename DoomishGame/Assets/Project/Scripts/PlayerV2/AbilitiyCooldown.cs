@@ -7,7 +7,7 @@ public class AbilitiyCooldown : MonoBehaviour
 {
     [Header("Properties")]
     [SerializeField] int maxNumberOfUses;
-    [SerializeField] int cooldown;
+    [SerializeField] float cooldown;
     [HideInInspector] public int numberOfUses;
 
     [Header("References")]
@@ -22,8 +22,8 @@ public class AbilitiyCooldown : MonoBehaviour
     public void UseAbility()
     {
         --numberOfUses;
-        CheckAvaialibity();
-        StartCoroutine(startAbilityCooldown());
+        //CheckAvaialibity();
+        StartCoroutine(StartAbilityCooldown());
     }
 
     private void CheckAvaialibity()
@@ -34,9 +34,9 @@ public class AbilitiyCooldown : MonoBehaviour
         }
     }
 
-    private IEnumerator startAbilityCooldown()
+    private IEnumerator StartAbilityCooldown()
     {
-        abilityUI.PlaceHolderStartCooldown();
+        //abilityUI.PlaceHolderStartCooldown();
         yield return new WaitForSeconds(cooldown);
         if(++numberOfUses !> maxNumberOfUses)
         {

@@ -192,16 +192,6 @@ public class CharacterMovement : MonoBehaviour
         walljumping = false;
     }
 
-    public void StartJumpBoost(float timeOfBoost)
-    {
-        StartCoroutine(TempHigherJump(timeOfBoost));
-    }
-
-    public void StartVelocityBoost(float maxTempVelocity, float timeOfBost)
-    {
-        StartCoroutine(TempHigherVelocity(maxTempVelocity, timeOfBost));
-    }
-
     public void IsGroundSlaming()
     {
         if(!isGrounded)
@@ -236,18 +226,27 @@ public class CharacterMovement : MonoBehaviour
         spriteRenderer.color = Color.white;
     }
 
-    IEnumerator TempHigherJump(float timeOfBoost)
-    {
-        jumpForce = temJumpForceAfterSlide;
-        yield return new WaitForSeconds(timeOfBoost);
-        jumpForce = defJumpForce;
-    }
-
-    IEnumerator TempHigherVelocity(float maxTempVelocity, float timeOfBoost)
+     IEnumerator TempHigherVelocity(float maxTempVelocity, float timeOfBoost)
     {
         maxPlayerVelocity = maxTempVelocity;
         yield return new WaitForSeconds(timeOfBoost);
         maxPlayerVelocity = maxDefaultVelocity;
     }
+    
+    //public void StartVelocityBoost(float maxTempVelocity, float timeOfBost)
+    //{
+    //    StartCoroutine(TempHigherVelocity(maxTempVelocity, timeOfBost));
+    //}
 
+    //public void StartJumpBoost(float timeOfBoost)
+    //{
+    //    StartCoroutine(TempHigherJump(timeOfBoost));
+    //}
+
+    //IEnumerator TempHigherJump(float timeOfBoost)
+    //{
+    //    jumpForce = temJumpForceAfterSlide;
+    //    yield return new WaitForSeconds(timeOfBoost);
+    //    jumpForce = defJumpForce;
+    //}
 }

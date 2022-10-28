@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class AbilitiyCooldown : MonoBehaviour
 {
     [Header("Properties")]
+    [SerializeField] KeyCode keyCode;
     [SerializeField] int maxNumberOfUses;
     [SerializeField] float cooldown;
     [HideInInspector] public int numberOfUses;

@@ -30,6 +30,7 @@ public class Katana : MonoBehaviour
     private Transform playerTransform;
     private ItemSwaper ItemSwaper;
     private AbilitiyCooldown abilityCooldown;
+    private bool isTouchedGroundFromLastSlash;
 
     private void Awake()
     {
@@ -46,7 +47,7 @@ public class Katana : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSlashing && abilityCooldown.numberOfUses > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSlashing && abilityCooldown.numberOfUses > 0 && isTouchedGroundFromLastSlash)
         {
             if(chMovement.isPlayerBoosted)
             {
@@ -58,6 +59,14 @@ public class Katana : MonoBehaviour
             else
             {
                 Slash(slashDuration);
+            }
+        }
+
+        if(!isTouchedGroundFromLastSlash)
+        {
+            if(chMovement.isGrounded || chMovement.wallSliding)
+            {
+                isTouchedGroundFromLastSlash = true;
             }
         }
     }
@@ -83,6 +92,7 @@ public class Katana : MonoBehaviour
         isSlashing = false;
         capsuleCollider2D.enabled = false;
         rb2d.gravityScale = deafaultGravityScale;
+        isTouchedGroundFromLastSlash = false;
         abilityCooldown.UseAbility();
     }
 

@@ -44,7 +44,6 @@ public class GroundSlam : MonoBehaviour
         }
 
         chMovement.IsGroundSlaming();
-        abilityCooldown.UseAbility();
     }
 
 }

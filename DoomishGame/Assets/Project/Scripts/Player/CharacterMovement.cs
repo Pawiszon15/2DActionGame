@@ -35,7 +35,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] float wallSlidingSpeed;
     [SerializeField] Transform frontChecker;
     private bool isFrontTouchingWall;
-    private bool wallSliding;
+    [HideInInspector] public bool wallSliding;
     private bool facingRight = true;
 
     [Header("Sliding")]

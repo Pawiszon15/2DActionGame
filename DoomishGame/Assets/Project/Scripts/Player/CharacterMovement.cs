@@ -58,7 +58,7 @@ public class CharacterMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] float timeOfGateBoost;
     [HideInInspector] public bool isPlayerBoosted;
-    [SerializeField] CircleCollider2D groundSlamCollider;
+    [SerializeField] CapsuleCollider2D groundSlamCollider;
     [SerializeField] GameObject player;
     private CircleCollider2D circle2D;
 

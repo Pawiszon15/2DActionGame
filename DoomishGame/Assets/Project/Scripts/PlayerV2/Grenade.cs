@@ -66,23 +66,27 @@ public class Grenade : MonoBehaviour
 
         foreach (Collider2D collider2d in inExplosionRadius)
         {
+            Player player = collider2d.GetComponent<Player>();
             Rigidbody2D rigidbody2D = collider2d.GetComponent<Rigidbody2D>();
-
-            if (rigidbody2D != null)
+            if (player)
             {
-                //other effect for the player, and other effect for the enemies
-                Vector2 distanceVector = collider2d.transform.position - transform.position;
-                if(distanceVector.magnitude > 0)
+                if (rigidbody2D != null)
                 {
-                    //rigidbody2D.velocity = Vector2.zero;
-                    float explosionPower = explosionForce; /*/distanceVector.magnitude;*/
-                    rigidbody2D.AddForce(explosionPower * distanceVector.normalized, ForceMode2D.Impulse);
+                    //other effect for the player, and other effect for the enemies
+                    Vector2 distanceVector = collider2d.transform.position - transform.position;
+                    if (distanceVector.magnitude > 0)
+                    {
+                        //rigidbody2D.velocity = Vector2.zero;
+                        float explosionPower = explosionForce; /*/distanceVector.magnitude;*/
+                        rigidbody2D.AddForce(explosionPower * distanceVector.normalized, ForceMode2D.Impulse);
+                    }
                 }
             }
-        }
+            Destroy(gameObject);
 
-        Destroy(gameObject);
+        }
     }
+
 
     IEnumerator WaitForMomement()
     {
@@ -124,3 +128,4 @@ public class Grenade : MonoBehaviour
     }
 
 }
+        

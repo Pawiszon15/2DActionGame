@@ -16,7 +16,7 @@ public class BasicEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bullet" && firstDMG/* && !hasShiled*/)
+        if (collision.gameObject.tag == "PlayerBullet" && firstDMG/* && !hasShiled*/)
         {
             KillEnemy();
         }

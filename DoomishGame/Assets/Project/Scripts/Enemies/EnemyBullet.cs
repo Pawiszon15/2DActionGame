@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [Header("Properties")]
     [SerializeField] float speed;
+    [SerializeField] bool shouldCreateAnotherBullet;
+
+    [Header("References")]
+    [SerializeField] GameObject bulletToCreate;
+    [SerializeField] Transform firePoint;
 
     private Rigidbody2D rigidbody2d;
     private GameManger manger;
+    private Player player;
 
     private void Awake()
     {
         manger = FindObjectOfType<GameManger>();
-        rigidbody2d = GetComponent<Rigidbody2D>();
+        player = FindObjectOfType<Player>();
     }
 
     private void Start()
     {
+        rigidbody2d = GetComponent<Rigidbody2D>();
         rigidbody2d.velocity = transform.right * speed;
     }
 
@@ -31,7 +39,15 @@ public class EnemyBullet : MonoBehaviour
         else if(collision.gameObject.tag == "Platform")
         {
             Destroy(this.gameObject);
+            if(shouldCreateAnotherBullet)
+            {
+                ExtraShot();
+            }
         }
     }
 
+    private void ExtraShot()
+    {
+        Instantiate(bulletToCreate, firePoint.position, firePoint.rotation);
+    }
 }

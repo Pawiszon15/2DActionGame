@@ -8,6 +8,7 @@ public class Enemy_RocketLuncher : MonoBehaviour
     [SerializeField] Transform rocketSpawnPoint;
     [SerializeField] GameObject rocket;
 
+    private GameObject spawnedRocket = null;
     void Start()
     {
         StartCoroutine(TimeBetweenRocketSpawn());
@@ -15,13 +16,16 @@ public class Enemy_RocketLuncher : MonoBehaviour
 
     void SpawnRocket()
     {
-        Instantiate(rocket, rocketSpawnPoint.position, Quaternion.identity);
-        StartCoroutine(TimeBetweenRocketSpawn());
+       spawnedRocket = Instantiate(rocket, rocketSpawnPoint.position, Quaternion.identity);
     }
 
     IEnumerator TimeBetweenRocketSpawn()
     {
         yield return new WaitForSeconds(timeBetweenShoots);
-        SpawnRocket();
+        if(spawnedRocket == null)
+        {
+            SpawnRocket();
+        }
+        StartCoroutine(TimeBetweenRocketSpawn());
     }
 }

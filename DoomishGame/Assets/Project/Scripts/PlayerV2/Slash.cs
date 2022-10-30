@@ -8,7 +8,17 @@ public class Slash : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
-            Destroy(collision.gameObject);
+            HomingRocket homingRocket = collision.gameObject.GetComponent<HomingRocket>();
+            if(homingRocket)
+            {
+                homingRocket.CreateExplosion();
+                Destroy(collision.gameObject);
+            }
+
+            else
+            {
+                Destroy(collision.gameObject);
+            }
         }
 
         if(collision.gameObject.GetComponent<Grenade>())

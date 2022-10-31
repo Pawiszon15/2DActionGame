@@ -53,7 +53,6 @@ public class Katana : MonoBehaviour
             {
                 Slash(slashDurMultiplayer * slashDuration);
                 chMovement.isPlayerBoosted = false;
-                Debug.Log("Enchanced katana slash has been done");
             }
 
             else

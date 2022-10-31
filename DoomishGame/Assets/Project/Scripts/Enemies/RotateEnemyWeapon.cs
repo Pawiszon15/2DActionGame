@@ -6,6 +6,8 @@ public class RotateEnemyWeapon : MonoBehaviour
 {
     [SerializeField] Transform gunPivot;
     [SerializeField] float rotationSpeed;
+    [SerializeField] bool waveAttacker;
+    [SerializeField] Transform middlePartOfPlayer;
 
     private Player player;
     private Vector2 playerPos;
@@ -17,7 +19,16 @@ public class RotateEnemyWeapon : MonoBehaviour
 
     private void Update()
     {
-        playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+        if(!waveAttacker)
+        {
+            playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
+        }
+
+        else if(waveAttacker)
+        {
+            playerPos = new Vector2(middlePartOfPlayer.position.x, middlePartOfPlayer.position.y);
+        }
+
         RotateGun(playerPos);
     }
 

@@ -9,7 +9,7 @@ public class SingleShot : MonoBehaviour
     [SerializeField] float speedMultiplayerByGate;
     [HideInInspector] public bool isShiledBreaker = false;
 
-    private bool canPierceEnemies;
+    private bool canPierceEnemies = false;
     private Rigidbody2D rigidbody2d;
 
     private void Awake()
@@ -34,6 +34,15 @@ public class SingleShot : MonoBehaviour
         else if(collision.gameObject.tag == "Enemy")
         {
             if (!canPierceEnemies)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        else if(collision.gameObject.GetComponent<HomingRocket>())
+        {
+            Destroy(collision.gameObject);
+            if(!canPierceEnemies)
             {
                 Destroy(gameObject);
             }

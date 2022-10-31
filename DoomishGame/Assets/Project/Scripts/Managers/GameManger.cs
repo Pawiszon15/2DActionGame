@@ -22,7 +22,7 @@ public class GameManger : MonoBehaviour
 
     private void Awake()
     {
-        foreach (Enemuy_FloorDeneyer denayer in allFloorDenayers)
+/*        foreach (Enemuy_FloorDeneyer denayer in allFloorDenayers)
         {
             denayer.enabled = false;
         }
@@ -40,9 +40,9 @@ public class GameManger : MonoBehaviour
         foreach (RailGunner railGunner in allRailGunners)
         {
             railGunner.enabled = false;
-        }
+        }*/
 
-        isFirstEnemy = true;
+        //isFirstEnemy = true;
     }
 
     private void Start()

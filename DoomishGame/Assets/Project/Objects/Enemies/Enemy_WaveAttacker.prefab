@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cee5699d1863e46bbd290e5e5f14dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1.2
+  timeBetweenShots: 1.8
   pistolBullet: {fileID: 3082266481703378707, guid: f903dd68a6cfd18499fc47e470dba528, type: 3}
   firePoint:
   - {fileID: 874916746597215993}

@@ -56,6 +56,8 @@ public class CharacterMovement : MonoBehaviour
     private bool walljumping;
 
     [Header("References")]
+    [SerializeField] GameObject playerFrontTarget;
+    [SerializeField] GameObject playerBottomTarget;
     [SerializeField] float timeOfGateBoost;
     [HideInInspector] public bool isPlayerBoosted;
     [SerializeField] CapsuleCollider2D groundSlamCollider;
@@ -156,6 +158,10 @@ public class CharacterMovement : MonoBehaviour
 
             isSliding = false;
         }
+
+
+        playerFrontTarget.transform.localPosition = new Vector3(Mathf.Clamp(rb2D.velocity.x, -8f, 8f), Mathf.Clamp(rb2D.velocity.y, 0f, 8f), playerFrontTarget.transform.localPosition.z);
+
     }
 
     void FixedUpdate()

@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - PlayerBullet
   - Wave
+  - EnemyShield
   layers:
   - Default
   - TransparentFX

@@ -5,9 +5,10 @@ using UnityEngine;
 public class BasicEnemy : MonoBehaviour
 {
     //[SerializeField] bool hasShiled;
+    public bool isProtector;
     private GameManger gameManger;
     private bool firstDMG;
-
+    private bool isTempInvurnable;
     private void Start()
     {
         gameManger = FindObjectOfType<GameManger>();
@@ -16,9 +17,12 @@ public class BasicEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerBullet" && firstDMG/* && !hasShiled*/)
+        if (collision.gameObject.tag == "PlayerBullet" && firstDMG)
         {
-            KillEnemy();
+            if(!isProtector)
+            {
+                KillEnemy();
+            }
         }
 
         //else if(hasShiled)
@@ -31,11 +35,16 @@ public class BasicEnemy : MonoBehaviour
         //}
     }
 
-    private void KillEnemy()
+    public void KillEnemy()
     {
         firstDMG = false;
         string objectName = gameObject.name;
         gameManger.KilledEnemy(objectName);
         Destroy(gameObject);
+    }
+
+    public void InvurnableForAttacks()
+    {
+
     }
 }

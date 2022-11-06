@@ -18,7 +18,7 @@ public class Enmy_Protector : MonoBehaviour
     private Vector3 chargeDireciton;
     private bool isCharging;
     private bool isPlayerChargable;
-    private bool isChargeAvaialable;
+    public bool isChargeAvaialable;
 
     [Header("References")]
     [SerializeField] GameObject shield;
@@ -41,13 +41,11 @@ public class Enmy_Protector : MonoBehaviour
     {
         if(!isCharging)
         {
-            Debug.Log("protectorWalking");
             gameObject.transform.position += movementDirection * Time.deltaTime * walkingSpeed;
         }
 
         else if(isCharging)
         {
-            Debug.Log("Protector charging");
             gameObject.transform.position += chargeDireciton * Time.deltaTime * chargeSpeed;
         }
 
@@ -107,12 +105,10 @@ public class Enmy_Protector : MonoBehaviour
     private void ProtectorCharge()
     {
         isChargeAvaialable = false;
-        Debug.Log("start of enemy charge");
         CheckWhereIsPlayer();
         chargeDireciton = movementDirection;
         isCharging = true;
         StartCoroutine(ChargeDuration());
-        StartCoroutine(AbilityCooldown(chargeCooldown, isChargeAvaialable));
     }
 
     IEnumerator WaitBeforeNextAction(float waitingTime)
@@ -125,11 +121,12 @@ public class Enmy_Protector : MonoBehaviour
     {
         yield return new WaitForSeconds(chargeDurtaion);
         isCharging = false;
+        StartCoroutine(AbilityCooldown(chargeCooldown));
     }
 
-    IEnumerator AbilityCooldown(float cooldown, bool abilityAvaialibility)
+    IEnumerator AbilityCooldown(float cooldown)
     {
         yield return new WaitForSeconds(cooldown);
-        abilityAvaialibility = true;
+        isChargeAvaialable = true;
     }
 }

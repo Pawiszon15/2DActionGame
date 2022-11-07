@@ -23,6 +23,7 @@ public class Enmy_Protector : MonoBehaviour
     [Header("References")]
     [SerializeField] GameObject shield;
     [SerializeField] GameObject player;
+    [SerializeField] BasicEnemy basicEnemy;
     private CharacterMovement characterMovement;
     private float defaultWaitingTime;
 
@@ -57,12 +58,18 @@ public class Enmy_Protector : MonoBehaviour
                 ProtectorCharge();
             }
         }
+
+
     }
 
     private void UpdateBehaviour()
     {
         CheckWhereIsPlayer();
         StartCoroutine(WaitBeforeNextAction(defaultWaitingTime));
+        if (basicEnemy == null)
+        {
+            Destroy(gameObject);
+        }
     }
     private void CheckWhetherPlayerIsChargable()
     {
@@ -89,6 +96,7 @@ public class Enmy_Protector : MonoBehaviour
             if(!isCharging)
             {
                 shield.transform.localPosition = new Vector3(Mathf.Abs(shield.transform.localPosition.x), shield.transform.localPosition.y, shield.transform.localPosition.z);
+                basicEnemy.FlipToRight(true);
             }
         }
 
@@ -98,6 +106,7 @@ public class Enmy_Protector : MonoBehaviour
             if(!isCharging)
             {
                 shield.transform.localPosition = new Vector3(-(Mathf.Abs(shield.transform.localPosition.x)), shield.transform.localPosition.y, shield.transform.localPosition.z);
+                basicEnemy.FlipToRight(false);
             }
         }
     }

@@ -26,7 +26,6 @@ public class SingleShot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "EnemyShield")
         {
             Destroy(gameObject);

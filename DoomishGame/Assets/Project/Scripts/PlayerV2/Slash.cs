@@ -6,7 +6,6 @@ public class Slash : MonoBehaviour
 {
     [SerializeField] LayerMask maskToCheck;
     [SerializeField] Transform raycastFirePoint;
-    private bool canCheckAgain = true;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Bullet")
@@ -51,12 +50,4 @@ public class Slash : MonoBehaviour
                  
         //}
     }
-
-    IEnumerator DoItOnce()
-    {
-        canCheckAgain = false;
-        yield return new WaitForSeconds(0.1f);
-        canCheckAgain = true;
-    }
-
 }

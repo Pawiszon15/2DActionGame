@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ProtectorShield : MonoBehaviour
 {
-    GameManger manger;
-    float time;
+    private GameManger manger;
+    private float time;
+    [SerializeField] BasicEnemy basicEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +25,22 @@ public class ProtectorShield : MonoBehaviour
 
         if (player != null)
         {
-            Debug.Log("player death" + time);
             manger.ResetScene();
         }
 
         if(collision.gameObject.tag == "PlayerBullet")
         {
-            Debug.Log("playerbullet" + time);
+            if(collision.gameObject.GetComponent<SingleShot>())
+            {
+                Debug.Log("bullet decteded");
+            }
+
+            if(collision.gameObject.GetComponent<Slash>())
+            {
+                Debug.Log("slash detected");
+            }
         }
+
+
     }
 }

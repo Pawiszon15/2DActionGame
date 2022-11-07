@@ -89,7 +89,6 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             m_rigidbody.gravityScale = startingGravityScale;
             isGraplingRopeUsed = false;
             abilityCooldown.UseAbility();
-            Debug.Log("sth rope");
         }
 
         //else if (Input.GetKey(KeyCode.Mouse1))

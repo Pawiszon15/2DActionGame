@@ -86,7 +86,6 @@ public class GameManger : MonoBehaviour
 
     public void ResetScene()
     {
-        Debug.Log("Death");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

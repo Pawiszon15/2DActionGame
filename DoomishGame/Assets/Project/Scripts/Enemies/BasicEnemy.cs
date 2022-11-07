@@ -8,9 +8,12 @@ public class BasicEnemy : MonoBehaviour
     public bool isProtector;
     private GameManger gameManger;
     private bool firstDMG;
-    private bool isTempInvurnable;
+    private Player player;
+    private bool isFacingRight = false;
+
     private void Start()
     {
+        player = FindObjectOfType<Player>();
         gameManger = FindObjectOfType<GameManger>();
         firstDMG = true;
     }
@@ -19,32 +22,42 @@ public class BasicEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerBullet" && firstDMG)
         {
-            if(!isProtector)
+            if(isProtector)
+            {
+                TryToKillProtector();
+            }
+
+            else
             {
                 KillEnemy();
             }
         }
-
-        //else if(hasShiled)
-        //{
-        //    SingleShot singleShot = GetComponent<SingleShot>();
-        //    if(singleShot.isShiledBreaker)
-        //    {
-        //        KillEnemy();
-        //    }
-        //}
     }
 
     public void KillEnemy()
     {
+        Debug.Log(gameObject.name);
         firstDMG = false;
-        string objectName = gameObject.name;
+        string objectName = this.gameObject.name;
         gameManger.KilledEnemy(objectName);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 
-    public void InvurnableForAttacks()
+    public void FlipToRight(bool isRight)
     {
+        isFacingRight = isRight;
+    }
 
+    private void TryToKillProtector()
+    {
+        if (!isFacingRight && gameObject.transform.position.x <= player.transform.position.x)
+        {
+            KillEnemy();
+        }
+
+        else if(isFacingRight && gameObject.transform.position.x > player.transform.position.x)
+        {
+            KillEnemy();
+        }
     }
 }

@@ -46,7 +46,6 @@ public class TimeDisplay : MonoBehaviour
                 Debug.Log("Time is UP!");
                 TimeLeftToStartAlarm = 0;
                 shouldTimerBeforeAlarmTick = false;
-                gameManger.ActivateEnemies();
             }
         }
 

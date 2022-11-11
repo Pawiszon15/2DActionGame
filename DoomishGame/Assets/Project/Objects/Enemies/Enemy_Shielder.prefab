@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c860764cb7d99c4d997e49445cf30d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProtector: 0
 --- !u!114 &3227575431073779002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,12 +167,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 5054931543078381073, guid: 0ce0ad40a55b0724ba737903a434206e, type: 3}
+  shieldLifeTime: 2.5
   shiledCooldown: 3
   meleeBullet: {fileID: 3082266481703378707, guid: 2ad7349f0e9957647b89f3ad6503d1dd, type: 3}
   meleeRangeTrigger: 5
   meleeCooldown: 1.5
   firePoint: {fileID: 3227575431102241811}
-  playerTrackingPoint: {fileID: 0}
   defaultWaitTime: 0.5
 --- !u!1 &3227575431102241811
 GameObject:

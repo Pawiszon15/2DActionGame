@@ -57,17 +57,16 @@ public class CharacterMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] GameObject playerFrontTarget;
-    [SerializeField] GameObject playerBottomTarget;
     [SerializeField] float timeOfGateBoost;
     [HideInInspector] public bool isPlayerBoosted;
     [SerializeField] CapsuleCollider2D groundSlamCollider;
     [SerializeField] GameObject player;
-    private CircleCollider2D circle2D;
+    private CapsuleCollider2D capsule2D;
 
     // Start is called before the first frame update
     void Start()
     {       
-        circle2D = GetComponent<CircleCollider2D>();
+        capsule2D = GetComponent<CapsuleCollider2D>();
         rb2D = GetComponent<Rigidbody2D>();
         isGrounded = true;
         isGroundSlaming = false;
@@ -142,7 +141,7 @@ public class CharacterMovement : MonoBehaviour
             if(!isSliding)
             {
                 player.transform.localScale = new Vector3(1f, 0.5f, 1f);
-                circle2D.radius = 0.25f;
+                //capsule2D.radius = 0.25f;
                 rb2D.AddForce(new Vector2(0, -5f));
             }
 
@@ -153,7 +152,7 @@ public class CharacterMovement : MonoBehaviour
             if(isSliding)
             {
                 player.transform.localScale = new Vector3(1f, 1f, 1f);
-                circle2D.radius = 0.5f;
+                //capsule2D.radius = 0.5f;
             }
 
             isSliding = false;

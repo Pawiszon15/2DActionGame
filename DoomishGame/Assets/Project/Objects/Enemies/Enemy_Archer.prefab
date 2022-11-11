@@ -163,8 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunPivot: {fileID: 1780198223594633866}
   rotationSpeed: 20
-  specialTarget: 1
-  specialTargetTransform: {fileID: 0}
+  isPredicterShooter: 1
 --- !u!1 &1780198223650592869
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,3 +305,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c860764cb7d99c4d997e49445cf30d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProtector: 0

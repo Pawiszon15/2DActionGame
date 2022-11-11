@@ -68,7 +68,7 @@ public class Grenade : MonoBehaviour
         {
             Player player = collider2d.GetComponent<Player>();
             Rigidbody2D rigidbody2D = collider2d.GetComponent<Rigidbody2D>();
-            if (player)
+            if (player != null)
             {
                 if (rigidbody2D != null)
                 {
@@ -76,6 +76,8 @@ public class Grenade : MonoBehaviour
                     Vector2 distanceVector = collider2d.transform.position - transform.position;
                     if (distanceVector.magnitude > 0)
                     {
+                        rigidbody2D.velocity = Vector2.zero;
+
                         //rigidbody2D.velocity = Vector2.zero;
                         float explosionPower = explosionForce; /*/distanceVector.magnitude;*/
                         rigidbody2D.AddForce(explosionPower * distanceVector.normalized, ForceMode2D.Impulse);
@@ -103,6 +105,8 @@ public class Grenade : MonoBehaviour
                 Vector2 distanceVector = collider2d.transform.position - transform.position;
                 if (distanceVector.magnitude > 0)
                 {
+                    rigidbody2D.velocity = Vector2.zero;
+
                     //rigidbody2D.velocity = Vector2.zero;
                     float explosionPower = explosionForce; /*/distanceVector.magnitude;*/
                     rigidbody2D.AddForce(explosionPower * distanceVector.normalized, ForceMode2D.Impulse);

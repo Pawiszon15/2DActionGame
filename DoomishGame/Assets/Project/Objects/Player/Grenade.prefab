@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 10
-  explosionForce: 80
+  explosionForce: 45
   timeToExplode: 1
   velocity: 3
   explosionRangeMulti: 1.5

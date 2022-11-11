@@ -6,27 +6,28 @@ public class RotateEnemyWeapon : MonoBehaviour
 {
     [SerializeField] Transform gunPivot;
     [SerializeField] float rotationSpeed;
-    [SerializeField] bool specialTarget;
-    [SerializeField] Transform specialTargetTransform;
+    [SerializeField] bool isPredicterShooter;
 
     private Player player;
+    private GameObject specialTargetTransform;
     private Vector2 playerPos;
 
     private void Awake()
     {
         player = FindObjectOfType<Player>();
+        specialTargetTransform = FindObjectOfType<SpecialTarget>().gameObject;
     }
 
     private void Update()
     {
-        if(!specialTarget)
+        if(!isPredicterShooter)
         {
             playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
         }
 
-        else if(specialTarget)
+        else if(isPredicterShooter)
         {
-            playerPos = new Vector2(specialTargetTransform.position.x, specialTargetTransform.position.y);
+            playerPos = new Vector2(specialTargetTransform.transform.position.x, specialTargetTransform.transform.position.y);
         }
 
         RotateGun(playerPos);

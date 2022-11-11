@@ -7,6 +7,7 @@ public class Enemy_Shielder : MonoBehaviour
 {
     [Header("Shield ability")]
     [SerializeField] GameObject shield;
+    [SerializeField] float shieldLifeTime;
     [SerializeField] float shiledCooldown;
     private bool isShieldAvaialable;
 
@@ -19,41 +20,42 @@ public class Enemy_Shielder : MonoBehaviour
 
     [Header("References")]
     [SerializeField] GameObject firePoint;
-    [SerializeField] GameObject playerTrackingPoint;
     [SerializeField] float defaultWaitTime;
     private bool bullshitBool;
+    private GameObject playerTrackingPoint;
 
 
- 
 
     // Start is called before the first frame update
     void Start()
     {
+        playerTrackingPoint = FindObjectOfType<SpecialTarget>().gameObject;
         isShieldAvaialable = true;
         isMeleeAttackAvaiable = true;
         StartCoroutine(AbilityCooldown(defaultWaitTime, bullshitBool));
     }
 
 
-    private void SpawnShield(Vector2 shieldPosition, Vector3 shieldRotation)
+    private void SpawnShield()
     {
-        Instantiate(shield, shieldPosition, Quaternion.Euler(shieldRotation));
+        GameObject temp = Instantiate(shield, playerTrackingPoint.transform.position, shield.transform.rotation);
+        Destroy(temp, shieldLifeTime);
         StartCoroutine(AbilityCooldown(shiledCooldown, isShieldAvaialable));
     }
 
-    private void CaluclateShieldSpawnProperties()
-    {
-        Vector2 forwardPosOfPlayer = Vector2.zero;
-        Vector3 forwardRotOfPlayer = new Vector3(0, 0, 90f);
+    //private void CaluclateShieldSpawnProperties()
+    //{
+    //    Vector2 forwardPosOfPlayer = Vector2.zero;
+    //    Vector3 forwardRotOfPlayer = new Vector3(0, 0, 90f);
 
-        forwardPosOfPlayer = playerTrackingPoint.transform.position;
-        //if(playerTrackingPoint.transform.position.y > 2)
-        //{
-        //    forwardRotOfPlayer = new Vector3(0, 0, 0f);
-        //}
+    //    forwardPosOfPlayer = playerTrackingPoint.transform.position;
+    //    //if(playerTrackingPoint.transform.position.y > 2)
+    //    //{
+    //    //    forwardRotOfPlayer = new Vector3(0, 0, 0f);
+    //    //}
 
-        SpawnShield(forwardPosOfPlayer, forwardRotOfPlayer);
-    }
+    //    SpawnShield(forwardPosOfPlayer, forwardRotOfPlayer);
+    //}
 
     private void MeleeAttack()
     {
@@ -73,7 +75,7 @@ public class Enemy_Shielder : MonoBehaviour
 
         if(isShieldAvaialable && !isPlayerInMeleeRange)
         {
-            CaluclateShieldSpawnProperties();
+            SpawnShield();
         }
 
         else if(isMeleeAttackAvaiable && isPlayerInMeleeRange) //ut;s needed to check line of sight

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5655123827315509909}
   - component: {fileID: 1604666492}
   m_Layer: 0
-  m_Name: Shielder
+  m_Name: Enemy_Protector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,6 +77,7 @@ MonoBehaviour:
   isChargeAvaialable: 0
   shield: {fileID: 8680894710144242306}
   player: {fileID: 0}
+  basicEnemy: {fileID: 8680894710543510841}
 --- !u!1 &8680894709551874380
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b16d59f03aa2a54b8a2121afb1668d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basicEnemy: {fileID: 0}
 --- !u!1 &8680894710543510821
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,3 +349,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c860764cb7d99c4d997e49445cf30d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProtector: 0

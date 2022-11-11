@@ -22,13 +22,14 @@ public class Enmy_Protector : MonoBehaviour
 
     [Header("References")]
     [SerializeField] GameObject shield;
-    [SerializeField] GameObject player;
     [SerializeField] BasicEnemy basicEnemy;
+    private GameObject player;
     private CharacterMovement characterMovement;
     private float defaultWaitingTime;
 
     private void Start()
     {
+        player = FindObjectOfType<Player>().gameObject;
         characterMovement = player.GetComponent<CharacterMovement>();
         isChargeAvaialable = true;
         isCharging = false;

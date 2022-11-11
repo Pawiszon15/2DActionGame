@@ -138,4 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketSpeed: 11
   rotateSpeed: 240
-  explosion: {fileID: 7569741237248198324, guid: 7afc273f65e26df4eab69af3fc0d4ca9, type: 3}
+  explosion: {fileID: 1562817417552983664, guid: f8074c13ff71f4f449251645c7535f42, type: 3}

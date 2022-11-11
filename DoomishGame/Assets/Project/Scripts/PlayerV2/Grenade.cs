@@ -14,7 +14,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] float explosionRangeMulti;
 
     [Header("References")]
-    [SerializeField] CircleCollider2D explosionTrigger;
+    [SerializeField] GameObject explosion;
     private bool stickToSth = false;
     private Rigidbody2D rb;
 
@@ -51,16 +51,14 @@ public class Grenade : MonoBehaviour
 
     public void Explode()
     {
-        explosionTrigger.radius = explosionRadius + 1;
-        explosionTrigger.enabled = true;
+        explosion.SetActive(true);
         StartCoroutine(WaitForMomement());
     }
 
     IEnumerator ExplodeAfterTime()
     {
         yield return new WaitForSeconds(timeToExplode);
-        explosionTrigger.radius = explosionRadius + 1;
-        explosionTrigger.enabled = true;
+        explosion.SetActive(true);
         yield return new WaitForSeconds(0.05f);
         var inExplosionRadius = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 

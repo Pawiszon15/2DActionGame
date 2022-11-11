@@ -7612,7 +7612,7 @@ Transform:
   - {fileID: 36318856}
   - {fileID: 1102792791}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &314312752
 GameObject:
@@ -8240,7 +8240,7 @@ Transform:
   - {fileID: 1550031050}
   - {fileID: 8897905149454823640}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774172465
 GameObject:
@@ -9000,7 +9000,7 @@ Transform:
   - {fileID: 1776009483}
   - {fileID: 1676438482}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102792790
 GameObject:
@@ -10295,6 +10295,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1597604762075719448, guid: 2667b5c0967c06b478b25a4349de82bf, type: 3}
   m_PrefabInstance: {fileID: 1021599709}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1548938184
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1235635171295464583, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_Name
+      value: ShotgunBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -32.015404
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.082127
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279457014656874963, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b01f702f59f0c8e459292cc3e373dd70, type: 3}
 --- !u!1 &1550031047
 GameObject:
   m_ObjectHideFlags: 0
@@ -11031,7 +11088,7 @@ Transform:
   m_Children:
   - {fileID: 774172466}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0.04, y: 0, z: 0}
 --- !u!1 &1889619455
 GameObject:
@@ -11083,7 +11140,7 @@ Transform:
   - {fileID: 925278614}
   - {fileID: 1517969473}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1922827268 stripped
 Transform:
@@ -11312,6 +11369,10 @@ PrefabInstance:
       propertyPath: VFXEffect
       value: 
       objectReference: {fileID: 410849614}
+    - target: {fileID: 3727534308885961071, guid: 7bfb2f270e88c1043afa09e6380503a9, type: 3}
+      propertyPath: grenade
+      value: 
+      objectReference: {fileID: 6049851266426239756, guid: 13a22823e5e5ad842a03f2c6e4fd7a03, type: 3}
     - target: {fileID: 7980671895830398993, guid: 7bfb2f270e88c1043afa09e6380503a9, type: 3}
       propertyPath: m_Name
       value: PlayerV2

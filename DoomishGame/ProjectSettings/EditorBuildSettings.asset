@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/OLD/Level1_v2.unity
     guid: f6043e3557130dc4f8703dd73aeaf90f
   - enabled: 1
-    path: Assets/Project/Scenes/Level_TestingNeeCombatSet.unity
+    path: Assets/Project/Scenes/TestLevels/Level_TestingNeeCombatSet.unity
     guid: 212a38127f80128498a8f0880044e21b
   m_configObjects: {}

@@ -16,7 +16,7 @@ public class Enemy_RocketLuncher : MonoBehaviour
 
     void SpawnRocket()
     {
-       spawnedRocket = Instantiate(rocket, rocketSpawnPoint.position, Quaternion.identity);
+       spawnedRocket = Instantiate(rocket, rocketSpawnPoint.position, rocket.transform.rotation);
     }
 
     IEnumerator TimeBetweenRocketSpawn()

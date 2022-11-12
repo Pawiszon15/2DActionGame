@@ -19,7 +19,7 @@ public class Enemy_Shielder : MonoBehaviour
     private bool isPlayerInMeleeRange;
 
     [Header("References")]
-    [SerializeField] GameObject firePoint;
+    [SerializeField] Transform firePoint;
     [SerializeField] float defaultWaitTime;
     private bool bullshitBool;
     private GameObject playerTrackingPoint;
@@ -59,7 +59,7 @@ public class Enemy_Shielder : MonoBehaviour
 
     private void MeleeAttack()
     {
-        Instantiate(meleeBullet, firePoint.transform.position, firePoint.transform.rotation);
+        Instantiate(meleeBullet, firePoint.transform.position, firePoint.rotation);
         StartCoroutine(AbilityCooldown(meleeCooldown, isMeleeAttackAvaiable));
     }
 

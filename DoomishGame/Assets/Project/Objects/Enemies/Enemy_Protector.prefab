@@ -76,7 +76,6 @@ MonoBehaviour:
   chargeDistanceTrigger: 14
   isChargeAvaialable: 0
   shield: {fileID: 8680894710144242306}
-  player: {fileID: 0}
   basicEnemy: {fileID: 8680894710543510841}
 --- !u!1 &8680894709551874380
 GameObject:
@@ -136,8 +135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8680894710144242306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6199999, y: 0, z: 0}
-  m_LocalScale: {x: 1.2535, y: 1.6695, z: 0.25}
+  m_LocalPosition: {x: 0.461, y: 0, z: 0}
+  m_LocalScale: {x: 1.0208253, y: 1.3596073, z: 0.203595}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8680894709551874381}
@@ -300,8 +299,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.19215688, g: 0.7568628, b: 0.7490196, a: 1}
+  m_Sprite: {fileID: 1504133879, guid: ff4484a2c93764e44b35a75e93a237cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -324,18 +323,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.30954742, y: -0.1945076}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8828125}
+  m_Size: {x: 0.50590515, y: 1.0851021}
   m_EdgeRadius: 0
 --- !u!114 &8680894710543510841
 MonoBehaviour:

@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3441406626641453304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -20.206915, y: 3.4582996, z: 0}
   m_LocalScale: {x: 0.5177, y: 0.5177, z: 0.5177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &3441406626641453311
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketSpeed: 11
-  rotateSpeed: 240
+  rotateSpeed: 320
   explosion: {fileID: 1562817417552983664, guid: f8074c13ff71f4f449251645c7535f42, type: 3}

@@ -12,6 +12,7 @@ TagManager:
   - PlayerBullet
   - Wave
   - EnemyShield
+  - PermeablePlatform
   layers:
   - Default
   - TransparentFX

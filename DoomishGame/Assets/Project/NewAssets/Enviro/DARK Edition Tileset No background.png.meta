@@ -43,7 +43,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -119,12 +119,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 240
+        x: 16
+        y: 208
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -287,12 +287,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_8
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 240
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,7 +308,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_9
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 240
         width: 16
         height: 16
@@ -329,7 +329,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_10
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 240
         width: 16
         height: 16
@@ -350,7 +350,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_11
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 240
         width: 16
         height: 16
@@ -371,7 +371,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_12
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 240
         width: 16
         height: 16
@@ -392,7 +392,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_13
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 240
         width: 16
         height: 16
@@ -581,12 +581,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_22
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 224
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -602,7 +602,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_23
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 224
         width: 16
         height: 16
@@ -623,7 +623,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_24
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 224
         width: 16
         height: 16
@@ -644,7 +644,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_25
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 224
         width: 16
         height: 16
@@ -665,7 +665,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_26
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 224
         width: 16
         height: 16
@@ -686,7 +686,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_27
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 224
         width: 16
         height: 16
@@ -854,12 +854,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_35
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 208
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -875,7 +875,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_36
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 208
         width: 16
         height: 16
@@ -896,7 +896,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_37
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 208
         width: 16
         height: 16
@@ -917,7 +917,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_38
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 208
         width: 16
         height: 16
@@ -938,7 +938,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_39
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 208
         width: 16
         height: 16
@@ -959,7 +959,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_40
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 208
         width: 16
         height: 16
@@ -1085,12 +1085,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_46
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 192
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1127,12 +1127,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_48
       rect:
         serializedVersion: 2
-        x: 32
-        y: 176
+        x: 96
+        y: 192
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1253,12 +1253,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_54
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 176
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1275,7 +1275,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 176
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -1295,7 +1295,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_56
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 176
         width: 16
         height: 16
@@ -1316,7 +1316,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_57
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 176
         width: 16
         height: 16
@@ -1337,7 +1337,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_58
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 176
         width: 16
         height: 16
@@ -1358,7 +1358,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_59
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 176
         width: 16
         height: 16
@@ -1526,12 +1526,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_67
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 160
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1736,12 +1736,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_77
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 144
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1757,8 +1757,8 @@ TextureImporter:
       name: DARK Edition Tileset No background_78
       rect:
         serializedVersion: 2
-        x: 144
-        y: 144
+        x: 128
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -1778,7 +1778,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_79
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 144
         width: 16
         height: 16
@@ -1799,7 +1799,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_80
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 144
         width: 16
         height: 16
@@ -1820,7 +1820,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_81
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 144
         width: 16
         height: 16
@@ -1841,7 +1841,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_82
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 144
         width: 16
         height: 16
@@ -1946,12 +1946,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_87
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1967,7 +1967,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_88
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 128
         width: 16
         height: 16
@@ -2052,11 +2052,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 112
-        width: 16
-        height: 16
+        y: 123
+        width: 5
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2072,12 +2072,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_93
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
-        width: 16
-        height: 16
+        x: 60
+        y: 124
+        width: 4
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2093,7 +2093,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_94
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 112
         width: 16
         height: 16
@@ -2114,7 +2114,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_95
       rect:
         serializedVersion: 2
-        x: 80
+        x: 64
         y: 112
         width: 16
         height: 16
@@ -2135,7 +2135,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_96
       rect:
         serializedVersion: 2
-        x: 96
+        x: 80
         y: 112
         width: 16
         height: 16
@@ -2156,7 +2156,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_97
       rect:
         serializedVersion: 2
-        x: 112
+        x: 96
         y: 112
         width: 16
         height: 16
@@ -2177,7 +2177,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_98
       rect:
         serializedVersion: 2
-        x: 128
+        x: 112
         y: 112
         width: 16
         height: 16
@@ -2198,7 +2198,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_99
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 112
         width: 16
         height: 16
@@ -2282,8 +2282,8 @@ TextureImporter:
       name: DARK Edition Tileset No background_103
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
+        x: 32
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -2429,12 +2429,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_110
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 96
-        width: 16
+        width: 15
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2450,7 +2450,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_111
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 96
         width: 16
         height: 16
@@ -2471,7 +2471,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_112
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 96
         width: 16
         height: 16
@@ -2492,12 +2492,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_113
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
+        x: 177
+        y: 80
         width: 16
-        height: 16
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2513,7 +2513,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_114
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 96
         width: 16
         height: 16
@@ -2933,12 +2933,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_134
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 64
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2954,7 +2954,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_135
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 64
         width: 16
         height: 16
@@ -2975,7 +2975,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_136
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 64
         width: 16
         height: 16
@@ -2996,7 +2996,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_137
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 64
         width: 16
         height: 16
@@ -3017,7 +3017,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_138
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 64
         width: 16
         height: 16
@@ -3374,12 +3374,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_155
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 32
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3395,7 +3395,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_156
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 32
         width: 16
         height: 16
@@ -3416,7 +3416,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_157
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 32
         width: 16
         height: 16
@@ -3437,7 +3437,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_158
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 32
         width: 16
         height: 16
@@ -3584,12 +3584,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_165
       rect:
         serializedVersion: 2
-        x: 128
+        x: 112
         y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3605,7 +3605,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_166
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 16
         width: 16
         height: 16
@@ -3626,7 +3626,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_167
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 16
         width: 16
         height: 16
@@ -3815,12 +3815,12 @@ TextureImporter:
       name: DARK Edition Tileset No background_176
       rect:
         serializedVersion: 2
-        x: 128
+        x: 112
         y: 0
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3836,7 +3836,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_177
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 0
         width: 16
         height: 16
@@ -3857,7 +3857,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_178
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 0
         width: 16
         height: 16
@@ -3878,7 +3878,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_179
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 0
         width: 16
         height: 16
@@ -3899,7 +3899,7 @@ TextureImporter:
       name: DARK Edition Tileset No background_180
       rect:
         serializedVersion: 2
-        x: 192
+        x: 176
         y: 0
         width: 16
         height: 16
@@ -3912,6 +3912,2505 @@ TextureImporter:
       bones: []
       spriteID: 9a0f6f1fa2f166344bfda9065189282f
       internalID: 1040385998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_181
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e47ac9b30ab0f4dbdded9478565cc0
+      internalID: 1317604112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_182
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a110fff77243247b3d902bf8082dc8
+      internalID: -413150413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_183
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef2de5c67dd6234f94e332ad15aa8c3
+      internalID: -454100259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_184
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c615cc53a3e77a468b760318fcb5651
+      internalID: 1564580081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_185
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883b55c7b37b6bf4dbe521b75e399a2f
+      internalID: 913678055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_186
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5165d44538010c41b1f7fa2e7546001
+      internalID: 200580284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_187
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f926a7d77c28cc9489dbe60fb8c4199b
+      internalID: -1480237401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_188
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48fb4cb59eb3a24699518423df37a52
+      internalID: 836609556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_189
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d998afe50cdb4f4b88c35200be53012
+      internalID: 79622682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_190
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a30e6cd3edb8f40b12c775725f10ff
+      internalID: -276878367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_191
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58cb18c9ba5ecd4a9bcca020df3ef74
+      internalID: 2048704993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_192
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e73f1fdf11e8c49be439e7d755a2b9
+      internalID: 1317850525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_193
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9520382d88ede54e944dae35f30ea70
+      internalID: 1147067975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_194
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37f52af4b6c16f42a2d4c7044284887
+      internalID: -62006932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_195
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f874e7ec3a91545b5c25c38fea1ae3
+      internalID: 1027361948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_196
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433aa01a8e9d414419e08ed4d5bc6978
+      internalID: -957918412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_197
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec9ca2987ce4874cb1660b9fa462152
+      internalID: 1174862566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_198
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16fd7300a4e4c84ba302c8347d064fa
+      internalID: 706358392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_199
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f35629e36f314a46ae47d6b9017a040
+      internalID: 489780570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_200
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2e85ce339ef9644aa2107c06cbbe28
+      internalID: 562442867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_201
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47993d7648a6d9845b41307d06244aca
+      internalID: -1157945423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_202
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21101c3d45f3ade47b2a95c2c1afcf83
+      internalID: 868879169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_203
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0088b1bc9c4c74ba1fd2bf07801735
+      internalID: -761698519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_204
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d1c94b265b2de438e234955ef936ff
+      internalID: 396752843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_205
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2170a490d742ed24e8a4a88da8343b18
+      internalID: 242746987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_206
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f765837257752479681629dad9eb3b
+      internalID: -1942998850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_207
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8847874d26a0b4a831ffb7d5b5e69a
+      internalID: -1017752156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_208
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fcab245ef5bb0438eb7d1fab5e9cc8
+      internalID: -779043345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_209
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d16b2875c1ac141be6186503fdf1b2
+      internalID: -1412691356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_210
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 16
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532d5483823572847b529b2518f9a4dd
+      internalID: 1120334667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_211
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef0684b7788841459e7f60aac7d91c1
+      internalID: -199525550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_212
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18932847f253b9948b8988335ce46506
+      internalID: -758306337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_213
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81109f458c2f82848bda2e0ae657c322
+      internalID: 1585701510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_214
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589baa3946a445e449e960274f93147a
+      internalID: 880607749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_215
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3610b77f111e32943ab3f18ca49c64ff
+      internalID: 1112244179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_216
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f933e747812e84fb59f8752525d8a3
+      internalID: 1303743664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_217
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842eea0f0556a374484982024ba502aa
+      internalID: 2034551256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_218
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e56bdaa3f798d4e88bcd1338a0da42
+      internalID: -889481376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_219
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0807c2e41fb9de448a4822b90c2376d
+      internalID: 377853359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_220
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493f0da010850b54291359d1abdb1391
+      internalID: -1055243379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_221
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c5dae37b831334080b46ce49baaa7c
+      internalID: 1762595863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_222
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd1f2aafb4c4794ab1e43d1ab2f68d2
+      internalID: -1255901257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_223
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d90289f73c7aa46a16c47980dded33
+      internalID: -465585027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_224
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c6d5591552da545889d90ffb96d9f0
+      internalID: 1002219999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_225
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f075440b71720e498c1728c92938452
+      internalID: 266952141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_226
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01104949fa37ea443b0e1ca2100961fb
+      internalID: -145871551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_227
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8d099c6475962439a0d957100ce070
+      internalID: -1258466805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_228
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28da05bb837c9b498a8eb5df565506b
+      internalID: -496755277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_229
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf41e4e36f55aa40bb566bacfdd5b6d
+      internalID: 366150948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_230
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f3137b50535fb429f169c174221d1b
+      internalID: 515654298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_231
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a9a620e77b2a44d94b9676ac73a007
+      internalID: 845095819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_232
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb6a82bad155df42adf97cb23184482
+      internalID: 914927893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_233
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907c3cc93d4b032439a6ac77507305e5
+      internalID: -606262564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_234
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5909dd1f57b63a34fa1ac852e66d1972
+      internalID: -769713775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_235
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6bd91a9abbded4eb91ec2b4b5e7e9a
+      internalID: -120027885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_236
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a5b2b36268a934187b4f69ed5b2f16
+      internalID: -1616415345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_237
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f089257abd4cf47abb4871827d0354
+      internalID: 568143743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_238
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1947d34e578744ba4c7b999e88db1f
+      internalID: -344552750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_239
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6be697bd572c548ad2d38bddeb2672
+      internalID: -1633360334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_240
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a48eaa77065994f995d2c828790d74
+      internalID: -1467817324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_241
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb5ad46f2249d144aa804a85f6127ae
+      internalID: -414782838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_242
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4937ce92b6f3ac44aa4be8cd622e018b
+      internalID: -1749961517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_243
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b616658e887ec584c9885d1809a61b4c
+      internalID: 1512578795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_244
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0e29e3d43c427408bf85cbda1c2b06
+      internalID: -24100451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_245
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d610fc36717cb24186366cdedc5fb10
+      internalID: 1354915223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_246
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8926698c1bdda9449826e0aba6cd4675
+      internalID: 224053030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_247
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a7cbb1c9d732b4b91547d5092fb923
+      internalID: -632489838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_248
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1744505d8682e6248ab87bc3e096ad32
+      internalID: -573380181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_249
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106bc766485d21c4ab9fe35ab2c8196e
+      internalID: -733801304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_250
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5987e16c5656d4bb4dc0ea7ab9c990
+      internalID: 1820738508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_251
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10538db8040397f4fbf90618de0bbe33
+      internalID: 991829427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_252
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62d9ade684f80d42b435c3ae94ec0c4
+      internalID: 1029657637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_253
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e53e6fb1dd23a4a9103301f03ec4ee
+      internalID: 1136592568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_254
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548a282a17ef92743a21abf341d353ac
+      internalID: -52155293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_255
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcb161fd50972645b9ad15cce8046f6
+      internalID: 1606871461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_256
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8a4e4bc2b803a4ea17afee6f6cbe8c
+      internalID: 583626187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_257
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439751f6550bea14bb35597aac60e037
+      internalID: 2040425604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_258
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e536d6338a1e54ab2a74a69b24d633
+      internalID: 72897178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_259
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db0f9474ed54b544a7457765090a736
+      internalID: -535666242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_260
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4726db129d24c4eb1773503742afbf
+      internalID: 1263247538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_261
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1638d6a28cf2e45a17b7960e23719d
+      internalID: 767484827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_262
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728c8345e29fa594783649c7caacc22d
+      internalID: 1469240050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_263
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703f031cb3d3e434cac7451129ae91c1
+      internalID: -858811954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_264
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e1b3e015838334a82aa48f831eae71
+      internalID: 2016774950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_265
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d94f8590f6a0344e811443ceccec3dc
+      internalID: 1777935960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_266
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e8151d247adb84a8888e5fde001360
+      internalID: 1119235289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_267
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb56b0019a3fca747965f73d2b0f5917
+      internalID: 418712327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_268
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c12b9901854eb41a2ee6514572c4f7
+      internalID: -938826805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_269
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18954063a6ab28e498c249a436fc75a4
+      internalID: 1156666601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_270
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d083689dbdf0e794ba88d439f79cf145
+      internalID: 1127945106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_271
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b0e32e740fe774c89d68cb5cf2d83a
+      internalID: 1490939400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_272
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b686418ac1c204daa79c7d868cdc9e
+      internalID: 715643290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_273
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2e8fe0661a07d4791d435ccaeb7b02
+      internalID: 1025963194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_274
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a1e7ceff2db7540947d49f72068cba
+      internalID: -1394384782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_275
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e537cb1bdf0654dad9374c3e764ad4
+      internalID: 245838949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_276
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edf467e7f4920c468c3865cd5f4c88b
+      internalID: 21682284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_277
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61450b37dd99eaf43bba6cf8a322fef6
+      internalID: -426120962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_278
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fc555548a13f64abe4fe63d2cdca78
+      internalID: -1695980752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_279
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e3d6837cd0d7e4cbc02e751c7d301f
+      internalID: -972784503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_280
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ceedb3937eef14d9ac8f1fe25cddf8
+      internalID: -884498908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_281
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f10345c49074e49adda0851784c829
+      internalID: -938759330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_282
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c0101c25b34a947bffb9e311cba8b8
+      internalID: 248765796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_283
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a508b358e9386724da0b317795c0c70d
+      internalID: -2090073692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_284
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2220501bc968249984bb5b73bcd8a5
+      internalID: -1304337215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_285
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e463b7b2e92b9c942bfd3a027c9b6428
+      internalID: -932889483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_286
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b711a8d0fbe01d94eaf8f480d0984b7a
+      internalID: -1091429669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_287
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559c1d2126bc5e2458d548a1aa600fcb
+      internalID: 1097571904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_288
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2444b4487b2bff44c8a7c9ffa958927c
+      internalID: 37975387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_289
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b14808c44877c449b0f57864485cb11
+      internalID: -1685626303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_290
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97793a9be01034b4883763adc9768613
+      internalID: -1915147673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_291
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1f18953f675d94396737b08ea5a6e3
+      internalID: 1974005669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_292
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c248b5f53bc0e3c45ae67644fd996bd9
+      internalID: 1842223345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_293
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ccdbb48e6a6ec4186f755d748d18e9
+      internalID: -1018779479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_294
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f771b93419f6944abf987df97af611
+      internalID: 1220091304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_295
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672b5f275830a60498941898dfe365c3
+      internalID: -393678525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_296
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c061daf2c60ca646b9fd7896a1c96fd
+      internalID: 124550961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_297
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9c4cb7ff2813941a5c53fb18e4b0ae
+      internalID: 853027251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_298
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629fcb21ae8599c49a8e5584de05ad43
+      internalID: -315311980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK Edition Tileset No background_299
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7940e71d9258b4cae6bdc987903f7e
+      internalID: 133723628
       vertices: []
       indices: 
       edges: []
@@ -3930,10 +6429,13 @@ TextureImporter:
       DARK Edition Tileset No background_131: -2074358857
       DARK Edition Tileset No background_151: 892054421
       DARK Edition Tileset No background_129: -1689853299
+      DARK Edition Tileset No background_197: 1174862566
+      DARK Edition Tileset No background_264: 2016774950
       DARK Edition Tileset No background_111: 249048526
       DARK Edition Tileset No background_86: -1943303880
       DARK Edition Tileset No background_76: -136486187
       DARK Edition Tileset No background_22: 2015516054
+      DARK Edition Tileset No background_221: 1762595863
       DARK Edition Tileset No background_89: -1950415574
       DARK Edition Tileset No background_93: 326058986
       DARK Edition Tileset No background_154: 962638695
@@ -3943,83 +6445,148 @@ TextureImporter:
       DARK Edition Tileset No background_152: -1991223871
       DARK Edition Tileset No background_60: 14401148
       DARK Edition Tileset No background_47: 334866107
+      DARK Edition Tileset No background_266: 1119235289
       DARK Edition Tileset No background_112: -417663088
       DARK Edition Tileset No background_0: -68689565
       DARK Edition Tileset No background_14: -680556183
       DARK Edition Tileset No background_172: -910808406
       DARK Edition Tileset No background_123: -225959989
+      DARK Edition Tileset No background_292: 1842223345
       DARK Edition Tileset No background_145: -223536027
+      DARK Edition Tileset No background_199: 489780570
+      DARK Edition Tileset No background_294: 1220091304
       DARK Edition Tileset No background_157: 160080601
+      DARK Edition Tileset No background_268: -938826805
       DARK Edition Tileset No background_155: -1671233394
       DARK Edition Tileset No background_124: -528929866
       DARK Edition Tileset No background_56: 847759875
       DARK Edition Tileset No background_153: -1262066308
+      DARK Edition Tileset No background_256: 583626187
+      DARK Edition Tileset No background_262: 1469240050
       DARK Edition Tileset No background_21: 985582289
+      DARK Edition Tileset No background_185: 913678055
       DARK Edition Tileset No background_113: -2097653857
+      DARK Edition Tileset No background_238: -344552750
+      DARK Edition Tileset No background_251: 991829427
+      DARK Edition Tileset No background_284: -1304337215
       DARK Edition Tileset No background_139: -706440744
+      DARK Edition Tileset No background_289: -1685626303
+      DARK Edition Tileset No background_189: 79622682
       DARK Edition Tileset No background_29: -730670233
       DARK Edition Tileset No background_163: 515200895
       DARK Edition Tileset No background_171: 1604604143
       DARK Edition Tileset No background_30: -759422999
+      DARK Edition Tileset No background_192: 1317850525
+      DARK Edition Tileset No background_225: 266952141
+      DARK Edition Tileset No background_291: 1974005669
+      DARK Edition Tileset No background_186: 200580284
       DARK Edition Tileset No background_128: -344684249
+      DARK Edition Tileset No background_207: -1017752156
+      DARK Edition Tileset No background_276: 21682284
+      DARK Edition Tileset No background_288: 37975387
       DARK Edition Tileset No background_62: -1391562278
       DARK Edition Tileset No background_140: 1765557532
       DARK Edition Tileset No background_71: 1686718029
       DARK Edition Tileset No background_143: 1004326346
       DARK Edition Tileset No background_48: -6595559
+      DARK Edition Tileset No background_196: -957918412
+      DARK Edition Tileset No background_298: -315311980
       DARK Edition Tileset No background_4: 1568936864
+      DARK Edition Tileset No background_183: -454100259
+      DARK Edition Tileset No background_218: -889481376
       DARK Edition Tileset No background_61: 151907262
       DARK Edition Tileset No background_66: 1170905187
+      DARK Edition Tileset No background_246: 224053030
+      DARK Edition Tileset No background_208: -779043345
       DARK Edition Tileset No background_58: -1325781058
+      DARK Edition Tileset No background_203: -761698519
       DARK Edition Tileset No background_102: -2030801536
       DARK Edition Tileset No background_126: 636293317
       DARK Edition Tileset No background_95: -964061538
+      DARK Edition Tileset No background_253: 1136592568
       DARK Edition Tileset No background_39: 517529944
-      DARK Edition Tileset No background_79: 265938799
       DARK Edition Tileset No background_150: -1790157939
+      DARK Edition Tileset No background_277: -426120962
+      DARK Edition Tileset No background_79: 265938799
       DARK Edition Tileset No background_59: -1924636713
       DARK Edition Tileset No background_103: -150545847
       DARK Edition Tileset No background_16: 1913591096
       DARK Edition Tileset No background_77: -406295212
+      DARK Edition Tileset No background_259: -535666242
+      DARK Edition Tileset No background_213: 1585701510
+      DARK Edition Tileset No background_267: 418712327
+      DARK Edition Tileset No background_258: 72897178
+      DARK Edition Tileset No background_281: -938759330
       DARK Edition Tileset No background_9: -563127714
       DARK Edition Tileset No background_173: -1608402751
+      DARK Edition Tileset No background_219: 377853359
       DARK Edition Tileset No background_107: 301366144
       DARK Edition Tileset No background_99: -1292102140
       DARK Edition Tileset No background_32: -1761256074
       DARK Edition Tileset No background_54: 641775231
+      DARK Edition Tileset No background_182: -413150413
       DARK Edition Tileset No background_96: -2045176073
+      DARK Edition Tileset No background_279: -972784503
+      DARK Edition Tileset No background_254: -52155293
       DARK Edition Tileset No background_3: 498475647
+      DARK Edition Tileset No background_255: 1606871461
+      DARK Edition Tileset No background_286: -1091429669
+      DARK Edition Tileset No background_273: 1025963194
       DARK Edition Tileset No background_44: 1170722616
       DARK Edition Tileset No background_50: -1107735506
       DARK Edition Tileset No background_40: 851748931
       DARK Edition Tileset No background_178: -1077780752
       DARK Edition Tileset No background_70: 989434335
       DARK Edition Tileset No background_149: -1839451959
+      DARK Edition Tileset No background_240: -1467817324
       DARK Edition Tileset No background_156: 2006740976
+      DARK Edition Tileset No background_206: -1942998850
+      DARK Edition Tileset No background_244: -24100451
+      DARK Edition Tileset No background_287: 1097571904
       DARK Edition Tileset No background_80: 14383323
+      DARK Edition Tileset No background_282: 248765796
       DARK Edition Tileset No background_130: 699107121
       DARK Edition Tileset No background_176: -630813816
       DARK Edition Tileset No background_110: 1967903328
       DARK Edition Tileset No background_180: 1040385998
       DARK Edition Tileset No background_17: 850928527
+      DARK Edition Tileset No background_241: -414782838
+      DARK Edition Tileset No background_233: -606262564
       DARK Edition Tileset No background_115: -955464324
       DARK Edition Tileset No background_88: 2038154259
       DARK Edition Tileset No background_53: -553745004
+      DARK Edition Tileset No background_216: 1303743664
+      DARK Edition Tileset No background_272: 715643290
+      DARK Edition Tileset No background_211: -199525550
       DARK Edition Tileset No background_19: 806115811
       DARK Edition Tileset No background_43: 1042018232
       DARK Edition Tileset No background_26: 1513055061
       DARK Edition Tileset No background_94: -543751802
-      DARK Edition Tileset No background_25: -850670669
+      DARK Edition Tileset No background_227: -1258466805
       DARK Edition Tileset No background_78: -815369160
+      DARK Edition Tileset No background_297: 853027251
+      DARK Edition Tileset No background_25: -850670669
+      DARK Edition Tileset No background_228: -496755277
       DARK Edition Tileset No background_83: -1422077144
+      DARK Edition Tileset No background_229: 366150948
+      DARK Edition Tileset No background_190: -276878367
+      DARK Edition Tileset No background_269: 1156666601
       DARK Edition Tileset No background_136: -1132610475
+      DARK Edition Tileset No background_191: 2048704993
       DARK Edition Tileset No background_114: 1434409200
       DARK Edition Tileset No background_108: 19812846
+      DARK Edition Tileset No background_235: -120027885
+      DARK Edition Tileset No background_212: -758306337
       DARK Edition Tileset No background_55: -905762932
       DARK Edition Tileset No background_81: 1783947732
-      DARK Edition Tileset No background_121: -413630145
       DARK Edition Tileset No background_148: 1028452200
+      DARK Edition Tileset No background_205: 242746987
+      DARK Edition Tileset No background_121: -413630145
+      DARK Edition Tileset No background_274: -1394384782
+      DARK Edition Tileset No background_210: 1120334667
       DARK Edition Tileset No background_105: 2079507551
+      DARK Edition Tileset No background_204: 396752843
+      DARK Edition Tileset No background_275: 245838949
       DARK Edition Tileset No background_67: -1572467347
       DARK Edition Tileset No background_28: -437063909
       DARK Edition Tileset No background_69: 734646901
@@ -4027,41 +6594,62 @@ TextureImporter:
       DARK Edition Tileset No background_45: -2025426562
       DARK Edition Tileset No background_85: 865913713
       DARK Edition Tileset No background_133: 1772913454
+      DARK Edition Tileset No background_187: -1480237401
       DARK Edition Tileset No background_164: -1749500240
+      DARK Edition Tileset No background_138: 994979808
       DARK Edition Tileset No background_73: 1262933327
       DARK Edition Tileset No background_15: 2040913684
-      DARK Edition Tileset No background_138: 994979808
+      DARK Edition Tileset No background_195: 1027361948
       DARK Edition Tileset No background_12: 246999430
       DARK Edition Tileset No background_1: 328388544
       DARK Edition Tileset No background_170: -674971242
       DARK Edition Tileset No background_146: 996035005
+      DARK Edition Tileset No background_270: 1127945106
       DARK Edition Tileset No background_87: -1652612676
       DARK Edition Tileset No background_35: 1020202103
+      DARK Edition Tileset No background_243: 1512578795
+      DARK Edition Tileset No background_260: 1263247538
+      DARK Edition Tileset No background_209: -1412691356
+      DARK Edition Tileset No background_226: -145871551
       DARK Edition Tileset No background_33: 2084958462
       DARK Edition Tileset No background_7: -466780399
       DARK Edition Tileset No background_120: 35459755
       DARK Edition Tileset No background_52: -1418174229
+      DARK Edition Tileset No background_201: -1157945423
       DARK Edition Tileset No background_42: -1863087816
+      DARK Edition Tileset No background_202: 868879169
       DARK Edition Tileset No background_8: -553308600
       DARK Edition Tileset No background_11: -1707607477
       DARK Edition Tileset No background_119: -238800249
       DARK Edition Tileset No background_51: 1246426102
       DARK Edition Tileset No background_159: -1389490304
+      DARK Edition Tileset No background_257: 2040425604
       DARK Edition Tileset No background_27: -1964168414
       DARK Edition Tileset No background_168: -657266163
       DARK Edition Tileset No background_100: 830113949
       DARK Edition Tileset No background_174: 720411308
       DARK Edition Tileset No background_13: 588900376
       DARK Edition Tileset No background_91: 415815177
+      DARK Edition Tileset No background_261: 767484827
+      DARK Edition Tileset No background_217: 2034551256
+      DARK Edition Tileset No background_296: 124550961
       DARK Edition Tileset No background_167: 1112522110
       DARK Edition Tileset No background_118: 1472120639
+      DARK Edition Tileset No background_239: -1633360334
       DARK Edition Tileset No background_34: 1766834202
+      DARK Edition Tileset No background_193: 1147067975
+      DARK Edition Tileset No background_215: 1112244179
+      DARK Edition Tileset No background_214: 880607749
+      DARK Edition Tileset No background_299: 133723628
+      DARK Edition Tileset No background_184: 1564580081
       DARK Edition Tileset No background_90: -386145949
       DARK Edition Tileset No background_98: -1983474982
       DARK Edition Tileset No background_68: 202039237
       DARK Edition Tileset No background_141: 2094320325
+      DARK Edition Tileset No background_245: 1354915223
       DARK Edition Tileset No background_10: 1371386387
       DARK Edition Tileset No background_75: 2084635963
+      DARK Edition Tileset No background_194: -62006932
       DARK Edition Tileset No background_36: -346198040
       DARK Edition Tileset No background_104: 1339468845
       DARK Edition Tileset No background_147: 1374007336
@@ -4069,14 +6657,24 @@ TextureImporter:
       DARK Edition Tileset No background_64: 1863848136
       DARK Edition Tileset No background_177: -1548898909
       DARK Edition Tileset No background_160: 952874541
+      DARK Edition Tileset No background_252: 1029657637
+      DARK Edition Tileset No background_250: 1820738508
       DARK Edition Tileset No background_169: 481416817
       DARK Edition Tileset No background_109: -718987411
+      DARK Edition Tileset No background_181: 1317604112
+      DARK Edition Tileset No background_263: -858811954
       DARK Edition Tileset No background_116: -371655174
       DARK Edition Tileset No background_161: -1057914442
+      DARK Edition Tileset No background_283: -2090073692
       DARK Edition Tileset No background_2: 1887850046
+      DARK Edition Tileset No background_293: -1018779479
       DARK Edition Tileset No background_74: 1495325007
+      DARK Edition Tileset No background_230: 515654298
       DARK Edition Tileset No background_175: -296289847
+      DARK Edition Tileset No background_232: 914927893
+      DARK Edition Tileset No background_247: -632489838
       DARK Edition Tileset No background_135: 63231202
+      DARK Edition Tileset No background_248: -573380181
       DARK Edition Tileset No background_23: 1438146110
       DARK Edition Tileset No background_57: 437281854
       DARK Edition Tileset No background_5: -1150848562
@@ -4088,26 +6686,46 @@ TextureImporter:
       DARK Edition Tileset No background_101: 1349300746
       DARK Edition Tileset No background_6: -1675806154
       DARK Edition Tileset No background_162: -165853520
+      DARK Edition Tileset No background_242: -1749961517
+      DARK Edition Tileset No background_271: 1490939400
+      DARK Edition Tileset No background_280: -884498908
+      DARK Edition Tileset No background_200: 562442867
+      DARK Edition Tileset No background_231: 845095819
       DARK Edition Tileset No background_117: -158346880
       DARK Edition Tileset No background_144: -363981023
+      DARK Edition Tileset No background_223: -465585027
       DARK Edition Tileset No background_134: 1947645681
+      DARK Edition Tileset No background_290: -1915147673
       DARK Edition Tileset No background_82: 416752871
+      DARK Edition Tileset No background_265: 1777935960
+      DARK Edition Tileset No background_295: -393678525
+      DARK Edition Tileset No background_198: 706358392
       DARK Edition Tileset No background_125: 372912265
+      DARK Edition Tileset No background_234: -769713775
+      DARK Edition Tileset No background_188: 836609556
       DARK Edition Tileset No background_106: -651123863
       DARK Edition Tileset No background_37: -1934611930
       DARK Edition Tileset No background_122: -755934330
+      DARK Edition Tileset No background_285: -932889483
       DARK Edition Tileset No background_72: 1971126654
       DARK Edition Tileset No background_84: 1924672367
+      DARK Edition Tileset No background_249: -733801304
+      DARK Edition Tileset No background_222: -1255901257
       DARK Edition Tileset No background_142: -1658062120
       DARK Edition Tileset No background_137: -897125575
       DARK Edition Tileset No background_127: -1347693213
+      DARK Edition Tileset No background_236: -1616415345
       DARK Edition Tileset No background_165: -1836286431
       DARK Edition Tileset No background_41: 339229228
       DARK Edition Tileset No background_132: -156723079
+      DARK Edition Tileset No background_237: 568143743
+      DARK Edition Tileset No background_224: 1002219999
       DARK Edition Tileset No background_65: 77758390
       DARK Edition Tileset No background_179: 2069141759
       DARK Edition Tileset No background_46: -1975111047
       DARK Edition Tileset No background_38: 227159801
+      DARK Edition Tileset No background_278: -1695980752
+      DARK Edition Tileset No background_220: -1055243379
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

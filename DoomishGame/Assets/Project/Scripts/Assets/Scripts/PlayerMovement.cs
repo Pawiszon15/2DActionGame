@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 	//just paste in all the parameters, though you will need to manuly change all references in this script
 	public PlayerData Data;
 	[SerializeField] GameObject playerVisuals;
+	[SerializeField] Transform mousePos;
 	#region COMPONENTS
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
@@ -118,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
 			OnJumpUpInput();
 		}
 
-		if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
+		if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
 		{
 			OnDashInput();
 		}
@@ -208,14 +209,13 @@ public class PlayerMovement : MonoBehaviour
 		if (CanDash() && LastPressedDashTime > 0)
 		{
 			//Freeze game for split second. Adds juiciness and a bit of forgiveness over directional input
-			Sleep(Data.dashSleepTime); 
-
+			Sleep(Data.dashSleepTime);
 			//If not direction pressed, dash forward
-			if (_moveInput != Vector2.zero)
-				_lastDashDir = _moveInput;
-			else
-				_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
-
+			//if (_moveInput != Vector2.zero)
+			//	_lastDashDir = _moveInput;
+			//else
+			//	_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
+			_lastDashDir = mousePos.right;
 
 
 			IsDashing = true;
@@ -399,9 +399,15 @@ public class PlayerMovement : MonoBehaviour
 	private void Turn()
 	{
 		//stores scale and flips the player along the x axis, 
+		Transform trans = _frontWallCheckPoint;
 		Vector3 scale = playerVisuals.transform.localScale; 
+
+		//change needed due to flipping only visuals of player
+		_frontWallCheckPoint = _backWallCheckPoint;
+		_backWallCheckPoint = trans;
+
 		scale.x *= -1;
-		playerVisuals.transform.localScale = scale;
+        playerVisuals.transform.localScale = scale;
 
 		IsFacingRight = !IsFacingRight;
 	}

@@ -71,7 +71,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (startedJumping)
         {
-            anim.SetTrigger("Jump");
+            //anim.SetTrigger("Jump");
             GameObject obj = Instantiate(jumpFX, transform.position - (Vector3.up * transform.localScale.y / 2), Quaternion.Euler(-90, 0, 0));
             Destroy(obj, 1);
             startedJumping = false;
@@ -80,13 +80,14 @@ public class PlayerAnimator : MonoBehaviour
 
         if (justLanded)
         {
-            anim.SetTrigger("Land");
+            //anim.SetTrigger("Land");
             GameObject obj = Instantiate(landFX, transform.position - (Vector3.up * transform.localScale.y / 1.5f), Quaternion.Euler(-90, 0, 0));
             Destroy(obj, 1);
             justLanded = false;
             return;
         }
 
-        anim.SetFloat("Vel Y", mov.RB.velocity.y);
+        anim.SetFloat("velocityX", mov.RB.velocity.x);
+        anim.SetFloat("velocityY", mov.RB.velocity.y);
     }
 }

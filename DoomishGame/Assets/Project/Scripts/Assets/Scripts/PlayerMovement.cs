@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 	#region COMPONENTS
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
-	//public PlayerAnimator AnimHandler { get; private set; }
+	public PlayerAnimator AnimHandler { get; private set; }
 	#endregion
 
 	#region STATE PARAMETERS
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
 	{
 		RB = GetComponent<Rigidbody2D>();
-		//AnimHandler = GetComponent<PlayerAnimator>();
+		AnimHandler = GetComponent<PlayerAnimator>();
 	}
 
 	private void Start()
@@ -133,8 +133,8 @@ public class PlayerMovement : MonoBehaviour
 			{
 				if(LastOnGroundTime < -0.1f)
                 {
-					//AnimHandler.justLanded = true;
-                }
+					AnimHandler.justLanded = true;
+				}
 
 				LastOnGroundTime = Data.coyoteTime; //if so sets the lastGrounded to coyoteTime
             }		
@@ -187,7 +187,7 @@ public class PlayerMovement : MonoBehaviour
 				_isJumpFalling = false;
 				Jump();
 
-				//AnimHandler.startedJumping = true;
+				AnimHandler.startedJumping = true;
 			}
 			//WALL JUMP
 			else if (CanWallJump() && LastPressedJumpTime > 0)

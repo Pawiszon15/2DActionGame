@@ -71,7 +71,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943624018}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -468,7 +468,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.099056594, b: 0.254717, a: 0}
+  m_BackGroundColor: {r: 0.1764706, g: 0.1764706, b: 0.1764706, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -485,7 +485,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -600,7 +600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764787693261374505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.646, z: 0}
+  m_LocalPosition: {x: 0, y: -1.119, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -680,7 +680,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 0bb68d41cd332d746a2ea8c8c6bebc01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 764787691870002631}
-  grenade: {fileID: 1809446704913160074, guid: 13a22823e5e5ad842a03f2c6e4fd7a03, type: 3}
+  grenade: {fileID: 6049851266426239756, guid: 13a22823e5e5ad842a03f2c6e4fd7a03, type: 3}
 --- !u!114 &3727534308885961064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1122,7 @@ GameObject:
   - component: {fileID: 7980671895830398998}
   - component: {fileID: 7980671895830399003}
   - component: {fileID: 1244778799}
+  - component: {fileID: 5851255356953244359}
   m_Layer: 0
   m_Name: PlayerV2
   m_TagString: Player
@@ -1202,12 +1203,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 2077080457, guid: 0415e128775bef94ab9de3ab1c192987, type: 3}
+  m_Sprite: {fileID: 1343072593, guid: 11ae7fa41a50c5140b2cb0a2cbaad31c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.625, y: 2.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1230,7 +1231,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 48.703182
+  m_Distance: 53.889362
   m_DampingRatio: 1
   m_Frequency: 1
 --- !u!50 &7980671895830398998
@@ -1306,9 +1307,29 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.33041, y: -0.20585728}
-  m_Size: {x: 0.4087448, y: 1.0302067}
+  m_Offset: {x: -1.0934963, y: -0.22693634}
+  m_Size: {x: 0.5352211, y: 1.5301857}
   m_Direction: 0
+--- !u!95 &5851255356953244359
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980671895830398993}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75064ef14361344409b87f98e258fd73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7980671895875179577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1824,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2901483747606244667, guid: aca06dea1aea2b04cafd49cfc7b52c93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2901483747719026454, guid: aca06dea1aea2b04cafd49cfc7b52c93, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1945,6 +1970,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3356624567006253329, guid: aca06dea1aea2b04cafd49cfc7b52c93, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356624567006253329, guid: aca06dea1aea2b04cafd49cfc7b52c93, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

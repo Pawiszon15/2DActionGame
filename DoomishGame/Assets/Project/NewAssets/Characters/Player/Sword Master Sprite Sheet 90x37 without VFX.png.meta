@@ -119,10 +119,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 962
-        width: 90
-        height: 37
+        x: 16
+        y: 965
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 925
-        width: 90
-        height: 37
+        x: 16
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_2
       rect:
         serializedVersion: 2
-        x: 90
-        y: 925
-        width: 90
-        height: 37
+        x: 106
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_3
       rect:
         serializedVersion: 2
-        x: 180
-        y: 925
-        width: 90
-        height: 37
+        x: 196
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_4
       rect:
         serializedVersion: 2
-        x: 270
-        y: 925
-        width: 90
-        height: 37
+        x: 286
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_5
       rect:
         serializedVersion: 2
-        x: 360
-        y: 925
-        width: 90
-        height: 37
+        x: 376
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_6
       rect:
         serializedVersion: 2
-        x: 450
-        y: 925
-        width: 90
-        height: 37
+        x: 466
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_7
       rect:
         serializedVersion: 2
-        x: 540
-        y: 925
-        width: 90
-        height: 37
+        x: 556
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_8
       rect:
         serializedVersion: 2
-        x: 630
-        y: 925
-        width: 90
-        height: 37
+        x: 646
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_9
       rect:
         serializedVersion: 2
-        x: 720
-        y: 925
-        width: 90
-        height: 37
+        x: 736
+        y: 928
+        width: 23
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,10 +329,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 888
-        width: 90
-        height: 37
+        x: 15
+        y: 891
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +350,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_11
       rect:
         serializedVersion: 2
-        x: 90
-        y: 888
-        width: 90
-        height: 37
+        x: 106
+        y: 891
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,10 +371,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_12
       rect:
         serializedVersion: 2
-        x: 180
-        y: 888
-        width: 90
-        height: 37
+        x: 197
+        y: 890
+        width: 21
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_13
       rect:
         serializedVersion: 2
-        x: 270
-        y: 888
-        width: 90
-        height: 37
+        x: 288
+        y: 890
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,10 +413,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_14
       rect:
         serializedVersion: 2
-        x: 360
-        y: 888
-        width: 90
-        height: 37
+        x: 379
+        y: 890
+        width: 17
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,10 +434,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_15
       rect:
         serializedVersion: 2
-        x: 450
-        y: 888
-        width: 90
-        height: 37
+        x: 468
+        y: 891
+        width: 19
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,10 +455,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_16
       rect:
         serializedVersion: 2
-        x: 540
-        y: 888
-        width: 90
-        height: 37
+        x: 557
+        y: 891
+        width: 22
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,10 +476,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_17
       rect:
         serializedVersion: 2
-        x: 630
-        y: 888
-        width: 90
-        height: 37
+        x: 646
+        y: 891
+        width: 23
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,10 +497,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 851
-        width: 90
-        height: 37
+        x: 16
+        y: 854
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,10 +518,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_19
       rect:
         serializedVersion: 2
-        x: 90
-        y: 851
-        width: 90
-        height: 37
+        x: 106
+        y: 855
+        width: 23
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,10 +539,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_20
       rect:
         serializedVersion: 2
-        x: 180
-        y: 851
-        width: 90
-        height: 37
+        x: 196
+        y: 856
+        width: 23
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -560,10 +560,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_21
       rect:
         serializedVersion: 2
-        x: 270
-        y: 851
-        width: 90
-        height: 37
+        x: 286
+        y: 856
+        width: 22
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,10 +581,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_22
       rect:
         serializedVersion: 2
-        x: 360
-        y: 851
-        width: 90
-        height: 37
+        x: 381
+        y: 854
+        width: 13
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,10 +602,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_23
       rect:
         serializedVersion: 2
-        x: 450
-        y: 851
-        width: 90
-        height: 37
+        x: 472
+        y: 854
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_24
       rect:
         serializedVersion: 2
-        x: 540
-        y: 851
-        width: 90
-        height: 37
+        x: 561
+        y: 855
+        width: 13
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -644,10 +644,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_25
       rect:
         serializedVersion: 2
-        x: 630
-        y: 851
-        width: 90
-        height: 37
+        x: 651
+        y: 855
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,10 +665,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_26
       rect:
         serializedVersion: 2
-        x: 0
-        y: 814
-        width: 90
-        height: 37
+        x: 18
+        y: 817
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,10 +686,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_27
       rect:
         serializedVersion: 2
-        x: 90
-        y: 814
-        width: 90
-        height: 37
+        x: 108
+        y: 818
+        width: 16
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -707,10 +707,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_28
       rect:
         serializedVersion: 2
-        x: 180
-        y: 814
-        width: 90
-        height: 37
+        x: 198
+        y: 819
+        width: 16
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,10 +728,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_29
       rect:
         serializedVersion: 2
-        x: 270
-        y: 814
-        width: 90
-        height: 37
+        x: 288
+        y: 819
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -749,10 +749,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_30
       rect:
         serializedVersion: 2
-        x: 360
-        y: 814
-        width: 90
-        height: 37
+        x: 381
+        y: 817
+        width: 11
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,10 +770,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_31
       rect:
         serializedVersion: 2
-        x: 450
-        y: 814
-        width: 90
-        height: 37
+        x: 471
+        y: 817
+        width: 11
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -791,10 +791,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_32
       rect:
         serializedVersion: 2
-        x: 540
-        y: 814
-        width: 90
-        height: 37
+        x: 561
+        y: 818
+        width: 12
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -812,10 +812,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_33
       rect:
         serializedVersion: 2
-        x: 630
-        y: 814
-        width: 90
-        height: 37
+        x: 651
+        y: 819
+        width: 12
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -833,10 +833,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_34
       rect:
         serializedVersion: 2
-        x: 0
-        y: 777
-        width: 90
-        height: 37
+        x: 16
+        y: 780
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -854,10 +854,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_35
       rect:
         serializedVersion: 2
-        x: 90
-        y: 777
-        width: 90
-        height: 37
+        x: 107
+        y: 780
+        width: 21
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -875,10 +875,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_36
       rect:
         serializedVersion: 2
-        x: 180
-        y: 777
-        width: 90
-        height: 37
+        x: 199
+        y: 780
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -896,10 +896,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_37
       rect:
         serializedVersion: 2
-        x: 270
-        y: 777
-        width: 90
-        height: 37
+        x: 288
+        y: 780
+        width: 17
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -917,10 +917,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_38
       rect:
         serializedVersion: 2
-        x: 360
-        y: 777
-        width: 90
-        height: 37
+        x: 379
+        y: 780
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -938,10 +938,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_39
       rect:
         serializedVersion: 2
-        x: 450
-        y: 777
-        width: 90
-        height: 37
+        x: 470
+        y: 780
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -959,10 +959,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_40
       rect:
         serializedVersion: 2
-        x: 540
-        y: 777
-        width: 90
-        height: 37
+        x: 559
+        y: 780
+        width: 19
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -980,10 +980,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_41
       rect:
         serializedVersion: 2
-        x: 630
-        y: 777
-        width: 90
-        height: 37
+        x: 647
+        y: 780
+        width: 22
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1001,10 +1001,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_42
       rect:
         serializedVersion: 2
-        x: 0
-        y: 740
-        width: 90
-        height: 37
+        x: 16
+        y: 743
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1022,10 +1022,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_43
       rect:
         serializedVersion: 2
-        x: 90
-        y: 740
-        width: 90
-        height: 37
+        x: 107
+        y: 743
+        width: 21
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1043,10 +1043,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_44
       rect:
         serializedVersion: 2
-        x: 180
-        y: 740
-        width: 90
-        height: 37
+        x: 199
+        y: 743
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1064,10 +1064,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_45
       rect:
         serializedVersion: 2
-        x: 270
-        y: 740
-        width: 90
-        height: 37
+        x: 287
+        y: 743
+        width: 18
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,10 +1085,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_46
       rect:
         serializedVersion: 2
-        x: 360
-        y: 740
-        width: 90
-        height: 37
+        x: 377
+        y: 743
+        width: 14
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1106,10 +1106,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_47
       rect:
         serializedVersion: 2
-        x: 450
-        y: 740
-        width: 90
-        height: 37
+        x: 467
+        y: 743
+        width: 29
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1127,10 +1127,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_48
       rect:
         serializedVersion: 2
-        x: 540
-        y: 740
-        width: 90
-        height: 37
+        x: 557
+        y: 743
+        width: 28
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1148,10 +1148,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_49
       rect:
         serializedVersion: 2
-        x: 630
-        y: 740
-        width: 90
-        height: 37
+        x: 647
+        y: 743
+        width: 27
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1169,10 +1169,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_50
       rect:
         serializedVersion: 2
-        x: 720
-        y: 740
-        width: 90
-        height: 37
+        x: 737
+        y: 743
+        width: 27
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1190,10 +1190,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_51
       rect:
         serializedVersion: 2
-        x: 810
-        y: 740
-        width: 90
-        height: 37
+        x: 827
+        y: 743
+        width: 26
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1211,10 +1211,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_52
       rect:
         serializedVersion: 2
-        x: 0
-        y: 703
-        width: 90
-        height: 37
+        x: 27
+        y: 707
+        width: 21
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1232,10 +1232,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_53
       rect:
         serializedVersion: 2
-        x: 90
-        y: 703
-        width: 90
-        height: 37
+        x: 102
+        y: 707
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1253,10 +1253,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_54
       rect:
         serializedVersion: 2
-        x: 180
-        y: 703
-        width: 90
-        height: 37
+        x: 192
+        y: 707
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1274,10 +1274,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_55
       rect:
         serializedVersion: 2
-        x: 270
-        y: 703
-        width: 90
-        height: 37
+        x: 282
+        y: 708
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1295,10 +1295,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_56
       rect:
         serializedVersion: 2
-        x: 360
-        y: 703
-        width: 90
-        height: 37
+        x: 371
+        y: 708
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1316,10 +1316,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_57
       rect:
         serializedVersion: 2
-        x: 450
-        y: 703
-        width: 90
-        height: 37
+        x: 462
+        y: 708
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1337,10 +1337,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_58
       rect:
         serializedVersion: 2
-        x: 540
-        y: 703
-        width: 90
-        height: 37
+        x: 552
+        y: 707
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1358,10 +1358,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_59
       rect:
         serializedVersion: 2
-        x: 0
-        y: 666
-        width: 90
-        height: 37
+        x: 12
+        y: 670
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1379,10 +1379,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_60
       rect:
         serializedVersion: 2
-        x: 90
-        y: 666
-        width: 90
-        height: 37
+        x: 104
+        y: 670
+        width: 39
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1400,10 +1400,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_61
       rect:
         serializedVersion: 2
-        x: 180
-        y: 666
-        width: 90
-        height: 37
+        x: 208
+        y: 671
+        width: 24
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1421,10 +1421,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_62
       rect:
         serializedVersion: 2
-        x: 270
-        y: 666
-        width: 90
-        height: 37
+        x: 298
+        y: 671
+        width: 21
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1442,10 +1442,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_63
       rect:
         serializedVersion: 2
-        x: 360
-        y: 666
-        width: 90
-        height: 37
+        x: 387
+        y: 670
+        width: 21
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1463,10 +1463,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_64
       rect:
         serializedVersion: 2
-        x: 0
-        y: 629
-        width: 90
-        height: 37
+        x: 17
+        y: 632
+        width: 17
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1484,10 +1484,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_65
       rect:
         serializedVersion: 2
-        x: 90
-        y: 629
-        width: 90
-        height: 37
+        x: 114
+        y: 632
+        width: 26
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1505,10 +1505,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_66
       rect:
         serializedVersion: 2
-        x: 180
-        y: 629
-        width: 90
-        height: 37
+        x: 205
+        y: 632
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1526,10 +1526,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_67
       rect:
         serializedVersion: 2
-        x: 270
-        y: 629
-        width: 90
-        height: 37
+        x: 295
+        y: 632
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1547,10 +1547,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_68
       rect:
         serializedVersion: 2
-        x: 360
-        y: 629
-        width: 90
-        height: 37
+        x: 385
+        y: 632
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1568,10 +1568,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_69
       rect:
         serializedVersion: 2
-        x: 0
-        y: 592
-        width: 90
-        height: 37
+        x: 13
+        y: 595
+        width: 40
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1589,10 +1589,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_70
       rect:
         serializedVersion: 2
-        x: 90
-        y: 592
-        width: 90
-        height: 37
+        x: 103
+        y: 595
+        width: 41
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1610,10 +1610,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_71
       rect:
         serializedVersion: 2
-        x: 180
-        y: 592
-        width: 90
-        height: 37
+        x: 194
+        y: 595
+        width: 39
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1631,10 +1631,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_72
       rect:
         serializedVersion: 2
-        x: 270
-        y: 592
-        width: 90
-        height: 37
+        x: 287
+        y: 595
+        width: 25
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1652,10 +1652,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_73
       rect:
         serializedVersion: 2
-        x: 360
-        y: 592
-        width: 90
-        height: 37
+        x: 378
+        y: 595
+        width: 21
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1673,10 +1673,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_74
       rect:
         serializedVersion: 2
-        x: 450
-        y: 592
-        width: 90
-        height: 37
+        x: 468
+        y: 595
+        width: 21
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1694,10 +1694,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_75
       rect:
         serializedVersion: 2
-        x: 0
-        y: 555
-        width: 90
-        height: 37
+        x: 21
+        y: 558
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1715,10 +1715,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_76
       rect:
         serializedVersion: 2
-        x: 90
-        y: 555
-        width: 90
-        height: 37
+        x: 113
+        y: 558
+        width: 11
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1736,10 +1736,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_77
       rect:
         serializedVersion: 2
-        x: 180
-        y: 555
-        width: 90
-        height: 37
+        x: 203
+        y: 558
+        width: 12
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1757,10 +1757,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_78
       rect:
         serializedVersion: 2
-        x: 270
-        y: 555
-        width: 90
-        height: 37
+        x: 294
+        y: 558
+        width: 12
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1778,10 +1778,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_79
       rect:
         serializedVersion: 2
-        x: 360
-        y: 555
-        width: 90
-        height: 37
+        x: 385
+        y: 558
+        width: 11
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1799,10 +1799,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_80
       rect:
         serializedVersion: 2
-        x: 450
-        y: 555
-        width: 90
-        height: 37
+        x: 475
+        y: 558
+        width: 11
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1820,10 +1820,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_81
       rect:
         serializedVersion: 2
-        x: 0
-        y: 518
-        width: 90
-        height: 37
+        x: 12
+        y: 522
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1841,10 +1841,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_82
       rect:
         serializedVersion: 2
-        x: 90
-        y: 518
-        width: 90
-        height: 37
+        x: 102
+        y: 522
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1862,10 +1862,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_83
       rect:
         serializedVersion: 2
-        x: 180
-        y: 518
-        width: 90
-        height: 37
+        x: 192
+        y: 523
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1883,10 +1883,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_84
       rect:
         serializedVersion: 2
-        x: 270
-        y: 518
-        width: 90
-        height: 37
+        x: 281
+        y: 523
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1904,10 +1904,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_85
       rect:
         serializedVersion: 2
-        x: 360
-        y: 518
-        width: 90
-        height: 37
+        x: 372
+        y: 523
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1925,10 +1925,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_86
       rect:
         serializedVersion: 2
-        x: 450
-        y: 518
-        width: 90
-        height: 37
+        x: 462
+        y: 522
+        width: 22
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1946,10 +1946,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_87
       rect:
         serializedVersion: 2
-        x: 0
-        y: 481
-        width: 90
-        height: 37
+        x: 22
+        y: 486
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1967,10 +1967,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_88
       rect:
         serializedVersion: 2
-        x: 90
-        y: 481
-        width: 90
-        height: 37
+        x: 112
+        y: 486
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1988,10 +1988,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_89
       rect:
         serializedVersion: 2
-        x: 180
-        y: 481
-        width: 90
-        height: 37
+        x: 202
+        y: 486
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2009,10 +2009,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_90
       rect:
         serializedVersion: 2
-        x: 0
-        y: 444
-        width: 90
-        height: 37
+        x: 21
+        y: 450
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2030,10 +2030,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_91
       rect:
         serializedVersion: 2
-        x: 90
-        y: 444
-        width: 90
-        height: 37
+        x: 111
+        y: 450
+        width: 14
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2051,10 +2051,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_92
       rect:
         serializedVersion: 2
-        x: 180
-        y: 444
-        width: 90
-        height: 37
+        x: 197
+        y: 451
+        width: 19
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2072,10 +2072,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_93
       rect:
         serializedVersion: 2
-        x: 270
-        y: 444
-        width: 90
-        height: 37
+        x: 287
+        y: 451
+        width: 19
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2093,10 +2093,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_94
       rect:
         serializedVersion: 2
-        x: 0
-        y: 407
-        width: 90
-        height: 37
+        x: 17
+        y: 414
+        width: 19
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2114,10 +2114,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_95
       rect:
         serializedVersion: 2
-        x: 90
-        y: 407
-        width: 90
-        height: 37
+        x: 107
+        y: 414
+        width: 19
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2135,10 +2135,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_96
       rect:
         serializedVersion: 2
-        x: 180
-        y: 407
-        width: 90
-        height: 37
+        x: 197
+        y: 414
+        width: 19
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2156,10 +2156,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_97
       rect:
         serializedVersion: 2
-        x: 0
-        y: 370
-        width: 90
-        height: 37
+        x: 22
+        y: 375
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2177,10 +2177,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_98
       rect:
         serializedVersion: 2
-        x: 90
-        y: 370
-        width: 90
-        height: 37
+        x: 112
+        y: 375
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2198,10 +2198,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_99
       rect:
         serializedVersion: 2
-        x: 180
-        y: 370
-        width: 90
-        height: 37
+        x: 202
+        y: 375
+        width: 12
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2219,10 +2219,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_100
       rect:
         serializedVersion: 2
-        x: 0
-        y: 333
-        width: 90
-        height: 37
+        x: 19
+        y: 340
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2240,10 +2240,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_101
       rect:
         serializedVersion: 2
-        x: 90
-        y: 333
-        width: 90
-        height: 37
+        x: 109
+        y: 340
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2261,10 +2261,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_102
       rect:
         serializedVersion: 2
-        x: 180
-        y: 333
-        width: 90
-        height: 37
+        x: 199
+        y: 340
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2282,10 +2282,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_103
       rect:
         serializedVersion: 2
-        x: 270
-        y: 333
-        width: 90
-        height: 37
+        x: 289
+        y: 340
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2303,10 +2303,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_104
       rect:
         serializedVersion: 2
-        x: 360
-        y: 333
-        width: 90
-        height: 37
+        x: 379
+        y: 340
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2324,10 +2324,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_105
       rect:
         serializedVersion: 2
-        x: 450
-        y: 333
-        width: 90
-        height: 37
+        x: 469
+        y: 340
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2345,10 +2345,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_106
       rect:
         serializedVersion: 2
-        x: 0
-        y: 296
-        width: 90
-        height: 37
+        x: 20
+        y: 303
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2366,10 +2366,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_107
       rect:
         serializedVersion: 2
-        x: 90
-        y: 296
-        width: 90
-        height: 37
+        x: 107
+        y: 303
+        width: 17
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2387,10 +2387,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_108
       rect:
         serializedVersion: 2
-        x: 180
-        y: 296
-        width: 90
-        height: 37
+        x: 197
+        y: 303
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2408,10 +2408,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_109
       rect:
         serializedVersion: 2
-        x: 270
-        y: 296
-        width: 90
-        height: 37
+        x: 286
+        y: 303
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2429,10 +2429,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_110
       rect:
         serializedVersion: 2
-        x: 360
-        y: 296
-        width: 90
-        height: 37
+        x: 375
+        y: 303
+        width: 21
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2450,10 +2450,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_111
       rect:
         serializedVersion: 2
-        x: 450
-        y: 296
-        width: 90
-        height: 37
+        x: 466
+        y: 303
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2471,10 +2471,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_112
       rect:
         serializedVersion: 2
-        x: 540
-        y: 296
-        width: 90
-        height: 37
+        x: 561
+        y: 303
+        width: 15
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2492,10 +2492,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_113
       rect:
         serializedVersion: 2
-        x: 630
-        y: 296
-        width: 90
-        height: 37
+        x: 652
+        y: 303
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2513,10 +2513,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_114
       rect:
         serializedVersion: 2
-        x: 720
-        y: 296
-        width: 90
-        height: 37
+        x: 742
+        y: 303
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2534,10 +2534,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_115
       rect:
         serializedVersion: 2
-        x: 0
-        y: 259
-        width: 90
-        height: 37
+        x: 22
+        y: 262
+        width: 12
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2555,10 +2555,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_116
       rect:
         serializedVersion: 2
-        x: 90
-        y: 259
-        width: 90
-        height: 37
+        x: 111
+        y: 262
+        width: 13
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2576,10 +2576,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_117
       rect:
         serializedVersion: 2
-        x: 180
-        y: 259
-        width: 90
-        height: 37
+        x: 203
+        y: 262
+        width: 11
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2597,10 +2597,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_118
       rect:
         serializedVersion: 2
-        x: 270
-        y: 259
-        width: 90
-        height: 37
+        x: 293
+        y: 262
+        width: 12
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2618,10 +2618,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_119
       rect:
         serializedVersion: 2
-        x: 0
-        y: 222
-        width: 90
-        height: 37
+        x: 22
+        y: 226
+        width: 10
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2639,10 +2639,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_120
       rect:
         serializedVersion: 2
-        x: 90
-        y: 222
-        width: 90
-        height: 37
+        x: 113
+        y: 226
+        width: 9
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2660,10 +2660,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_121
       rect:
         serializedVersion: 2
-        x: 180
-        y: 222
-        width: 90
-        height: 37
+        x: 202
+        y: 226
+        width: 10
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2681,10 +2681,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_122
       rect:
         serializedVersion: 2
-        x: 270
-        y: 222
-        width: 90
-        height: 37
+        x: 292
+        y: 226
+        width: 10
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2702,10 +2702,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_123
       rect:
         serializedVersion: 2
-        x: 360
-        y: 222
-        width: 90
-        height: 37
+        x: 382
+        y: 226
+        width: 10
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2723,10 +2723,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_124
       rect:
         serializedVersion: 2
-        x: 0
-        y: 185
-        width: 90
-        height: 37
+        x: 23
+        y: 191
+        width: 9
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2744,10 +2744,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_125
       rect:
         serializedVersion: 2
-        x: 0
-        y: 148
-        width: 90
-        height: 37
+        x: 23
+        y: 154
+        width: 9
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2765,10 +2765,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_126
       rect:
         serializedVersion: 2
-        x: 90
-        y: 148
-        width: 90
-        height: 37
+        x: 112
+        y: 154
+        width: 11
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2786,10 +2786,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_127
       rect:
         serializedVersion: 2
-        x: 0
-        y: 111
-        width: 90
-        height: 37
+        x: 22
+        y: 117
+        width: 11
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2807,10 +2807,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_128
       rect:
         serializedVersion: 2
-        x: 90
-        y: 111
-        width: 90
-        height: 37
+        x: 113
+        y: 117
+        width: 10
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2828,10 +2828,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_129
       rect:
         serializedVersion: 2
-        x: 180
-        y: 111
-        width: 90
-        height: 37
+        x: 203
+        y: 117
+        width: 10
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2849,10 +2849,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_130
       rect:
         serializedVersion: 2
-        x: 0
-        y: 74
-        width: 90
-        height: 37
+        x: 22
+        y: 80
+        width: 11
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2870,10 +2870,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_131
       rect:
         serializedVersion: 2
-        x: 90
-        y: 74
-        width: 90
-        height: 37
+        x: 113
+        y: 80
+        width: 9
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2891,10 +2891,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_132
       rect:
         serializedVersion: 2
-        x: 180
-        y: 74
-        width: 90
-        height: 37
+        x: 203
+        y: 80
+        width: 9
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2912,10 +2912,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_133
       rect:
         serializedVersion: 2
-        x: 0
-        y: 37
-        width: 90
-        height: 37
+        x: 16
+        y: 40
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2933,10 +2933,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_134
       rect:
         serializedVersion: 2
-        x: 90
-        y: 37
-        width: 90
-        height: 37
+        x: 106
+        y: 40
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2954,10 +2954,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_135
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 90
-        height: 37
+        x: 16
+        y: 3
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2975,10 +2975,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_136
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 90
-        height: 37
+        x: 106
+        y: 3
+        width: 23
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2996,10 +2996,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_137
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 90
-        height: 37
+        x: 196
+        y: 4
+        width: 25
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3017,10 +3017,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_138
       rect:
         serializedVersion: 2
-        x: 270
-        y: 0
-        width: 90
-        height: 37
+        x: 288
+        y: 3
+        width: 36
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3038,10 +3038,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_139
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 90
-        height: 37
+        x: 379
+        y: 3
+        width: 35
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3059,10 +3059,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37 without VFX_140
       rect:
         serializedVersion: 2
-        x: 450
-        y: 0
-        width: 90
-        height: 37
+        x: 470
+        y: 3
+        width: 35
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

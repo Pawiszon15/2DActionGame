@@ -15,7 +15,7 @@ public class RotateEnemyWeapon : MonoBehaviour
     private void Awake()
     {
         player = FindObjectOfType<Player>();
-        specialTargetTransform = FindObjectOfType<SpecialTarget>().gameObject;
+        //specialTargetTransform = FindObjectOfType<SpecialTarget>().gameObject;
     }
 
     private void Update()

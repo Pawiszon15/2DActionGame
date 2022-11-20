@@ -22,6 +22,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public bool startedJumping {  private get; set; }
     public bool justLanded { private get; set; }
+    public bool isWallSliding { private get; set; }
 
     public float currentVelY;
 
@@ -71,7 +72,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (startedJumping)
         {
-            //anim.SetTrigger("Jump");
+            anim.SetBool("isGrounded", false);
             GameObject obj = Instantiate(jumpFX, transform.position - (Vector3.up * transform.localScale.y / 2), Quaternion.Euler(-90, 0, 0));
             Destroy(obj, 1);
             startedJumping = false;
@@ -80,13 +81,20 @@ public class PlayerAnimator : MonoBehaviour
 
         if (justLanded)
         {
-            //anim.SetTrigger("Land");
+            anim.SetBool("isGrounded", true);
             GameObject obj = Instantiate(landFX, transform.position - (Vector3.up * transform.localScale.y / 1.5f), Quaternion.Euler(-90, 0, 0));
             Destroy(obj, 1);
             justLanded = false;
             return;
         }
 
+        else
+        {
+            anim.SetBool("isWallSliding", false);
+        }
+
+        anim.SetBool("isWallSliding", mov.isWallSliding);
+        anim.SetBool("isDashing", mov.IsDashing);
         anim.SetFloat("velocityX", mov.RB.velocity.x);
         anim.SetFloat("velocityY", mov.RB.velocity.y);
     }

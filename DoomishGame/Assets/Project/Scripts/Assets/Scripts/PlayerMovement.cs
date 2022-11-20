@@ -6,6 +6,7 @@
 	Feel free to use this in your own games, and I'd love to see anything you make!
  */
 
+using Mono.Cecil.Cil;
 using System.Collections;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 	public PlayerData Data;
 	[SerializeField] GameObject playerVisuals;
 	[SerializeField] Transform mousePos;
+	[SerializeField] float wallSlideSpeed;
+	public bool isWallSliding { get; private set;}
 	#region COMPONENTS
     public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
@@ -151,7 +154,19 @@ public class PlayerMovement : MonoBehaviour
 
 			//Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
 			LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
-		}
+
+			if((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal") > 0f)
+				|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal")  < 0f))
+            {
+				isWallSliding = true;
+			}
+
+			else
+			{
+				isWallSliding = false;
+			}
+
+        }
 		#endregion
 
 		#region JUMP CHECKS
@@ -216,7 +231,6 @@ public class PlayerMovement : MonoBehaviour
 			//else
 			//	_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
 			_lastDashDir = mousePos.right;
-
 
 			IsDashing = true;
 			IsJumping = false;

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5759d6a660e3ac14dbd9a801bf9d7627, type: 3}
-  m_Name: MyController
+  m_Name: MyControllerV2
   m_EditorClassIdentifier: 
   gravityStrength: -44.444447
   gravityScale: 4.5305243
@@ -42,11 +42,11 @@ MonoBehaviour:
   slideAccel: 3
   coyoteTime: 0.2
   jumpInputBufferTime: 0.2
-  dashAmount: 2
-  dashSpeed: 30
-  dashSleepTime: 0.06
-  dashAttackTime: 0.15
-  dashEndTime: 0.15
+  dashAmount: 1
+  dashSpeed: 25
+  dashSleepTime: 0.05
+  dashAttackTime: 0.1
+  dashEndTime: 0.1
   dashEndSpeed: {x: 15, y: 15}
   dashEndRunLerp: 0.5
   dashRefillTime: 0.1

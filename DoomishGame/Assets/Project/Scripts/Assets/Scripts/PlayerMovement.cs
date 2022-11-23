@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] GameObject playerVisuals;
 	[SerializeField] Transform mousePos;
 	[SerializeField] float wallSlideSpeed;
+	[SerializeField] GameObject dashMeleeCollider;
 	public bool isWallSliding { get; private set;}
 	#region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -122,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
 			OnJumpUpInput();
 		}
 
-		if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
+		if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.K))
 		{
 			OnDashInput();
 		}
@@ -485,8 +486,9 @@ public class PlayerMovement : MonoBehaviour
 
 		_dashesLeft--;
 		_isDashAttacking = true;
+        dashMeleeCollider.SetActive(true);
 
-		SetGravityScale(0);
+        SetGravityScale(0);
 
 		//We keep the player's velocity at the dash speed during the "attack" phase (in celeste the first 0.15s)
 		while (Time.time - startTime <= Data.dashAttackTime)
@@ -499,6 +501,7 @@ public class PlayerMovement : MonoBehaviour
 
 		startTime = Time.time;
 
+		dashMeleeCollider.SetActive(false);
 		_isDashAttacking = false;
 
 		//Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())

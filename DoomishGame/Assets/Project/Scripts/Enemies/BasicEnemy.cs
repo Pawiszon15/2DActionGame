@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
+    //For animation purpose
+
     //[SerializeField] bool hasShiled;
     public bool isProtector;
     private GameManger gameManger;

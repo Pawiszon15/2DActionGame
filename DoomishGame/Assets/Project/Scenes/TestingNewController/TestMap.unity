@@ -1121,6 +1121,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1393941473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2524970998559066301, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
+  m_PrefabInstance: {fileID: 771695116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1393941480
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393941473}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 075633062acc1b34ab76e2b1652ab157, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1394033972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33697,7 +33722,6 @@ GameObject:
   - component: {fileID: 7703920648033828953}
   - component: {fileID: 7703920648033828957}
   - component: {fileID: 7703920648033828960}
-  - component: {fileID: 7703920648033828962}
   - component: {fileID: 7703920648033828961}
   m_Layer: 6
   m_Name: Player
@@ -33801,23 +33825,6 @@ SpringJoint2D:
   m_Distance: 50.1237
   m_DampingRatio: 0
   m_Frequency: 1
---- !u!114 &7703920648033828962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7703920648033828954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1cb30ef58ceed449f231e293e1fb0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 376be0fd2767ca64d9fcfb6eaab45693, type: 2}
-  swordPrefab: {fileID: 6101588818873561404, guid: 7a108e4e6112f73499d2d6afa212584d, type: 3}
-  waitTime: 0.05
-  firePoint: {fileID: 1886488855}
-  weaponPivot: {fileID: 2144213526}
 --- !u!4 &7703920648069059862
 Transform:
   m_ObjectHideFlags: 0

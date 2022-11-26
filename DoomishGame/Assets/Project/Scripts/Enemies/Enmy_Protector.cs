@@ -24,13 +24,15 @@ public class Enmy_Protector : MonoBehaviour
     [SerializeField] GameObject shield;
     [SerializeField] BasicEnemy basicEnemy;
     private GameObject player;
-    private CharacterMovement characterMovement;
+    private PlayerMovement characterMovement;
     private float defaultWaitingTime;
+    private EnemyAnimator enemyAnimator;
 
     private void Start()
     {
+        enemyAnimator = GetComponent<EnemyAnimator>();
         player = FindObjectOfType<Player>().gameObject;
-        characterMovement = player.GetComponent<CharacterMovement>();
+        characterMovement = player.GetComponent<PlayerMovement>();
         isChargeAvaialable = true;
         isCharging = false;
         isPlayerChargable = false;
@@ -56,7 +58,7 @@ public class Enmy_Protector : MonoBehaviour
             CheckWhetherPlayerIsChargable();
             if(isPlayerChargable)
             {
-                ProtectorCharge();
+                ProtectorMeleeHit();
             }
         }
 
@@ -112,27 +114,34 @@ public class Enmy_Protector : MonoBehaviour
         }
     }
 
-    private void ProtectorCharge()
+    //private void ProtectorCharge()
+    //{
+    //    isChargeAvaialable = false;
+    //    CheckWhereIsPlayer();
+    //    chargeDireciton = movementDirection;
+    //    isCharging = true;
+    //    StartCoroutine(ChargeDuration());
+    //}
+
+    private void ProtectorMeleeHit()
     {
-        isChargeAvaialable = false;
-        CheckWhereIsPlayer();
-        chargeDireciton = movementDirection;
-        isCharging = true;
-        StartCoroutine(ChargeDuration());
+        enemyAnimator.isAttacking = true;
+        enemyAnimator.isMoving = false;
     }
 
     IEnumerator WaitBeforeNextAction(float waitingTime)
-    {
+    {   
+        enemyAnimator.isMoving = true;
         yield return new WaitForSeconds(waitingTime);
         UpdateBehaviour();
     }
 
-    IEnumerator ChargeDuration()
-    {
-        yield return new WaitForSeconds(chargeDurtaion);
-        isCharging = false;
-        StartCoroutine(AbilityCooldown(chargeCooldown));
-    }
+    //IEnumerator ChargeDuration()
+    //{
+    //    yield return new WaitForSeconds(chargeDurtaion);
+    //    isCharging = false;
+    //    StartCoroutine(AbilityCooldown(chargeCooldown));
+    //}
 
     IEnumerator AbilityCooldown(float cooldown)
     {

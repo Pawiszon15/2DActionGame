@@ -9,11 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597604762075719448}
-  - component: {fileID: 1597604762075719449}
+  - component: {fileID: 7409401798556397535}
+  - component: {fileID: 1394033974}
   - component: {fileID: 1597604762075719452}
   - component: {fileID: 1597604762075719453}
   - component: {fileID: 1597604762075719450}
   - component: {fileID: 1597604762075719451}
+  - component: {fileID: 7696355484964605084}
   m_Layer: 0
   m_Name: Enemy_Sharpshooter
   m_TagString: Enemy
@@ -37,7 +39,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1597604762075719449
+--- !u!212 &7409401798556397535
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,6 +91,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1394033974
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597604762075719430}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2906a19277ddac248b2c9d1f3a0033cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &1597604762075719452
 Rigidbody2D:
   serializedVersion: 4
@@ -123,10 +145,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7415752, y: -0.29525948}
+  m_Offset: {x: 0.013259888, y: -0.1526308}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.215, y: 0.4}
     oldSize: {x: 5.75, y: 2.25}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
@@ -134,7 +156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7754936, y: 1.4401054}
+  m_Size: {x: 0.9412384, y: 1.3827}
   m_EdgeRadius: 0
 --- !u!114 &1597604762075719450
 MonoBehaviour:
@@ -164,6 +186,28 @@ MonoBehaviour:
   timeBetweenShots: 3
   pistolBullet: {fileID: 1235635171295464583, guid: 91827f42a1928ce4da994fcc013891ee, type: 3}
   firePoint: {fileID: 1597604763083852654}
+--- !u!114 &7696355484964605084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597604762075719430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2b023f9422b7e4c9f405703c33ded1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackParticle: {fileID: 0}
+  chargeParticle: {fileID: 0}
+  moveParticle: {fileID: 0}
+  dyingParticle: {fileID: 0}
+  idleParticle: {fileID: 0}
+  isAttacking: 0
+  isCharging: 0
+  isMoving: 0
+  isDying: 0
+  isIdling: 0
 --- !u!1 &1597604762474944673
 GameObject:
   m_ObjectHideFlags: 0

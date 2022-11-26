@@ -114,7 +114,700 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8935a052e771b40aec30677d2ab35e
+      internalID: -1211648692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acd938d9e228f84faba8e7c44468ac8
+      internalID: 528271648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_2
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3608e60a9e07f3f40928232b3b670463
+      internalID: -1062529795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8289b1c7baf2ce4a8ac6bf9dae3dd91
+      internalID: 1439594043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_4
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e74bc8de7818847b02166910918302
+      internalID: 215114378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb06dac51ea0c54b9df6c9bbac77ed6
+      internalID: 1461458958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_6
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccffa17151b2bfd4e8e62c660fa94753
+      internalID: 101050895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b07885a12fe65543bdda30c63ea73e8
+      internalID: 1546373466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 76
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed5c2053c704c94eb61bc3864542805
+      internalID: -1154310761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6ccc79b54a9f34a98175c6bf719c5e
+      internalID: 988063573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8d3a3592dc36f419e7112625666c6a
+      internalID: 774593466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef5abff88fc0144a99268549a62e00d
+      internalID: 1300976717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_12
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188fa26a19e1be84394c9595dbeed0af
+      internalID: 169366862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc8c9688f5796a47ac1dadd557e2be5
+      internalID: -1503364289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_14
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6935b900deba36d4392ec2e07414da07
+      internalID: 368120499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6fa66ccd77fa04caeeec81a9388493
+      internalID: 579890500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_16
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3591d55f4dce04b4bb878ff6417efddb
+      internalID: -808592360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b21899e162cb0e4baebad68fe56ffaa
+      internalID: -620235145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96528a7ea19b0245bdf9c432234a44a
+      internalID: 1552137502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a5c1a2376a17344a0580a59fe984a4
+      internalID: -80435958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_20
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd87ed72f9314d64fa42dad50b29bc0d
+      internalID: 1043348861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc3b2f97114c6b43ade7403f2920ea4
+      internalID: 1513752787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_22
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6500b129e8330749882298e9b55915f
+      internalID: 1825564652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_23
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f34c4a5bc6c6bb47b082dd16eb13170
+      internalID: -643804442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_24
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 38
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44109483fa058e645b683c07b9867fa7
+      internalID: -1458948935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1143aea0e0b4524f91168d344f16123
+      internalID: -1006939434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2670361c7bcf5694494332bc50eb888f
+      internalID: 1030386524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_27
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22503a792cc8a2b4a9a939f20dd5dc08
+      internalID: 1817450314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_28
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685603d11b74ac7499b94d06520aa4d7
+      internalID: 1141737543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_29
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc8b4318433c2b4c892ece845c05e43
+      internalID: -1516416853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d8220ae28a8c84fb808000db791542
+      internalID: 958952356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb73cca1488484f4d8230d45b72c581b
+      internalID: 735000309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smoke Animations 12x38_32
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bda72a1d0f61f74bb7d802cb3495958
+      internalID: -711290023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +818,40 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Smoke Animations 12x38_18: 1552137502
+      Smoke Animations 12x38_5: 1461458958
+      Smoke Animations 12x38_22: 1825564652
+      Smoke Animations 12x38_30: 958952356
+      Smoke Animations 12x38_0: -1211648692
+      Smoke Animations 12x38_17: -620235145
+      Smoke Animations 12x38_26: 1030386524
+      Smoke Animations 12x38_6: 101050895
+      Smoke Animations 12x38_24: -1458948935
+      Smoke Animations 12x38_21: 1513752787
+      Smoke Animations 12x38_27: 1817450314
+      Smoke Animations 12x38_15: 579890500
+      Smoke Animations 12x38_31: 735000309
+      Smoke Animations 12x38_13: -1503364289
+      Smoke Animations 12x38_14: 368120499
+      Smoke Animations 12x38_4: 215114378
+      Smoke Animations 12x38_25: -1006939434
+      Smoke Animations 12x38_2: -1062529795
+      Smoke Animations 12x38_11: 1300976717
+      Smoke Animations 12x38_28: 1141737543
+      Smoke Animations 12x38_12: 169366862
+      Smoke Animations 12x38_3: 1439594043
+      Smoke Animations 12x38_7: 1546373466
+      Smoke Animations 12x38_32: -711290023
+      Smoke Animations 12x38_29: -1516416853
+      Smoke Animations 12x38_8: -1154310761
+      Smoke Animations 12x38_10: 774593466
+      Smoke Animations 12x38_23: -643804442
+      Smoke Animations 12x38_19: -80435958
+      Smoke Animations 12x38_16: -808592360
+      Smoke Animations 12x38_9: 988063573
+      Smoke Animations 12x38_1: 528271648
+      Smoke Animations 12x38_20: 1043348861
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

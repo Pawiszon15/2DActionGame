@@ -12,9 +12,11 @@ public class BasicEnemy : MonoBehaviour
     private bool firstDMG;
     private Player player;
     private bool isFacingRight = false;
+    private EnemyAnimator enemyAnimator;
 
     private void Start()
     {
+        enemyAnimator = GetComponent<EnemyAnimator>();
         player = FindObjectOfType<Player>();
         gameManger = FindObjectOfType<GameManger>();
         firstDMG = true;
@@ -31,9 +33,14 @@ public class BasicEnemy : MonoBehaviour
 
             else
             {
-                KillEnemy();
+                StartDeathAnimation();
             }
         }
+    }
+
+    public void StartDeathAnimation()
+    {
+        enemyAnimator.isDying = true;
     }
 
     public void KillEnemy()
@@ -53,12 +60,12 @@ public class BasicEnemy : MonoBehaviour
     {
         if (!isFacingRight && gameObject.transform.position.x <= player.transform.position.x)
         {
-            KillEnemy();
+            StartDeathAnimation();
         }
 
         else if(isFacingRight && gameObject.transform.position.x > player.transform.position.x)
         {
-            KillEnemy();
+            StartDeathAnimation();
         }
     }
 }

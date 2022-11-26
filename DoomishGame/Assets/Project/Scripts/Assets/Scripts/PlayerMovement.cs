@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] Transform mousePos;
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashMeleeCollider;
+	public bool isGrounded;
 	public bool isWallSliding { get; private set;}
 	#region COMPONENTS
     public Rigidbody2D RB { get; private set; }
@@ -292,8 +293,20 @@ public class PlayerMovement : MonoBehaviour
 			//No gravity when dashing (returns to normal once initial dashAttack phase over)
 			SetGravityScale(0);
 		}
+        #endregion
+
+        #region MINE
+		if(Data.coyoteTime > LastOnGroundTime)
+		{
+			isGrounded = false;
+		}
+
+		else
+		{
+			isGrounded = true;
+		}
 		#endregion
-    }
+	}
 
     private void FixedUpdate()
 	{

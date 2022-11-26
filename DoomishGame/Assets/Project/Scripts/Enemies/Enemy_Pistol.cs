@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 public class Enemy_Pistol : MonoBehaviour
@@ -11,10 +12,19 @@ public class Enemy_Pistol : MonoBehaviour
     [Header("references")]
     [SerializeField] GameObject pistolBullet;
     [SerializeField] Transform firePoint;
+    private EnemyAnimator enemyAnimator;
 
     private void Start()
     {
+        enemyAnimator = GetComponent<EnemyAnimator>();
         StartCoroutine(WaitForAnotherShot());
+    }
+
+    private void StartAttackAnimation()
+    {
+        enemyAnimator.isAttacking = true;
+        enemyAnimator.isIdling = false;
+        Debug.Log("is attacking");
     }
 
     private void Shot()
@@ -25,7 +35,9 @@ public class Enemy_Pistol : MonoBehaviour
 
     IEnumerator WaitForAnotherShot()
     {
+        enemyAnimator.isIdling = true;
+        Debug.Log("wait for antoher shot");
         yield return new WaitForSeconds(timeBetweenShots);
-        Shot();
+        StartAttackAnimation();
     }
 }

@@ -10,10 +10,18 @@ public class Enemy_WaveAttacker : MonoBehaviour
     [Header("references")]
     [SerializeField] GameObject pistolBullet;
     [SerializeField] Transform[] firePoint;
+    private EnemyAnimator enemyAnimator;
 
     private void Start()
     {
+        enemyAnimator = GetComponent<EnemyAnimator>();
         StartCoroutine(WaitForAnotherShot());
+    }
+
+    private void StartAttackAnimation()
+    {
+        enemyAnimator.isAttacking = true;
+        enemyAnimator.isIdling = false;
     }
 
     private void Shot()
@@ -22,12 +30,14 @@ public class Enemy_WaveAttacker : MonoBehaviour
         {
             Instantiate(pistolBullet, firePoint[i].position, firePoint[i].rotation);
         }
+
         StartCoroutine(WaitForAnotherShot());
     }
 
     IEnumerator WaitForAnotherShot()
     {
+        enemyAnimator.isIdling = true;
         yield return new WaitForSeconds(timeBetweenShots);
-        Shot();
+        StartAttackAnimation();
     }
 }

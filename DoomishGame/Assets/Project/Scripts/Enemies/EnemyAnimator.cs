@@ -31,39 +31,39 @@ public class EnemyAnimator : MonoBehaviour
 
     private void CheckAnimationState()
     {
+        enemyAnimator.SetBool("isDying", isDying);
+        enemyAnimator.SetBool("isMoving", isMoving);
+        enemyAnimator.SetBool("isCharging", isCharging);
+        enemyAnimator.SetBool("isAttacking", isAttacking);
+        enemyAnimator.SetBool("isIdling", isIdling);
+        
         if (isAttacking)
         {
-            enemyAnimator.SetBool("isAttacking", isAttacking);
-            CreateParticle(attackParticle);
+            //CreateParticle(attackParticle);
             isAttacking = false;
         }
 
         if (isCharging)
         {
-            enemyAnimator.SetBool("isCharging", isCharging);
-            CreateParticle(attackParticle);
-            isAttacking = false;
+            //CreateParticle(attackParticle);
         }
 
         if (isMoving)
         {
-            enemyAnimator.SetBool("isMoving", isMoving);
-            CreateParticle(attackParticle);
-            isAttacking = false;
+            //CreateParticle(attackParticle);
+            isMoving = false;
         }
 
         if (isDying)
         {
-            enemyAnimator.SetBool("isDying", isDying);
-            CreateParticle(attackParticle);
-            isAttacking = false;
+            //CreateParticle(attackParticle);
+            isDying = false;
         }
 
         if (isIdling)
         {
-            enemyAnimator.SetBool("isIdling", isIdling);
-            CreateParticle(attackParticle);
-            isAttacking = false;
+            //CreateParticle(attackParticle);
+            isDying = false;
         }
     }
 

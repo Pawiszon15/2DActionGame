@@ -54,7 +54,7 @@ public class PlayerAnimator : MonoBehaviour
             tiltProgress = Mathf.InverseLerp(-mov.Data.runMaxSpeed, mov.Data.runMaxSpeed, mov.RB.velocity.x);
             mult = (mov.IsFacingRight) ? 1 : -1;
         }
-            
+
         float newRot = ((tiltProgress * maxTilt * 2) - maxTilt);
         float rot = Mathf.LerpAngle(spriteRend.transform.localRotation.eulerAngles.z * mult, newRot, tiltSpeed);
         spriteRend.transform.localRotation = Quaternion.Euler(0, 0, rot * mult);
@@ -62,10 +62,11 @@ public class PlayerAnimator : MonoBehaviour
 
         CheckAnimationState();
 
-        ParticleSystem.MainModule jumpPSettings = _jumpParticle.main;
-        jumpPSettings.startColor = new ParticleSystem.MinMaxGradient(demoManager.SceneData.foregroundColor);
-        ParticleSystem.MainModule landPSettings = _landParticle.main;
-        landPSettings.startColor = new ParticleSystem.MinMaxGradient(demoManager.SceneData.foregroundColor);
+        //    ParticleSystem.MainModule jumpPSettings = _jumpParticle.main;
+        //    jumpPSettings.startColor = new ParticleSystem.MinMaxGradient(demoManager.SceneData.foregroundColor);
+        //    ParticleSystem.MainModule landPSettings = _landParticle.main;
+        //    landPSettings.startColor = new ParticleSystem.MinMaxGradient(demoManager.SceneData.foregroundColor);
+        //
     }
 
     private void CheckAnimationState()

@@ -40,11 +40,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5740077906868307124}
+  - component: {fileID: 1679642668}
   - component: {fileID: 5740077906868307125}
   - component: {fileID: 5740077906868307123}
   - component: {fileID: 5740077906868307126}
   - component: {fileID: 5740077906868307080}
   - component: {fileID: 5740077906868307081}
+  - component: {fileID: 7146926263840934152}
   m_Layer: 0
   m_Name: Enemy_RocketLuncher
   m_TagString: Enemy
@@ -68,6 +70,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1679642668
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5740077906868307082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 112c21be91f80cb4f95fba7e1319b187, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &5740077906868307125
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -185,3 +207,25 @@ MonoBehaviour:
   timeBetweenShoots: 3
   rocketSpawnPoint: {fileID: 5740077906671640298}
   rocket: {fileID: 3441406626641453304, guid: 5cc211fe33857524c8c70024d59d7d2c, type: 3}
+--- !u!114 &7146926263840934152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5740077906868307082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2b023f9422b7e4c9f405703c33ded1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackParticle: {fileID: 0}
+  chargeParticle: {fileID: 0}
+  moveParticle: {fileID: 0}
+  dyingParticle: {fileID: 0}
+  idleParticle: {fileID: 0}
+  isAttacking: 0
+  isCharging: 0
+  isMoving: 0
+  isDying: 0
+  isIdling: 0

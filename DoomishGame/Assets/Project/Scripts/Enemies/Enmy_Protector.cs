@@ -16,13 +16,13 @@ public class Enmy_Protector : MonoBehaviour
     [SerializeField] float chargeCooldown;
     [SerializeField] float chargeDistanceTrigger;
     private Vector3 chargeDireciton;
-    private bool isCharging;
-    private bool isPlayerChargable;
-    public bool isChargeAvaialable;
+    private bool isPerformingMelee;
+    private bool isPlayerHitable;
+    public bool meleeAvaialable;
 
     [Header("References")]
     [SerializeField] GameObject shield;
-    [SerializeField] BasicEnemy basicEnemy;
+    private BasicEnemy basicEnemy;
     private GameObject player;
     private PlayerMovement characterMovement;
     private float defaultWaitingTime;
@@ -30,75 +30,66 @@ public class Enmy_Protector : MonoBehaviour
 
     private void Start()
     {
+        basicEnemy = GetComponent<BasicEnemy>();
         enemyAnimator = GetComponent<EnemyAnimator>();
         player = FindObjectOfType<Player>().gameObject;
         characterMovement = player.GetComponent<PlayerMovement>();
-        isChargeAvaialable = true;
-        isCharging = false;
-        isPlayerChargable = false;
-        defaultWaitingTime = 0.25f;
+        meleeAvaialable = true;
+        isPerformingMelee = false;
+        isPlayerHitable = false;
+        defaultWaitingTime = 0.1f;
         movementDirection = Vector2.right;
         StartCoroutine(WaitBeforeNextAction(defaultWaitingTime));
     }
 
     private void Update()
     {
-        if(!isCharging)
+        if(!isPerformingMelee)
         {
             gameObject.transform.position += movementDirection * Time.deltaTime * walkingSpeed;
         }
-
-        else if(isCharging)
-        {
-            gameObject.transform.position += chargeDireciton * Time.deltaTime * chargeSpeed;
-        }
-
-        if(isChargeAvaialable)
-        {
-            CheckWhetherPlayerIsChargable();
-            if(isPlayerChargable)
-            {
-                ProtectorMeleeHit();
-            }
-        }
-
-
     }
 
     private void UpdateBehaviour()
     {
         CheckWhereIsPlayer();
+        CheckWhetherPlayerIsHitable();
         StartCoroutine(WaitBeforeNextAction(defaultWaitingTime));
         if (basicEnemy == null)
         {
             Destroy(gameObject);
         }
     }
-    private void CheckWhetherPlayerIsChargable()
+    private void CheckWhetherPlayerIsHitable()
     {
         bool isPlayerGrounded = false;
         isPlayerGrounded = characterMovement.isGrounded;
         
         if (isPlayerGrounded && Vector3.Distance(transform.position, player.transform.position) <= chargeDistanceTrigger)
         {
-            isPlayerChargable = true;
+            isPlayerHitable = true;
+
+            if(meleeAvaialable)
+            {
+                ProtectorMeleeHit();
+            }
         }
-        
+
         else
         {
-            isPlayerChargable = false;
+            isPlayerHitable = false;
         }
 
     }
 
     private void CheckWhereIsPlayer()
     {
-        if (player.transform.position.x > gameObject.transform.position.x)
+        if (player.transform.position.x > transform.position.x)
         {
             movementDirection = Vector2.right;
-            if(!isCharging)
+            if(!isPerformingMelee)
             {
-                shield.transform.localPosition = new Vector3(Mathf.Abs(shield.transform.localPosition.x), shield.transform.localPosition.y, shield.transform.localPosition.z);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 basicEnemy.FlipToRight(true);
             }
         }
@@ -106,32 +97,32 @@ public class Enmy_Protector : MonoBehaviour
         else
         {
             movementDirection = -Vector2.right;
-            if(!isCharging)
+            if(!isPerformingMelee)
             {
-                shield.transform.localPosition = new Vector3(-(Mathf.Abs(shield.transform.localPosition.x)), shield.transform.localPosition.y, shield.transform.localPosition.z);
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 basicEnemy.FlipToRight(false);
             }
         }
     }
 
-    //private void ProtectorCharge()
-    //{
-    //    isChargeAvaialable = false;
-    //    CheckWhereIsPlayer();
-    //    chargeDireciton = movementDirection;
-    //    isCharging = true;
-    //    StartCoroutine(ChargeDuration());
-    //}
-
     private void ProtectorMeleeHit()
     {
+        Debug.Log("is attacking");
+        isPerformingMelee = true;
+        meleeAvaialable = false;
         enemyAnimator.isAttacking = true;
         enemyAnimator.isMoving = false;
+        StartCoroutine(AbilityCooldown(chargeCooldown));
+    }
+
+    private void StopPerformingMelee()
+    {
+        isPerformingMelee = false;
+        enemyAnimator.isMoving = true;
     }
 
     IEnumerator WaitBeforeNextAction(float waitingTime)
     {   
-        enemyAnimator.isMoving = true;
         yield return new WaitForSeconds(waitingTime);
         UpdateBehaviour();
     }
@@ -146,6 +137,6 @@ public class Enmy_Protector : MonoBehaviour
     IEnumerator AbilityCooldown(float cooldown)
     {
         yield return new WaitForSeconds(cooldown);
-        isChargeAvaialable = true;
+        meleeAvaialable = true;
     }
 }

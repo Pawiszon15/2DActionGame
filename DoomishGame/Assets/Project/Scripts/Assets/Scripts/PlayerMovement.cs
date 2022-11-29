@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	//Scriptable object which holds all the player's movement parameters. If you don't want to use it
 	//just paste in all the parameters, though you will need to manuly change all references in this script
+	public bool canPlayerMove = true;
 	public PlayerData Data;
 	[SerializeField] GameObject playerVisuals;
 	[SerializeField] Transform mousePos;
@@ -86,11 +87,12 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
 	{
 		RB = GetComponent<Rigidbody2D>();
-		AnimHandler = GetComponent<PlayerAnimator>();
+		AnimHandler = GetComponentInChildren<PlayerAnimator>();
 	}
 
 	private void Start()
 	{
+		canPlayerMove = true;
 		SetGravityScale(Data.gravityScale);
 		IsFacingRight = true;
 	}
@@ -108,7 +110,16 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 
 		#region INPUT HANDLER
-		_moveInput.x = Input.GetAxisRaw("Horizontal");
+		if(canPlayerMove)
+		{
+			_moveInput.x = Input.GetAxisRaw("Horizontal");
+		}
+		else
+		{
+			_moveInput.x = 0;
+			RB.velocity = Vector2.zero;
+		}
+
 		_moveInput.y = Input.GetAxisRaw("Vertical");
 
 		if (_moveInput.x != 0)

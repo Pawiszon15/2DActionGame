@@ -22,7 +22,7 @@ public class GroundSlam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             SlamGetDown();
         }
@@ -31,19 +31,21 @@ public class GroundSlam : MonoBehaviour
     private void SlamGetDown()
     {
         rb2d.velocity = Vector2.zero;
-        if(chMovement.isPlayerBoosted)
-        {
-            rb2d.velocity = new Vector2(0, 2 * -slamSpeed);
-            Debug.Log("Enchanced ground slam has been done");
-            chMovement.isPlayerBoosted = false;
-        }
+        rb2d.velocity = new Vector2(0, -slamSpeed);
+        
+        //if(chMovement.isPlayerBoosted)
+        //{
+        //    rb2d.velocity = new Vector2(0, 2 * -slamSpeed);
+        //    Debug.Log("Enchanced ground slam has been done");
+        //    chMovement.isPlayerBoosted = false;
+        //}
 
-        else
-        {
-            rb2d.velocity = new Vector2(0, -slamSpeed);
-        }
+        //else
+        //{
+        //    }aaaaaaaaaa
 
-        chMovement.IsGroundSlaming();
+        //    chMovement.IsGroundSlaming();
+        //}
+
     }
-
 }

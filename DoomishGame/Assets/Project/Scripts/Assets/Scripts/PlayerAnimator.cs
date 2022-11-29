@@ -9,6 +9,7 @@ public class PlayerAnimator : MonoBehaviour
     private SpriteRenderer spriteRend;
 
     private DemoManager demoManager;
+    [SerializeField] GameObject SwordGroundSlam;
 
     [Header("Movement Tilt")]
     [SerializeField] private float maxTilt;
@@ -19,6 +20,7 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private GameObject landFX;
     private ParticleSystem _jumpParticle;
     private ParticleSystem _landParticle;
+    private bool shouldGroundSlam;
 
     public bool startedJumping {  private get; set; }
     public bool justLanded { private get; set; }
@@ -28,8 +30,8 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Start()
     {
-        mov = GetComponent<PlayerMovement>();
-        spriteRend = GetComponentInChildren<SpriteRenderer>();
+        mov = GetComponentInParent<PlayerMovement>();
+        spriteRend = GetComponent<SpriteRenderer>();
         anim = spriteRend.GetComponent<Animator>();
 
         demoManager = FindObjectOfType<DemoManager>();
@@ -86,6 +88,13 @@ public class PlayerAnimator : MonoBehaviour
             GameObject obj = Instantiate(landFX, transform.position - (Vector3.up * transform.localScale.y / 1.5f), Quaternion.Euler(-90, 0, 0));
             Destroy(obj, 1);
             justLanded = false;
+
+            if(shouldGroundSlam)
+            {
+                anim.SetBool("IsGroundSlaming", true);
+                shouldGroundSlam = false;
+            }
+
             return;
         }
 
@@ -98,5 +107,28 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("isDashing", mov.IsDashing);
         anim.SetFloat("velocityX", mov.RB.velocity.x);
         anim.SetFloat("velocityY", mov.RB.velocity.y);
+
+        if(mov.RB.velocity.y < -35)
+        {
+            shouldGroundSlam = true;
+        }
+    }
+
+    private void StartedGroundSlammingAnimation()
+    {
+        mov.canPlayerMove = false;
+        SwordGroundSlam.SetActive(true);
+    }
+
+    private void StopGroundSlamingAnimation()
+    {
+        anim.SetBool("IsGroundSlaming", false);
+        mov.canPlayerMove = true;
+        SwordGroundSlam.SetActive(false);
+    }
+
+    IEnumerator WaitAfterSlam()
+    {
+        yield return new WaitForSeconds(0.1f);
     }
 }

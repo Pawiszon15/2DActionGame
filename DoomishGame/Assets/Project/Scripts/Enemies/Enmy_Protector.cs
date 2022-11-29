@@ -17,7 +17,7 @@ public class Enmy_Protector : MonoBehaviour
     [SerializeField] float chargeDistanceTrigger;
     private Vector3 chargeDireciton;
     private bool isPerformingMelee;
-    private bool isPlayerHitable;
+    //private bool isPlayerHitable;
     public bool meleeAvaialable;
 
     [Header("References")]
@@ -36,7 +36,7 @@ public class Enmy_Protector : MonoBehaviour
         characterMovement = player.GetComponent<PlayerMovement>();
         meleeAvaialable = true;
         isPerformingMelee = false;
-        isPlayerHitable = false;
+        //isPlayerHitable = false;
         defaultWaitingTime = 0.1f;
         movementDirection = Vector2.right;
         StartCoroutine(WaitBeforeNextAction(defaultWaitingTime));
@@ -67,7 +67,7 @@ public class Enmy_Protector : MonoBehaviour
         
         if (isPlayerGrounded && Vector3.Distance(transform.position, player.transform.position) <= chargeDistanceTrigger)
         {
-            isPlayerHitable = true;
+            //isPlayerHitable = true;
 
             if(meleeAvaialable)
             {
@@ -77,7 +77,7 @@ public class Enmy_Protector : MonoBehaviour
 
         else
         {
-            isPlayerHitable = false;
+            //isPlayerHitable = false;
         }
 
     }

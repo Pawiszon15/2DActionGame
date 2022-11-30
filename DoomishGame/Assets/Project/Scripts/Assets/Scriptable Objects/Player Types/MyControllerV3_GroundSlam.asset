@@ -51,3 +51,12 @@ MonoBehaviour:
   dashEndRunLerp: 0.5
   dashRefillTime: 0.1
   dashInputBufferTime: 0.1
+  rollAmount: 1
+  rollSpeed: 20
+  rollSleepTime: 0
+  rollAttackTime: 0.2
+  rollEndTime: 0.3
+  rollEndSpeed: {x: 15, y: 0}
+  rollEndRunLerp: 0.5
+  rollRefillTime: 0.5
+  rollInputBufferTime: 0.1

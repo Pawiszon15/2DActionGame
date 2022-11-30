@@ -107,6 +107,7 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("isDashing", mov.IsDashing);
         anim.SetFloat("velocityX", mov.RB.velocity.x);
         anim.SetFloat("velocityY", mov.RB.velocity.y);
+        anim.SetBool("isRolling", mov.isRolling);
 
         if(mov.RB.velocity.y < -35)
         {
@@ -118,6 +119,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         mov.canPlayerMove = false;
         SwordGroundSlam.SetActive(true);
+        mov.isGroundSlamming = true;    
     }
 
     private void StopGroundSlamingAnimation()
@@ -125,6 +127,7 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("IsGroundSlaming", false);
         mov.canPlayerMove = true;
         SwordGroundSlam.SetActive(false);
+        mov.isGroundSlamming = false;
     }
 
     IEnumerator WaitAfterSlam()

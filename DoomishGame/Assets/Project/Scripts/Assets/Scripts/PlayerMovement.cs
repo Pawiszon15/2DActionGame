@@ -21,9 +21,10 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashMeleeCollider;
 	public bool isGrounded;
-	public bool isWallSliding { get; private set;}
+	public bool isWallSliding { get; private set; }
+	public bool isGroundSlamming { get; set; }
 	#region COMPONENTS
-    public Rigidbody2D RB { get; private set; }
+	public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 	public PlayerAnimator AnimHandler { get; private set; }
 	#endregion
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 	public bool IsWallJumping { get; private set; }
 	public bool IsDashing { get; private set; }
 	public bool IsSliding { get; private set; }
+	public bool isRolling { get; private set; }
 
 	//Timers (also all fields, could be private and a method returning a bool could be used)
 	public float LastOnGroundTime { get; private set; }
@@ -58,13 +60,20 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 _lastDashDir;
 	private bool _isDashAttacking;
 
-	#endregion
+	//Roll
+	private int _rollLeft;
+    private bool _rollRefilling;
+	private Vector2 _lastRoolDir;
+    private bool _isRollattacking;
 
-	#region INPUT PARAMETERS
-	private Vector2 _moveInput;
+    #endregion
+
+    #region INPUT PARAMETERS
+    private Vector2 _moveInput;
 
 	public float LastPressedJumpTime { get; private set; }
 	public float LastPressedDashTime { get; private set; }
+	public float LastPressedRollTime { get; private set; }
 	#endregion
 
 	#region CHECK PARAMETERS
@@ -95,6 +104,8 @@ public class PlayerMovement : MonoBehaviour
 		canPlayerMove = true;
 		SetGravityScale(Data.gravityScale);
 		IsFacingRight = true;
+		_rollLeft = 1;
+		isGroundSlamming = false;
 	}
 
 	private void Update()
@@ -107,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
 		LastPressedJumpTime -= Time.deltaTime;
 		LastPressedDashTime -= Time.deltaTime;
+		LastPressedRollTime -= Time.deltaTime;
 		#endregion
 
 		#region INPUT HANDLER
@@ -116,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		else
 		{
-			_moveInput.x = 0;
+			//_moveInput.x = 0;
 			RB.velocity = Vector2.zero;
 		}
 
@@ -138,6 +150,11 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.K))
 		{
 			OnDashInput();
+		}
+
+		if (Input.GetKeyDown(KeyCode.S))
+		{
+			OnRollInput();
 		}
 		#endregion
 
@@ -204,7 +221,7 @@ public class PlayerMovement : MonoBehaviour
 				_isJumpFalling = false;
 		}
 
-		if (!IsDashing)
+		if (!IsDashing && !isRolling)
 		{
 			//Jump
 			if (CanJump() && LastPressedJumpTime > 0)
@@ -254,8 +271,39 @@ public class PlayerMovement : MonoBehaviour
 		}
 		#endregion
 
-		#region SLIDE CHECKS
-		if (CanSlide() && ((LastOnWallLeftTime > 0 && _moveInput.x < 0) || (LastOnWallRightTime > 0 && _moveInput.x > 0)))
+		#region ROLL CHECKS
+		if (LastPressedRollTime > 0 && !isGroundSlamming && !_rollRefilling && _rollLeft > 0 && isGrounded)
+		{
+			Vector2 rollDir = Vector2.zero;
+
+			if (_moveInput.x > 0.75f)
+			{
+				rollDir = Vector2.right;
+			}
+
+			else if(_moveInput.x < -0.75)
+			{
+                rollDir = -Vector2.right;
+            }
+
+            else
+			{
+				if(IsFacingRight)
+				{
+                    rollDir = Vector2.right;
+                }
+                else
+				{
+                    rollDir = -Vector2.right;
+                }
+            }
+			StartCoroutine(StartRoll(rollDir));
+		}
+
+        #endregion
+
+        #region SLIDE CHECKS
+        if (CanSlide() && ((LastOnWallLeftTime > 0 && _moveInput.x < 0) || (LastOnWallRightTime > 0 && _moveInput.x > 0)))
 			IsSliding = true;
 		else
 			IsSliding = false;
@@ -355,6 +403,12 @@ public class PlayerMovement : MonoBehaviour
 	public void OnDashInput()
 	{
 		LastPressedDashTime = Data.dashInputBufferTime;
+	}
+
+	public void OnRollInput()
+	{	
+		if(!isGroundSlamming)
+		LastPressedRollTime = Data.rollInputBufferTime;
 	}
     #endregion
 
@@ -552,8 +606,71 @@ public class PlayerMovement : MonoBehaviour
 	}
 	#endregion
 
-	#region OTHER MOVEMENT METHODS
-	private void Slide()
+	#region ROLL METHOD
+
+	private IEnumerator StartRoll (Vector2 dir)
+    {
+		isRolling = true;
+        //Overall this method of dashing aims to mimic Celeste, if you're looking for
+        // a more physics-based approach try a method similar to that used in the jump
+
+        //LastOnGroundTime = 0;
+        LastPressedRollTime = 0;
+		Debug.Log(dir.x);
+
+        float startTime = Time.time;
+
+        _rollLeft--;
+        //_isDashAttacking = true;
+        //dashMeleeCollider.SetActive(true);
+
+        SetGravityScale(0);
+
+        //We keep the player's velocity at the dash speed during the "attack" phase (in celeste the first 0.15s)
+        while (Time.time - startTime <= Data.rollAttackTime)
+        {
+            RB.velocity = dir.normalized * Data.rollSpeed;
+            //Pauses the loop until the next frame, creating something of a Update loop. 
+            //This is a cleaner implementation opposed to multiple timers and this coroutine approach is actually what is used in Celeste :D
+            yield return null;
+        }
+
+        startTime = Time.time;
+
+        _isDashAttacking = false;
+
+        //Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())
+        SetGravityScale(Data.gravityScale);
+        RB.velocity = Data.rollEndSpeed * dir.normalized;
+
+        while (Time.time - startTime <= Data.rollEndTime)
+        {
+            yield return null;
+        }
+
+        //Dash over
+        isRolling = false;
+
+		Debug.Log("roll ended");
+		StartCoroutine(RefillRoll(1));
+    }
+
+    private IEnumerator RefillRoll(int amount)
+    {
+        //SHoet cooldown, so we can't constantly dash along the ground, again this is the implementation in Celeste, feel free to change it up
+        _rollRefilling = true;
+        yield return new WaitForSeconds(Data.rollRefillTime);
+        _rollRefilling = false;
+        _rollLeft = Mathf.Min(Data.rollAmount, _rollLeft + 1);
+    }
+
+
+
+
+    #endregion
+
+    #region OTHER MOVEMENT METHODS
+    private void Slide()
 	{
 		//Works the same as the Run but only in the y-axis
 		//THis seems to work fine, buit maybe you'll find a better way to implement a slide into this system

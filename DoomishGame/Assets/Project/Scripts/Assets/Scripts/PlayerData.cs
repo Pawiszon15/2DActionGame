@@ -77,9 +77,23 @@ public class PlayerData : ScriptableObject
 	public float dashRefillTime;
 	[Space(5)]
 	[Range(0.01f, 0.5f)] public float dashInputBufferTime;
-	
 
-	//Unity Callback, called when the inspector updates
+    [Header("Roll")]
+    public int rollAmount;
+    public float rollSpeed;
+    public float rollSleepTime; //Duration for which the game freezes when we press dash but before we read directional input and apply a force
+    [Space(5)]
+    public float rollAttackTime;
+    [Space(5)]
+    public float rollEndTime; //Time after you finish the inital drag phase, smoothing the transition back to idle (or any standard state)
+    public Vector2 rollEndSpeed; //Slows down player, makes dash feel more responsive (used in Celeste)
+    [Range(0f, 1f)] public float rollEndRunLerp; //Slows the affect of player movement while dashing
+    [Space(5)]
+    public float rollRefillTime;
+    [Space(5)]
+    [Range(0.01f, 0.5f)] public float rollInputBufferTime;
+
+    //Unity Callback, called when the inspector updates
     private void OnValidate()
     {
 		//Calculate gravity strength using the formula (gravity = 2 * jumpHeight / timeToJumpApex^2) 

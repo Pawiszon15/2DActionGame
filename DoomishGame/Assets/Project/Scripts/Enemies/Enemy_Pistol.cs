@@ -24,7 +24,6 @@ public class Enemy_Pistol : MonoBehaviour
     {
         enemyAnimator.isAttacking = true;
         enemyAnimator.isIdling = false;
-        Debug.Log("is attacking");
     }
 
     private void Shot()
@@ -36,7 +35,6 @@ public class Enemy_Pistol : MonoBehaviour
     IEnumerator WaitForAnotherShot()
     {
         enemyAnimator.isIdling = true;
-        Debug.Log("wait for antoher shot");
         yield return new WaitForSeconds(timeBetweenShots);
         StartAttackAnimation();
     }

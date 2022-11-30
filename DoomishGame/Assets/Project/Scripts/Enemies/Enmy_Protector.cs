@@ -107,7 +107,6 @@ public class Enmy_Protector : MonoBehaviour
 
     private void ProtectorMeleeHit()
     {
-        Debug.Log("is attacking");
         isPerformingMelee = true;
         meleeAvaialable = false;
         enemyAnimator.isAttacking = true;

@@ -43,7 +43,6 @@ public class TimeDisplay : MonoBehaviour
 
             else
             {
-                Debug.Log("Time is UP!");
                 TimeLeftToStartAlarm = 0;
                 shouldTimerBeforeAlarmTick = false;
             }

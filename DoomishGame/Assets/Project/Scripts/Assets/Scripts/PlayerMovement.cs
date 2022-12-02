@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] Transform mousePos;
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashMeleeCollider;
+	private SpriteRenderer spriteRenderer;
 	Player player;
 
 	public bool isGrounded;
@@ -104,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
 		RB = GetComponent<Rigidbody2D>();
 		AnimHandler = GetComponentInChildren<PlayerAnimator>();
 		player = GetComponent<Player>();
+		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 	}
 
 	private void Start()
@@ -622,7 +624,7 @@ public class PlayerMovement : MonoBehaviour
         // a more physics-based approach try a method similar to that used in the jump
 
         //LastOnGroundTime = 0;
-		//here I should start counting this same time like in time jump buffer
+        //here I should start counting this same time like in time jump buffer
         LastPressedRollTime = 0;
 
         float startTime = Time.time;

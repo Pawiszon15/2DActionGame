@@ -8,10 +8,12 @@ public class Player : MonoBehaviour
     private float shortTimeAfterInvDuration = 0.2f;
     private bool isShortTimeAfterInv = false;
     private GameManger manger;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         manger = FindObjectOfType<GameManger>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,9 +47,13 @@ public class Player : MonoBehaviour
 
     private IEnumerator InvTime(float invTime)
     {
+        spriteRenderer.color = new Color(1f, 1f, 1f, 0.3f);
+
         isPlayerInv = true;
         yield return new WaitForSeconds(invTime);
         isPlayerInv = false;
+
+        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
 
         isShortTimeAfterInv = true;
         yield return new WaitForSeconds(shortTimeAfterInvDuration);

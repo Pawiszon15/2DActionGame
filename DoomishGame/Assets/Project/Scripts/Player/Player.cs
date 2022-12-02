@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public bool isPlayerInv = false;
+    [SerializeField] float deflectTime;
+    [HideInInspector] public bool isDeflecting;
+
+    [HideInInspector] public bool isPlayerInv = false;
     private float shortTimeAfterInvDuration = 0.2f;
     private bool isShortTimeAfterInv = false;
     private GameManger manger;

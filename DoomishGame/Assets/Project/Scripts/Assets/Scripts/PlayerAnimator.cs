@@ -7,10 +7,11 @@ public class PlayerAnimator : MonoBehaviour
     private PlayerMovement mov;
     private Animator anim;
     private SpriteRenderer spriteRend;
+    private Player player;
 
     private DemoManager demoManager;
     [SerializeField] GameObject SwordGroundSlam;
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject playerObject;
 
     [Header("Movement Tilt")]
     [SerializeField] private float maxTilt;
@@ -34,7 +35,7 @@ public class PlayerAnimator : MonoBehaviour
         mov = GetComponentInParent<PlayerMovement>();
         spriteRend = GetComponent<SpriteRenderer>();
         anim = spriteRend.GetComponent<Animator>();
-
+        player = GetComponentInParent<Player>();
         demoManager = FindObjectOfType<DemoManager>();
 
         _jumpParticle = jumpFX.GetComponent<ParticleSystem>();
@@ -131,14 +132,14 @@ public class PlayerAnimator : MonoBehaviour
         mov.isGroundSlamming = false;
     }
 
-    private void PlayerInvulnerable()
+    public void StartDeflectAniamtion()
     {
-        player.tag = "Untagged";
+
     }
 
-    private void PlayerVulnerable()
+    private void EndDeflectAnimation()
     {
-        player.tag = "Player";
+
     }
 
     IEnumerator WaitAfterSlam()

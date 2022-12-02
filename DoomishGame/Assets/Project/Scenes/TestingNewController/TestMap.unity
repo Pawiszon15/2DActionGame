@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &628202825
 Transform:
   m_ObjectHideFlags: 0
@@ -32693,6 +32693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ce7dcaf8ba26249988ba9062866507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deflectTime: 0
+  isDeflecting: 0
   isPlayerInv: 0
 --- !u!4 &522013067126940622
 Transform:
@@ -35378,6 +35380,7 @@ GameObject:
   - component: {fileID: 7703920648033828953}
   - component: {fileID: 7703920648033828962}
   - component: {fileID: 7703920648033828963}
+  - component: {fileID: 7703920648033828964}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -35477,7 +35480,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ce7dcaf8ba26249988ba9062866507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deflectTime: 0
+  isDeflecting: 0
   isPlayerInv: 0
+--- !u!114 &7703920648033828964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7703920648033828954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7685b3b0054ff2749b56237b245322cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deflectRange: 0
+  defectTime: 0
+  deflectCooldown: 0
+  isDeflecting: 0
 --- !u!4 &7703920648069059862
 Transform:
   m_ObjectHideFlags: 0
@@ -35632,7 +35653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SwordGroundSlam: {fileID: 1610359722}
-  player: {fileID: 7703920648033828954}
+  playerObject: {fileID: 0}
   maxTilt: 1
   tiltSpeed: 0.344
   jumpFX: {fileID: 3234584074981126610, guid: ef64e6572022fbb47969c1618d73ef20, type: 3}

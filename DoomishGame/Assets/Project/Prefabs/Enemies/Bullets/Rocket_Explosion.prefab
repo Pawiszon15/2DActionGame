@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8520735064187470838}
   - component: {fileID: 3068717847378710569}
   - component: {fileID: 5465340487783693547}
+  - component: {fileID: 4667450083554118290}
   m_Layer: 0
   m_Name: Rocket_Explosion
   m_TagString: Bullet
@@ -147,3 +148,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.5
+--- !u!114 &4667450083554118290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562817417552983664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc780b5fe5fe364d87bb87210efa542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

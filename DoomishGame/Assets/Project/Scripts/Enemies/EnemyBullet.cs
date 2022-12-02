@@ -31,15 +31,15 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             manger.ResetScene();
         }
 
-        else if(collision.gameObject.tag == "Platform")
+        else if (collision.gameObject.tag == "Platform")
         {
             Destroy(this.gameObject);
-            if(shouldCreateAnotherBullet)
+            if (shouldCreateAnotherBullet)
             {
                 ExtraShot();
             }

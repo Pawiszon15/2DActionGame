@@ -10,6 +10,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private DemoManager demoManager;
     [SerializeField] GameObject SwordGroundSlam;
+    [SerializeField] GameObject player;
 
     [Header("Movement Tilt")]
     [SerializeField] private float maxTilt;
@@ -128,6 +129,16 @@ public class PlayerAnimator : MonoBehaviour
         mov.canPlayerMove = true;
         SwordGroundSlam.SetActive(false);
         mov.isGroundSlamming = false;
+    }
+
+    private void PlayerInvulnerable()
+    {
+        player.tag = "Untagged";
+    }
+
+    private void PlayerVulnerable()
+    {
+        player.tag = "Player";
     }
 
     IEnumerator WaitAfterSlam()

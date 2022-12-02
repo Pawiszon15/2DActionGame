@@ -78,7 +78,8 @@ public class PlayerData : ScriptableObject
 	[Space(5)]
 	[Range(0.01f, 0.5f)] public float dashInputBufferTime;
 
-    [Header("Roll")]
+	[Header("Roll")]
+	public float invDuration;
     public int rollAmount;
     public float rollSpeed;
     public float rollSleepTime; //Duration for which the game freezes when we press dash but before we read directional input and apply a force

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3787991200057782726}
   - component: {fileID: 5840437540682539551}
   - component: {fileID: 5840496625541176772}
+  - component: {fileID: 4874311437658212324}
   m_Layer: 0
   m_Name: Bullet_Waver
   m_TagString: Bullet
@@ -138,3 +139,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 16
   expadingSpeed: 0.9
+--- !u!114 &4874311437658212324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082266481703378707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc780b5fe5fe364d87bb87210efa542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

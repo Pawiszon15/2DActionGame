@@ -12,19 +12,25 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	//Scriptable object which holds all the player's movement parameters. If you don't want to use it
-	//just paste in all the parameters, though you will need to manuly change all references in this script
-	public bool canPlayerMove = true;
+    //Scriptable object which holds all the player's movement parameters. If you don't want to use it
+    //just paste in all the parameters, though you will need to manuly change all references in this script
+    
+	#region MINE
+    public bool canPlayerMove = true;
 	public PlayerData Data;
 	[SerializeField] GameObject playerVisuals;
 	[SerializeField] Transform mousePos;
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashMeleeCollider;
+	Player player;
+
 	public bool isGrounded;
 	public bool isWallSliding { get; private set; }
 	public bool isGroundSlamming { get; set; }
-	#region COMPONENTS
-	public Rigidbody2D RB { get; private set; }
+    #endregion
+
+    #region COMPONENTS
+    public Rigidbody2D RB { get; private set; }
 	//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 	public PlayerAnimator AnimHandler { get; private set; }
 	#endregion
@@ -97,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		RB = GetComponent<Rigidbody2D>();
 		AnimHandler = GetComponentInChildren<PlayerAnimator>();
+		player = GetComponent<Player>();
 	}
 
 	private void Start()
@@ -152,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
 			OnDashInput();
 		}
 
-		if (Input.GetKeyDown(KeyCode.S))
+		if (Input.GetKeyDown(KeyCode.LeftControl))
 		{
 			OnRollInput();
 		}
@@ -221,7 +228,7 @@ public class PlayerMovement : MonoBehaviour
 				_isJumpFalling = false;
 		}
 
-		if (!IsDashing && !isRolling)
+		if (!IsDashing)
 		{
 			//Jump
 			if (CanJump() && LastPressedJumpTime > 0)
@@ -615,17 +622,17 @@ public class PlayerMovement : MonoBehaviour
         // a more physics-based approach try a method similar to that used in the jump
 
         //LastOnGroundTime = 0;
+		//here I should start counting this same time like in time jump buffer
         LastPressedRollTime = 0;
-		Debug.Log(dir.x);
 
         float startTime = Time.time;
 
         _rollLeft--;
-        //_isDashAttacking = true;
-        //dashMeleeCollider.SetActive(true);
+		//_isDashAttacking = true;
+		//dashMeleeCollider.SetActive(true);
 
         SetGravityScale(0);
-
+		player.StartInvincibility(Data.invDuration);
         //We keep the player's velocity at the dash speed during the "attack" phase (in celeste the first 0.15s)
         while (Time.time - startTime <= Data.rollAttackTime)
         {
@@ -636,7 +643,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         startTime = Time.time;
-
         _isDashAttacking = false;
 
         //Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())
@@ -647,11 +653,9 @@ public class PlayerMovement : MonoBehaviour
         {
             yield return null;
         }
-
         //Dash over
         isRolling = false;
 
-		Debug.Log("roll ended");
 		StartCoroutine(RefillRoll(1));
     }
 

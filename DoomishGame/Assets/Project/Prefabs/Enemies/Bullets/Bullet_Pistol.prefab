@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1112977629540098642}
   - component: {fileID: 3311649398356717233}
   - component: {fileID: -6426147970361605908}
-  m_Layer: 0
+  - component: {fileID: 4388585725100348928}
+  m_Layer: 7
   m_Name: Bullet_Pistol
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -154,6 +155,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc780b5fe5fe364d87bb87210efa542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &4388585725100348928
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235635171295464583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.45
 --- !u!1 &5648773897300054892
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1947595532763799750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PivotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3426099406262022269}
   - component: {fileID: 4000625153846228584}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

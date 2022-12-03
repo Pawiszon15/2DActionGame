@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8850480163755380225}
   - component: {fileID: 8850480163755380224}
   - component: {fileID: 168730841}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_RailLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

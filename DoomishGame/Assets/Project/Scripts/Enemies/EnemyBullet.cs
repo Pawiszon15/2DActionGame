@@ -50,4 +50,10 @@ public class EnemyBullet : MonoBehaviour
     {
         Instantiate(bulletToCreate, firePoint.position, firePoint.rotation);
     }
+
+    public void DeflectBullet()
+    {
+        Debug.Log("deflected bullet");
+        rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
+    }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3959704763325088115}
   - component: {fileID: 8424170912786910402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7593289091425199123}
   - component: {fileID: 1252950544804372735}
   - component: {fileID: 6769312523024043758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SniperBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}

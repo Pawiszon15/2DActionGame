@@ -7,6 +7,7 @@ public class PlayerAnimator : MonoBehaviour
     private PlayerMovement mov;
     private Animator anim;
     private SpriteRenderer spriteRend;
+    public DeflectAbility deflectAbility;
     private Player player;
 
     private DemoManager demoManager;
@@ -37,9 +38,11 @@ public class PlayerAnimator : MonoBehaviour
         anim = spriteRend.GetComponent<Animator>();
         player = GetComponentInParent<Player>();
         demoManager = FindObjectOfType<DemoManager>();
+        deflectAbility = GetComponentInParent<DeflectAbility>();
 
         _jumpParticle = jumpFX.GetComponent<ParticleSystem>();
         _landParticle = landFX.GetComponent<ParticleSystem>();
+
     }
 
     private void LateUpdate()
@@ -116,6 +119,10 @@ public class PlayerAnimator : MonoBehaviour
             shouldGroundSlam = true;
         }
     }
+    public void ChangeDeflectAnimation()
+    {
+        anim.SetBool("isDeflect", deflectAbility.isDeflecting);
+    }
 
     private void StartedGroundSlammingAnimation()
     {
@@ -130,16 +137,6 @@ public class PlayerAnimator : MonoBehaviour
         mov.canPlayerMove = true;
         SwordGroundSlam.SetActive(false);
         mov.isGroundSlamming = false;
-    }
-
-    public void StartDeflectAniamtion()
-    {
-
-    }
-
-    private void EndDeflectAnimation()
-    {
-
     }
 
     IEnumerator WaitAfterSlam()

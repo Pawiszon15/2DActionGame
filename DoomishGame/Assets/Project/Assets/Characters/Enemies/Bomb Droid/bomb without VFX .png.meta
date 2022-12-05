@@ -119,10 +119,10 @@ TextureImporter:
       name: bomb without VFX _0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1155
-        width: 116
-        height: 77
+        x: 50
+        y: 1213
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: bomb without VFX _1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1078
-        width: 116
-        height: 77
+        x: 51
+        y: 1137
+        width: 13
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: bomb without VFX _2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1001
-        width: 116
-        height: 77
+        x: 50
+        y: 1063
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: bomb without VFX _3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 924
-        width: 116
-        height: 77
+        x: 50
+        y: 987
+        width: 15
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: bomb without VFX _4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 847
-        width: 116
-        height: 77
+        x: 50
+        y: 910
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: bomb without VFX _5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 770
-        width: 116
-        height: 77
+        x: 50
+        y: 833
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: bomb without VFX _6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 693
-        width: 116
-        height: 77
+        x: 50
+        y: 756
+        width: 15
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: bomb without VFX _7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 616
-        width: 116
-        height: 77
+        x: 50
+        y: 679
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: bomb without VFX _8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 539
-        width: 116
-        height: 77
+        x: 50
+        y: 602
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: bomb without VFX _9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 462
-        width: 116
-        height: 77
+        x: 50
+        y: 525
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,10 +329,10 @@ TextureImporter:
       name: bomb without VFX _10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 385
-        width: 116
-        height: 77
+        x: 50
+        y: 448
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +350,10 @@ TextureImporter:
       name: bomb without VFX _11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 308
-        width: 116
-        height: 77
+        x: 50
+        y: 371
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,10 +371,10 @@ TextureImporter:
       name: bomb without VFX _12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 231
-        width: 116
-        height: 77
+        x: 50
+        y: 294
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: bomb without VFX _13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 154
-        width: 116
-        height: 77
+        x: 50
+        y: 217
+        width: 15
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,10 +413,10 @@ TextureImporter:
       name: bomb without VFX _14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 77
-        width: 116
-        height: 77
+        x: 50
+        y: 140
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,10 +434,10 @@ TextureImporter:
       name: bomb without VFX _15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 116
-        height: 77
+        x: 50
+        y: 63
+        width: 15
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

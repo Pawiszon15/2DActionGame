@@ -15,6 +15,7 @@ public class EnemyBullet : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     private GameManger manger;
     private Player player;
+    private bool wasDeflected = false;
 
     private void Awake()
     {
@@ -53,7 +54,12 @@ public class EnemyBullet : MonoBehaviour
 
     public void DeflectBullet()
     {
-        Debug.Log("deflected bullet");
-        rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
+        if(!wasDeflected)
+        {
+            wasDeflected = true;
+            Debug.Log("deflected bullet");
+            gameObject.tag = "PlayerBullet";
+            rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
+        }
     }
 }

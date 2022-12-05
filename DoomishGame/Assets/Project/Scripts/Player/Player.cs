@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float deflectTime;
-    [HideInInspector] public bool isDeflecting;
-
+    [HideInInspector] public bool isPlayerInvForDeflactableBullets = false;
     [HideInInspector] public bool isPlayerInv = false;
     private float shortTimeAfterInvDuration = 0.2f;
     private bool isShortTimeAfterInv = false;
@@ -23,10 +21,22 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Killable thing))
         {
-            if (!isPlayerInv)
+            if (isPlayerInv)
+            {
+                Debug.Log("PlayerIsInv");
+            }
+
+            else if (isPlayerInvForDeflactableBullets && collision.gameObject.TryGetComponent(out EnemyBullet deflectableBullet))
+            {
+                Debug.Log("it is working");
+                deflectableBullet.DeflectBullet();
+            }
+
+            else
             {
                 manger.ResetScene();
             }
+
         }
     }
 
@@ -40,12 +50,24 @@ public class Player : MonoBehaviour
             }
         }
     }
-        
 
+    #region INV TIMERS
     public void StartInvincibility(float dashDuration)
     {
 
         StartCoroutine(InvTime(dashDuration));
+    }
+
+    public void StartDeflectInv(float deflectInv)
+    {
+        StartCoroutine(defInvTime(deflectInv));
+    }
+
+    private IEnumerator defInvTime(float defTime)
+    {
+        isPlayerInvForDeflactableBullets = true;
+        yield return new WaitForSeconds(defTime);
+        isPlayerInvForDeflactableBullets = false;
     }
 
     private IEnumerator InvTime(float invTime)
@@ -62,4 +84,5 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(shortTimeAfterInvDuration);
         isShortTimeAfterInv = false;
     }
+    #endregion
 }

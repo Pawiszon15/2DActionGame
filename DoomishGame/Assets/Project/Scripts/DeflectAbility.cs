@@ -16,6 +16,7 @@ public class DeflectAbility : MonoBehaviour
 
     private void Awake()
     {
+        player = GetComponent<Player>();
         animator = GetComponentInChildren<PlayerAnimator>();
     }
 
@@ -24,32 +25,36 @@ public class DeflectAbility : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && numberOfDeflects > 0 && !isDeflecting)
         {
-            Debug.Log("deflecting");
-            isDeflecting = true;
-            deflectionCollider.SetActive(true);
             --numberOfDeflects;
+            player.StartDeflectInv(defectTime);
+            isDeflecting = true;
             animator.ChangeDeflectAnimation();
             StartCoroutine(DeflectTime());
         }  
+
+        if(isDeflecting)
+        {
+            DeflectEnemiesBullet();
+        }
     }
 
     private void DeflectEnemiesBullet()
     {
-        Collider2D[] overlapedBullets = Physics2D.OverlapCircleAll(transform.position, deflectRange, layer);
-        Debug.Log(overlapedBullets.Length);
-        foreach (Collider2D overlapedBullet in overlapedBullets)
-        {
-            if (overlapedBullet.gameObject.GetComponent<EnemyBullet>())
-            {
-                EnemyBullet enemyBullet = overlapedBullet.gameObject.GetComponent<EnemyBullet>();
-                enemyBullet.DeflectBullet();
-            }
-        }
+        //Collider2D[] overlapedBullets = Physics2D.OverlapCircleAll(transform.position, deflectRange, layer);
+        //Debug.Log(overlapedBullets.Length);
+        //foreach (Collider2D overlapedBullet in overlapedBullets)
+        //{
+        //    if (overlapedBullet.gameObject.GetComponent<EnemyBullet>())
+        //    {
+        //        EnemyBullet enemyBullet = overlapedBullet.gameObject.GetComponent<EnemyBullet>();
+        //        enemyBullet.DeflectBullet();
+        //    }
+        //}
     }
 
     IEnumerator DeflectTime()
     {
-        yield return new WaitForSeconds(defectTime);
+        yield return new WaitForSeconds(2*defectTime);
         isDeflecting = false;
         animator.ChangeDeflectAnimation();
         deflectionCollider.SetActive(false);

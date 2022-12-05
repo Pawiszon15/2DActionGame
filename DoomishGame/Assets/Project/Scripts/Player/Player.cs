@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
             else if (isPlayerInvForDeflactableBullets && collision.gameObject.TryGetComponent(out EnemyBullet deflectableBullet))
             {
                 Debug.Log("it is working");
-                deflectableBullet.DeflectBullet();
+                //deflectableBullet.DeflectBullet();
             }
 
             else

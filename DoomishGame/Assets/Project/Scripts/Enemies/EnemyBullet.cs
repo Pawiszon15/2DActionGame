@@ -52,7 +52,7 @@ public class EnemyBullet : MonoBehaviour
         Instantiate(bulletToCreate, firePoint.position, firePoint.rotation);
     }
 
-    public void DeflectBullet( Vector2 mouseDir)
+    public void DeflectBullet(Vector2 mouseDir)
     {
         if(!wasDeflected)
         {
@@ -60,7 +60,7 @@ public class EnemyBullet : MonoBehaviour
             Debug.Log("deflected bullet");
             gameObject.tag = "PlayerBullet";
             //rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
-            rigidbody2d.velocity = mouseDir.normalized * speed;
+            rigidbody2d.velocity = mouseDir.normalized * (2 * speed);
         }
     }
 }

@@ -10,7 +10,7 @@ using Mono.Cecil.Cil;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement  : MonoBehaviour
 {
     //Scriptable object which holds all the player's movement parameters. If you don't want to use it
     //just paste in all the parameters, though you will need to manuly change all references in this script
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 	private int _rollLeft;
     private bool _rollRefilling;
 	private Vector2 _lastRoolDir;
-    private bool _isRollattacking;
+    private bool _isRollAttacking;
 
     #endregion
 
@@ -229,8 +229,9 @@ public class PlayerMovement : MonoBehaviour
 			if(!IsJumping)
 				_isJumpFalling = false;
 		}
-
-		if (!IsDashing)
+		
+		//thanks to that extra condition, it ghater inputs at the begining of the roll
+		if (!IsDashing && !_isRollAttacking)
 		{
 			//Jump
 			if (CanJump() && LastPressedJumpTime > 0)
@@ -260,7 +261,7 @@ public class PlayerMovement : MonoBehaviour
 		#endregion
 
 		#region DASH CHECKS
-		if (CanDash() && LastPressedDashTime > 0)
+		if (CanDash() && LastPressedDashTime > 0 && !isRolling)
 		{
 			//Freeze game for split second. Adds juiciness and a bit of forgiveness over directional input
 			Sleep(Data.dashSleepTime);
@@ -641,10 +642,9 @@ public class PlayerMovement : MonoBehaviour
         float startTime = Time.time;
 
         _rollLeft--;
-		//_isDashAttacking = true;
+		_isRollAttacking = true;
 		//dashMeleeCollider.SetActive(true);
 
-        SetGravityScale(0);
 		player.StartInvincibility(Data.invDuration);
         //We keep the player's velocity at the dash speed during the "attack" phase (in celeste the first 0.15s)
         while (Time.time - startTime <= Data.rollAttackTime)
@@ -656,10 +656,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         startTime = Time.time;
-        _isDashAttacking = false;
+        _isRollAttacking = false;
 
         //Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())
-        SetGravityScale(Data.gravityScale);
         RB.velocity = Data.rollEndSpeed * dir.normalized;
 
         while (Time.time - startTime <= Data.rollEndTime)
@@ -705,7 +704,6 @@ public class PlayerMovement : MonoBehaviour
 	}
     #endregion
 
-
     #region CHECK METHODS
     public void CheckDirectionToFace(bool isMovingRight)
 	{
@@ -733,10 +731,10 @@ public class PlayerMovement : MonoBehaviour
 	{
 		return IsWallJumping && RB.velocity.y > 0;
 	}
-
+	
 	private bool CanDash()
 	{
-		if (!IsDashing && _dashesLeft < Data.dashAmount && LastOnGroundTime > 0 && !_dashRefilling)
+		if (!IsDashing && _dashesLeft < Data.dashAmount && LastOnGroundTime > 0 && !_dashRefilling && !isRolling)
 		{
 			StartCoroutine(nameof(RefillDash), 1);
 		}
@@ -752,7 +750,6 @@ public class PlayerMovement : MonoBehaviour
 			return false;
 	}
     #endregion
-
 
     #region EDITOR METHODS
     private void OnDrawGizmosSelected()

@@ -502,7 +502,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		//stores scale and flips the player along the x axis, 
 		Transform trans = _frontWallCheckPoint;
-		Vector3 scale = playerVisuals.transform.localScale; 
+		Vector3 scale = playerVisuals.transform.localScale;
 
 		//change needed due to flipping only visuals of player
 		_frontWallCheckPoint = _backWallCheckPoint;
@@ -543,8 +543,18 @@ public class PlayerMovement : MonoBehaviour
 		LastOnWallLeftTime = 0;
 
 		#region Perform Wall Jump
-		Vector2 force = new Vector2(Data.wallJumpForce.x, Data.wallJumpForce.y);
-		force.x *= dir; //apply force in opposite direction of wall
+		Vector2 force;
+
+		if (Input.GetKey(KeyCode.W))
+		{
+			force = new Vector2(Data.wallJumpUpForce.x, Data.wallJumpUpForce.y);
+		}
+		else
+		{
+            force = new Vector2(Data.wallJumpForce.x, Data.wallJumpForce.y);
+
+        }
+        force.x *= dir; //apply force in opposite direction of wall
 
 		if (Mathf.Sign(RB.velocity.x) != Mathf.Sign(force.x))
 			force.x -= RB.velocity.x;
@@ -555,6 +565,7 @@ public class PlayerMovement : MonoBehaviour
 		//Unlike in the run we want to use the Impulse mode.
 		//The default mode will apply are force instantly ignoring masss
 		RB.AddForce(force, ForceMode2D.Impulse);
+
 		#endregion
 	}
 	#endregion
@@ -684,13 +695,13 @@ public class PlayerMovement : MonoBehaviour
 	{
 		//Works the same as the Run but only in the y-axis
 		//THis seems to work fine, buit maybe you'll find a better way to implement a slide into this system
-		float speedDif = Data.slideSpeed - RB.velocity.y;	
+		float speedDif = Data.slideSpeed - RB.velocity.y;
 		float movement = speedDif * Data.slideAccel;
 		//So, we clamp the movement here to prevent any over corrections (these aren't noticeable in the Run)
 		//The force applied can't be greater than the (negative) speedDifference * by how many times a second FixedUpdate() is called. For more info research how force are applied to rigidbodies.
-		movement = Mathf.Clamp(movement, -Mathf.Abs(speedDif)  * (1 / Time.fixedDeltaTime), Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime));
-
+		movement = Mathf.Clamp(movement, -Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime), Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime));
 		RB.AddForce(movement * Vector2.up);
+		//RB.velocity = new Vector2(RB.velocity.x, Mathf.Clamp(RB.velocity.y, -wallSlidingSpeed, float.MaxValue));
 	}
     #endregion
 

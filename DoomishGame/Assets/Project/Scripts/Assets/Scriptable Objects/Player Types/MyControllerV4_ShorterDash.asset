@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5759d6a660e3ac14dbd9a801bf9d7627, type: 3}
-  m_Name: MyControllerV3_GroundSlam
+  m_Name: MyControllerV4_ShorterDash
   m_EditorClassIdentifier: 
   gravityStrength: -44.444447
   gravityScale: 4.5305243
@@ -35,12 +35,11 @@ MonoBehaviour:
   jumpHangAccelerationMult: 0
   jumpHangMaxSpeedMult: 0
   wallJumpForce: {x: 20, y: 20}
-  wallJumpUpForce: {x: 10, y: 25}
   wallJumpRunLerp: 0.75
   wallJumpTime: 0.2
   doTurnOnWallJump: 1
-  slideSpeed: -10
-  slideAccel: 8
+  slideSpeed: -15
+  slideAccel: 3
   coyoteTime: 0.1
   jumpInputBufferTime: 0.2
   dashAmount: 2
@@ -48,7 +47,7 @@ MonoBehaviour:
   dashSleepTime: 0.05
   dashAttackTime: 0.1
   dashEndTime: 0.1
-  dashEndSpeed: {x: 15, y: 15}
+  dashEndSpeed: {x: 15, y: 10}
   dashEndRunLerp: 0.5
   dashRefillTime: 0.1
   dashInputBufferTime: 0.1

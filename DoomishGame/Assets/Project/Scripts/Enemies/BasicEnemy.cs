@@ -45,7 +45,6 @@ public class BasicEnemy : MonoBehaviour
 
     public void KillEnemy()
     {
-        Debug.Log(gameObject.name);
         firstDMG = false;
         gameManger.KilledEnemy();
         Destroy(this.gameObject);

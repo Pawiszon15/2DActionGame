@@ -57,7 +57,6 @@ public class EnemyBullet : MonoBehaviour
         if(!wasDeflected)
         {
             wasDeflected = true;
-            Debug.Log("deflected bullet");
             gameObject.tag = "PlayerBullet";
             //rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
             rigidbody2d.velocity = mouseDir.normalized * (2 * speed);

@@ -44,7 +44,6 @@ public class DeflectAbility : MonoBehaviour
     private void DeflectEnemiesBullet()
     {
         Collider2D[] overlapedBullets = Physics2D.OverlapCircleAll(deflectPos.position, deflectRange, layer);
-        Debug.Log(overlapedBullets.Length);
         foreach (Collider2D overlapedBullet in overlapedBullets)
         {
             if (overlapedBullet.gameObject.GetComponent<EnemyBullet>())

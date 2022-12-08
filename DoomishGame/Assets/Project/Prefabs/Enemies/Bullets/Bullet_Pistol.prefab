@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf5d672dbd2d59498e87afbcd93caa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
+  speed: 20
   shouldCreateAnotherBullet: 0
   bulletToCreate: {fileID: 3082266481703378707, guid: 2ad7349f0e9957647b89f3ad6503d1dd, type: 3}
   firePoint: {fileID: 3426099406262022269}

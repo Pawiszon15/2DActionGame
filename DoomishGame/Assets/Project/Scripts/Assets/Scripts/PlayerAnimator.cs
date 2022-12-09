@@ -9,6 +9,7 @@ public class PlayerAnimator : MonoBehaviour
     private SpriteRenderer spriteRend;
     public DeflectAbility deflectAbility;
     private Player player;
+    private PlayerPogJump playerPogJump;
 
     private DemoManager demoManager;
     [SerializeField] GameObject SwordGroundSlam;
@@ -16,7 +17,7 @@ public class PlayerAnimator : MonoBehaviour
 
     [Header("Movement Tilt")]
     [SerializeField] private float maxTilt;
-    [SerializeField] [Range(0, 1)] private float tiltSpeed;
+    [SerializeField][Range(0, 1)] private float tiltSpeed;
 
     [Header("Particle FX")]
     [SerializeField] private GameObject jumpFX;
@@ -25,7 +26,7 @@ public class PlayerAnimator : MonoBehaviour
     private ParticleSystem _landParticle;
     private bool shouldGroundSlam;
 
-    public bool startedJumping {  private get; set; }
+    public bool startedJumping { private get; set; }
     public bool justLanded { private get; set; }
     public bool isWallSliding { private get; set; }
 
@@ -33,6 +34,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Start()
     {
+        playerPogJump = GetComponentInParent<PlayerPogJump>();
         mov = GetComponentInParent<PlayerMovement>();
         spriteRend = GetComponent<SpriteRenderer>();
         anim = spriteRend.GetComponent<Animator>();
@@ -42,7 +44,6 @@ public class PlayerAnimator : MonoBehaviour
 
         _jumpParticle = jumpFX.GetComponent<ParticleSystem>();
         _landParticle = landFX.GetComponent<ParticleSystem>();
-
     }
 
     private void LateUpdate()
@@ -94,9 +95,9 @@ public class PlayerAnimator : MonoBehaviour
             Destroy(obj, 1);
             justLanded = false;
 
-            if(shouldGroundSlam)
+            if (shouldGroundSlam)
             {
-                anim.SetBool("IsGroundSlaming", true);
+                anim.SetTrigger("isGroundSlamming");
                 shouldGroundSlam = false;
             }
 
@@ -114,7 +115,7 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetFloat("velocityY", mov.RB.velocity.y);
         anim.SetBool("isRolling", mov.isRolling);
 
-        if(mov.RB.velocity.y < -35)
+        if (mov.RB.velocity.y < -35)
         {
             shouldGroundSlam = true;
         }
@@ -122,6 +123,21 @@ public class PlayerAnimator : MonoBehaviour
     public void ChangeDeflectAnimation()
     {
         anim.SetBool("isDeflect", deflectAbility.isDeflecting);
+    }
+
+    public void StartPogJumpAnimation()
+    {
+        anim.SetTrigger("pogJump");
+    }
+
+    private void StartPogJump()
+    {
+        playerPogJump.pogJumpColliderActive = true;
+    }
+
+    private void EndPogTime()
+    {
+        playerPogJump.pogJumpColliderActive = false;
     }
 
     private void StartedGroundSlammingAnimation()
@@ -133,14 +149,8 @@ public class PlayerAnimator : MonoBehaviour
 
     private void StopGroundSlamingAnimation()
     {
-        anim.SetBool("IsGroundSlaming", false);
         mov.canPlayerMove = true;
         SwordGroundSlam.SetActive(false);
         mov.isGroundSlamming = false;
-    }
-
-    IEnumerator WaitAfterSlam()
-    {
-        yield return new WaitForSeconds(0.1f);
     }
 }

@@ -41,7 +41,7 @@ public class PlayerMovement  : MonoBehaviour
 	//These are fields which can are public allowing for other sctipts to read them
 	//but can only be privately written to.
 	public bool IsFacingRight { get; private set; }
-	public bool IsJumping { get; private set; }
+	public bool IsJumping { get; set; }
 	public bool IsWallJumping { get; private set; }
 	public bool IsDashing { get; private set; }
 	public bool IsSliding { get; private set; }

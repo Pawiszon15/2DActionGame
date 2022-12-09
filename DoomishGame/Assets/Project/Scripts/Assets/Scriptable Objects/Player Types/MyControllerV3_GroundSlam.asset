@@ -23,7 +23,7 @@ MonoBehaviour:
   runAccelAmount: 6
   runDecceleration: 4
   runDeccelAmount: 13.333333
-  accelInAir: 0.8
+  accelInAir: 0.484
   deccelInAir: 0.2
   doConserveMomentum: 1
   jumpHeight: 4.5

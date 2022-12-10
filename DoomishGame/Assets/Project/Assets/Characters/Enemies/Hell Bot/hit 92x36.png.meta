@@ -119,10 +119,10 @@ TextureImporter:
       name: hit 92x36_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 36
-        width: 92
-        height: 36
+        x: 10
+        y: 37
+        width: 22
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: hit 92x36_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 92
-        height: 36
+        x: 10
+        y: 1
+        width: 22
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

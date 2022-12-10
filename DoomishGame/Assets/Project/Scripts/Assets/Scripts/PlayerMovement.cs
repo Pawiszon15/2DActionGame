@@ -194,16 +194,14 @@ public class PlayerMovement  : MonoBehaviour
 			//Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
 			LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
 
-			if((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal") > 0f)
-				|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal")  < 0f))
-            {
-				isWallSliding = true;
-			}
+			//if((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal") > 0f)
+			//	|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal")  < 0f))
+   //         {
+			//}
 
-			else
-			{
-				isWallSliding = false;
-			}
+			//else
+			//{
+			//}
 
         }
 		#endregion
@@ -393,6 +391,7 @@ public class PlayerMovement  : MonoBehaviour
 		}
 
 		//Handle Slide
+		Debug.Log(IsSliding);
 		if (IsSliding)
 			Slide();
     }
@@ -421,7 +420,7 @@ public class PlayerMovement  : MonoBehaviour
 		LastPressedRollTime = Data.rollInputBufferTime;
 	}
     #endregion
-
+	
     #region GENERAL METHODS
     public void SetGravityScale(float scale)
 	{
@@ -501,16 +500,18 @@ public class PlayerMovement  : MonoBehaviour
 
 	private void Turn()
 	{
-		//stores scale and flips the player along the x axis, 
-		Transform trans = _frontWallCheckPoint;
+		Vector3 trans;
+
+        Debug.Log(LastOnWallLeftTime);
+		//flips visuals of player
 		Vector3 scale = playerVisuals.transform.localScale;
-
-		//change needed due to flipping only visuals of player
-		_frontWallCheckPoint = _backWallCheckPoint;
-		_backWallCheckPoint = trans;
-
 		scale.x *= -1;
         playerVisuals.transform.localScale = scale;
+
+		//change needed due to flipping only visuals of player
+		trans = _frontWallCheckPoint.position;
+		_frontWallCheckPoint.position = _backWallCheckPoint.position;
+		_backWallCheckPoint.position = trans;
 
 		IsFacingRight = !IsFacingRight;
 	}
@@ -637,6 +638,7 @@ public class PlayerMovement  : MonoBehaviour
 	private IEnumerator StartRoll (Vector2 dir)
     {
 		isRolling = true;
+		AnimHandler.StartRollingAnimation();
         //Overall this method of dashing aims to mimic Celeste, if you're looking for
         // a more physics-based approach try a method similar to that used in the jump
 
@@ -697,6 +699,7 @@ public class PlayerMovement  : MonoBehaviour
     #region OTHER MOVEMENT METHODS
     private void Slide()
 	{
+
 		//Works the same as the Run but only in the y-axis
 		//THis seems to work fine, buit maybe you'll find a better way to implement a slide into this system
 		float speedDif = Data.slideSpeed - RB.velocity.y;

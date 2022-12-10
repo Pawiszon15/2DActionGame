@@ -113,21 +113,37 @@ public class PlayerAnimator : MonoBehaviour
             anim.SetBool("isWallSliding", false);
         }
 
-        anim.SetBool("isWallSliding", mov.isWallSliding);
+        anim.SetBool("isWallSliding", mov.IsSliding);
         anim.SetFloat("velocityX", mov.RB.velocity.x);
         anim.SetFloat("velocityY", mov.RB.velocity.y);
-        anim.SetBool("isRolling", mov.isRolling);
 
         if (mov.RB.velocity.y < -35)
         {
             shouldGroundSlam = true;
         }
+        
+        else if(mov.RB.velocity.y > 0)
+        {
+            shouldGroundSlam = false;
+        }
+
     }
+
+    #region ROLLING
+    public void StartRollingAnimation()
+    {
+        anim.SetTrigger("isRolling");
+    }
+
+
+
+    #endregion
 
     #region DASH
 
     public void StartDashAnimation()
     {
+        shouldGroundSlam = false;
         anim.SetTrigger("isDashing");
     }
 

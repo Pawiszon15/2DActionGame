@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3977718930224878552}
   - component: {fileID: 3977718930224878558}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3977718930243766162}
   - component: {fileID: 3977718930243766160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 4881195465520247340}
   - component: {fileID: 4365199596576140760}
   - component: {fileID: 172789770632169880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 874916745592996493}
   - component: {fileID: 874916745592996489}
   - component: {fileID: 762685742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_WaveAttacker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874916746248120810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 874916746264902967}
   - component: {fileID: 874916746264902965}
   - component: {fileID: 874916746264902964}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 874916746597215993}
   - component: {fileID: 874916746597215991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6597597322034358760}
   - component: {fileID: 6597597322034358759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6597597322535941789}
   - component: {fileID: 6597597322535941788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6597597322731424010}
   - component: {fileID: 6597597322731424009}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6597597323363129211}
   - component: {fileID: 6597597323363129210}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

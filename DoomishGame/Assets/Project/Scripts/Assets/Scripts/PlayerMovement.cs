@@ -104,7 +104,7 @@ public class PlayerMovement  : MonoBehaviour
 	{
 		RB = GetComponent<Rigidbody2D>();
 		AnimHandler = GetComponentInChildren<PlayerAnimator>();
-		player = GetComponent<Player>();
+		player = GetComponentInChildren<Player>();
 		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 	}
 
@@ -272,7 +272,7 @@ public class PlayerMovement  : MonoBehaviour
 			//	_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
 			_lastDashDir = mousePos.right;
 
-			IsDashing = true;
+			//IsDashing = true;
 			IsJumping = false;
 			IsWallJumping = false;
 			_isJumpCut = false;
@@ -577,7 +577,7 @@ public class PlayerMovement  : MonoBehaviour
 	{
 		//Overall this method of dashing aims to mimic Celeste, if you're looking for
 		// a more physics-based approach try a method similar to that used in the jump
-
+		IsDashing = true;
 		LastOnGroundTime = 0;
 		LastPressedDashTime = 0;
 
@@ -585,7 +585,7 @@ public class PlayerMovement  : MonoBehaviour
 
 		_dashesLeft--;
 		_isDashAttacking = true;
-        dashMeleeCollider.SetActive(true);
+		AnimHandler.StartDashAnimation();
 
         SetGravityScale(0);
 
@@ -600,7 +600,6 @@ public class PlayerMovement  : MonoBehaviour
 
 		startTime = Time.time;
 
-		dashMeleeCollider.SetActive(false);
 		_isDashAttacking = false;
 
 		//Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())
@@ -617,6 +616,12 @@ public class PlayerMovement  : MonoBehaviour
 	}
 
 	//Short period before the player is able to dash again
+
+	public void InstaDashRefill()
+	{
+		_dashesLeft = 1;
+	}
+
 	private IEnumerator RefillDash(int amount)
 	{
 		//SHoet cooldown, so we can't constantly dash along the ground, again this is the implementation in Celeste, feel free to change it up

@@ -12,7 +12,7 @@ public class DeflectAbility : MonoBehaviour
     [SerializeField] float deflectCooldown;
     [SerializeField] Transform mousePos;
 
-    [HideInInspector] public bool isDeflecting = false;
+    [HideInInspector] public bool shouldDeflect = false;
     private int numberOfDeflects = 1;
     private Player player;
     private PlayerAnimator animator;
@@ -26,16 +26,15 @@ public class DeflectAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && numberOfDeflects > 0 && !isDeflecting)
-        {
-            //player.StartDeflectInv(defectTime);
-            //animator.ChangeDeflectAnimation();    
-            --numberOfDeflects;      
-            isDeflecting = true;
-            StartCoroutine(DeflectTime());
-        }  
+        //if (Input.GetKeyDown(KeyCode.Mouse0) && numberOfDeflects > 0 && !shouldDeflect)
+        //{
+        //    //player.StartDeflectInv(defectTime);
+        //    //animator.ChangeDeflectAnimation();    
+        //    --numberOfDeflects;      
+        //    shouldDeflect = true;
+        //}  
 
-        if(isDeflecting)
+        if(shouldDeflect)
         {
             DeflectEnemiesBullet();
         }
@@ -54,14 +53,14 @@ public class DeflectAbility : MonoBehaviour
         }
     }
 
-    IEnumerator DeflectTime()
-    {
-        yield return new WaitForSeconds(defectTime);
-        isDeflecting = false;
-        animator.ChangeDeflectAnimation();
+    //IEnumerator DeflectTime()
+    //{
+    //    yield return new WaitForSeconds(defectTime);
+    //    isDeflecting = false;
+    //    animator.();
 
 
-        yield return new WaitForSeconds(deflectCooldown);
-        ++numberOfDeflects;
-    }
+    //    yield return new WaitForSeconds(deflectCooldown);
+    //    ++numberOfDeflects;
+    //}
 }

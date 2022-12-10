@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6209170010757079277}
   - component: {fileID: 3991855658091662383}
   - component: {fileID: -5064115096307126208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ArrowExplosion
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2181150884882785644}
   - component: {fileID: 1848903028670426786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5740077906671640298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5740077906868307080}
   - component: {fileID: 5740077906868307081}
   - component: {fileID: 7146926263840934152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_RocketLuncher
   m_TagString: Enemy
   m_Icon: {fileID: 0}

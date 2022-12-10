@@ -31,7 +31,7 @@ public class PlayerPogJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && pogJumpAvaialable && !playerMovement.IsDashing && !playerMovement.isGrounded && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)     
+        if (Input.GetKeyDown(KeyCode.Mouse1) && pogJumpAvaialable && !playerMovement.IsDashing && !playerMovement.isGrounded && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)     
         {
             Debug.Log("pog jump animation");
             playerAnimator.StartPogJumpAnimation();
@@ -46,7 +46,6 @@ public class PlayerPogJump : MonoBehaviour
     private void CheckForCollision()
     {
         Collider2D[] OverlapThings = Physics2D.OverlapCircleAll(posOfPogJumpCollider.position, rangeOfCircle, layers);
-        Debug.Log(OverlapThings.Length);
 
         foreach(Collider2D overlapThing in OverlapThings)
         {
@@ -60,6 +59,13 @@ public class PlayerPogJump : MonoBehaviour
             {
                 MakePogJump();
             }
+
+            // I do not like it. I feel like it is more interesting if you can only kill enemies with dash
+            //if(overlapThing.TryGetComponent(out BasicEnemy enemy))
+            //{
+            //    //enemy.KillEnemy();
+            //    MakePogJump();
+            //}
         }
 
     }

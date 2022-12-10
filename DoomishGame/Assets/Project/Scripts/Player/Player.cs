@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         manger = FindObjectOfType<GameManger>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(isShortTimeAfterInv)
+        if (isShortTimeAfterInv)
         {
             if (collision.gameObject.TryGetComponent(out Killable thing))
             {

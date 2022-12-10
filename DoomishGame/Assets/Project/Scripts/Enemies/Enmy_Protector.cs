@@ -32,7 +32,7 @@ public class Enmy_Protector : MonoBehaviour
     {
         basicEnemy = GetComponent<BasicEnemy>();
         enemyAnimator = GetComponent<EnemyAnimator>();
-        player = FindObjectOfType<Player>().gameObject;
+        player = FindObjectOfType<PlayerMovement>().gameObject;
         characterMovement = player.GetComponent<PlayerMovement>();
         meleeAvaialable = true;
         isPerformingMelee = false;

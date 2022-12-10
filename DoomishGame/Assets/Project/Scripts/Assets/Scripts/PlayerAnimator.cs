@@ -12,8 +12,10 @@ public class PlayerAnimator : MonoBehaviour
     private PlayerPogJump playerPogJump;
 
     private DemoManager demoManager;
+    [Header("References")]
     [SerializeField] GameObject SwordGroundSlam;
     [SerializeField] GameObject playerObject;
+    [SerializeField] GameObject dashCollider;
 
     [Header("Movement Tilt")]
     [SerializeField] private float maxTilt;
@@ -25,6 +27,7 @@ public class PlayerAnimator : MonoBehaviour
     private ParticleSystem _jumpParticle;
     private ParticleSystem _landParticle;
     private bool shouldGroundSlam;
+    private float time;
 
     public bool startedJumping { private get; set; }
     public bool justLanded { private get; set; }
@@ -38,7 +41,7 @@ public class PlayerAnimator : MonoBehaviour
         mov = GetComponentInParent<PlayerMovement>();
         spriteRend = GetComponent<SpriteRenderer>();
         anim = spriteRend.GetComponent<Animator>();
-        player = GetComponentInParent<Player>();
+        player = GetComponent<Player>();
         demoManager = FindObjectOfType<DemoManager>();
         deflectAbility = GetComponentInParent<DeflectAbility>();
 
@@ -48,6 +51,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void LateUpdate()
     {
+        time += Time.deltaTime;
         #region Tilt
         float tiltProgress;
 
@@ -110,7 +114,6 @@ public class PlayerAnimator : MonoBehaviour
         }
 
         anim.SetBool("isWallSliding", mov.isWallSliding);
-        anim.SetBool("isDashing", mov.IsDashing);
         anim.SetFloat("velocityX", mov.RB.velocity.x);
         anim.SetFloat("velocityY", mov.RB.velocity.y);
         anim.SetBool("isRolling", mov.isRolling);
@@ -120,11 +123,28 @@ public class PlayerAnimator : MonoBehaviour
             shouldGroundSlam = true;
         }
     }
-    public void ChangeDeflectAnimation()
+
+    #region DASH
+
+    public void StartDashAnimation()
     {
-        anim.SetBool("isDeflect", deflectAbility.isDeflecting);
+        anim.SetTrigger("isDashing");
     }
 
+    private void StartDeflectingLogic()
+    {
+        dashCollider.SetActive(true);
+        deflectAbility.shouldDeflect = true;
+    }
+
+    private void StopDeflectingLogic()
+    {
+        dashCollider.SetActive(false);
+        deflectAbility.shouldDeflect = false;
+    }
+    #endregion
+
+    #region POG JUMP
     public void StartPogJumpAnimation()
     {
         anim.SetTrigger("pogJump");
@@ -139,7 +159,9 @@ public class PlayerAnimator : MonoBehaviour
     {
         playerPogJump.pogJumpColliderActive = false;
     }
+    #endregion 
 
+    #region GROUND SLAM
     private void StartedGroundSlammingAnimation()
     {
         mov.canPlayerMove = false;
@@ -153,4 +175,5 @@ public class PlayerAnimator : MonoBehaviour
         SwordGroundSlam.SetActive(false);
         mov.isGroundSlamming = false;
     }
+    #endregion
 }

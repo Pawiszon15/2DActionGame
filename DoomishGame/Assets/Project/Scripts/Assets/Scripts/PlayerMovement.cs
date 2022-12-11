@@ -391,7 +391,6 @@ public class PlayerMovement  : MonoBehaviour
 		}
 
 		//Handle Slide
-		Debug.Log(IsSliding);
 		if (IsSliding)
 			Slide();
     }
@@ -502,7 +501,6 @@ public class PlayerMovement  : MonoBehaviour
 	{
 		Vector3 trans;
 
-        Debug.Log(LastOnWallLeftTime);
 		//flips visuals of player
 		Vector3 scale = playerVisuals.transform.localScale;
 		scale.x *= -1;

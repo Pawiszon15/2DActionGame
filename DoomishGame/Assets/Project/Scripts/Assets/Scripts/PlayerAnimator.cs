@@ -27,7 +27,7 @@ public class PlayerAnimator : MonoBehaviour
     private ParticleSystem _jumpParticle;
     private ParticleSystem _landParticle;
     private bool shouldGroundSlam;
-    private float time;
+    private float timeFromLastDash;
 
     public bool startedJumping { private get; set; }
     public bool justLanded { private get; set; }
@@ -51,7 +51,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void LateUpdate()
     {
-        time += Time.deltaTime;
+        timeFromLastDash += Time.deltaTime;
         #region Tilt
         float tiltProgress;
 
@@ -127,6 +127,11 @@ public class PlayerAnimator : MonoBehaviour
             shouldGroundSlam = false;
         }
 
+        if (timeFromLastDash > 0.22f && dashCollider.activeSelf)
+        {
+            dashCollider.SetActive(false);
+        }
+
     }
 
     #region ROLLING
@@ -148,7 +153,8 @@ public class PlayerAnimator : MonoBehaviour
     }
 
     private void StartDeflectingLogic()
-    {
+    { 
+        timeFromLastDash = 0;
         dashCollider.SetActive(true);
         deflectAbility.shouldDeflect = true;
     }

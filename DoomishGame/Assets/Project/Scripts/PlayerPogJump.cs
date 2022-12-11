@@ -33,7 +33,6 @@ public class PlayerPogJump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && pogJumpAvaialable && !playerMovement.IsDashing && !playerMovement.isGrounded && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)     
         {
-            Debug.Log("pog jump animation");
             playerAnimator.StartPogJumpAnimation();
         }
 
@@ -72,7 +71,6 @@ public class PlayerPogJump : MonoBehaviour
 
     private void MakePogJump()
     {
-        Debug.Log("make pog jump");
         pogJumpColliderActive = false;
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);

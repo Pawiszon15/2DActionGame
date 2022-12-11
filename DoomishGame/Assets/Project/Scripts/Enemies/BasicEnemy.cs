@@ -10,14 +10,14 @@ public class BasicEnemy : MonoBehaviour
     public bool isProtector;
     private GameManger gameManger;
     private bool firstDMG;
-    private Player player;
+    private PlayerMovement player;
     private bool isFacingRight = false;
     private EnemyAnimator enemyAnimator;
 
     private void Start()
     {
         enemyAnimator = GetComponent<EnemyAnimator>();
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<PlayerMovement>();
         gameManger = FindObjectOfType<GameManger>();
         firstDMG = true;
     }
@@ -41,7 +41,9 @@ public class BasicEnemy : MonoBehaviour
     public void StartDeathAnimation()
     {
         enemyAnimator.isDying = true;
-    }
+        //StartCoroutine(StopTimeForMomemnt());
+        //player.InstaDashRefill();
+ }
 
     public void KillEnemy()
     {
@@ -66,5 +68,12 @@ public class BasicEnemy : MonoBehaviour
         {
             StartDeathAnimation();
         }
+    }
+
+    IEnumerator StopTimeForMomemnt()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(0.2f);
+        Time.timeScale = 1f;
     }
 }

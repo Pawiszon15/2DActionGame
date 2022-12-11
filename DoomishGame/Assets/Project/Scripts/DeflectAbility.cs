@@ -13,10 +13,8 @@ public class DeflectAbility : MonoBehaviour
     [SerializeField] Transform mousePos;
 
     /*[HideInInspector] */public bool shouldDeflect = false;
-    private int numberOfDeflects = 1;
     private Player player;
     private PlayerAnimator animator;
-    private float timeFromLastDash;
 
     private void Awake()
     {
@@ -34,17 +32,10 @@ public class DeflectAbility : MonoBehaviour
         //    --numberOfDeflects;      
         //    shouldDeflect = true;
         //}  
-        timeFromLastDash =+ Time.deltaTime;
 
         if(shouldDeflect)
         {
-            timeFromLastDash = 0f;  
             DeflectEnemiesBullet();
-        }
-
-        if(timeFromLastDash > defectTime && shouldDeflect)
-        {
-            shouldDeflect = false;
         }
     }
 

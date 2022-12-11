@@ -129,7 +129,7 @@ public class PlayerAnimator : MonoBehaviour
 
         if (timeFromLastDash > 0.22f && dashCollider.activeSelf)
         {
-            dashCollider.SetActive(false);
+            StopDeflectingLogic();
         }
 
     }

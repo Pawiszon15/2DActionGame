@@ -12,12 +12,25 @@ public class Enemy_Pistol : MonoBehaviour
     [Header("references")]
     [SerializeField] GameObject pistolBullet;
     [SerializeField] Transform firePoint;
+    
+    private EnemyActivation enemyActivation;
     private EnemyAnimator enemyAnimator;
 
     private void Start()
     {
+        enemyActivation = GetComponent<EnemyActivation>();
         enemyAnimator = GetComponent<EnemyAnimator>();
-        StartCoroutine(WaitForAnotherShot());
+        StartCoroutine(RechargeAttackAbility());
+    }
+
+    private void Update()
+    {
+        if(enemyActivation.isThereLineOfSight && enemyActivation.isEnemyReadyToShoot)
+        {
+            enemyActivation.isThereLineOfSight = false;
+            enemyActivation.isEnemyReadyToShoot = false;
+            StartAttackAnimation();
+        }
     }
 
     private void StartAttackAnimation()
@@ -29,13 +42,13 @@ public class Enemy_Pistol : MonoBehaviour
     private void Shot()
     {
         Instantiate(pistolBullet, firePoint.position, firePoint.rotation);
-        StartCoroutine(WaitForAnotherShot());
+        StartCoroutine(RechargeAttackAbility());
     }
 
-    IEnumerator WaitForAnotherShot()
+    IEnumerator RechargeAttackAbility()
     {
         enemyAnimator.isIdling = true;
         yield return new WaitForSeconds(timeBetweenShots);
-        StartAttackAnimation();
+        enemyActivation.isEnemyReadyToShoot = true;
     }
 }

@@ -7,13 +7,24 @@ public class Enemy_RocketLuncher : MonoBehaviour
     [SerializeField] float timeBetweenShoots;
     [SerializeField] Transform rocketSpawnPoint;
     [SerializeField] GameObject rocket;
-    private EnemyAnimator enemyAnimator;
 
+    private EnemyActivation enemyActivation;
+    private EnemyAnimator enemyAnimator;
     private GameObject spawnedRocket = null;
     void Start()
     {
+        enemyActivation = GetComponent<EnemyActivation>();
         enemyAnimator = GetComponent<EnemyAnimator>();
         StartCoroutine(TimeBetweenRocketSpawn());
+    }
+    private void Update()
+    {
+        if(enemyActivation.isThereLineOfSight && enemyActivation.isEnemyReadyToShoot)
+        {
+            enemyActivation.isThereLineOfSight = false;
+            enemyActivation.isEnemyReadyToShoot = false;
+            StartAttackAnimation();
+        }
     }
 
     void StartAttackAnimation()
@@ -21,6 +32,7 @@ public class Enemy_RocketLuncher : MonoBehaviour
         enemyAnimator.isAttacking = true;
         enemyAnimator.isIdling = false;
     }
+
 
     private void SpawnRocket()
     {
@@ -35,7 +47,7 @@ public class Enemy_RocketLuncher : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenShoots);
         if(spawnedRocket == null)
         {
-            StartAttackAnimation();
+            enemyActivation.isEnemyReadyToShoot = true;
         }
 
         else

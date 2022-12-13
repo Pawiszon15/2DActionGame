@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 public class Enemy_WaveAttacker : MonoBehaviour
@@ -11,11 +12,23 @@ public class Enemy_WaveAttacker : MonoBehaviour
     [SerializeField] GameObject pistolBullet;
     [SerializeField] Transform[] firePoint;
     private EnemyAnimator enemyAnimator;
+    private EnemyActivation enemyActivation;
 
     private void Start()
     {
         enemyAnimator = GetComponent<EnemyAnimator>();
         StartCoroutine(WaitForAnotherShot());
+        enemyActivation = GetComponent<EnemyActivation>();
+    }
+
+    private void Update()
+    {
+        if (enemyActivation.isThereLineOfSight && enemyActivation.isEnemyReadyToShoot)
+        {
+            enemyActivation.isThereLineOfSight = false;
+            enemyActivation.isEnemyReadyToShoot = false;
+            StartAttackAnimation();
+        }
     }
 
     private void StartAttackAnimation()
@@ -38,6 +51,6 @@ public class Enemy_WaveAttacker : MonoBehaviour
     {
         enemyAnimator.isIdling = true;
         yield return new WaitForSeconds(timeBetweenShots);
-        StartAttackAnimation();
+        enemyActivation.isEnemyReadyToShoot = true;
     }
 }

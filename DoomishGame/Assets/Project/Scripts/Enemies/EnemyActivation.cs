@@ -32,6 +32,7 @@ public class EnemyActivation : MonoBehaviour
 
     private void Turn()
     {
+        
         if (player.transform.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -77,7 +78,7 @@ public class EnemyActivation : MonoBehaviour
                     Debug.Log(hit2D.collider.gameObject.name);
                 }
 
-                Debug.DrawRay(shootPoint.position, shootPoint.right *100f, Color.red, 1f);
+                //Debug.DrawRay(shootPoint.position, shootPoint.right * 100f, Color.red, 0.3f);
                 Debug.Log("is there line of sight - " + isThereLineOfSight);
             }
         }

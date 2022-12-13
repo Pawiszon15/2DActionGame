@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2524970997408195797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2524970997408195796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53, y: 0, z: 0}
+  m_LocalPosition: {x: 0.308, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 2524970998559066272}
   - component: {fileID: -15244715382699708}
   - component: {fileID: 1393941480}
+  - component: {fileID: 884879126}
   m_Layer: 7
   m_Name: Enemy_Pistol
   m_TagString: Enemy
@@ -156,10 +157,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.3468494, y: -0.058714867}
+  m_Offset: {x: 0.026855469, y: 0.26862812}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.155, y: 0.3}
     oldSize: {x: 7, y: 1.625}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
@@ -167,7 +168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.58880234, y: 1.3627529}
+  m_Size: {x: 0.6856537, y: 1.3779011}
   m_EdgeRadius: 0
 --- !u!114 &2524970998559066273
 MonoBehaviour:
@@ -239,6 +240,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &884879126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524970998559066301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c92c86abd38b6f4f9fb6053bf149910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootPoint: {fileID: 2524970997408195797}
+  weaponPivot: {fileID: 2524970998947816390}
+  layers:
+    serializedVersion: 2
+    m_Bits: 311
+  timeToEvaulateBehaviour: 0.1
+  distanceToActivate: 30
+  isEnemyReadyToShoot: 0
+  isThereLineOfSight: 0
 --- !u!1 &2524970998947816385
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,10 +270,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2524970998947816390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeaponPivot
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -263,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2524970998947816385}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.324, y: -0.206, z: 0}
+  m_LocalPosition: {x: 0.481, y: 0.205, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -282,7 +304,7 @@ GameObject:
   - component: {fileID: 2524970998964598555}
   - component: {fileID: 2524970998964598553}
   - component: {fileID: 2524970998964598552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,9 +318,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2524970998964598554}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.36, y: 0, z: 0}
-  m_LocalScale: {x: 0.10416, y: 0.10416, z: 0.10416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2524970997408195797}
@@ -370,5 +392,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPivot: {fileID: 2524970998947816390}
-  rotationSpeed: 8
+  rotationSpeed: 100
   isPredicterShooter: 0

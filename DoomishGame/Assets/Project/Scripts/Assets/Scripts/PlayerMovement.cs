@@ -24,7 +24,7 @@ public class PlayerMovement  : MonoBehaviour
 	[SerializeField] GameObject dashMeleeCollider;
 	private SpriteRenderer spriteRenderer;
 	Player player;
-
+	private RotateWeaponCollider rotateWeaponCollider;
 	public bool isGrounded;
 	public bool isWallSliding { get; private set; }
 	public bool isGroundSlamming { get; set; }
@@ -102,6 +102,7 @@ public class PlayerMovement  : MonoBehaviour
 
     private void Awake()
 	{
+		rotateWeaponCollider = GetComponentInChildren<RotateWeaponCollider>();
 		RB = GetComponent<Rigidbody2D>();
 		AnimHandler = GetComponentInChildren<PlayerAnimator>();
 		player = GetComponentInChildren<Player>();
@@ -146,22 +147,22 @@ public class PlayerMovement  : MonoBehaviour
 		if (_moveInput.x != 0)
 			CheckDirectionToFace(_moveInput.x > 0);
 
-		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
+		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.J))
         {
 			OnJumpInput();
         }
 
-		if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.J))
+		if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.J))
 		{
 			OnJumpUpInput();
 		}
 
-		if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.K))
+		if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.C))
 		{
 			OnDashInput();
 		}
 
-		if (Input.GetKeyDown(KeyCode.LeftControl))
+		if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded)
 		{
 			OnRollInput();
 		}
@@ -264,17 +265,18 @@ public class PlayerMovement  : MonoBehaviour
 			//Freeze game for split second. Adds juiciness and a bit of forgiveness over directional input
 			Sleep(Data.dashSleepTime);
 			//If not direction pressed, dash forward
-			//if (_moveInput != Vector2.zero)
-			//	_lastDashDir = _moveInput;
-			//else
-			//	_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
-			_lastDashDir = mousePos.right;
+			if (_moveInput != Vector2.zero)
+				_lastDashDir = _moveInput;
+			else
+				_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
+			//_lastDashDir = mousePos.right;
 
 			//IsDashing = true;
 			IsJumping = false;
 			IsWallJumping = false;
 			_isJumpCut = false;
 
+			rotateWeaponCollider.RotateWeapon(_lastDashDir);
 			StartCoroutine(nameof(StartDash), _lastDashDir);
 		}
 		#endregion
@@ -545,7 +547,7 @@ public class PlayerMovement  : MonoBehaviour
 		#region Perform Wall Jump
 		Vector2 force;
 
-		if (Input.GetKey(KeyCode.W))
+		if (Input.GetKey(KeyCode.UpArrow))
 		{
 			force = new Vector2(Data.wallJumpUpForce.x, Data.wallJumpUpForce.y);
 		}

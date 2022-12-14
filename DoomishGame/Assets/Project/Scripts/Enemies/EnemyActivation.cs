@@ -49,7 +49,6 @@ public class EnemyActivation : MonoBehaviour
         if (!isEnemyActivated)
         {
             distanceToPlayer = Vector2.Distance(player.transform.position, transform.position);
-            Debug.Log("distance to player is - " + distanceToPlayer);
 
             if (distanceToActivate > distanceToPlayer)
             {

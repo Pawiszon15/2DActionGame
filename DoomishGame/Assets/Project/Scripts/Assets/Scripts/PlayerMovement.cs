@@ -21,7 +21,8 @@ public class PlayerMovement  : MonoBehaviour
 	[SerializeField] GameObject playerVisuals;
 	[SerializeField] Transform mousePos;
 	[SerializeField] float wallSlideSpeed;
-	[SerializeField] GameObject dashMeleeCollider;
+	[SerializeField] GameObject dashCollider;
+
 	private SpriteRenderer spriteRenderer;
 	Player player;
 	private RotateWeaponCollider rotateWeaponCollider;
@@ -585,7 +586,8 @@ public class PlayerMovement  : MonoBehaviour
 		float startTime = Time.time;
 
 		_dashesLeft--;
-		_isDashAttacking = true;
+        dashCollider.SetActive(true);
+        _isDashAttacking = true;
 		AnimHandler.StartDashAnimation();
 
         SetGravityScale(0);

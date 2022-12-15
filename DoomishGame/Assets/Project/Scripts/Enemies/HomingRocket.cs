@@ -49,7 +49,7 @@ public class HomingRocket : MonoBehaviour
         else if(collision.gameObject.tag == "Platform")
         {
             Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject);
         }
     }
 

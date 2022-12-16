@@ -51,6 +51,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void TryToKillPlayer()
+    {
+        if(!isPlayerInv)
+        {
+            manger.ResetScene();
+        }
+    }
+
     #region INV TIMERS
     public void StartInvincibility(float dashDuration)
     {

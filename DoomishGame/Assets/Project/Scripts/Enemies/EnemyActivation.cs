@@ -9,6 +9,7 @@ public class EnemyActivation : MonoBehaviour
     [SerializeField] LayerMask layers;
     [SerializeField] float timeToEvaulateBehaviour;
     [SerializeField] float distanceToActivate;
+    [SerializeField] float distanceToAttack;
 
 
     private PlayerMovement player;
@@ -59,11 +60,11 @@ public class EnemyActivation : MonoBehaviour
         }
     }
 
-    private void CheckWhetherEnemyCanShot()
+    private void CheckWhetherEnemyCanAttack()
     {
         if (isEnemyActivated)
         {
-            if (isEnemyReadyToShoot)
+            if (isEnemyReadyToShoot && distanceToPlayer < distanceToAttack)
             {
                 RaycastHit2D hit2D = Physics2D.Raycast(shootPoint.position, shootPoint.right, 100f, layers);
                 if (hit2D.collider.TryGetComponent(out PlayerMovement playerFound))
@@ -87,7 +88,7 @@ public class EnemyActivation : MonoBehaviour
     {
         TryTurnOnLogic();
         Turn();
-        CheckWhetherEnemyCanShot();
+        CheckWhetherEnemyCanAttack();
 
         yield return new WaitForSeconds(timeToEvaulateBehaviour);
 

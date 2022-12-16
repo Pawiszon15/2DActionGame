@@ -67,6 +67,11 @@ public class EnemyAnimator : MonoBehaviour
         }
     }
 
+    public void StartDeathAnimation()
+    {
+        enemyAnimator.SetTrigger("isDaying");
+    }
+
     private void CreateParticle(GameObject particleType)
     {
         GameObject obj = Instantiate(particleType , transform.position - (Vector3.up * transform.localScale.y / 2), Quaternion.Euler(-90, 0, 0));

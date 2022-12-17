@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58acbcc3868c4d344b69aaa3e395f14e
+guid: 807b6efca345b5743bae9dfeb8e22ec0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,390 +116,180 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 576
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: caeb54c3881195c419597ce01f0262d5
-      internalID: 1433975488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 544
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ac2b8dd2dfac3546b245f721b30667f
-      internalID: -1632174121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49730687d6feffc4d82eec1cf8492ac0
-      internalID: -1740832649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 480
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dfb54e1aedbbf24898c9129fa1e6631
-      internalID: -1637821164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 448
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b01cdfc56bc3774d8ff80762af960ec
-      internalID: -1072617283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_6
+      name: Double Slash no VFX (48x32)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 416
-        width: 144
+        width: 48
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4939374, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 943c17edd177c0d4a964ad2ca0e7d1c6
-      internalID: 1059742560
+      spriteID: e187c4c423ce74444aa3250ce84d75bd
+      internalID: 1526806798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 352
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7083d3a38f717814ba5290b1f1087698
-      internalID: 1485440995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_13
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68ca9b00592f3c747a4fe39be425535e
-      internalID: 864581910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78979fa5d09377a439a204aac3503d51
-      internalID: 1592390357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 224
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aef9e216ba62a5b4287eed4bc2424e2a
-      internalID: 2018050791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_21
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 787c43c7c03b5f94a89cbd59ca2aa20a
-      internalID: -1000192831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_22
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a81cbb33964dfd344acc131f44d0aad6
-      internalID: 247516427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbfc23ec1f2db5142b0b89ad70373c41
-      internalID: -597344717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_26
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 773ca1b72ebf61c4493d97c4e1a8d742
-      internalID: -155578413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 144
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60e34098be8091f479b53dd32f204862
-      internalID: 534831372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_4
+      name: Double Slash no VFX (48x32)_1
       rect:
         serializedVersion: 2
         x: 0
         y: 384
-        width: 144
+        width: 48
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4939374, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9b6737ff7d2304183c9fb6cf5ac7bb
-      internalID: -942273674
+      spriteID: f1f3e624920b8fb4793aa13abcf969d7
+      internalID: -1010127766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_9
+      name: Double Slash no VFX (48x32)_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4939374, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cded4acc649c247ac4237a3972cef5
+      internalID: 1894407531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_3
       rect:
         serializedVersion: 2
         x: 0
         y: 320
-        width: 144
+        width: 48
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4939374, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24fc06a0c1f611049bec8efd6fe1bda1
-      internalID: -1068881987
+      spriteID: 05e5a4d130ae7924b80cbba23d03e355
+      internalID: -217049313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_10
+      name: Double Slash no VFX (48x32)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.53, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe2e1117a6b1bc44a5e73e26de07302
+      internalID: -1915247805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.52, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001a4d653f335ff40aa7816161692081
+      internalID: 1037466269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.525, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb71990e3c2afe947861be1b1f22d1e8
+      internalID: 696009925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_7
       rect:
         serializedVersion: 2
         x: 0
         y: 192
-        width: 144
+        width: 48
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9e1ae0bff7c7bf4c957860821e5ac71
-      internalID: 547126686
+      spriteID: d6a3b434801c6ef4db98a05314b1e640
+      internalID: -869103823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dodge Charge Attack(144x32)_11
+      name: Double Slash no VFX (48x32)_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 144
+        y: 160
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -508,8 +298,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 316d7b772a222e745aaf4544fb64bc28
-      internalID: 1837886939
+      spriteID: 671ed77cc6b089940af619286363f8dc
+      internalID: 1011207284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47e4ac095cda4e47bb4fe3421dfccac
+      internalID: 791570650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417b61bd76907594cb8e89f6be53822d
+      internalID: -1372703084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbfb0f43c9135648baa96ffcaa14e22
+      internalID: 236890413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9405e416bc767ee43a830183da7379c8
+      internalID: -884631124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Double Slash no VFX (48x32)_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90cde5f6f4723a4b9ce5381456896a8
+      internalID: 320375340
       vertices: []
       indices: 
       edges: []
@@ -525,33 +420,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dodge Charge Attack(144x32)_4: -942273674
-      Dodge Charge Attack(144x32)_3: -1637821164
-      Dodge Charge Attack(144x32)_16: 1592390357
-      Dodge Charge Attack(144x32)_7: 1485440995
-      Dodge Charge Attack(144x32)_5: -1072617283
-      Dodge Charge Attack(144x32)_26: -155578413
-      Dodge Charge Attack(144x32)_9: -1068881987
-      Dodge Charge Attack(144x32)_22: 247516427
-      Dodge Charge Attack(144x32)_23: 798409181
-      Dodge Charge Attack(144x32)_8: 534831372
-      Dodge Charge Attack(144x32)_21: -1000192831
-      Dodge Charge Attack(144x32)_13: 864581910
-      Dodge Charge Attack(144x32)_24: -597344717
-      Dodge Charge Attack(144x32)_0: 1433975488
-      Dodge Charge Attack(144x32)_6: 1059742560
-      Dodge Charge Attack(144x32)_17: 1092841720
-      Dodge Charge Attack(144x32)_1: -1632174121
-      Dodge Charge Attack(144x32)_25: -163262117
-      Dodge Charge Attack(144x32)_19: 2018050791
-      Dodge Charge Attack(144x32)_11: 1837886939
-      Dodge Charge Attack(144x32)_10: 547126686
-      Dodge Charge Attack(144x32)_15: 2077216631
-      Dodge Charge Attack(144x32)_12: 887639717
-      Dodge Charge Attack(144x32)_20: -569928861
-      Dodge Charge Attack(144x32)_14: -761542645
-      Dodge Charge Attack(144x32)_2: -1740832649
-      Dodge Charge Attack(144x32)_18: -1371587462
+      Double Slash no VFX (48x32)_8: 1011207284
+      Double Slash no VFX (48x32)_7: -869103823
+      Double Slash no VFX (48x32)_2: 1894407531
+      Double Slash no VFX (48x32)_9: 791570650
+      Double Slash no VFX (48x32)_13: 320375340
+      Double Slash no VFX (48x32)_4: -1915247805
+      Double Slash no VFX (48x32)_10: -1372703084
+      Double Slash no VFX (48x32)_11: 236890413
+      Double Slash no VFX (48x32)_5: 1037466269
+      Double Slash no VFX (48x32)_3: -217049313
+      Double Slash no VFX (48x32)_12: -884631124
+      Double Slash no VFX (48x32)_0: 1526806798
+      Double Slash no VFX (48x32)_1: -1010127766
+      Double Slash no VFX (48x32)_6: 696009925
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

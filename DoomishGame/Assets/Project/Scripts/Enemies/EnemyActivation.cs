@@ -11,11 +11,11 @@ public class EnemyActivation : MonoBehaviour
     [SerializeField] float distanceToActivate;
     [SerializeField] float distanceToAttack;
 
-
     private PlayerMovement player;
 
+    [HideInInspector] public float isFacingRight = 1f;
     [HideInInspector] public bool isEnemyReadyToShoot = false;
-    [HideInInspector] public bool isThereLineOfSight = false;
+    [HideInInspector] public bool isThereLineOfSightAndInRange = false;
 
     private bool isEnemyActivated = false;
     private float distanceToPlayer = 0f;
@@ -37,11 +37,13 @@ public class EnemyActivation : MonoBehaviour
         if (player.transform.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            isFacingRight = 1f;
         }
 
         else
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            isFacingRight = -1f;
         }
     }
 
@@ -64,22 +66,29 @@ public class EnemyActivation : MonoBehaviour
     {
         if (isEnemyActivated)
         {
+
+            distanceToPlayer = Vector2.Distance(player.transform.position, transform.position);
+            //Debug.Log(isEnemyReadyToShoot);
+            //Debug.Log(distanceToPlayer);
+
             if (isEnemyReadyToShoot && distanceToPlayer < distanceToAttack)
             {
+                
+
                 RaycastHit2D hit2D = Physics2D.Raycast(shootPoint.position, shootPoint.right, 100f, layers);
                 if (hit2D.collider.TryGetComponent(out PlayerMovement playerFound))
                 {
-                    isThereLineOfSight = true;
+                    isThereLineOfSightAndInRange = true;
                 }
 
                 else
                 {
-                    isThereLineOfSight = false;
+                    isThereLineOfSightAndInRange = false;
                     Debug.Log(hit2D.collider.gameObject.name);
                 }
 
-                //Debug.DrawRay(shootPoint.position, shootPoint.right * 100f, Color.red, 0.3f);
-                Debug.Log("is there line of sight - " + isThereLineOfSight);
+                Debug.DrawRay(shootPoint.position, shootPoint.right * 100f, Color.red, 0.3f);
+                Debug.Log("is there line of sight - " + isThereLineOfSightAndInRange);
             }
         }
     }

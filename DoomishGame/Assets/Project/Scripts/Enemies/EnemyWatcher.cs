@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class EnemyWatcher : MonoBehaviour
 {
+    [SerializeField] LayerMask layer;
     [SerializeField] private float rayDist;
     [SerializeField] Transform laserFirePoint;
     LineRenderer lineRenderer;
@@ -18,15 +19,17 @@ public class EnemyWatcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ShootLaser();   
     }
 
 
     private void ShootLaser()
     {
-        if( Physics2D.Raycast(transform.position, transform.right))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right);
+        //Debug.DrawRay(laserFirePoint.position, laserFirePoint.right * 100f, Color.red, 1f);
+        if( Physics2D.Raycast(transform.position, transform.right, layer))
+        { 
+            Debug.Log("trutgt");
+            RaycastHit2D hit = Physics2D.Raycast(laserFirePoint.position, laserFirePoint.right * 100f, layer);
             Draw2DRay(laserFirePoint.position, hit.point);
         }
         

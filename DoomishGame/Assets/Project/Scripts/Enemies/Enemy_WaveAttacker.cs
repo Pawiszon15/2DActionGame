@@ -23,9 +23,9 @@ public class Enemy_WaveAttacker : MonoBehaviour
 
     private void Update()
     {
-        if (enemyActivation.isThereLineOfSight && enemyActivation.isEnemyReadyToShoot)
+        if (enemyActivation.isThereLineOfSightAndInRange && enemyActivation.isEnemyReadyToShoot)
         {
-            enemyActivation.isThereLineOfSight = false;
+            enemyActivation.isThereLineOfSightAndInRange = false;
             enemyActivation.isEnemyReadyToShoot = false;
             StartAttackAnimation();
         }

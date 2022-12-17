@@ -36,7 +36,7 @@ public class EnemyAnimator : MonoBehaviour
         enemyAnimator.SetBool("isCharging", isCharging);
         enemyAnimator.SetBool("isAttacking", isAttacking);
         enemyAnimator.SetBool("isIdling", isIdling);
-        
+
         if (isAttacking)
         {
             //CreateParticle(attackParticle);
@@ -69,7 +69,19 @@ public class EnemyAnimator : MonoBehaviour
 
     public void StartDeathAnimation()
     {
+        enemyAnimator.SetBool("isIdling", false);
         enemyAnimator.SetTrigger("isDaying");
+    }
+
+    public void StartAttackAnimation()
+    {
+        enemyAnimator.SetBool("isIdling", false);
+        enemyAnimator.SetTrigger("isCharging");
+    }
+
+    public void StartStagerdAnimation()
+    {
+        enemyAnimator.SetTrigger("isStaggered");
     }
 
     private void CreateParticle(GameObject particleType)

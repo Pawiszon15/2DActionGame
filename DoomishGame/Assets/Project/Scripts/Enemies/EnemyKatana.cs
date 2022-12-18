@@ -80,7 +80,7 @@ public class EnemyKatana : MonoBehaviour
             if (collider2d.TryGetComponent(out PlayerSlash playerAttack))
             {
                 isVurnable = true;
-                animator.StartStagerdAnimation();
+                //animator.StartStagerdAnimation();
                 //Time.timeScale = 0f;
                 playerParry = true;
 

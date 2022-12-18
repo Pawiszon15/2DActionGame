@@ -31,40 +31,40 @@ public class EnemyAnimator : MonoBehaviour
 
     private void CheckAnimationState()
     {
-        enemyAnimator.SetBool("isDying", isDying);
-        enemyAnimator.SetBool("isMoving", isMoving);
-        enemyAnimator.SetBool("isCharging", isCharging);
-        enemyAnimator.SetBool("isAttacking", isAttacking);
-        enemyAnimator.SetBool("isIdling", isIdling);
+        //enemyAnimator.SetBool("isDying", isDying);
+        //enemyAnimator.SetBool("isMoving", isMoving);
+        //enemyAnimator.SetBool("isCharging", isCharging);
+        //enemyAnimator.SetBool("isAttacking", isAttacking);
+        //enemyAnimator.SetBool("isIdling", isIdling);
 
-        if (isAttacking)
-        {
-            //CreateParticle(attackParticle);
-            isAttacking = false;
-        }
+        //if (isAttacking)
+        //{
+        //    //CreateParticle(attackParticle);
+        //    isAttacking = false;
+        //}
 
-        if (isCharging)
-        {
-            //CreateParticle(attackParticle);
-        }
+        //if (isCharging)
+        //{
+        //    //CreateParticle(attackParticle);
+        //}
 
-        if (isMoving)
-        {
-            //CreateParticle(attackParticle);
-            isMoving = false;
-        }
+        //if (isMoving)
+        //{
+        //    //CreateParticle(attackParticle);
+        //    isMoving = false;
+        //}
 
-        if (isDying)
-        {
-            //CreateParticle(attackParticle);
-            isDying = false;
-        }
+        //if (isDying)
+        //{
+        //    //CreateParticle(attackParticle);
+        //    isDying = false;
+        //}
 
-        if (isIdling)
-        {
-            //CreateParticle(attackParticle);
-            isDying = false;
-        }
+        //if (isIdling)
+        //{
+        //    //CreateParticle(attackParticle);
+        //    isDying = false;
+        //}
     }
 
     public void StartDeathAnimation()
@@ -75,13 +75,8 @@ public class EnemyAnimator : MonoBehaviour
 
     public void StartAttackAnimation()
     {
-        enemyAnimator.SetBool("isIdling", false);
-        enemyAnimator.SetTrigger("isCharging");
-    }
-
-    public void StartStagerdAnimation()
-    {
-        enemyAnimator.SetTrigger("isStaggered");
+        //enemyAnimator.SetBool("isIdling", false);
+        enemyAnimator.SetTrigger("isAttacking");
     }
 
     private void CreateParticle(GameObject particleType)

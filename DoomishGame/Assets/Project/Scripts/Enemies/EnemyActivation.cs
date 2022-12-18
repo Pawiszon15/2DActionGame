@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -84,10 +84,9 @@ public class EnemyActivation : MonoBehaviour
                 else
                 {
                     isThereLineOfSightAndInRange = false;
-                    Debug.Log(hit2D.collider.gameObject.name);
                 }
 
-                Debug.DrawRay(shootPoint.position, shootPoint.right * 100f, Color.red, 0.3f);
+                //Debug.DrawRay(shootPoint.position, shootPoint.right * 100f, Color.red, 0.3f);
                 Debug.Log("is there line of sight - " + isThereLineOfSightAndInRange);
             }
         }
@@ -101,7 +100,6 @@ public class EnemyActivation : MonoBehaviour
 
         yield return new WaitForSeconds(timeToEvaulateBehaviour);
 
-        Debug.Log("Evaluate");
         StartCoroutine(CheckDiffrentCondition());
     }
 }

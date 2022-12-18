@@ -40,7 +40,7 @@ public class BasicEnemy : MonoBehaviour
 
     public void StartDeathAnimation()
     {
-        enemyAnimator.isDying = true;
+        enemyAnimator.StartDeathAnimation();
         //StartCoroutine(StopTimeForMomemnt());
         //player.InstaDashRefill();
  }

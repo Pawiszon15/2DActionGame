@@ -163,7 +163,7 @@ public class PlayerMovement  : MonoBehaviour
 			OnDashInput();
 		}
 
-		if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded)
+		if (Input.GetKeyDown(KeyCode.DownArrow))
 		{
 			OnRollInput();
 		}

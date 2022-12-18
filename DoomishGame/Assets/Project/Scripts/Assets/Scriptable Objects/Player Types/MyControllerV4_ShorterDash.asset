@@ -60,5 +60,5 @@ MonoBehaviour:
   rollEndTime: 0.15
   rollEndSpeed: {x: 15, y: 0}
   rollEndRunLerp: 0.5
-  rollRefillTime: 0.5
+  rollRefillTime: 0.1
   rollInputBufferTime: 0.1

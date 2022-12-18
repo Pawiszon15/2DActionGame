@@ -76,4 +76,5 @@ public class BasicEnemy : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.2f);
         Time.timeScale = 1f;
     }
+
 }

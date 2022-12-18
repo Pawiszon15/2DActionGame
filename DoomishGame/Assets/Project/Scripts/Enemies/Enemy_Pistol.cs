@@ -8,7 +8,8 @@ public class Enemy_Pistol : MonoBehaviour
 {
     [Header("Shooting properties")]
     [SerializeField] float timeBetweenShots;
- 
+    [SerializeField] bool isCarabine;
+
     [Header("references")]
     [SerializeField] GameObject pistolBullet;
     [SerializeField] Transform firePoint;
@@ -23,31 +24,33 @@ public class Enemy_Pistol : MonoBehaviour
         StartCoroutine(RechargeAttackAbility());
     }
 
-    private void Update()
+    void Update()
     {
         if(enemyActivation.isThereLineOfSightAndInRange && enemyActivation.isEnemyReadyToShoot)
         {
             enemyActivation.isThereLineOfSightAndInRange = false;
             enemyActivation.isEnemyReadyToShoot = false;
-            StartAttackAnimation();
+            enemyAnimator.StartAttackAnimation();
         }
-    }
-
-    private void StartAttackAnimation()
-    {
-        enemyAnimator.isAttacking = true;
-        enemyAnimator.isIdling = false;
     }
 
     private void Shot()
     {
         Instantiate(pistolBullet, firePoint.position, firePoint.rotation);
+        if (!isCarabine)
+        {
+            StartCoroutine(RechargeAttackAbility());
+        }
+    }
+
+    private void StartRechargeAfterBurst()
+    {
         StartCoroutine(RechargeAttackAbility());
     }
 
     IEnumerator RechargeAttackAbility()
     {
-        enemyAnimator.isIdling = true;
+        enemyAnimator.StartIdling();
         yield return new WaitForSeconds(timeBetweenShots);
         enemyActivation.isEnemyReadyToShoot = true;
     }

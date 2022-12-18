@@ -20,52 +20,10 @@ public class EnemyAnimator : MonoBehaviour
     void Start()
     {
         enemyAnimator = GetComponent<Animator>();
+        enemyAnimator.SetBool("isIdling", true);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-        CheckAnimationState();
-    }
-
-    private void CheckAnimationState()
-    {
-        //enemyAnimator.SetBool("isDying", isDying);
-        //enemyAnimator.SetBool("isMoving", isMoving);
-        //enemyAnimator.SetBool("isCharging", isCharging);
-        //enemyAnimator.SetBool("isAttacking", isAttacking);
-        //enemyAnimator.SetBool("isIdling", isIdling);
-
-        //if (isAttacking)
-        //{
-        //    //CreateParticle(attackParticle);
-        //    isAttacking = false;
-        //}
-
-        //if (isCharging)
-        //{
-        //    //CreateParticle(attackParticle);
-        //}
-
-        //if (isMoving)
-        //{
-        //    //CreateParticle(attackParticle);
-        //    isMoving = false;
-        //}
-
-        //if (isDying)
-        //{
-        //    //CreateParticle(attackParticle);
-        //    isDying = false;
-        //}
-
-        //if (isIdling)
-        //{
-        //    //CreateParticle(attackParticle);
-        //    isDying = false;
-        //}
-    }
 
     public void StartDeathAnimation()
     {
@@ -75,8 +33,14 @@ public class EnemyAnimator : MonoBehaviour
 
     public void StartAttackAnimation()
     {
-        //enemyAnimator.SetBool("isIdling", false);
+        Debug.Log("start attack animation");
+        enemyAnimator.SetBool("isIdling", false);
         enemyAnimator.SetTrigger("isAttacking");
+    }
+
+    public void StartIdling()
+    {
+        enemyAnimator.SetBool("isIdling", true);
     }
 
     private void CreateParticle(GameObject particleType)

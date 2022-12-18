@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c716f87c0b6357742b69652ad561b827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenShots: 1.2
+  timeBetweenShots: 2
   pistolBullet: {fileID: 1235635171295464583, guid: 6cc412783271b7b41b88aa279fdbd1ac, type: 3}
   firePoint: {fileID: 2524970997408195797}
 --- !u!114 &-15244715382699708
@@ -259,8 +259,10 @@ MonoBehaviour:
     m_Bits: 311
   timeToEvaulateBehaviour: 0.1
   distanceToActivate: 30
+  distanceToAttack: 30
+  isFacingRight: 1
   isEnemyReadyToShoot: 0
-  isThereLineOfSight: 0
+  isThereLineOfSightAndInRange: 0
 --- !u!1 &2524970998947816385
 GameObject:
   m_ObjectHideFlags: 0

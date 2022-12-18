@@ -15,7 +15,7 @@ public class Enemy_RocketLuncher : MonoBehaviour
     {
         enemyActivation = GetComponent<EnemyActivation>();
         enemyAnimator = GetComponent<EnemyAnimator>();
-        StartCoroutine(TimeBetweenRocketSpawn());
+        enemyActivation.isEnemyReadyToShoot = true;
     }
     private void Update()
     {
@@ -23,16 +23,9 @@ public class Enemy_RocketLuncher : MonoBehaviour
         {
             enemyActivation.isThereLineOfSightAndInRange = false;
             enemyActivation.isEnemyReadyToShoot = false;
-            StartAttackAnimation();
+            enemyAnimator.StartAttackAnimation();
         }
     }
-
-    void StartAttackAnimation()
-    {
-        enemyAnimator.isAttacking = true;
-        enemyAnimator.isIdling = false;
-    }
-
 
     private void SpawnRocket()
     {
@@ -42,8 +35,7 @@ public class Enemy_RocketLuncher : MonoBehaviour
 
     IEnumerator TimeBetweenRocketSpawn()
     {
-        enemyAnimator.isIdling = true;
-        enemyAnimator.isAttacking = false;
+        enemyAnimator.StartIdling();
         yield return new WaitForSeconds(timeBetweenShoots);
         if(spawnedRocket == null)
         {

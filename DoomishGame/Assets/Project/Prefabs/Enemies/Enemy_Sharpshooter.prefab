@@ -185,7 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenShots: 3
-  pistolBullet: {fileID: 1235635171295464583, guid: 91827f42a1928ce4da994fcc013891ee, type: 3}
+  isCarabine: 1
+  pistolBullet: {fileID: 1235635171295464583, guid: 6cc412783271b7b41b88aa279fdbd1ac, type: 3}
   firePoint: {fileID: 1597604763083852654}
 --- !u!114 &7696355484964605084
 MonoBehaviour:
@@ -228,8 +229,10 @@ MonoBehaviour:
     m_Bits: 311
   timeToEvaulateBehaviour: 0.1
   distanceToActivate: 30
+  distanceToAttack: 30
+  isFacingRight: 1
   isEnemyReadyToShoot: 0
-  isThereLineOfSight: 0
+  isThereLineOfSightAndInRange: 0
 --- !u!1 &1597604762474944673
 GameObject:
   m_ObjectHideFlags: 0

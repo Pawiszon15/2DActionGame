@@ -22,7 +22,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5655123827315509908
 Transform:
   m_ObjectHideFlags: 0
@@ -178,7 +178,6 @@ MonoBehaviour:
   chargeDistanceTrigger: 5
   meleeAvaialable: 0
   shield: {fileID: 8680894710144242306}
-  basicEnemy: {fileID: 0}
 --- !u!114 &6747762265813844991
 MonoBehaviour:
   m_ObjectHideFlags: 0

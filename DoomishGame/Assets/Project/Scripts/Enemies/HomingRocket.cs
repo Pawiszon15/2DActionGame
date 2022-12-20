@@ -30,9 +30,9 @@ public class HomingRocket : MonoBehaviour
         Vector2 dir = (Vector2)target.position - rb.position;
         dir.Normalize();
 
-        float rotateAmount = Vector3.Cross(dir, transform.up).z;
+        float rotateAmount = Vector3.Cross(dir, transform.right).z;
         rb.angularVelocity = -rotateAmount * rotateSpeed;
-        rb.velocity = transform.up * rocketSpeed;
+        rb.velocity = transform.right * rocketSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

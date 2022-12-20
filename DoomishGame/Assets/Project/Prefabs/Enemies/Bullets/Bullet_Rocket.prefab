@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8451668589922915660}
   - component: {fileID: 8813102057592181766}
   - component: {fileID: -7733496422730622740}
+  - component: {fileID: 1627106307}
   m_Layer: 7
   m_Name: Bullet_Rocket
   m_TagString: Bullet
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3441406626641453304}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -20.206915, y: 3.4582996, z: 0}
-  m_LocalScale: {x: 0.8, y: 1.6, z: 0.5177}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1234982025, guid: a003e303160cadf4a93a46186e378489, type: 3}
-  m_Color: {r: 0.19752577, g: 0.764151, b: 0.7532655, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fcd62aeec2e215140ab83f1cbece8ea4, type: 3}
+  m_Color: {r: 0, g: 0.86792463, b: 0.9622642, a: 0.92941177}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,9 +123,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024445057, y: -0.19124806}
-  m_Size: {x: 0.31546116, y: 0.32886386}
-  m_Direction: 0
+  m_Offset: {x: 0.10323806, y: 0.0011033592}
+  m_Size: {x: 0.615339, y: 0.31536868}
+  m_Direction: 1
 --- !u!114 &8813102057592181766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +153,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc780b5fe5fe364d87bb87210efa542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1627106307
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441406626641453304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6780a7a9ccf06d34daee5e61b5dd5994, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

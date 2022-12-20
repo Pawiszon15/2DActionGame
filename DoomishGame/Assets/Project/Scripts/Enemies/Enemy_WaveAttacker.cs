@@ -19,6 +19,7 @@ public class Enemy_WaveAttacker : MonoBehaviour
         enemyAnimator = GetComponent<EnemyAnimator>();
         StartCoroutine(WaitForAnotherShot());
         enemyActivation = GetComponent<EnemyActivation>();
+        enemyActivation.isEnemyReadyToShoot = true;
     }
 
     private void Update()
@@ -27,14 +28,8 @@ public class Enemy_WaveAttacker : MonoBehaviour
         {
             enemyActivation.isThereLineOfSightAndInRange = false;
             enemyActivation.isEnemyReadyToShoot = false;
-            StartAttackAnimation();
+            enemyAnimator.StartAttackAnimation();
         }
-    }
-
-    private void StartAttackAnimation()
-    {
-        enemyAnimator.isAttacking = true;
-        enemyAnimator.isIdling = false;
     }
 
     private void Shot()

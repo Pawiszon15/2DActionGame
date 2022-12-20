@@ -114,7 +114,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03e0a6412f5f0e42a6933fc54517eb3
+      internalID: -1917418780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 476
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b27253bc4f0bcd41bfd24f38c0cd30c
+      internalID: -1000684388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 442
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2f57a1c7d423947963d67185ecad55
+      internalID: -1893966143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6172bb1da369daa4cbb4b1ba24d65451
+      internalID: 1954391818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 374
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88be55304bee02d4f99afa388dd78d5b
+      internalID: -660423985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598cb963090f29c46a41cbaed5322e27
+      internalID: 645386098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141b2fa3ca1c52e419ee00e4165b5e7f
+      internalID: 1818151853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a93f8172c5fdee4eb34cae6195b7701
+      internalID: -1150556021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1515bf2b88b7d6438304be338bf2f82
+      internalID: -472268618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2caf1b66ec1424598bce4bb587ecf4
+      internalID: 548158325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cebfe4cdc332c4a9396438823c97f9
+      internalID: 987746792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b970b78b6d9887545a77cebb7ea3b5c6
+      internalID: -933266057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d9acfa1ccee5248b8756e6a65a92f0
+      internalID: -711726874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786a9efbe972b7f478e5e418f3bfe81e
+      internalID: -2044743823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea78e5df88d5844c96722835b2fec48
+      internalID: 49930065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep Attack with VFX_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 119
+        height: 34
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a670000d52af6904d9c4a460057dff53
+      internalID: -1703542370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +461,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sweep Attack with VFX_4: -660423985
+      Sweep Attack with VFX_10: 987746792
+      Sweep Attack with VFX_3: 1954391818
+      Sweep Attack with VFX_9: 548158325
+      Sweep Attack with VFX_0: -1917418780
+      Sweep Attack with VFX_13: -2044743823
+      Sweep Attack with VFX_11: -933266057
+      Sweep Attack with VFX_6: 1818151853
+      Sweep Attack with VFX_2: -1893966143
+      Sweep Attack with VFX_12: -711726874
+      Sweep Attack with VFX_14: 49930065
+      Sweep Attack with VFX_1: -1000684388
+      Sweep Attack with VFX_5: 645386098
+      Sweep Attack with VFX_7: -1150556021
+      Sweep Attack with VFX_8: -472268618
+      Sweep Attack with VFX_15: -1703542370
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

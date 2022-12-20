@@ -17,10 +17,14 @@ public class Enemy_Pistol : MonoBehaviour
     private EnemyActivation enemyActivation;
     private EnemyAnimator enemyAnimator;
 
-    private void Start()
+    private void Awake()
     {
         enemyActivation = GetComponent<EnemyActivation>();
         enemyAnimator = GetComponent<EnemyAnimator>();
+    }
+
+    private void Start()
+    {
         StartCoroutine(RechargeAttackAbility());
     }
 

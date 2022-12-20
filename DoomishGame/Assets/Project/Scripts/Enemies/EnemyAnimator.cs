@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyAnimator : MonoBehaviour
 {
 
-    private Animator enemyAnimator;
+    private Animator animator;
 
     [SerializeField] public GameObject attackParticle, chargeParticle, moveParticle, dyingParticle, idleParticle;
 
@@ -16,31 +16,35 @@ public class EnemyAnimator : MonoBehaviour
     [HideInInspector] public bool isDying = false;
     [HideInInspector] public bool isIdling = false;
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        enemyAnimator = GetComponent<Animator>();
-        enemyAnimator.SetBool("isIdling", true);
+        animator.SetBool("isIdling", true);
     }
 
     // Update is called once per frame
 
     public void StartDeathAnimation()
     {
-        enemyAnimator.SetBool("isIdling", false);
-        enemyAnimator.SetTrigger("isDaying");
+        animator.SetBool("isIdling", false);
+        animator.SetTrigger("isDaying");
     }
 
     public void StartAttackAnimation()
     {
         Debug.Log("start attack animation");
-        enemyAnimator.SetBool("isIdling", false);
-        enemyAnimator.SetTrigger("isAttacking");
+        animator.SetBool("isIdling", false);
+        animator.SetTrigger("isAttacking");
     }
 
     public void StartIdling()
     {
-        enemyAnimator.SetBool("isIdling", true);
+        animator.SetBool("isIdling", true);
     }
 
     private void CreateParticle(GameObject particleType)

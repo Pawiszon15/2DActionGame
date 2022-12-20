@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1112977629540098642}
   - component: {fileID: 3311649398356717233}
   - component: {fileID: 7480843265258406516}
+  - component: {fileID: 461896467808404767}
   m_Layer: 7
   m_Name: Bullet_SharpShooter
   m_TagString: Bullet
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1235635171295464583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.34, y: 2.08, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1947595532763799750}
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -1357907109, guid: e3533d1c579d7cb449451c64b7239795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,9 +103,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.13889337}
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 0.36110663
 --- !u!50 &1112977629540098642
 Rigidbody2D:
   serializedVersion: 4
@@ -140,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 21
   shouldCreateAnotherBullet: 1
-  bulletToCreate: {fileID: 1235635171295464583, guid: b36a8460affb01346bc6c008cc05088b, type: 3}
+  bulletToCreate: {fileID: 1235635171295464583, guid: 35a47187f2e949f47a2458e3629593f9, type: 3}
   firePoint: {fileID: 3426099406262022269}
 --- !u!114 &7480843265258406516
 MonoBehaviour:
@@ -154,6 +155,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc780b5fe5fe364d87bb87210efa542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &461896467808404767
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235635171295464583}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: beed44c4f4316654c8487d1157175e79, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5648773897300054892
 GameObject:
   m_ObjectHideFlags: 0

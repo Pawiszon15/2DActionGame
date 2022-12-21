@@ -29,6 +29,7 @@ public class PlayerMovement  : MonoBehaviour
 	public bool isGrounded;
 	public bool isWallSliding { get; private set; }
 	public bool isGroundSlamming { get; set; }
+	public bool recentlyReallyColseToWalls { get; private set; }
     #endregion
 
     #region COMPONENTS
@@ -121,6 +122,8 @@ public class PlayerMovement  : MonoBehaviour
 
 	private void Update()
 	{
+        isGrounded = false;
+
         #region TIMERS
         LastOnGroundTime -= Time.deltaTime;
 		LastOnWallTime -= Time.deltaTime;
@@ -175,6 +178,7 @@ public class PlayerMovement  : MonoBehaviour
 			//Ground Check
 			if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer) && !IsJumping) //checks if set box overlaps with ground
 			{
+				isGrounded = true;
 				if(LastOnGroundTime < -0.1f)
                 {
 					AnimHandler.justLanded = true;
@@ -187,14 +191,17 @@ public class PlayerMovement  : MonoBehaviour
 			if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)
 					|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)) && !IsWallJumping)
 				LastOnWallRightTime = Data.coyoteTime;
+				
+				
 
 			//Right Wall Check
 			if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)
 				|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)) && !IsWallJumping)
 				LastOnWallLeftTime = Data.coyoteTime;
 
-			//Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
-			LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
+
+            //Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
+            LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
 
 			//if((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal") > 0f)
 			//	|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && Input.GetAxis("Horizontal")  < 0f))
@@ -363,22 +370,23 @@ public class PlayerMovement  : MonoBehaviour
 			//No gravity when dashing (returns to normal once initial dashAttack phase over)
 			SetGravityScale(0);
 		}
-        #endregion
-
-        #region MINE
-		if(Data.coyoteTime > LastOnGroundTime)
-		{
-			isGrounded = false;
-		}
-
-		else
-		{
-			isGrounded = true;
-		}
 		#endregion
+
+		#region MINE
+		//if(Data.coyoteTime > LastOnWallTimePog)
+		//{
+		//	recentlyReallyColseToWalls = false;
+		//}
+
+		//else
+		//{
+		//	recentlyReallyColseToWalls = true;
+		//}
+		#endregion
+
 	}
 
-    private void FixedUpdate()
+	private void FixedUpdate()
 	{
 		//Handle Run
 		if (!IsDashing)

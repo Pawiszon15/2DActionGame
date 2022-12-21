@@ -85,7 +85,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (startedJumping)
         {
-            anim.SetBool("isGrounded", false);
+            //anim.SetBool("isGrounded", false);
             GameObject obj = Instantiate(jumpFX, transform.position - (Vector3.up * transform.localScale.y / 2), Quaternion.Euler(-90, 0, 0));
             Destroy(obj, 1);
             startedJumping = false;
@@ -94,7 +94,7 @@ public class PlayerAnimator : MonoBehaviour
 
         if (justLanded)
         {
-            anim.SetBool("isGrounded", true);
+            //anim.SetBool("isGrounded", true);
             GameObject obj = Instantiate(landFX, transform.position - (Vector3.up * transform.localScale.y / 1.5f), Quaternion.Euler(-90, 0, 0));
             Destroy(obj, 1);
             justLanded = false;
@@ -132,6 +132,7 @@ public class PlayerAnimator : MonoBehaviour
             StopDeflectingLogic();
         }
 
+        anim.SetBool("isGrounded", mov.isGrounded);
     }
 
     #region ROLLING

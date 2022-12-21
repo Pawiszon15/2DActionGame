@@ -10,7 +10,7 @@ public class DeflectAbility : MonoBehaviour
     [SerializeField] Transform deflectPos;
     [SerializeField] float defectTime;
     [SerializeField] float deflectCooldown;
-    [SerializeField] Transform mousePos;
+    [HideInInspector] public Transform mousePos;
 
     /*[HideInInspector] */public bool shouldDeflect = false;
     private Player player;

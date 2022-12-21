@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerPogJump : MonoBehaviour
@@ -8,10 +9,13 @@ public class PlayerPogJump : MonoBehaviour
     [SerializeField] float jumpPower;
     [SerializeField] float reloadTime;
     [SerializeField] LayerMask layers;
+    [SerializeField] LayerMask forRaycast;
+    [SerializeField] float rangeOfRaycast;
     [HideInInspector] public bool pogJumpColliderActive;
     private bool pogJumpAvaialable = true;
 
     [Header("References")]
+    [SerializeField] Transform PlayersFeet;
     [SerializeField] Transform posOfPogJumpCollider;
     [SerializeField] Transform mousePos;
     [SerializeField] float rangeOfCircle;
@@ -30,16 +34,40 @@ public class PlayerPogJump : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X) && pogJumpAvaialable && !playerMovement.IsDashing && !playerMovement.isGrounded && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)     
+    {        
+        //if (playerMovement.isGrounded)
+        //{
+        //    pogJumpAvaialable = false;
+        //}
+
+        //else
+        //{
+        //    pogJumpAvaialable = true;
+        //}
+
+        if (Input.GetKeyDown(KeyCode.Space) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
+          && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping && !playerMovement.recentlyReallyColseToWalls)     
         {
-            playerAnimator.StartPogJumpAnimation();
+            if(!Physics2D.Raycast(new Vector2(PlayersFeet.position.x, PlayersFeet.position.y), -PlayersFeet.up, rangeOfRaycast, forRaycast))
+            {
+
+                Debug.Log(" is player grounded" + playerMovement.isGrounded);
+                playerAnimator.StartPogJumpAnimation();
+            }    
+
+            else
+            {
+                Debug.Log("Toclose to the ground");
+            }
+
         }
 
         if (pogJumpColliderActive)
         {
             CheckForCollision();
         }
+
+        Debug.Log(playerMovement.recentlyReallyColseToWalls);
     }
 
     private void CheckForCollision()
@@ -71,6 +99,7 @@ public class PlayerPogJump : MonoBehaviour
 
     private void MakePogJump()
     {
+        //Time.timeScale = 0.1f;
         pogJumpColliderActive = false;
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);

@@ -9,12 +9,13 @@ public class EkkoBullet : MonoBehaviour
     [SerializeField] LayerMask layer;
     [SerializeField] float StartSpeed, launchPhase, HoldPhase, rotateSpeed, rocketSpeed;
     private bool shouldFollowPlayer = false;
-    private GameObject target;
+    private Transform target;
+    Vector2 _moveInput;
     DeflectAbility deflectAbility;
 
     private void Awake()
     {
-        target = FindObjectOfType<PlayerMovement>().gameObject;
+        target = FindObjectOfType<Player>().gameObject.transform;
         rb = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
         deflectAbility = FindObjectOfType<DeflectAbility>();
@@ -23,7 +24,10 @@ public class EkkoBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.AddForce(deflectAbility.mousePos.right * StartSpeed, ForceMode2D.Impulse);
+        _moveInput.x = Input.GetAxisRaw("Horizontal");
+        _moveInput.y = Input.GetAxisRaw("Vertical");
+        Debug.Log(_moveInput);
+        rb.AddForce(_moveInput * StartSpeed, ForceMode2D.Impulse);
         StartCoroutine(LaunchPhase());
     }
 
@@ -31,19 +35,20 @@ public class EkkoBullet : MonoBehaviour
     {
         if (shouldFollowPlayer)
         {
-            Vector2 dir = (Vector2)target.transform.position - rb.position;
+            Vector2 dir = (Vector2)target.position - rb.position;
             dir.Normalize();
 
             float rotateAmount = Vector3.Cross(dir, transform.right).z;
             rb.angularVelocity = -rotateAmount * rotateSpeed;
             rb.velocity = transform.right * rocketSpeed;
 
-        if(Physics2D.Raycast(transform.position, dir, 4f, layer))
-        {
-            Destroy(gameObject);
-        }
-        }
 
+            if (Physics2D.Raycast(transform.position, dir, 1f, layer))
+            {
+                Destroy(gameObject);
+            }
+
+        }
     }
 
     IEnumerator LaunchPhase()

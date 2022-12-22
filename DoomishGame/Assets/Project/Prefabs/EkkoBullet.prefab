@@ -120,8 +120,8 @@ MonoBehaviour:
     m_Bits: 256
   StartSpeed: 10
   launchPhase: 1
-  HoldPhase: 1
-  rotateSpeed: 250
+  HoldPhase: 0.3
+  rotateSpeed: 1200
   rocketSpeed: 18
 --- !u!50 &2500569924377505010
 Rigidbody2D:

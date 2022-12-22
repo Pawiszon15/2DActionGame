@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerPogJump : MonoBehaviour
 {
     [Header("Pog jump")]
+    [SerializeField] float pogJumpBufferTime;
     [SerializeField] float jumpPower;
     [SerializeField] float reloadTime;
     [SerializeField] LayerMask layers;
@@ -24,6 +25,10 @@ public class PlayerPogJump : MonoBehaviour
     PlayerAnimator playerAnimator;
     Rigidbody2D rb;
 
+    private float leftArrowLastTimePressed;
+    private float rightArrowLastTimePressed;
+    private bool isPlayerTryingToPogJump = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,49 +39,54 @@ public class PlayerPogJump : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        //if (playerMovement.isGrounded)
+    {
+        //rightArrowLastTimePressed -= Time.deltaTime;
+        //leftArrowLastTimePressed -= Time.deltaTime;
+
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
         //{
-        //    pogJumpAvaialable = false;
+        //    leftArrowLastTimePressed = pogJumpBufferTime;
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    rightArrowLastTimePressed = pogJumpBufferTime;
+        //}
+
+        //if (leftArrowLastTimePressed > 0f && rightArrowLastTimePressed > 0f)
+        //{
+        //    isPlayerTryingToPogJump = true;
         //}
 
         //else
         //{
-        //    pogJumpAvaialable = true;
+        //    isPlayerTryingToPogJump = false;
         //}
 
-        if (Input.GetKeyDown(KeyCode.Space) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
-          && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping && !playerMovement.recentlyReallyColseToWalls)     
+        if (Input.GetKeyDown(KeyCode.UpArrow) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
+          && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping && !playerMovement.recentlyReallyColseToWalls)
         {
-            if(!Physics2D.Raycast(new Vector2(PlayersFeet.position.x, PlayersFeet.position.y), -PlayersFeet.up, rangeOfRaycast, forRaycast))
-            {
-
-                Debug.Log(" is player grounded" + playerMovement.isGrounded);
-                playerAnimator.StartPogJumpAnimation();
-            }    
-
-            else
-            {
-                Debug.Log("Toclose to the ground");
-            }
-
+            pogJumpAvaialable = false;
+            playerAnimator.StartPogJumpAnimation();
+            StartCoroutine(PogCooldown());
         }
+
 
         if (pogJumpColliderActive)
         {
             CheckForCollision();
         }
 
-        Debug.Log(playerMovement.recentlyReallyColseToWalls);
+        Debug.Log(isPlayerTryingToPogJump);
     }
 
     private void CheckForCollision()
     {
         Collider2D[] OverlapThings = Physics2D.OverlapCircleAll(posOfPogJumpCollider.position, rangeOfCircle, layers);
 
-        foreach(Collider2D overlapThing in OverlapThings)
+        foreach (Collider2D overlapThing in OverlapThings)
         {
-            if(overlapThing.TryGetComponent(out EnemyBullet enemyBullet))
+            if (overlapThing.TryGetComponent(out EnemyBullet enemyBullet))
             {
                 enemyBullet.DeflectBullet(mousePos.right);
                 MakePogJump();
@@ -104,4 +114,11 @@ public class PlayerPogJump : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
     }
+
+    IEnumerator PogCooldown()
+    {
+        yield return new WaitForSeconds(pogJumpBufferTime);
+        pogJumpAvaialable = true;
+    }
+
 }

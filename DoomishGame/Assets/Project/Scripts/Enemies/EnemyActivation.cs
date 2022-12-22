@@ -55,7 +55,6 @@ public class EnemyActivation : MonoBehaviour
 
             if (distanceToActivate > distanceToPlayer)
             {
-                Debug.Log("distance to player is - " + distanceToPlayer);
                 isEnemyActivated = true;
             }
 
@@ -87,7 +86,6 @@ public class EnemyActivation : MonoBehaviour
                 }
 
                 //Debug.DrawRay(shootPoint.position, shootPoint.right * 100f, Color.red, 0.3f);
-                Debug.Log("is there line of sight - " + isThereLineOfSightAndInRange);
                 
             }
         }

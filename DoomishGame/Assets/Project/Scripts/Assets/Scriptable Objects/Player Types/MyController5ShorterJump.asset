@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5759d6a660e3ac14dbd9a801bf9d7627, type: 3}
-  m_Name: MyControllerV4_ShorterDash
+  m_Name: MyController5ShorterJump
   m_EditorClassIdentifier: 
-  gravityStrength: -44.444447
-  gravityScale: 4.5305243
+  gravityStrength: -52.499996
+  gravityScale: 5.351681
   fallGravityMult: 2
   maxFallSpeed: 30
-  fastFallGravityMult: 2
-  maxFastFallSpeed: 40
+  fastFallGravityMult: 4
+  maxFastFallSpeed: 35
   runMaxSpeed: 12
   runAcceleration: 1.8
   runAccelAmount: 7.5
-  runDecceleration: 3
-  runDeccelAmount: 12.5
-  accelInAir: 0.8
+  runDecceleration: 4
+  runDeccelAmount: 16.666666
+  accelInAir: 0.9
   deccelInAir: 0.2
-  doConserveMomentum: 0
-  jumpHeight: 4.5
-  jumpTimeToApex: 0.45
+  doConserveMomentum: 1
+  jumpHeight: 4.2
+  jumpTimeToApex: 0.4
   airJumps: 1
-  jumpForce: 20
+  jumpForce: 20.999998
   jumpCutGravityMult: 2
   jumpHangGravityMult: 0
   jumpHangTimeThreshold: 0

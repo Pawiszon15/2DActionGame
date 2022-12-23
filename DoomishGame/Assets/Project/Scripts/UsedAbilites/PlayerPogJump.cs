@@ -25,9 +25,11 @@ public class PlayerPogJump : MonoBehaviour
     PlayerAnimator playerAnimator;
     Rigidbody2D rb;
 
-    private float leftArrowLastTimePressed;
-    private float rightArrowLastTimePressed;
-    private bool isPlayerTryingToPogJump = false;
+    private float firstTap;
+    private float secondTap;
+    [HideInInspector] public bool isPlayerTryingToPogJump = false;
+    [HideInInspector] public bool makingPogJump = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,32 +42,34 @@ public class PlayerPogJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //rightArrowLastTimePressed -= Time.deltaTime;
-        //leftArrowLastTimePressed -= Time.deltaTime;
+        //firstTap -= Time.deltaTime;
+        //secondTap -= Time.deltaTime;
 
-        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        //if(Input.GetKeyDown(KeyCode.UpArrow))
         //{
-        //    leftArrowLastTimePressed = pogJumpBufferTime;
-        //}
+        //    if(firstTap < 0.01f)
+        //    {
+        //        firstTap = pogJumpBufferTime;
+        //    }
 
-        //if (Input.GetKeyDown(KeyCode.RightArrow))
-        //{
-        //    rightArrowLastTimePressed = pogJumpBufferTime;
+        //    else
+        //    {
+        //        secondTap = pogJumpBufferTime;
+        //    }
+                
+        //    if(firstTap > 0f && secondTap > 0f)
+        //    {
+        //        //isPlayerTryingToPogJump = true;
+        //    }
+            
         //}
-
-        //if (leftArrowLastTimePressed > 0f && rightArrowLastTimePressed > 0f)
-        //{
-        //    isPlayerTryingToPogJump = true;
-        //}
-
-        //else
-        //{
-        //    isPlayerTryingToPogJump = false;
-        //}
-
         if (Input.GetKeyDown(KeyCode.UpArrow) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
-          && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping && !playerMovement.recentlyReallyColseToWalls)
+          && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)
         {
+            firstTap = 0f;
+            secondTap = 0f;
+            isPlayerTryingToPogJump = true;
+
             pogJumpAvaialable = false;
             playerAnimator.StartPogJumpAnimation();
             StartCoroutine(PogCooldown());
@@ -76,8 +80,6 @@ public class PlayerPogJump : MonoBehaviour
         {
             CheckForCollision();
         }
-
-        Debug.Log(isPlayerTryingToPogJump);
     }
 
     private void CheckForCollision()
@@ -89,12 +91,20 @@ public class PlayerPogJump : MonoBehaviour
             if (overlapThing.TryGetComponent(out EnemyBullet enemyBullet))
             {
                 enemyBullet.DeflectBullet(mousePos.right);
-                MakePogJump();
+                if (isPlayerTryingToPogJump)
+                {
+                    isPlayerTryingToPogJump = false;
+                    MakePogJump();
+                }
             }
 
             if (overlapThing.TryGetComponent(out PogableThings pogableThing))
             {
-                MakePogJump();
+                if (isPlayerTryingToPogJump)
+                {
+                    isPlayerTryingToPogJump=false;
+                    MakePogJump();
+                }
             }
 
             // I do not like it. I feel like it is more interesting if you can only kill enemies with dash
@@ -109,10 +119,13 @@ public class PlayerPogJump : MonoBehaviour
 
     private void MakePogJump()
     {
-        //Time.timeScale = 0.1f;
-        pogJumpColliderActive = false;
-        rb.velocity = new Vector2(rb.velocity.x, 0f);
-        rb.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+        makingPogJump = true;
+        Debug.Log("pogging");
+        ////Time.timeScale = 0.1f;
+        //pogJumpColliderActive = false;
+        //rb.velocity = new Vector2(rb.velocity.x, 0f);
+        //rb.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+        ////playerMovement.Jump();
     }
 
     IEnumerator PogCooldown()

@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class BasicEnemy : MonoBehaviour
 {
-    //For animation purpose
-
-    //[SerializeField] bool hasShiled;
-    public bool isProtector;
+    public bool itHasShield = false;
+    private SpriteRenderer spriteRenderer;
     private GameManger gameManger;
     private bool firstDMG;
-    private PlayerMovement player;
-    private bool isFacingRight = false;
     private EnemyAnimator enemyAnimator;
 
     private void Start()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         enemyAnimator = GetComponent<EnemyAnimator>();
-        player = FindObjectOfType<PlayerMovement>();
         gameManger = FindObjectOfType<GameManger>();
+
         firstDMG = true;
     }
 
@@ -26,12 +23,7 @@ public class BasicEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerBullet" && firstDMG)
         {
-            if(isProtector)
-            {
-                TryToKillProtector();
-            }
-
-            else
+            if(!itHasShield)
             {
                 StartDeathAnimation();
             }
@@ -52,23 +44,6 @@ public class BasicEnemy : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void FlipToRight(bool isRight)
-    {
-        isFacingRight = isRight;
-    }
-
-    private void TryToKillProtector()
-    {
-        if (!isFacingRight && gameObject.transform.position.x <= player.transform.position.x)
-        {
-            StartDeathAnimation();
-        }
-
-        else if(isFacingRight && gameObject.transform.position.x > player.transform.position.x)
-        {
-            StartDeathAnimation();
-        }
-    }
 
     IEnumerator StopTimeForMomemnt()
     {
@@ -77,4 +52,15 @@ public class BasicEnemy : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void TurnOnShield()
+    {
+        spriteRenderer.enabled = true;
+        itHasShield = true;
+    }
+
+    public void TurnOffShield()
+    {
+        spriteRenderer.enabled = false;
+        itHasShield = false;
+    }
 }

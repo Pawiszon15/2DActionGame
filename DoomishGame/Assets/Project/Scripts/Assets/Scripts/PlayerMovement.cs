@@ -84,11 +84,13 @@ public class PlayerMovement  : MonoBehaviour
 	public float LastPressedJumpTime { get; private set; }
 	public float LastPressedDashTime { get; private set; }
 	public float LastPressedRollTime { get; private set; }
-	#endregion
 
-	#region CHECK PARAMETERS
-	//Set all of these up in the inspector
-	[Header("Checks")] 
+	private PlayerPogJump playerPogJump;
+    #endregion
+
+    #region CHECK PARAMETERS
+    //Set all of these up in the inspector
+    [Header("Checks")] 
 	[SerializeField] private Transform _groundCheckPoint;
 	//Size of groundCheck depends on the size of your character generally you want them slightly small than width (for ground) and height (for the wall check)
 	[SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
@@ -105,6 +107,7 @@ public class PlayerMovement  : MonoBehaviour
 
     private void Awake()
 	{
+		playerPogJump = GetComponent<PlayerPogJump>();
 		rotateWeaponCollider = GetComponentInChildren<RotateWeaponCollider>();
 		RB = GetComponent<Rigidbody2D>();
 		AnimHandler = GetComponentInChildren<PlayerAnimator>();
@@ -277,6 +280,19 @@ public class PlayerMovement  : MonoBehaviour
 				_bonusJumpsLeft--;
 
 				Jump();
+
+                AnimHandler.startedJumping = true;
+            }
+
+			else if(playerPogJump.makingPogJump)
+			{
+                IsJumping = true;
+                IsWallJumping = false;
+                _isJumpCut = false;
+                _isJumpFalling = false;
+
+				playerPogJump.makingPogJump = false;
+                Jump();
 
                 AnimHandler.startedJumping = true;
             }
@@ -543,7 +559,7 @@ public class PlayerMovement  : MonoBehaviour
     #endregion
 
     #region JUMP METHODS
-    private void Jump()
+    public void Jump()
 	{
 		//Ensures we can't call Jump multiple times from one press
 		LastPressedJumpTime = 0;

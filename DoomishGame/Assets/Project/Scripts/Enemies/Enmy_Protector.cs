@@ -90,7 +90,7 @@ public class Enmy_Protector : MonoBehaviour
             if(!isPerformingMelee)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                basicEnemy.FlipToRight(true);
+                //basicEnemy.FlipToRight(true);
             }
         }
 
@@ -100,7 +100,7 @@ public class Enmy_Protector : MonoBehaviour
             if(!isPerformingMelee)
             {
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                basicEnemy.FlipToRight(false);
+                //basicEnemy.FlipToRight(false);
             }
         }
     }

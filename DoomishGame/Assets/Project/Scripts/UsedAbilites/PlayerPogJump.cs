@@ -25,8 +25,6 @@ public class PlayerPogJump : MonoBehaviour
     PlayerAnimator playerAnimator;
     Rigidbody2D rb;
 
-    private float firstTap;
-    private float secondTap;
     [HideInInspector] public bool isPlayerTryingToPogJump = false;
     [HideInInspector] public bool makingPogJump = false;
 
@@ -66,8 +64,8 @@ public class PlayerPogJump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
           && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)
         {
-            firstTap = 0f;
-            secondTap = 0f;
+            //firstTap = 0f;
+            //secondTap = 0f;
             isPlayerTryingToPogJump = true;
 
             pogJumpAvaialable = false;
@@ -120,7 +118,6 @@ public class PlayerPogJump : MonoBehaviour
     private void MakePogJump()
     {
         makingPogJump = true;
-        Debug.Log("pogging");
         ////Time.timeScale = 0.1f;
         //pogJumpColliderActive = false;
         //rb.velocity = new Vector2(rb.velocity.x, 0f);

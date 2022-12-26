@@ -5,14 +5,12 @@ using UnityEngine;
 public class BasicEnemy : MonoBehaviour
 {
     public bool itHasShield = false;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
     private GameManger gameManger;
     private bool firstDMG;
     private EnemyAnimator enemyAnimator;
-
-    private void Start()
+    private void Awake()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         enemyAnimator = GetComponent<EnemyAnimator>();
         gameManger = FindObjectOfType<GameManger>();
 
@@ -56,6 +54,7 @@ public class BasicEnemy : MonoBehaviour
     {
         spriteRenderer.enabled = true;
         itHasShield = true;
+        Debug.Log("Turn on shield on enemy");
     }
 
     public void TurnOffShield()

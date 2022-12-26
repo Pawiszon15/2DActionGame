@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         {
             if (isPlayerInv)
             {
-                Debug.Log("PlayerIsInv");
+
             }
 
             else if (isPlayerInvForDeflactableBullets && collision.gameObject.TryGetComponent(out EnemyBullet deflectableBullet))

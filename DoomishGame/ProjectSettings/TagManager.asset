@@ -13,11 +13,12 @@ TagManager:
   - Wave
   - EnemyShield
   - PermeablePlatform
+  - Explosion
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Explosion
   - Water
   - UI
   - Player

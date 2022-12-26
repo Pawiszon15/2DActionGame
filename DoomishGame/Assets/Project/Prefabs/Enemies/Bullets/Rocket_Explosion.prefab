@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4667450083554118290}
   m_Layer: 7
   m_Name: Rocket_Explosion
-  m_TagString: Bullet
+  m_TagString: Explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

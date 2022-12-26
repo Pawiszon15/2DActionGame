@@ -354,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itHasShield: 0
   spriteRenderer: {fileID: 1588863705228715321}
+  explosionGuy: 1
 --- !u!114 &1638767592
 MonoBehaviour:
   m_ObjectHideFlags: 0

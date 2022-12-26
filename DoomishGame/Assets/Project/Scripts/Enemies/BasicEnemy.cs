@@ -6,11 +6,16 @@ public class BasicEnemy : MonoBehaviour
 {
     public bool itHasShield = false;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] bool explosionGuy;
+
     private GameManger gameManger;
     private bool firstDMG;
     private EnemyAnimator enemyAnimator;
+    private KillingSpree killingSpree;
+
     private void Awake()
     {
+        killingSpree = FindObjectOfType<KillingSpree>();
         enemyAnimator = GetComponent<EnemyAnimator>();
         gameManger = FindObjectOfType<GameManger>();
 
@@ -26,10 +31,20 @@ public class BasicEnemy : MonoBehaviour
                 StartDeathAnimation();
             }
         }
+
+        //else if(collision.gameObject.tag == "Explosion" && firstDMG)
+        //{
+        //    if (!explosionGuy)
+        //    {
+        //        StartDeathAnimation();
+        //    }
+        //}
     }
 
     public void StartDeathAnimation()
     {
+        firstDMG = false;
+
         enemyAnimator.StartDeathAnimation();
         //StartCoroutine(StopTimeForMomemnt());
         //player.InstaDashRefill();
@@ -37,7 +52,7 @@ public class BasicEnemy : MonoBehaviour
 
     public void KillEnemy()
     {
-        firstDMG = false;
+        //killingSpree.AddEnemyToKillingManager();
         gameManger.KilledEnemy();
         Destroy(this.gameObject);
     }
@@ -54,7 +69,6 @@ public class BasicEnemy : MonoBehaviour
     {
         spriteRenderer.enabled = true;
         itHasShield = true;
-        Debug.Log("Turn on shield on enemy");
     }
 
     public void TurnOffShield()

@@ -461,9 +461,20 @@ public class PlayerMovement  : MonoBehaviour
 		if(!isGroundSlamming)
 		LastPressedRollTime = Data.rollInputBufferTime;
 	}
-    #endregion
-	
-    #region GENERAL METHODS
+	#endregion
+
+	#region GENERAL METHODS
+
+	public void ActivateBonusSpeed(float extraSpeed)
+	{
+
+	}
+
+	public void DeactivateBonusSpeed()
+	{
+
+	}
+
     public void SetGravityScale(float scale)
 	{
 		RB.gravityScale = scale;

@@ -37,7 +37,6 @@ public class EnemyAnimator : MonoBehaviour
 
     public void StartAttackAnimation()
     {
-        Debug.Log("start attack animation");
         animator.SetBool("isIdling", false);
         animator.SetTrigger("isAttacking");
     }

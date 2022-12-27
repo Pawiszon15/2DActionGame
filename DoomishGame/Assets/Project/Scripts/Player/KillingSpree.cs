@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class KillingSpree : MonoBehaviour
 {
@@ -14,33 +16,55 @@ public class KillingSpree : MonoBehaviour
     public int howManyEnemiesAreKilled;
     public bool isBonusActive;
     private PlayerMovement playerMovement;
-    private IEnumerator corutineBonus;
     private IEnumerator corutinePerKill;
+    private float timeLeftInBonus;
 
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        corutineBonus = CutdownBonus();
         corutinePerKill = CutdownPerKill();
+    }
+
+    private void Update()
+    {
+        if(isBonusActive)
+        {
+            timeLeftInBonus -= Time.deltaTime;
+
+            if(timeLeftInBonus < 0 && isBonusActive)
+            {
+                //turn of bonus
+                isBonusActive = false;
+                timeLeftInBonus = 0;
+                howManyEnemiesAreKilled = 0;
+                playerMovement.DeactivateBonusSpeed();
+            }
+        }
+
+
     }
 
     public void AddEnemyToKillingManager()
     {
         howManyEnemiesAreKilled++;
 
+        //Prolong the bonus
         if (isBonusActive)
         {
+            timeLeftInBonus = bonusSpeedDuration;
             Debug.Log("what to do if bonus activate");
-            StartCoroutine(WaitForLittleMoment());
+
         }
 
         else
         {
+            //Try to activate bonus
             if (howManyEnemiesAreKilled >= howManyEnemiesNeedToKill)
             {
                 isBonusActive = true;
+                timeLeftInBonus = bonusSpeedDuration;
+                playerMovement.ActivateBonusSpeed(additionalBonusSpeed);
                 StopCoroutine(corutinePerKill);
-                StartCoroutine(corutineBonus);
             }
 
             else
@@ -55,21 +79,5 @@ public class KillingSpree : MonoBehaviour
         howManyEnemiesAreKilled--;
     }
 
-    IEnumerator CutdownBonus()
-    {
-        Debug.Log("Begin");
-        //playerMovement.ActivateBonusSpeed(additionalBonusSpeed);
-        yield return new WaitForSeconds(bonusSpeedDuration);
-        Debug.Log("End");
-        isBonusActive = false;
-        //playerMovement.DeactivateBonusSpeed();
-    }
-
-    IEnumerator WaitForLittleMoment()
-    {
-        //Why this doesn't work???
-        StopCoroutine(corutineBonus);
-        yield return new WaitForSecondsRealtime(0.1f);
-        StartCoroutine(corutineBonus);
-    }
+ 
 }

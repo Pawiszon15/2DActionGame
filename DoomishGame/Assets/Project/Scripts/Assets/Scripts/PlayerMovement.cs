@@ -78,6 +78,9 @@ public class PlayerMovement  : MonoBehaviour
 	private Vector2 _lastRoolDir;
     private bool _isRollAttacking;
 
+	//Run
+	private float _currentSpeed;
+
     #endregion
 
     #region INPUT PARAMETERS
@@ -125,6 +128,7 @@ public class PlayerMovement  : MonoBehaviour
 		IsFacingRight = true;
 		_rollLeft = 1;
 		isGroundSlamming = false;
+		_currentSpeed = Data.runMaxSpeed;
 	}
 
 	private void Update()
@@ -470,12 +474,12 @@ public class PlayerMovement  : MonoBehaviour
 
 	public void ActivateBonusSpeed(float extraSpeed)
 	{
-
+		_currentSpeed = Data.runMaxSpeed + extraSpeed;
 	}
 
 	public void DeactivateBonusSpeed()
 	{
-
+		_currentSpeed = Data.runMaxSpeed;
 	}
 
     public void SetGravityScale(float scale)
@@ -504,7 +508,7 @@ public class PlayerMovement  : MonoBehaviour
     private void Run(float lerpAmount)
 	{
 		//Calculate the direction we want to move in and our desired velocity
-		float targetSpeed = _moveInput.x * Data.runMaxSpeed;
+		float targetSpeed = _moveInput.x * _currentSpeed;
 		//We can reduce are control using Lerp() this smooths changes to are direction and speed
 		targetSpeed = Mathf.Lerp(RB.velocity.x, targetSpeed, lerpAmount);
 

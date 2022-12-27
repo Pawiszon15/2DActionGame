@@ -35091,10 +35091,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf2e15041f5ede4f834648c1b0f87ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalBonusSpeed: 3
+  additionalBonusSpeed: 10
   howManyEnemiesNeedToKill: 2
   restTimePerKill: 5
-  bonusSpeedDuration: 10
+  bonusSpeedDuration: 5
   howManyEnemiesAreKilled: 0
   isBonusActive: 0
 --- !u!1001 &8897905149454823639

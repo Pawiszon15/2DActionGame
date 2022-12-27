@@ -23,6 +23,7 @@ public class PlayerMovement  : MonoBehaviour
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashCollider;
 
+	private PlayerBlinkingAbility blikingAbility;
 	private SpriteRenderer spriteRenderer;
 	Player player;
 	private RotateWeaponCollider rotateWeaponCollider;
@@ -30,6 +31,7 @@ public class PlayerMovement  : MonoBehaviour
 	public bool isWallSliding { get; private set; }
 	public bool isGroundSlamming { get; set; }
 	public bool recentlyReallyColseToWalls { get; private set; }
+
     #endregion
 
     #region COMPONENTS
@@ -107,6 +109,7 @@ public class PlayerMovement  : MonoBehaviour
 
     private void Awake()
 	{
+		blikingAbility = GetComponent<PlayerBlinkingAbility>();
 		playerPogJump = GetComponent<PlayerPogJump>();
 		rotateWeaponCollider = GetComponentInChildren<RotateWeaponCollider>();
 		RB = GetComponent<Rigidbody2D>();
@@ -363,7 +366,7 @@ public class PlayerMovement  : MonoBehaviour
 		if (!_isDashAttacking)
 		{
 			//Higher gravity if we've released the jump input or are falling
-			if (IsSliding)
+			if (IsSliding || blikingAbility.afterBlink)
 			{
 				SetGravityScale(0);
 			}

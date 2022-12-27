@@ -44,7 +44,7 @@ public class BasicEnemy : MonoBehaviour
     public void StartDeathAnimation()
     {
         firstDMG = false;
-
+        killingSpree.AddEnemyToKillingManager();
         enemyAnimator.StartDeathAnimation();
         //StartCoroutine(StopTimeForMomemnt());
         //player.InstaDashRefill();
@@ -52,7 +52,6 @@ public class BasicEnemy : MonoBehaviour
 
     public void KillEnemy()
     {
-        //killingSpree.AddEnemyToKillingManager();
         gameManger.KilledEnemy();
         Destroy(this.gameObject);
     }

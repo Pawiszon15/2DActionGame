@@ -13,7 +13,6 @@ public class PlayerPogJump : MonoBehaviour
     [SerializeField] LayerMask forRaycast;
     [SerializeField] float rangeOfRaycast;
     [HideInInspector] public bool pogJumpColliderActive;
-    private bool pogJumpAvaialable = true;
 
     [Header("References")]
     [SerializeField] Transform PlayersFeet;
@@ -61,17 +60,17 @@ public class PlayerPogJump : MonoBehaviour
         //    }
             
         //}
-        if (Input.GetKeyDown(KeyCode.UpArrow) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
-          && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)
-        {
-            //firstTap = 0f;
-            //secondTap = 0f;
-            isPlayerTryingToPogJump = true;
+        //if (Input.GetKeyDown(KeyCode.UpArrow) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
+        //  && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)
+        //{
+        //    //firstTap = 0f;
+        //    //secondTap = 0f;
+        //    isPlayerTryingToPogJump = true;
 
-            pogJumpAvaialable = false;
-            playerAnimator.StartPogJumpAnimation();
-            StartCoroutine(PogCooldown());
-        }
+        //    pogJumpAvaialable = false;
+        //    playerAnimator.StartPogJumpAnimation();
+        //    StartCoroutine(PogCooldown());
+        //}
 
 
         if (pogJumpColliderActive)
@@ -86,15 +85,15 @@ public class PlayerPogJump : MonoBehaviour
 
         foreach (Collider2D overlapThing in OverlapThings)
         {
-            if (overlapThing.TryGetComponent(out EnemyBullet enemyBullet))
-            {
-                enemyBullet.DeflectBullet(mousePos.right);
-                if (isPlayerTryingToPogJump)
-                {
-                    isPlayerTryingToPogJump = false;
-                    MakePogJump();
-                }
-            }
+            //if (overlapThing.TryGetComponent(out EnemyBullet enemyBullet))
+            //{
+            //    enemyBullet.DeflectBullet(mousePos.right);
+            //    if (isPlayerTryingToPogJump)
+            //    {
+            //        isPlayerTryingToPogJump = false;
+            //        MakePogJump();
+            //    }
+            //}
 
             if (overlapThing.TryGetComponent(out PogableThings pogableThing))
             {
@@ -128,7 +127,6 @@ public class PlayerPogJump : MonoBehaviour
     IEnumerator PogCooldown()
     {
         yield return new WaitForSeconds(pogJumpBufferTime);
-        pogJumpAvaialable = true;
     }
 
 }

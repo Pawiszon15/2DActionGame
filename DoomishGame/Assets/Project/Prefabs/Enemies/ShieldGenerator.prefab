@@ -174,7 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itHasShield: 0
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 3611740076971700093}
+  explosionGuy: 0
 --- !u!114 &6450456991907163649
 MonoBehaviour:
   m_ObjectHideFlags: 0

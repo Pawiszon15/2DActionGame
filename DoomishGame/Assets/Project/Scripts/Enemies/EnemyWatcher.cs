@@ -50,7 +50,6 @@ public class EnemyWatcher : MonoBehaviour
 
         if (shouldUseLaser)
         {            
-            Debug.Log("shootingLaser");
             ShootLaser();
         }
     }
@@ -63,7 +62,6 @@ public class EnemyWatcher : MonoBehaviour
         //Debug.DrawRay(laserFirePoint.position, laserFirePoint.right * 100f, Color.red,  1f);
         if (Physics2D.Raycast(transform.position, transform.right))
         {
-            Debug.Log("trutgt");
             RaycastHit2D hit = Physics2D.Raycast(laserFirePoint.position, laserFirePoint.right, 100f, layer);
             Draw2DRay(laserFirePoint.position, hit.point);
 

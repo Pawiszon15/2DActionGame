@@ -23,6 +23,7 @@ public class PlayerMovement  : MonoBehaviour
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashCollider;
 
+	private GroundSlamWithBonus GroundSlamWithBonus;
 	private PlayerBlinkingAbility blikingAbility;
 	private SpriteRenderer spriteRenderer;
 	Player player;
@@ -112,6 +113,7 @@ public class PlayerMovement  : MonoBehaviour
 
     private void Awake()
 	{
+		GroundSlamWithBonus = GetComponent<GroundSlamWithBonus>();
 		blikingAbility = GetComponent<PlayerBlinkingAbility>();
 		playerPogJump = GetComponent<PlayerPogJump>();
 		rotateWeaponCollider = GetComponentInChildren<RotateWeaponCollider>();
@@ -253,7 +255,7 @@ public class PlayerMovement  : MonoBehaviour
 		if (!IsDashing && !_isRollAttacking)
 		{
 			//Jump
-			if (CanJump() && LastPressedJumpTime > 0)
+			if (CanJump() && LastPressedJumpTime > 0 && !Input.GetKey(KeyCode.DownArrow))
 			{
 				IsJumping = true;
 				IsWallJumping = false;
@@ -277,7 +279,7 @@ public class PlayerMovement  : MonoBehaviour
 				WallJump(_lastWallJumpDir);
 			}
 
-			else if(LastPressedJumpTime > 0 && _bonusJumpsLeft > 0)
+			else if(LastPressedJumpTime > 0 && _bonusJumpsLeft > 0 && !Input.GetKey(KeyCode.DownArrow))
 			{
 				IsJumping = true;
 				IsWallJumping = false;
@@ -291,7 +293,7 @@ public class PlayerMovement  : MonoBehaviour
                 AnimHandler.startedJumping = true;
             }
 
-			else if(playerPogJump.makingPogJump)
+			else if(playerPogJump.makingPogJump && !Input.GetKey(KeyCode.DownArrow))
 			{
                 IsJumping = true;
                 IsWallJumping = false;
@@ -370,7 +372,7 @@ public class PlayerMovement  : MonoBehaviour
 		if (!_isDashAttacking)
 		{
 			//Higher gravity if we've released the jump input or are falling
-			if (IsSliding || blikingAbility.afterBlink)
+			if (IsSliding || blikingAbility.afterBlink || GroundSlamWithBonus.isGroundSlammingWithBonus)
 			{
 				SetGravityScale(0);
 			}

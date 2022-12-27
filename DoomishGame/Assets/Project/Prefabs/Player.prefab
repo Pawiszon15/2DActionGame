@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3551697869464769006}
   - component: {fileID: 3551697869464769001}
   - component: {fileID: 3551697869464769000}
-  - component: {fileID: 3551697869464768979}
   - component: {fileID: 3551697869464768981}
   - component: {fileID: 3551697869464768983}
   - component: {fileID: 3551697869464768982}
+  - component: {fileID: 7703920648033828968}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3551697869464769003}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -40.58, y: 29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -120,20 +120,6 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 1
---- !u!114 &3551697869464768979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3551697869464769003}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f42d5fc8a7bfe49b84936762f977f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slamSpeed: 100
-  rb2d: {fileID: 3551697869464769001}
 --- !u!114 &3551697869464768981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,12 +186,30 @@ MonoBehaviour:
   blinkingDistance: 4
   maxTimeOfSlowmo: 1.5
   hangTimeAfterBlink: 0.2
-  playerBullet: {fileID: 0}
-  bulletShotPos: {fileID: 0}
+  playerBullet: {fileID: 2864782047655724118, guid: e5377fed141b13548bf57be31dcae373, type: 3}
+  bulletShotPos: {fileID: 6603395696089364678}
   blinkCost: 0
   maxResourcesAmount: 1
   ongoingBlink: 0
   afterBlink: 0
+--- !u!114 &7703920648033828968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551697869464769003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf2e15041f5ede4f834648c1b0f87ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalBonusSpeed: 10
+  howManyEnemiesNeedToKill: 2
+  restTimePerKill: 5
+  bonusSpeedDuration: 5
+  howManyEnemiesAreKilled: 0
+  isBonusActive: 0
 --- !u!1 &3551697869496583334
 GameObject:
   m_ObjectHideFlags: 0

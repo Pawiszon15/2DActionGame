@@ -25,17 +25,24 @@ public class PlayerBlinkingAbility : MonoBehaviour
     [HideInInspector] public bool ongoingBlink;
     [HideInInspector] public bool afterBlink = false;
     private GameObject instancesOfBlink;
-    private int currentReousrceAmount;
+    public int currentReousrceAmount;
     private Vector2 moveInput;
     private float ongoingBlinkDuration;
 
     private Rigidbody2D rb;
     private PlayerMovement playerMovement;
+    private PlayerBlinkingAbilityUI ui;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerMovement = GetComponent<PlayerMovement>();
+        ui = FindObjectOfType<PlayerBlinkingAbilityUI>();
+    }
+
+    private void Start()
+    {
+        ui.TurnOffAllResources();
     }
 
     // Update is called once per frame
@@ -61,11 +68,15 @@ public class PlayerBlinkingAbility : MonoBehaviour
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
-        //idea diffrent ability for no resources?
-        if (blinkCost <= currentReousrceAmount)
+
+
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            if (Input.GetKeyDown(KeyCode.X))
-            {            
+            if (blinkCost <= currentReousrceAmount)
+            {
+                currentReousrceAmount -= blinkCost;
+                ui.SetCurrentResources(currentReousrceAmount);
+
                 ongoingBlinkDuration = 0f;
                 instancesOfBlink = Instantiate(previewOfBlink, transform.position, Quaternion.identity);
                 instancesOfBlink.transform.parent = transform;
@@ -73,7 +84,8 @@ public class PlayerBlinkingAbility : MonoBehaviour
                 StartCoroutine(StartAbility());
             }
 
-            if (Input.GetKeyUp(KeyCode.X))
+        }
+            if (Input.GetKeyUp(KeyCode.X) && ongoingBlink)
             {
                 StopCoroutine(StartAbility());
                 if (ongoingBlink)
@@ -81,7 +93,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
                     EndAbility();
                 }
             }
-        }
+        
     }
 
     IEnumerator StartAbility()
@@ -120,7 +132,12 @@ public class PlayerBlinkingAbility : MonoBehaviour
 
     public void AddResources()
     {
-        if (currentReousrceAmount == maxResourcesAmount)
+        if (currentReousrceAmount != maxResourcesAmount)
+        {
             currentReousrceAmount++;
+
+        }
+        ui.SetCurrentResources(currentReousrceAmount);
+
     }
 }

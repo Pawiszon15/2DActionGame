@@ -23,7 +23,7 @@ public class PlayerMovement  : MonoBehaviour
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashCollider;
 
-	private GroundSlamWithBonus GroundSlamWithBonus;
+	private GroundSlamWithBonus groundSlamWithBonus;
 	private PlayerBlinkingAbility blikingAbility;
 	private SpriteRenderer spriteRenderer;
 	Player player;
@@ -113,7 +113,7 @@ public class PlayerMovement  : MonoBehaviour
 
     private void Awake()
 	{
-		GroundSlamWithBonus = GetComponent<GroundSlamWithBonus>();
+		groundSlamWithBonus = GetComponent<GroundSlamWithBonus>();
 		blikingAbility = GetComponent<PlayerBlinkingAbility>();
 		playerPogJump = GetComponent<PlayerPogJump>();
 		rotateWeaponCollider = GetComponentInChildren<RotateWeaponCollider>();
@@ -149,16 +149,8 @@ public class PlayerMovement  : MonoBehaviour
 		#endregion
 
 		#region INPUT HANDLER
-		if(canPlayerMove)
-		{
-			_moveInput.x = Input.GetAxisRaw("Horizontal");
-		}
-		else
-		{
-			//_moveInput.x = 0;
-			RB.velocity = Vector2.zero;
-		}
 
+		_moveInput.x = Input.GetAxisRaw("Horizontal");
 		_moveInput.y = Input.GetAxisRaw("Vertical");
 
 		if (_moveInput.x != 0)
@@ -372,7 +364,7 @@ public class PlayerMovement  : MonoBehaviour
 		if (!_isDashAttacking)
 		{
 			//Higher gravity if we've released the jump input or are falling
-			if (IsSliding || blikingAbility.afterBlink || GroundSlamWithBonus.isGroundSlammingWithBonus)
+			if (IsSliding || blikingAbility.afterBlink || groundSlamWithBonus.isGroundSlammingWithBonus)
 			{
 				SetGravityScale(0);
 			}
@@ -430,7 +422,7 @@ public class PlayerMovement  : MonoBehaviour
 	private void FixedUpdate()
 	{
 		//Handle Run
-		if (!IsDashing)
+		if (!IsDashing && !groundSlamWithBonus.isGroundSlammingWithBonus)
 		{
 			if (IsWallJumping)
 				Run(Data.wallJumpRunLerp);

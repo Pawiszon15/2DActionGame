@@ -12,9 +12,11 @@ public class BasicEnemy : MonoBehaviour
     private bool firstDMG;
     private EnemyAnimator enemyAnimator;
     private KillingSpree killingSpree;
+    private PlayerBlinkingAbility blinkingAbility;
 
     private void Awake()
     {
+        blinkingAbility = FindObjectOfType<PlayerBlinkingAbility>();
         killingSpree = FindObjectOfType<KillingSpree>();
         enemyAnimator = GetComponent<EnemyAnimator>();
         gameManger = FindObjectOfType<GameManger>();
@@ -44,6 +46,7 @@ public class BasicEnemy : MonoBehaviour
     public void StartDeathAnimation()
     {
         firstDMG = false;
+        blinkingAbility.AddResources();
         killingSpree.AddEnemyToKillingManager();
         enemyAnimator.StartDeathAnimation();
         //StartCoroutine(StopTimeForMomemnt());

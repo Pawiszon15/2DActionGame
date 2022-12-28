@@ -6,6 +6,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
 {
     [Header("Ability properties")]
     [SerializeField][Range(0, 1)] float slowmoEffect;
+    [SerializeField] float multiplayerToPreviewSpeed;
     [SerializeField] float blinkingDistance;
     [SerializeField] float maxTimeOfSlowmo;
     [SerializeField] float hangTimeAfterBlink;
@@ -18,23 +19,41 @@ public class PlayerBlinkingAbility : MonoBehaviour
     [SerializeField] int blinkCost;
     [SerializeField] int maxResourcesAmount;
 
+    [Header("References")]
+    [SerializeField] GameObject previewOfBlink;
+
     [HideInInspector] public bool ongoingBlink;
     [HideInInspector] public bool afterBlink = false;
+    private GameObject instancesOfBlink;
     private int currentReousrceAmount;
     private Vector2 moveInput;
-    private Rigidbody2D rb;
     private float ongoingBlinkDuration;
+
+    private Rigidbody2D rb;
+    private PlayerMovement playerMovement;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
-    {
+    { 
+        ongoingBlinkDuration += multiplayerToPreviewSpeed * Time.deltaTime;
+
         HandleInputs();
-        ongoingBlinkDuration += Time.deltaTime;
+        PrevieOfBlink();
+    }
+
+    private void PrevieOfBlink()
+    {
+        if(ongoingBlink)
+        {
+            instancesOfBlink.transform.position = new Vector2(transform.position.x, transform.position.y) +
+            moveInput * blinkingDistance * ongoingBlinkDuration;
+        }
     }
 
     private void HandleInputs()
@@ -46,9 +65,11 @@ public class PlayerBlinkingAbility : MonoBehaviour
         if (blinkCost <= currentReousrceAmount)
         {
             if (Input.GetKeyDown(KeyCode.X))
-            {
+            {            
+                ongoingBlinkDuration = 0f;
+                instancesOfBlink = Instantiate(previewOfBlink, transform.position, Quaternion.identity);
+                instancesOfBlink.transform.parent = transform;
                 ongoingBlink = true;
-                ongoingBlinkDuration = maxTimeOfSlowmo;
                 StartCoroutine(StartAbility());
             }
 
@@ -75,13 +96,14 @@ public class PlayerBlinkingAbility : MonoBehaviour
     }
 
     private void EndAbility()
-    {      
+    {
         Instantiate(playerBullet, bulletShotPos.position, Quaternion.identity);
+        Destroy(instancesOfBlink);
         ongoingBlink = false;
         afterBlink = true;
-       
-        transform.position = new Vector2(transform.position.x, transform.position.y) + 
-        (moveInput * blinkingDistance *  ongoingBlinkDuration);
+
+        transform.position = new Vector2(transform.position.x, transform.position.y) +
+        (moveInput * blinkingDistance * ongoingBlinkDuration);
 
         ongoingBlinkDuration = 0f;
         StartCoroutine(WaitForSec());

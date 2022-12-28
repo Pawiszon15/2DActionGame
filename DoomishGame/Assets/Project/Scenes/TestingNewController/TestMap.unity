@@ -883,7 +883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &495202875
 Transform:
   m_ObjectHideFlags: 0
@@ -34726,6 +34726,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3551697869464768982, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}
+      propertyPath: previewOfBlink
+      value: 
+      objectReference: {fileID: 542590072953477193, guid: 047cdcfe074c05b47834e216cb8ee0bd, type: 3}
+    - target: {fileID: 3551697869464768982, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}
+      propertyPath: maxTimeOfSlowmo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551697869464768982, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}
+      propertyPath: blinkingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551697869464768982, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}
+      propertyPath: multiplayerToPreviewSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3551697869464768983, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}
       propertyPath: mousePos
       value: 
@@ -34777,6 +34793,10 @@ PrefabInstance:
     - target: {fileID: 3551697869464769007, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603395696089364678, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000071525574
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64687b3f13f6b4042931f2ec80bbebe5, type: 3}

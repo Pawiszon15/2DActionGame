@@ -21,7 +21,6 @@ public class PlayerBlinkingAbilityUI : MonoBehaviour
     {
         if(blinkingAbility.ongoingBlinkDuration > 0 && blinkingAbility.ongoingBlink)
         {
-            Debug.Log(blinkingAbility.ongoingBlinkDuration);
             slider.value = blinkingAbility.ongoingBlinkDuration/2;
         }
     }

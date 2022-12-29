@@ -53,24 +53,23 @@ public class PlayerPogJump : MonoBehaviour
         //    {
         //        secondTap = pogJumpBufferTime;
         //    }
-                
+
         //    if(firstTap > 0f && secondTap > 0f)
         //    {
         //        //isPlayerTryingToPogJump = true;
         //    }
-            
-        //}
-        //if (Input.GetKeyDown(KeyCode.UpArrow) && pogJumpAvaialable && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
-        //  && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)
-        //{
-        //    //firstTap = 0f;
-        //    //secondTap = 0f;
-        //    isPlayerTryingToPogJump = true;
 
-        //    pogJumpAvaialable = false;
-        //    playerAnimator.StartPogJumpAnimation();
-        //    StartCoroutine(PogCooldown());
         //}
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
+          && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)
+        {
+            //firstTap = 0f;
+            //secondTap = 0f;
+            isPlayerTryingToPogJump = true;
+
+            playerAnimator.StartPogJumpAnimation();
+            StartCoroutine(PogCooldown());
+        }
 
 
         if (pogJumpColliderActive)

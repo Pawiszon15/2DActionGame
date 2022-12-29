@@ -1,10 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBlinkingAbilityUI : MonoBehaviour
 {
     [SerializeField] GameObject[] playerRes;
+    [SerializeField] Slider slider;
+
+    private float maxTimeOfDash;
+    private float currentTimeOfDash;
+    private PlayerBlinkingAbility blinkingAbility;
+
+    private void Awake()
+    {
+        blinkingAbility = FindObjectOfType<PlayerBlinkingAbility>();
+    }
+
+    private void Update()
+    {
+        if(blinkingAbility.ongoingBlinkDuration > 0 && blinkingAbility.ongoingBlink)
+        {
+            Debug.Log(blinkingAbility.ongoingBlinkDuration);
+            slider.value = blinkingAbility.ongoingBlinkDuration/2;
+        }
+    }
+
+    public void TurnBlinkSlider(bool value)
+    {
+        slider.gameObject.SetActive(value);
+    }
 
     public void SetCurrentResources(int currentRes)
     {

@@ -27,7 +27,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
     private GameObject instancesOfBlink;
     public int currentReousrceAmount;
     private Vector2 moveInput;
-    private float ongoingBlinkDuration;
+    [HideInInspector] public float ongoingBlinkDuration;
 
     private Rigidbody2D rb;
     private PlayerMovement playerMovement;
@@ -48,7 +48,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        ongoingBlinkDuration += multiplayerToPreviewSpeed * Time.deltaTime;
+        ongoingBlinkDuration -= Time.deltaTime;
 
         HandleInputs();
         PrevieOfBlink();
@@ -59,7 +59,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
         if(ongoingBlink)
         {
             instancesOfBlink.transform.position = new Vector2(transform.position.x, transform.position.y) +
-            moveInput * blinkingDistance * ongoingBlinkDuration;
+            moveInput * blinkingDistance;
         }
     }
 
@@ -76,8 +76,9 @@ public class PlayerBlinkingAbility : MonoBehaviour
             {
                 currentReousrceAmount -= blinkCost;
                 ui.SetCurrentResources(currentReousrceAmount);
+                ui.TurnBlinkSlider(true);
 
-                ongoingBlinkDuration = 0f;
+                ongoingBlinkDuration = maxTimeOfSlowmo;
                 instancesOfBlink = Instantiate(previewOfBlink, transform.position, Quaternion.identity);
                 instancesOfBlink.transform.parent = transform;
                 ongoingBlink = true;
@@ -100,7 +101,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
     {
         Debug.Log("start sth");
         Time.timeScale = slowmoEffect;
-        yield return new WaitForSecondsRealtime(maxTimeOfSlowmo);
+        yield return new WaitForSeconds(maxTimeOfSlowmo);
         if (ongoingBlink)
         {
             EndAbility();
@@ -115,9 +116,10 @@ public class PlayerBlinkingAbility : MonoBehaviour
         afterBlink = true;
 
         transform.position = new Vector2(transform.position.x, transform.position.y) +
-        (moveInput * blinkingDistance * ongoingBlinkDuration);
+        (moveInput * blinkingDistance);
 
         ongoingBlinkDuration = 0f;
+        ui.TurnBlinkSlider(false);
         StartCoroutine(WaitForSec());
     }
 

@@ -617,6 +617,18 @@ public class PlayerMovement  : MonoBehaviour
 		if (RB.velocity.y < 0) //checks whether player is falling, if so we subtract the velocity.y (counteracting force of gravity). This ensures the player always reaches our desired jump force or greater
 			force.y -= RB.velocity.y;
 
+		//else
+		//	Mathf.Min(force.y + RB.velocity.y, Data.wallJumpUpForce.y + 5f);
+
+		else
+			force.y -= RB.velocity.y;
+
+
+		//else if (RB.velocity.y > 12f)
+		//{
+		//	force.y = Mathf.Min(force.y, 20f);
+		//}
+
 		//Unlike in the run we want to use the Impulse mode.
 		//The default mode will apply are force instantly ignoring masss
 		RB.AddForce(force, ForceMode2D.Impulse);

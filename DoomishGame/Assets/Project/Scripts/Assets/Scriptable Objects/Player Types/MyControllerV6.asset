@@ -36,7 +36,7 @@ MonoBehaviour:
   jumpHangAccelerationMult: 0
   jumpHangMaxSpeedMult: 0
   wallJumpForce: {x: 20, y: 17}
-  wallJumpUpForce: {x: 8, y: 21}
+  wallJumpUpForce: {x: 0, y: 21}
   wallJumpRunLerp: 0.75
   wallJumpTime: 0.2
   doTurnOnWallJump: 1

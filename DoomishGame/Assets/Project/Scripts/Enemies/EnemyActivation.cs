@@ -16,6 +16,7 @@ public class EnemyActivation : MonoBehaviour
     [HideInInspector] public float isFacingRight = 1f;
     [HideInInspector] public bool isEnemyReadyToShoot = false;
     [HideInInspector] public bool isThereLineOfSightAndInRange = false;
+    [HideInInspector] public bool ongoingShoot = false;
 
     private bool isEnemyActivated = false;
     private float distanceToPlayer = 0f;
@@ -34,13 +35,13 @@ public class EnemyActivation : MonoBehaviour
     private void Turn()
     {
         
-        if (player.transform.position.x > transform.position.x)
+        if (player.transform.position.x > transform.position.x && !ongoingShoot)
         {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             isFacingRight = 1f;
         }
 
-        else
+        else if(!ongoingShoot)
         {
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             isFacingRight = -1f;

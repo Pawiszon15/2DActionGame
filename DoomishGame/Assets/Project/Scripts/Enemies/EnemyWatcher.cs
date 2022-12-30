@@ -15,12 +15,11 @@ public class EnemyWatcher : MonoBehaviour
     [SerializeField] float abilityCooldown;
     [SerializeField] float rotationSpeed;
     [SerializeField] Transform gunPivot;
-    [SerializeField] Transform UpShootPoint, downShootPoint;
+    [SerializeField] GameObject positionUpPoint, positionDownPoint;
 
     [HideInInspector] public bool shouldUseLaser = false;
     private EnemyAnimator animator;
     private EnemyActivation enemyActivation;
-    private Vector3 positionUpPoint, positionDownPoint;
 
     private void Awake()
     {
@@ -32,9 +31,9 @@ public class EnemyWatcher : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        positionDownPoint = new Vector3(downShootPoint.position.x, downShootPoint.position.y, downShootPoint.position.z);
-        positionUpPoint = new Vector3(UpShootPoint.position.x, UpShootPoint.position.y, UpShootPoint.position.z);
-        SetBeginingRotation(positionUpPoint);
+        //positionDownPoint = new Vector3(downShootPoint.position.x, downShootPoint.position.y, downShootPoint.position.z);
+        //positionUpPoint = new Vector3(UpShootPoint.position.x, UpShootPoint.position.y, UpShootPoint.position.z);
+        SetBeginingRotation(positionUpPoint.transform.position);
         StartCoroutine(AbilityCooldown());
     }
 
@@ -57,7 +56,7 @@ public class EnemyWatcher : MonoBehaviour
 
     private void ShootLaser()
     {
-        RotateGun(positionDownPoint);
+        RotateGun(positionDownPoint.transform.position);
 
         //Debug.DrawRay(laserFirePoint.position, laserFirePoint.right * 100f, Color.red,  1f);
         if (Physics2D.Raycast(transform.position, transform.right))
@@ -99,6 +98,7 @@ public class EnemyWatcher : MonoBehaviour
 
     void StartOfTheAttack()
     {
+        enemyActivation.ongoingShoot = true;
         StartCoroutine(StopLaserAttack());
         shouldUseLaser = true;
     }
@@ -116,9 +116,10 @@ public class EnemyWatcher : MonoBehaviour
 
     IEnumerator StopLaserAttack()
     {
-        SetBeginingRotation(positionUpPoint);
+        SetBeginingRotation(positionUpPoint.transform.position);
         lineRenderer.enabled = true;
         yield return new WaitForSeconds(durationOfLaserAttack);
+        enemyActivation.ongoingShoot = false;
         lineRenderer.enabled = false;
         shouldUseLaser = false;
         StartCoroutine(AbilityCooldown());

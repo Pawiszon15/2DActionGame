@@ -467,6 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itHasShield: 0
   spriteRenderer: {fileID: 3008291904103059723}
+  explosionGuy: 0
 --- !u!114 &8999774976897829258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +513,7 @@ MonoBehaviour:
   isFacingRight: 1
   isEnemyReadyToShoot: 0
   isThereLineOfSightAndInRange: 0
+  ongoingShoot: 0
 --- !u!114 &8999774976897829261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,8 +535,8 @@ MonoBehaviour:
   abilityCooldown: 2
   rotationSpeed: 0.5
   gunPivot: {fileID: 2316599623322100488}
-  UpShootPoint: {fileID: 1681008458127409611}
-  downShootPoint: {fileID: 1681008457307520996}
+  positionUpPoint: {fileID: 1681008458127409608}
+  positionDownPoint: {fileID: 1681008457307520997}
   shouldUseLaser: 0
 --- !u!120 &8999774976897829260
 LineRenderer:

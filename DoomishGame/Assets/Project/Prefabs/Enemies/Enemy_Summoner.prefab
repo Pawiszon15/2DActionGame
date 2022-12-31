@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &691214811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691214812}
+  m_Layer: 7
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691214812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691214811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34, y: 2.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2316599622935414893}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1681008456957134470
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +196,7 @@ MonoBehaviour:
   gunPivot: {fileID: 1681008458378106156}
   rotationSpeed: 100
   isPredicterShooter: 0
+  specialTargetTransform: {fileID: 0}
 --- !u!1 &1681008458127409608
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +363,7 @@ Transform:
   - {fileID: 1681008456957134473}
   - {fileID: 1681008458378106156}
   - {fileID: 2068298536319144575}
+  - {fileID: 691214812}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -374,7 +407,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1997125485, guid: 146ac31831f7be643a69ff4727f97c12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -480,11 +513,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2b023f9422b7e4c9f405703c33ded1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackParticle: {fileID: 0}
+  attackParticle: {fileID: 7976357807012159664, guid: 8257f4ea25730ce41b4740659058cf3f, type: 3}
   chargeParticle: {fileID: 0}
   moveParticle: {fileID: 0}
   dyingParticle: {fileID: 0}
   idleParticle: {fileID: 0}
+  posOfAttackParticle: {fileID: 691214812}
   isAttacking: 0
   isCharging: 0
   isMoving: 0
@@ -770,6 +804,7 @@ MonoBehaviour:
   gunPivot: {fileID: 2316599623322100488}
   rotationSpeed: 0.5
   isPredicterShooter: 0
+  specialTargetTransform: {fileID: 0}
 --- !u!1 &8968332895286456384
 GameObject:
   m_ObjectHideFlags: 0

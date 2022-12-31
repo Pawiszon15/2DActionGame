@@ -9,6 +9,7 @@ public class EnemyAnimator : MonoBehaviour
     private Animator animator;
 
     [SerializeField] public GameObject attackParticle, chargeParticle, moveParticle, dyingParticle, idleParticle;
+    [SerializeField] Transform posOfAttackParticle;
 
     [HideInInspector] public bool isAttacking = false;
     [HideInInspector] public bool isCharging = false;
@@ -49,6 +50,12 @@ public class EnemyAnimator : MonoBehaviour
     private void CreateParticle(GameObject particleType)
     {
         GameObject obj = Instantiate(particleType , transform.position - (Vector3.up * transform.localScale.y / 2), Quaternion.Euler(-90, 0, 0));
+        Destroy(obj, 1);
+    }
+
+    private void CreatAttackParticle()
+    {
+        GameObject obj = Instantiate(attackParticle, posOfAttackParticle.position, Quaternion.identity);
         Destroy(obj, 1);
     }
 }

@@ -7,15 +7,14 @@ public class RotateEnemyWeapon : MonoBehaviour
     [SerializeField] Transform gunPivot;
     [SerializeField] float rotationSpeed;
     [SerializeField] bool isPredicterShooter;
+    [SerializeField] GameObject specialTargetTransform;
 
     private Player player;
-    private GameObject specialTargetTransform;
     private Vector2 playerPos;
 
     private void Awake()
     {
         player = FindObjectOfType<Player>();
-        //specialTargetTransform = FindObjectOfType<SpecialTarget>().gameObject;
     }
 
     private void Update()

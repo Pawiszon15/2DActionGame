@@ -26,6 +26,8 @@ AnimationClip:
     - time: 0.25
       value: {fileID: -1140058558, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
     - time: 0.375
+      value: {fileID: 1036322301, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
+    - time: 0.5
       value: {fileID: -851104690, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
     attribute: m_Sprite
     path: 
@@ -49,13 +51,14 @@ AnimationClip:
     - {fileID: -1891736351, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
     - {fileID: 1036322301, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
     - {fileID: -1140058558, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
+    - {fileID: 1036322301, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
     - {fileID: -851104690, guid: 31b639b15b87573459912d0e9225ab52, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.625
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,4 +77,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: CreatAttackParticle
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

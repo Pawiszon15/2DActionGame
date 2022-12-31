@@ -21,7 +21,7 @@ public class PlayerBlinkingAbilityUI : MonoBehaviour
     {
         if(blinkingAbility.ongoingBlinkDuration > 0 && blinkingAbility.ongoingBlink)
         {
-            slider.value = blinkingAbility.ongoingBlinkDuration/2;
+            slider.value = blinkingAbility.ongoingBlinkDuration/blinkingAbility.maxTimeOfSlowmo;
         }
     }
 

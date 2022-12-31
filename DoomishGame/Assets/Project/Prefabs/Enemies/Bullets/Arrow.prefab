@@ -166,14 +166,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.0206938, y: -0.22314692}
-      - {x: 0.90577215, y: -0.22320673}
+    - - {x: 1.0206938, y: -0.2668096}
+      - {x: 0.9104511, y: -0.2631269}
       - {x: 0.9108734, y: -0.34950256}
       - {x: 0.19071579, y: -0.35116196}
       - {x: 0.1559053, y: -0.35195243}
       - {x: 0.1561737, y: -0.40180588}
       - {x: 0.91028214, y: -0.40412807}
-      - {x: 0.907457, y: -0.53940654}
+      - {x: 0.91213477, y: -0.48701137}
+      - {x: 1.0184216, y: -0.48593396}
       - {x: 1.22398, y: -0.3804422}
 --- !u!114 &4365199596576140760
 MonoBehaviour:
@@ -188,7 +189,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 28
-  shouldCreateAnotherBullet: 1
+  shouldCreateAnotherBullet: 0
+  shouldCreatExplosion: 1
+  shouldaHaveDelay: 1
+  delayDuration: 0.25
+  layers:
+    serializedVersion: 2
+    m_Bits: 0
   bulletToCreate: {fileID: 7569741237248198324, guid: ab4029396d05aba4fa0c6c7efacf9b19, type: 3}
   firePoint: {fileID: 3977718930243766162}
 --- !u!114 &172789770632169880

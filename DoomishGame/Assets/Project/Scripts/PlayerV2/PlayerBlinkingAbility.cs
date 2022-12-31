@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerBlinkingAbility : MonoBehaviour
 {
     [Header("Ability properties")]
+    public float maxTimeOfSlowmo;
     [SerializeField][Range(0, 1)] float slowmoEffect;
     [SerializeField] float multiplayerToPreviewSpeed;
     [SerializeField] float blinkingDistance;
-    [SerializeField] float maxTimeOfSlowmo;
     [SerializeField] float hangTimeAfterBlink;
 
     [Header("Offensive ability")]
@@ -22,12 +22,12 @@ public class PlayerBlinkingAbility : MonoBehaviour
     [Header("References")]
     [SerializeField] GameObject previewOfBlink;
 
+    [HideInInspector] public float ongoingBlinkDuration;
     [HideInInspector] public bool ongoingBlink;
     [HideInInspector] public bool afterBlink = false;
+    [HideInInspector] public int currentReousrceAmount;
     private GameObject instancesOfBlink;
-    public int currentReousrceAmount;
     private Vector2 moveInput;
-    [HideInInspector] public float ongoingBlinkDuration;
 
     private Rigidbody2D rb;
     private PlayerMovement playerMovement;

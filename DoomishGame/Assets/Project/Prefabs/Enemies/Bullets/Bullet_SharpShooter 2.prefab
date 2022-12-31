@@ -141,6 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 21
   shouldCreateAnotherBullet: 1
+  layers:
+    serializedVersion: 2
+    m_Bits: 257
   bulletToCreate: {fileID: 1235635171295464583, guid: ab9e6fa0635db7749be2ccd8569897a9, type: 3}
   firePoint: {fileID: 3426099406262022269}
 --- !u!114 &7480843265258406516

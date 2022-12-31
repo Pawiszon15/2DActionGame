@@ -7,8 +7,14 @@ public class EnemyBullet : MonoBehaviour
     [Header("Properties")]
     [SerializeField] float speed;
     [SerializeField] bool shouldCreateAnotherBullet;
+    [SerializeField] bool shouldCreatExplosion;
+
+    [Header("Delay properties")]
+    [SerializeField] bool shouldaHaveDelay;
+    [SerializeField] float delayDuration;
 
     [Header("References")]
+    [SerializeField] LayerMask layers;
     [SerializeField] GameObject bulletToCreate;
     [SerializeField] Transform firePoint;
 
@@ -39,8 +45,24 @@ public class EnemyBullet : MonoBehaviour
 
         else if (collision.gameObject.tag == "Platform")
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, delayDuration + 0.1f);
             if (shouldCreateAnotherBullet)
+            {
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, firePoint.right, 100f, layers);
+                Debug.Log(hit.collider.gameObject.name);
+
+                if (hit.collider.gameObject.TryGetComponent(out PlayerMovement player))
+                {
+                    ExtraShot();
+                }
+            }
+
+            else if (shouldaHaveDelay)
+            {
+                StartCoroutine(DelayBeforeExplosion());
+            }
+
+            else if (shouldCreatExplosion)
             {
                 ExtraShot();
             }
@@ -54,7 +76,7 @@ public class EnemyBullet : MonoBehaviour
 
     public void DeflectBullet(Vector2 mouseDir)
     {
-        if(!wasDeflected)
+        if (!wasDeflected)
         {
             wasDeflected = true;
             gameObject.tag = "PlayerBullet";
@@ -62,4 +84,11 @@ public class EnemyBullet : MonoBehaviour
             rigidbody2d.velocity = mouseDir.normalized * (2 * speed);
         }
     }
+
+    private IEnumerator DelayBeforeExplosion()
+    {
+        rigidbody2d.velocity = Vector2.zero;
+        yield return new WaitForSeconds(delayDuration);
+        ExtraShot();
+    }    
 }

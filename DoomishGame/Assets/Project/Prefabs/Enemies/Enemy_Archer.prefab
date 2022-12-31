@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &414596825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414596826}
+  m_Layer: 7
+  m_Name: ShotPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &414596826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414596825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.95, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780198223650592921}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1780198223548447951
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780198223594633867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.091, y: -0.119, z: 0}
+  m_LocalPosition: {x: -0.341, y: 0.7681326, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -164,6 +195,7 @@ MonoBehaviour:
   gunPivot: {fileID: 1780198223594633866}
   rotationSpeed: 100
   isPredicterShooter: 0
+  specialTargetTransform: {fileID: 0}
 --- !u!1 &1780198223650592869
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +234,7 @@ Transform:
   m_Children:
   - {fileID: 1780198223594633866}
   - {fileID: 4115048576705455047}
+  - {fileID: 414596826}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -367,11 +400,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2b023f9422b7e4c9f405703c33ded1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackParticle: {fileID: 0}
+  attackParticle: {fileID: 2845257928829885074, guid: 407216d6829fcda49a7938b0f7f9ecb0, type: 3}
   chargeParticle: {fileID: 0}
   moveParticle: {fileID: 0}
   dyingParticle: {fileID: 0}
   idleParticle: {fileID: 0}
+  posOfAttackParticle: {fileID: 414596826}
   isAttacking: 0
   isCharging: 0
   isMoving: 0
@@ -393,13 +427,14 @@ MonoBehaviour:
   weaponPivot: {fileID: 1780198223594633866}
   layers:
     serializedVersion: 2
-    m_Bits: 311
+    m_Bits: 257
   timeToEvaulateBehaviour: 0.1
   distanceToActivate: 30
   distanceToAttack: 30
   isFacingRight: 1
   isEnemyReadyToShoot: 0
   isThereLineOfSightAndInRange: 0
+  ongoingShoot: 0
 --- !u!1 &7504930702329617308
 GameObject:
   m_ObjectHideFlags: 0

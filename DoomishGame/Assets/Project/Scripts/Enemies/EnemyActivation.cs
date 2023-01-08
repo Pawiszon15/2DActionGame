@@ -76,7 +76,7 @@ public class EnemyActivation : MonoBehaviour
                 
 
                 RaycastHit2D hit2D = Physics2D.Raycast(shootPoint.position, shootPoint.right, 100f, layers);
-                if (hit2D.collider.TryGetComponent(out PlayerMovement playerFound) || hit2D.collider.TryGetComponent(out SpecialTarget specialTarget))
+                if (hit2D.collider.TryGetComponent(out PlayerMovement playerFound) /*|| hit2D.collider.TryGetComponent(out SpecialTarget specialTarget)*/)
                 {
                     isThereLineOfSightAndInRange = true;
                 }
@@ -85,9 +85,6 @@ public class EnemyActivation : MonoBehaviour
                 {
                     isThereLineOfSightAndInRange = false;
                 }
-
-                Debug.DrawRay(shootPoint.position, shootPoint.right * 100f, Color.red, 0.3f);
-
             }
         }
     }

@@ -14,8 +14,9 @@ public class PlayerAnimator : MonoBehaviour
     private DemoManager demoManager;
     [Header("References")]
     [SerializeField] GameObject SwordGroundSlam;
-    [SerializeField] GameObject playerObject;
     [SerializeField] GameObject dashCollider;
+    [SerializeField] GameObject slashParticle;
+    [SerializeField] Transform whereToSpawnSlash;
 
     [Header("Movement Tilt")]
     [SerializeField] private float maxTilt;
@@ -151,6 +152,8 @@ public class PlayerAnimator : MonoBehaviour
     {
         shouldGroundSlam = false;
         anim.SetTrigger("isDashing");
+        GameObject objectSpawned = Instantiate(slashParticle, whereToSpawnSlash.position, whereToSpawnSlash.rotation, whereToSpawnSlash);
+        Destroy(objectSpawned, 0.5f);
     }
 
     private void StartDeflectingLogic()

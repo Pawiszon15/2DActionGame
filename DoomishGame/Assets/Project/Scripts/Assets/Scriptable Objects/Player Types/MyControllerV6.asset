@@ -28,7 +28,7 @@ MonoBehaviour:
   doConserveMomentum: 1
   jumpHeight: 4.2
   jumpTimeToApex: 0.4
-  airJumps: 1
+  airJumps: 0
   jumpForce: 20.999998
   jumpCutGravityMult: 2.5
   jumpHangGravityMult: 0

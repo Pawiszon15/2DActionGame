@@ -90,7 +90,9 @@ public class PlayerMovement  : MonoBehaviour
 	public float LastPressedJumpTime { get; private set; }
 	public float LastPressedDashTime { get; private set; }
 	public float LastPressedRollTime { get; private set; }
+	public float LastPreesedDownArrow { get; private set; }
 
+	private float downArrowBlockTime = 0.1f;
 	private PlayerPogJump playerPogJump;
     #endregion
 
@@ -146,6 +148,7 @@ public class PlayerMovement  : MonoBehaviour
 		LastPressedJumpTime -= Time.deltaTime;
 		LastPressedDashTime -= Time.deltaTime;
 		LastPressedRollTime -= Time.deltaTime;
+		LastPreesedDownArrow -= Time.deltaTime;
 		#endregion
 
 		#region INPUT HANDLER
@@ -175,7 +178,13 @@ public class PlayerMovement  : MonoBehaviour
 		{
 			OnRollInput();
 		}
-		#endregion
+
+		if(Input.GetKey(KeyCode.DownArrow))
+		{
+			Debug.Log("ispressed");
+			OnDownArrow();
+		}
+			#endregion
 
 		#region COLLISION CHECKS
 		if (!IsDashing && !IsJumping)
@@ -326,7 +335,7 @@ public class PlayerMovement  : MonoBehaviour
 		#endregion
 
 		#region ROLL CHECKS
-		if (LastPressedRollTime > 0 && !isGroundSlamming && !_rollRefilling && _rollLeft > 0 && isGrounded)
+		if (LastPressedRollTime > 0 && !isGroundSlamming && !_rollRefilling && _rollLeft > 0 && isGrounded && _moveInput.x != 0)
 		{
 			Vector2 rollDir = Vector2.zero;
 
@@ -461,15 +470,21 @@ public class PlayerMovement  : MonoBehaviour
 	}
 
 	public void OnRollInput()
-	{	
+	{
 		if(!isGroundSlamming)
-		LastPressedRollTime = Data.rollInputBufferTime;
+			LastPressedRollTime = Data.rollInputBufferTime;
+		
 	}
-	#endregion
 
-	#region GENERAL METHODS
+	public void OnDownArrow()
+	{
+        LastPreesedDownArrow = downArrowBlockTime;
+    }
+    #endregion
 
-	public void ActivateBonusSpeed(float extraSpeed)
+    #region GENERAL METHODS
+
+    public void ActivateBonusSpeed(float extraSpeed)
 	{
 		_currentSpeed = Data.runMaxSpeed + extraSpeed;
 	}
@@ -576,67 +591,75 @@ public class PlayerMovement  : MonoBehaviour
     #region JUMP METHODS
     public void Jump()
 	{
-		//Ensures we can't call Jump multiple times from one press
-		LastPressedJumpTime = 0;
-		LastOnGroundTime = 0;
+		if (LastPreesedDownArrow < 0f)
+		{
+            //Ensures we can't call Jump multiple times from one press
+            Debug.Log(LastPreesedDownArrow);
+            LastPressedJumpTime = 0;
+			LastOnGroundTime = 0;
 
-		#region Perform Jump
-		//We increase the force applied if we are falling
-		//This means we'll always feel like we jump the same amount 
-		//(setting the player's Y velocity to 0 beforehand will likely work the same, but I find this more elegant :D)
-		float force = Data.jumpForce;
-		if (RB.velocity.y < 0)
-			force -= RB.velocity.y;
+			#region Perform Jump
+			//We increase the force applied if we are falling
+			//This means we'll always feel like we jump the same amount 
+			//(setting the player's Y velocity to 0 beforehand will likely work the same, but I find this more elegant :D)
+			float force = Data.jumpForce;
+			if (RB.velocity.y < 0)
+				force -= RB.velocity.y;
 
-		RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
-		#endregion
+			RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+			#endregion
+		}
 	}
 
 	private void WallJump(int dir)
 	{
-		//Ensures we can't call Wall Jump multiple times from one press
-		LastPressedJumpTime = 0;
-		LastOnGroundTime = 0;
-		LastOnWallRightTime = 0;
-		LastOnWallLeftTime = 0;
-
-		#region Perform Wall Jump
-		Vector2 force;
-
-		if (Input.GetKey(KeyCode.UpArrow))
+		if(LastPreesedDownArrow < 0f)
 		{
-			force = new Vector2(Data.wallJumpUpForce.x, Data.wallJumpUpForce.y);
+			//Ensures we can't call Wall Jump multiple times from one press
+			Debug.Log(LastPreesedDownArrow);
+			LastPressedJumpTime = 0;
+			LastOnGroundTime = 0;
+			LastOnWallRightTime = 0;
+			LastOnWallLeftTime = 0;
+
+			#region Perform Wall Jump
+			Vector2 force;
+
+			if (Input.GetKey(KeyCode.UpArrow))
+			{
+				force = new Vector2(Data.wallJumpUpForce.x, Data.wallJumpUpForce.y);
+			}
+			else
+			{
+				force = new Vector2(Data.wallJumpForce.x, Data.wallJumpForce.y);
+
+			}
+			force.x *= dir; //apply force in opposite direction of wall
+
+			if (Mathf.Sign(RB.velocity.x) != Mathf.Sign(force.x))
+				force.x -= RB.velocity.x;
+
+			if (RB.velocity.y < 0) //checks whether player is falling, if so we subtract the velocity.y (counteracting force of gravity). This ensures the player always reaches our desired jump force or greater
+				force.y -= RB.velocity.y;
+
+			//else
+			//	Mathf.Min(force.y + RB.velocity.y, Data.wallJumpUpForce.y + 5f);
+
+			else
+				force.y -= RB.velocity.y;
+
+
+			//else if (RB.velocity.y > 12f)
+			//{
+			//	force.y = Mathf.Min(force.y, 20f);
+			//}
+
+			//Unlike in the run we want to use the Impulse mode.
+			//The default mode will apply are force instantly ignoring masss
+			RB.AddForce(force, ForceMode2D.Impulse);
+
+			#endregion
 		}
-		else
-		{
-            force = new Vector2(Data.wallJumpForce.x, Data.wallJumpForce.y);
-
-        }
-        force.x *= dir; //apply force in opposite direction of wall
-
-		if (Mathf.Sign(RB.velocity.x) != Mathf.Sign(force.x))
-			force.x -= RB.velocity.x;
-
-		if (RB.velocity.y < 0) //checks whether player is falling, if so we subtract the velocity.y (counteracting force of gravity). This ensures the player always reaches our desired jump force or greater
-			force.y -= RB.velocity.y;
-
-		//else
-		//	Mathf.Min(force.y + RB.velocity.y, Data.wallJumpUpForce.y + 5f);
-
-		else
-			force.y -= RB.velocity.y;
-
-
-		//else if (RB.velocity.y > 12f)
-		//{
-		//	force.y = Mathf.Min(force.y, 20f);
-		//}
-
-		//Unlike in the run we want to use the Impulse mode.
-		//The default mode will apply are force instantly ignoring masss
-		RB.AddForce(force, ForceMode2D.Impulse);
-
-		#endregion
 	}
 	#endregion
 

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1378236375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378236376}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378236376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378236375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0414047, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5867510763985186574}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4288630744315325724
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +124,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4288630745155505751}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -40.58, y: 29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -169,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPlayerMove: 0
-  Data: {fileID: 11400000, guid: 40541d4bfc3af9248a9e6ef3840d26d9, type: 2}
+  Data: {fileID: 11400000, guid: 4335a62a100f4ba49817c689fc8c16c2, type: 2}
   playerVisuals: {fileID: 4288630745336709231}
   mousePos: {fileID: 5867510762955904027}
   wallSlideSpeed: 0
@@ -245,18 +276,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f65c3b39e33d94a9523e150fda4c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowmoEffect: 0.5
-  multiplayerToPreviewSpeed: 5
-  blinkingDistance: 2
   maxTimeOfSlowmo: 1
-  hangTimeAfterBlink: 0.2
+  slowmoEffect: 0.25
+  multiplayerToPreviewSpeed: 5
+  blinkingDistance: 4
+  hangTimeAfterBlink: 0.15
   playerBullet: {fileID: 2864782047655724118, guid: e5377fed141b13548bf57be31dcae373, type: 3}
   bulletShotPos: {fileID: 5867510764530198394}
-  blinkCost: 0
-  maxResourcesAmount: 1
+  blinkCost: 3
+  maxResourcesAmount: 3
   previewOfBlink: {fileID: 542590072953477193, guid: 047cdcfe074c05b47834e216cb8ee0bd, type: 3}
+  ongoingBlinkDuration: 0
   ongoingBlink: 0
   afterBlink: 0
+  currentReousrceAmount: 3
 --- !u!114 &6928717206607830996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +322,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chargeDuration: 0.2
   groundSlamSpeed: 30
+  pivotPoint: {fileID: 4288630745336709228}
+  boxSize: {x: 2, y: 2}
+  layersToCheck:
+    serializedVersion: 2
+    m_Bits: 128
   isGroundSlammingWithBonus: 0
 --- !u!1 &4288630745259219738
 GameObject:
@@ -447,8 +485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deflectAbility: {fileID: 0}
   SwordGroundSlam: {fileID: 5867510763496058279}
-  playerObject: {fileID: 0}
   dashCollider: {fileID: 5867510763985186575}
+  slashParticle: {fileID: 0}
+  whereToSpawnSlash: {fileID: 1378236376}
   maxTilt: 1
   tiltSpeed: 0.344
   jumpFX: {fileID: 3234584074981126610, guid: ef64e6572022fbb47969c1618d73ef20, type: 3}
@@ -706,7 +745,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1378236376}
   m_Father: {fileID: 5867510762955904027}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -935,7 +975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5369000945664219904
 Transform:
   m_ObjectHideFlags: 0

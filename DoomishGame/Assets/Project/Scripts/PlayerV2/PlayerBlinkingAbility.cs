@@ -14,6 +14,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
     [Header("Offensive ability")]
     [SerializeField] GameObject playerBullet;
     [SerializeField] Transform bulletShotPos;
+    [SerializeField] LayerMask enemyLayers;
 
     [Header("Resources")]
     [SerializeField] int blinkCost;
@@ -32,6 +33,9 @@ public class PlayerBlinkingAbility : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerMovement playerMovement;
     private PlayerBlinkingAbilityUI ui;
+
+    private Vector2 beforeBlinkTransfrom;
+    private Vector2 afterBlinkTransform;
 
     private void Awake()
     {
@@ -110,7 +114,8 @@ public class PlayerBlinkingAbility : MonoBehaviour
 
     private void EndAbility()
     {
-        Instantiate(playerBullet, bulletShotPos.position, Quaternion.identity);
+        beforeBlinkTransfrom = transform.position;
+        //Instantiate(playerBullet, bulletShotPos.position, Quaternion.identity);
         Destroy(instancesOfBlink);
         ongoingBlink = false;
         afterBlink = true;
@@ -118,9 +123,28 @@ public class PlayerBlinkingAbility : MonoBehaviour
         transform.position = new Vector2(transform.position.x, transform.position.y) +
         (moveInput * blinkingDistance);
 
+        afterBlinkTransform = transform.position;
         ongoingBlinkDuration = 0f;
+
         ui.TurnBlinkSlider(false);
+        KillEnemiesAlongTheWay();
         StartCoroutine(WaitForSec());
+    }
+
+    private void KillEnemiesAlongTheWay()
+    {
+        RaycastHit2D[] hits2D = Physics2D.LinecastAll(beforeBlinkTransfrom, afterBlinkTransform, enemyLayers);
+        
+        Debug.Log(hits2D.Length);
+        Debug.DrawLine(beforeBlinkTransfrom, afterBlinkTransform);
+
+        foreach(RaycastHit2D hit in hits2D)
+        {
+            if(hit.collider.TryGetComponent(out BasicEnemy enemy))
+            {
+                enemy.StartDeathAnimation();
+            }
+        }
     }
 
     IEnumerator WaitForSec()
@@ -142,4 +166,6 @@ public class PlayerBlinkingAbility : MonoBehaviour
         ui.SetCurrentResources(currentReousrceAmount);
 
     }
+
+    
 }

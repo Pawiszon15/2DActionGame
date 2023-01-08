@@ -1023,9 +1023,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 90
-        y: 740
+        y: 742
         width: 90
-        height: 37
+        height: 35
       alignment: 9
       pivot: {x: 0.31, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1232,10 +1232,10 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37_53
       rect:
         serializedVersion: 2
-        x: 90
-        y: 703
-        width: 90
-        height: 37
+        x: 124
+        y: 707
+        width: 50
+        height: 22
       alignment: 9
       pivot: {x: 0.31, y: 0.42}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1253,9 +1253,9 @@ TextureImporter:
       name: Sword Master Sprite Sheet 90x37_54
       rect:
         serializedVersion: 2
-        x: 180
+        x: 174
         y: 703
-        width: 90
+        width: 96
         height: 37
       alignment: 9
       pivot: {x: 0.31, y: 0.42}

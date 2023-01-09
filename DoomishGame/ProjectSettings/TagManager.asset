@@ -26,8 +26,8 @@ TagManager:
   - PlayerPhysCollider
   - PlayerBullet
   - PlayerSpecialTarget
-  - 
-  - 
+  - OneSidePlatform
+  - EnemyBullets
   - 
   - 
   - 

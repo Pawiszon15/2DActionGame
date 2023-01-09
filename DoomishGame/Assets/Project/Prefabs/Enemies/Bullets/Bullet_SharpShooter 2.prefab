@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3311649398356717233}
   - component: {fileID: 7480843265258406516}
   - component: {fileID: 461896467808404767}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Bullet_SharpShooter 2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -141,6 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 21
   shouldCreateAnotherBullet: 1
+  shouldCreatExplosion: 0
+  shouldaHaveDelay: 0
+  delayDuration: 0
   layers:
     serializedVersion: 2
     m_Bits: 257
@@ -187,7 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1947595532763799750}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: PivotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3426099406262022269}
   - component: {fileID: 4000625153846228584}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,3 +260,4 @@ MonoBehaviour:
   gunPivot: {fileID: 1947595532763799750}
   rotationSpeed: 500
   isPredicterShooter: 0
+  specialTargetTransform: {fileID: 0}

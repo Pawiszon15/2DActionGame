@@ -38,35 +38,34 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+
+        if (!shouldCreateAnotherBullet && collision.gameObject.tag != "Player")
         {
-            manger.ResetScene();
+            Destroy(this.gameObject);
         }
 
-        else if (collision.gameObject.tag == "Platform")
+        if (shouldCreateAnotherBullet)
         {
             Destroy(this.gameObject, delayDuration + 0.1f);
-            if (shouldCreateAnotherBullet)
-            {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, firePoint.right, 100f, layers);
-                Debug.Log(hit.collider.gameObject.name);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, firePoint.right, 100f, layers);
+            Debug.Log(hit.collider.gameObject.name);
 
-                if (hit.collider.gameObject.TryGetComponent(out PlayerMovement player))
-                {
-                    ExtraShot();
-                }
-            }
-
-            else if (shouldaHaveDelay)
-            {
-                StartCoroutine(DelayBeforeExplosion());
-            }
-
-            else if (shouldCreatExplosion)
+            if (hit.collider.gameObject.TryGetComponent(out PlayerMovement isthereplayer))
             {
                 ExtraShot();
             }
         }
+
+        else if (shouldaHaveDelay)
+        {
+            StartCoroutine(DelayBeforeExplosion());
+        }
+
+        else if (shouldCreatExplosion)
+        {
+            ExtraShot();
+        }
+
     }
 
     private void ExtraShot()

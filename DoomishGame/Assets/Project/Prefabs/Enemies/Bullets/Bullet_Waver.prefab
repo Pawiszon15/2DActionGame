@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5840496625541176772}
   - component: {fileID: 4874311437658212324}
   - component: {fileID: 6711602363269081787}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Bullet_Waver
   m_TagString: Bullet
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3311649398356717233}
   - component: {fileID: -6426147970361605908}
   - component: {fileID: 789724898832219775}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Bullet_Pistol
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -106,9 +106,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &3311649398356717233
 MonoBehaviour:
@@ -124,6 +124,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   shouldCreateAnotherBullet: 0
+  shouldCreatExplosion: 0
+  shouldaHaveDelay: 0
+  delayDuration: 0
+  layers:
+    serializedVersion: 2
+    m_Bits: 0
   bulletToCreate: {fileID: 3082266481703378707, guid: 2ad7349f0e9957647b89f3ad6503d1dd, type: 3}
   firePoint: {fileID: 3426099406262022269}
 --- !u!114 &-6426147970361605908
@@ -163,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1947595532763799750}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: PivotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3426099406262022269}
   - component: {fileID: 4000625153846228584}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,3 +239,4 @@ MonoBehaviour:
   gunPivot: {fileID: 1947595532763799750}
   rotationSpeed: 100
   isPredicterShooter: 0
+  specialTargetTransform: {fileID: 0}

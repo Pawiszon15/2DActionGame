@@ -282,6 +282,7 @@ public class PlayerMovement  : MonoBehaviour
 
 			else if(LastPressedJumpTime > 0 && _bonusJumpsLeft > 0 && !Input.GetKey(KeyCode.DownArrow))
 			{
+				RB.velocity = new Vector2(RB.velocity.x, 0f);
 				IsJumping = true;
 				IsWallJumping = false;
 				_isJumpCut = false;

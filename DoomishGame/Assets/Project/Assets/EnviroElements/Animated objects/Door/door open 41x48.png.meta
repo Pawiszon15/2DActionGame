@@ -114,7 +114,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: door open 41x48_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85b7e8259f29ce4b99704a5ef9cdb94
+      internalID: 1428488267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3112fd8c30b8c49add80b110d8457e
+      internalID: -1685685741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc1a2adf48503248842ffdf728f53d2
+      internalID: 777099411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc96a8488c08954ea8d57e5f6396485
+      internalID: 1405909211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e85569be42a1f449b85405f342f22d6
+      internalID: -750579311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbda96e14fcc1448a1e4ab510f52f90
+      internalID: -822534633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_6
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6edb4d02d7c6ed44a1151e365087c1f
+      internalID: 1636541382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_7
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37b376f83e37cb4fa8296e7d35d4839
+      internalID: -326972889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_8
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244194bbfcd57ce4bbdcc6b91d6ea63d
+      internalID: -1026319245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_9
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c41b249e784b94b802d856b632915f
+      internalID: -164341249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_10
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06097caced72114d872d04ef3d8701f
+      internalID: 416209961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_11
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bac3547cf0c404781ad2327df1c3d8
+      internalID: -109211206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_12
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afaa16a121b8534fadf99f61b5b1e8b
+      internalID: 54199799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_13
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b16869142ae9eb42a8c6f8675def9e9
+      internalID: -133747603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door open 41x48_14
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 0
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7132e80550bd1bd4cbf5b951edef5be8
+      internalID: 1803553724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +440,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      door open 41x48_6: 1636541382
+      door open 41x48_5: -822534633
+      door open 41x48_12: 54199799
+      door open 41x48_9: -164341249
+      door open 41x48_10: 416209961
+      door open 41x48_3: 1405909211
+      door open 41x48_13: -133747603
+      door open 41x48_4: -750579311
+      door open 41x48_7: -326972889
+      door open 41x48_2: 777099411
+      door open 41x48_1: -1685685741
+      door open 41x48_8: -1026319245
+      door open 41x48_11: -109211206
+      door open 41x48_0: 1428488267
+      door open 41x48_14: 1803553724
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

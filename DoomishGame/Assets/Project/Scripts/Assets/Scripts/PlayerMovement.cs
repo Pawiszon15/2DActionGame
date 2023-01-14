@@ -595,7 +595,6 @@ public class PlayerMovement  : MonoBehaviour
 		if (LastPreesedDownArrow < 0f)
 		{
             //Ensures we can't call Jump multiple times from one press
-            Debug.Log(LastPreesedDownArrow);
             LastPressedJumpTime = 0;
 			LastOnGroundTime = 0;
 
@@ -617,7 +616,6 @@ public class PlayerMovement  : MonoBehaviour
 		if(LastPreesedDownArrow < 0f)
 		{
 			//Ensures we can't call Wall Jump multiple times from one press
-			Debug.Log(LastPreesedDownArrow);
 			LastPressedJumpTime = 0;
 			LastOnGroundTime = 0;
 			LastOnWallRightTime = 0;
@@ -625,6 +623,7 @@ public class PlayerMovement  : MonoBehaviour
 
 			#region Perform Wall Jump
 			Vector2 force;
+			RB.velocity = Vector2.zero;
 
 			if (Input.GetKey(KeyCode.UpArrow))
 			{

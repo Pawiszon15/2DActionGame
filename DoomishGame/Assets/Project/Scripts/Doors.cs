@@ -6,22 +6,29 @@ using UnityEngine;
 public class Doors : MonoBehaviour
 {
     [SerializeField] int enemiesToOpenTheDoor;
-    [SerializeField] GameObject whereToMovePlayers;
     [SerializeField] CinemachineVirtualCamera currentCamera;
     [SerializeField] CinemachineVirtualCamera cameraToActivate;
+    [SerializeField] Transform whereToMovePlayers;
 
+
+    private Vector2 VectorWhereToMovePlayer;
+    private GameObject PlayerPointDoors;
     private GameManger gameManager;
     private bool doorOpen = false;
     private Animator animator;
+    private GameObject playerController;
 
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManger>();
         animator = GetComponent<Animator>();
+        playerController = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
     private void Start()
     {
+        VectorWhereToMovePlayer = new Vector2(whereToMovePlayers.transform.position.x, whereToMovePlayers.transform.position.y);
+
         if (enemiesToOpenTheDoor == 0)
         {
             OpenTheDoor();
@@ -41,10 +48,11 @@ public class Doors : MonoBehaviour
     {
         if(collision.TryGetComponent(out PlayerMovement player) && doorOpen)
         {
-            player.gameObject.transform.position = whereToMovePlayers.transform.position;
             cameraToActivate.Priority = currentCamera.Priority;
             currentCamera.Priority = 0;
-            gameManager.SavePlayerPosition(whereToMovePlayers.transform.position);
+            gameManager.SavePlayerPosition(VectorWhereToMovePlayer);
+            Time.timeScale = 0.05f;
+            StartCoroutine(WaitForCameraChanged());
         }
     }
 
@@ -52,5 +60,12 @@ public class Doors : MonoBehaviour
     {
         doorOpen = true;
         animator.SetBool("DoorOpen", true);
+    }
+
+    IEnumerator WaitForCameraChanged()
+    {
+        yield return new WaitForSecondsRealtime(0.7f);
+        playerController.transform.position = whereToMovePlayers.position;
+        Time.timeScale = 1f;
     }
 }

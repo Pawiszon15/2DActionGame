@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Doors : MonoBehaviour
-{
+{    
     [SerializeField] int enemiesToOpenTheDoor;
+    [SerializeField] bool isThisFinalDoor;
     [SerializeField] CinemachineVirtualCamera currentCamera;
     [SerializeField] CinemachineVirtualCamera cameraToActivate;
     [SerializeField] Transform whereToMovePlayers;
-
 
     private Vector2 VectorWhereToMovePlayer;
     private GameObject PlayerPointDoors;
@@ -35,6 +35,11 @@ public class Doors : MonoBehaviour
         }
     }
 
+    public void HowManyEnemiesAreThere()
+    {
+        enemiesToOpenTheDoor++;
+    }
+
     public void enemyKilled()
     {
         enemiesToOpenTheDoor--;
@@ -48,11 +53,19 @@ public class Doors : MonoBehaviour
     {
         if(collision.TryGetComponent(out PlayerMovement player) && doorOpen)
         {
-            cameraToActivate.Priority = currentCamera.Priority;
-            currentCamera.Priority = 0;
-            gameManager.SavePlayerPosition(VectorWhereToMovePlayer);
-            Time.timeScale = 0.05f;
-            StartCoroutine(WaitForCameraChanged());
+            if (isThisFinalDoor)
+            {
+                gameManager.WinTheLevel();
+            }
+
+            else
+            {
+                cameraToActivate.Priority = currentCamera.Priority;
+                currentCamera.Priority = 0;
+                gameManager.SavePlayerPosition(VectorWhereToMovePlayer, cameraToActivate, FindObjectOfType<TimeDisplay>().timeAfterStartingLevel);
+                Time.timeScale = 0.05f;
+                StartCoroutine(WaitForCameraChanged());
+            }
         }
     }
 

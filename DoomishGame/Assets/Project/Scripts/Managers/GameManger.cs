@@ -5,16 +5,20 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using Unity.VisualScripting;
 
 class GameManger : MonoBehaviour
 {
     public static GameManger Instance;
 
     public Vector3 whereToSpawnPlayer;
+    public string whichCameraToChose;
+    public float savedLevelDuration;
     [SerializeField] int howManyEnemies;
     
 
     private GameObject player;
+
 
     private void Awake()
     {
@@ -34,7 +38,6 @@ class GameManger : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
-        howManyEnemies = FindObjectsOfType<BasicEnemy>().Length;
     }
 
     void Update()
@@ -43,38 +46,37 @@ class GameManger : MonoBehaviour
         {
             Debug.Log("r pressed");
             ResetScene();
-            StartCoroutine(WaitForSecond());
         }
     }
-
-    public void KilledEnemy()
-    {
-        howManyEnemies--;
-        //CheckForWin();
-    }
-
-    //private void CheckForWin()
-    //{
-    //    if(0 >= howManyEnemies)
-    //    {
-    //        Time.timeScale = 0f;
-    //    }
-    //}
 
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(WaitForSecond());
     }
 
-    public void SavePlayerPosition(Vector3 transform)
+    public void SavePlayerPosition(Vector3 transform, CinemachineVirtualCamera virtualCamera, float currentTime)
     {
         Instance.whereToSpawnPlayer = transform;
+        whichCameraToChose = virtualCamera.name;
+        savedLevelDuration = currentTime;
+    }
+
+    public void WinTheLevel()
+    {
+        Time.timeScale = 0f;
     }
 
     IEnumerator WaitForSecond()
     {       
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.3f);
+
+        FindObjectOfType<TimeDisplay>().setTimerAfter(savedLevelDuration);
+
         player = FindObjectOfType<PlayerMovement>().gameObject;
         player.transform.position = whereToSpawnPlayer;
+
+        GameObject cameraVirtualAfterRestart =  GameObject.Find(whichCameraToChose);
+        cameraVirtualAfterRestart.GetComponent<CinemachineVirtualCamera>().Priority = 20;
     }
 }

@@ -15,7 +15,7 @@ public class TimeDisplay : MonoBehaviour
     [SerializeField] GameManger gameManger;
 
     private bool firstInput;
-    private float timeAfterStartingLevel;
+    public float timeAfterStartingLevel;
     private TextMeshProUGUI TimerTxt;
 
     private void Awake()
@@ -79,5 +79,9 @@ public class TimeDisplay : MonoBehaviour
         TimerTxt.text = TimeSpan.FromSeconds(currentTime).ToString("ss\\.fff");
     }
 
+    public void setTimerAfter(float timeAfterLoad)
+    {
+        timeAfterStartingLevel = timeAfterLoad;
+    }
 }
 

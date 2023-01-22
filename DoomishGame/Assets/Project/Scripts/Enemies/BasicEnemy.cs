@@ -7,6 +7,7 @@ public class BasicEnemy : MonoBehaviour
     public bool itHasShield = false;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] bool explosionGuy;
+    [SerializeField] Doors door;
 
     private GameManger gameManger;
     private bool firstDMG;
@@ -21,6 +22,7 @@ public class BasicEnemy : MonoBehaviour
         enemyAnimator = GetComponent<EnemyAnimator>();
         gameManger = FindObjectOfType<GameManger>();
 
+        door.HowManyEnemiesAreThere();
         firstDMG = true;
     }
 
@@ -45,17 +47,17 @@ public class BasicEnemy : MonoBehaviour
 
     public void StartDeathAnimation()
     {
+        door.enemyKilled();
         firstDMG = false;
         blinkingAbility.AddResources();
         killingSpree.AddEnemyToKillingManager();
         enemyAnimator.StartDeathAnimation();
         //StartCoroutine(StopTimeForMomemnt());
         //player.InstaDashRefill();
- }
+    }
 
     public void KillEnemy()
     {
-        gameManger.KilledEnemy();
         Destroy(this.gameObject);
     }
 

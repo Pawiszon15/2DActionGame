@@ -6,15 +6,18 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 class GameManger : MonoBehaviour
 {
     public static GameManger Instance;
 
     public Vector3 whereToSpawnPlayer;
-    public string whichCameraToChose;
+    public string whichCameraToChose = null;
     public float savedLevelDuration;
+    
     [SerializeField] int howManyEnemies;
+    [SerializeField] Image image;
     
 
     private GameObject player;
@@ -32,11 +35,11 @@ class GameManger : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
     }
 
     private void Start()
     {
+        MovePlayer();
         player = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
@@ -47,12 +50,13 @@ class GameManger : MonoBehaviour
             Debug.Log("r pressed");
             ResetScene();
         }
+
+
     }
 
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        StartCoroutine(WaitForSecond());
     }
 
     public void SavePlayerPosition(Vector3 transform, CinemachineVirtualCamera virtualCamera, float currentTime)
@@ -67,16 +71,21 @@ class GameManger : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    IEnumerator WaitForSecond()
-    {       
-        yield return new WaitForSeconds(0.3f);
+    public void OnLevelWasLoaded(int level)
+    {
+        if (whichCameraToChose != null)
+        {
+            FindObjectOfType<TimeDisplay>().setTimerAfter(savedLevelDuration);
 
-        FindObjectOfType<TimeDisplay>().setTimerAfter(savedLevelDuration);
+            player = FindObjectOfType<PlayerMovement>().gameObject;
+            player.transform.position = whereToSpawnPlayer;
 
-        player = FindObjectOfType<PlayerMovement>().gameObject;
-        player.transform.position = whereToSpawnPlayer;
+            GameObject cameraVirtualAfterRestart = GameObject.Find(whichCameraToChose);
+            cameraVirtualAfterRestart.GetComponent<CinemachineVirtualCamera>().Priority = 20;
+        }
+    }
+    public void MovePlayer()
+    {
 
-        GameObject cameraVirtualAfterRestart =  GameObject.Find(whichCameraToChose);
-        cameraVirtualAfterRestart.GetComponent<CinemachineVirtualCamera>().Priority = 20;
     }
 }

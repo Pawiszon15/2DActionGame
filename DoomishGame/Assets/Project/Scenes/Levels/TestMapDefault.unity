@@ -493,7 +493,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 384
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 1
@@ -1459,7 +1459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524970998559066275, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.23
+      value: 10.69
       objectReference: {fileID: 0}
     - target: {fileID: 2524970998559066275, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2107,7 +2107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524970998559066275, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2429285
+      value: 3.74
       objectReference: {fileID: 0}
     - target: {fileID: 2524970998559066275, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2523,7 +2523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524970998559066275, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.91
+      value: 15.7
       objectReference: {fileID: 0}
     - target: {fileID: 2524970998559066275, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18924,6 +18924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pogable
       objectReference: {fileID: 0}
+    - target: {fileID: 4062706409917752823, guid: d0f9f2f37b55ec54f87950c8aa76afe2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f9f2f37b55ec54f87950c8aa76afe2, type: 3}
 --- !u!1 &2113847679
@@ -19348,6 +19352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4288630745155505751, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4288630745155505770, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: blinkingDistance
       value: 6
@@ -19360,10 +19368,42 @@ PrefabInstance:
       propertyPath: mousePos
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4288630745259219738, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4288630745336709221, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: slashParticle
       value: 
       objectReference: {fileID: 8272386410410323952, guid: 4c1ee30427f172045b7928dc9c28f34a, type: 3}
+    - target: {fileID: 4288630745336709231, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510762955904024, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510763933416481, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510764184109156, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510764456643915, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510764530198395, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316867833199621780, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6928717206607830996, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: additionalBonusSpeed
       value: 3

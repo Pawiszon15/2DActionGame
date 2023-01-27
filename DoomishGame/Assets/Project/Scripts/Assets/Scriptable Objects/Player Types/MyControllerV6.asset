@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5759d6a660e3ac14dbd9a801bf9d7627, type: 3}
   m_Name: MyControllerV6
   m_EditorClassIdentifier: 
-  gravityStrength: -50
-  gravityScale: 5.09684
+  gravityStrength: -51.249996
+  gravityScale: 5.2242603
   fallGravityMult: 2
   maxFallSpeed: 20
   fastFallGravityMult: 2
@@ -26,10 +26,10 @@ MonoBehaviour:
   accelInAir: 0.9
   deccelInAir: 0.2
   doConserveMomentum: 1
-  jumpHeight: 4
+  jumpHeight: 4.1
   jumpTimeToApex: 0.4
   airJumps: 1
-  jumpForce: 20
+  jumpForce: 20.499998
   jumpCutGravityMult: 2.5
   jumpHangGravityMult: 0
   jumpHangTimeThreshold: 0

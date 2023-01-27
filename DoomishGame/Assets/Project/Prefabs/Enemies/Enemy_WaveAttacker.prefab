@@ -298,7 +298,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -345,6 +345,7 @@ MonoBehaviour:
   itHasShield: 0
   spriteRenderer: {fileID: 8620803799105261752}
   explosionGuy: 0
+  door: {fileID: 0}
 --- !u!114 &1882431542433994251
 MonoBehaviour:
   m_ObjectHideFlags: 0

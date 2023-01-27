@@ -298,7 +298,7 @@ public class PlayerMovement  : MonoBehaviour
 			else if(playerPogJump.makingPogJump && !Input.GetKey(KeyCode.DownArrow))
 			{
 				//to make sure that forces from jump and pog jump doesn't interefe with each other
-				RB.velocity = Vector2.zero;
+				RB.velocity = new Vector2(RB.velocity.x, 0);
 
                 IsJumping = true;
                 IsWallJumping = false;

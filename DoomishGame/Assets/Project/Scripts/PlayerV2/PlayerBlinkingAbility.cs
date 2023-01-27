@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerBlinkingAbility : MonoBehaviour
 {
@@ -21,8 +24,9 @@ public class PlayerBlinkingAbility : MonoBehaviour
     [SerializeField] int maxResourcesAmount;
 
     [Header("References")]
+    [SerializeField] LayerMask layerToCheck;
     [SerializeField] GameObject previewOfBlink;
-
+    [SerializeField] Transform placeOfCheck;
     [HideInInspector] public float ongoingBlinkDuration;
     [HideInInspector] public bool ongoingBlink;
     [HideInInspector] public bool afterBlink = false;
@@ -78,14 +82,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
         {
             if (blinkCost <= currentReousrceAmount)
             {
-                currentReousrceAmount -= blinkCost;
-                ui.SetCurrentResources(currentReousrceAmount);
-                ui.TurnBlinkSlider(true);
-
-                ongoingBlinkDuration = maxTimeOfSlowmo;
-                instancesOfBlink = Instantiate(previewOfBlink, transform.position, Quaternion.identity);
-                instancesOfBlink.transform.parent = transform;
-                ongoingBlink = true;
+                HandleResources();
                 StartCoroutine(StartAbility());
             }
 
@@ -101,9 +98,25 @@ public class PlayerBlinkingAbility : MonoBehaviour
         
     }
 
+    private void ShootLaser()
+    {
+        Vector2 dir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        RaycastHit2D hit = Physics2D.Raycast(placeOfCheck.position, dir, 100f, layerToCheck);   
+    }
+
+    private void HandleResources()
+    {
+        currentReousrceAmount -= blinkCost;
+        ui.SetCurrentResources(currentReousrceAmount);
+        ui.TurnBlinkSlider(true);
+    }
     IEnumerator StartAbility()
     {
-        Debug.Log("start sth");
+        ongoingBlinkDuration = maxTimeOfSlowmo;
+        instancesOfBlink = Instantiate(previewOfBlink, transform.position, Quaternion.identity);
+        instancesOfBlink.transform.parent = transform;
+        ongoingBlink = true;
+
         Time.timeScale = slowmoEffect;
         yield return new WaitForSeconds(maxTimeOfSlowmo);
         if (ongoingBlink)
@@ -111,7 +124,6 @@ public class PlayerBlinkingAbility : MonoBehaviour
             EndAbility();
         }
     }
-
     private void EndAbility()
     {
         beforeBlinkTransfrom = transform.position;
@@ -130,7 +142,6 @@ public class PlayerBlinkingAbility : MonoBehaviour
         KillEnemiesAlongTheWay();
         StartCoroutine(WaitForSec());
     }
-
     private void KillEnemiesAlongTheWay()
     {
         RaycastHit2D[] hits2D = Physics2D.LinecastAll(beforeBlinkTransfrom, afterBlinkTransform, enemyLayers);
@@ -146,7 +157,6 @@ public class PlayerBlinkingAbility : MonoBehaviour
             }
         }
     }
-
     IEnumerator WaitForSec()
     {
         rb.velocity = Vector2.zero;
@@ -155,7 +165,6 @@ public class PlayerBlinkingAbility : MonoBehaviour
         Time.timeScale = 1f;
         afterBlink = false;
     }
-
     public void AddResources()
     {
         if (currentReousrceAmount != maxResourcesAmount)
@@ -164,8 +173,5 @@ public class PlayerBlinkingAbility : MonoBehaviour
 
         }
         ui.SetCurrentResources(currentReousrceAmount);
-
     }
-
-    
 }

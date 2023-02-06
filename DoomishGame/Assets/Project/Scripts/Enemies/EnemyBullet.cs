@@ -39,7 +39,7 @@ public class EnemyBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (!shouldCreateAnotherBullet && collision.gameObject.tag != "Player")
+        if (!shouldCreateAnotherBullet && collision.gameObject.tag == "Platform")
         {
             Destroy(this.gameObject);
         }
@@ -79,6 +79,7 @@ public class EnemyBullet : MonoBehaviour
         {
             wasDeflected = true;
             gameObject.tag = "PlayerBullet";
+            gameObject.layer = 0;
             //rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
             rigidbody2d.velocity = mouseDir.normalized * (2 * speed);
         }

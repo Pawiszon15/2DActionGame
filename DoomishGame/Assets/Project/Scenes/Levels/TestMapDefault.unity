@@ -19356,6 +19356,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4288630745155505769, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: layer.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 4288630745155505770, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: blinkingDistance
       value: 6
@@ -19391,6 +19395,18 @@ PrefabInstance:
     - target: {fileID: 5867510764184109156, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510764219622412, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510764219623410, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867510764456643915, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867510764456643915, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: m_TagString

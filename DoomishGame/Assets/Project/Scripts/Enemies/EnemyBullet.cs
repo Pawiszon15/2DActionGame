@@ -79,7 +79,7 @@ public class EnemyBullet : MonoBehaviour
         {
             wasDeflected = true;
             gameObject.tag = "PlayerBullet";
-            gameObject.layer = 0;
+            gameObject.layer = 0    ;
             //rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
             rigidbody2d.velocity = mouseDir.normalized * (2 * speed);
         }

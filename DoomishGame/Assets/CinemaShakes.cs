@@ -5,36 +5,40 @@ using Cinemachine;
 
 public class CinemaShakes : MonoBehaviour
 {
-    CinemachineVirtualCamera[] camerasOnMap;
+    [SerializeField] CinemachineVirtualCamera[] camerasOnMap;
+    [SerializeField] CinemachineBasicMultiChannelPerlin[] shakeComponent;
 
     private void Awake()
     {
-        camerasOnMap = FindObjectsOfType<CinemachineVirtualCamera>();
+        for (int j = 0; j < shakeComponent.Length; ++j)
+        {
+            shakeComponent[j] = camerasOnMap[j].GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        }
     }
 
     public void CameraShakeStart(float intesity, float time)
     {
-        StopCoroutine(CameraShakeTimer(time));
+        StartCoroutine(CameraShakeTimer());
 
-        foreach (CinemachineVirtualCamera cam in camerasOnMap)
+        for(int j = 0; j < shakeComponent.Length; ++j)
         {
-            cam.GetComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = intesity;
-            cam.GetComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = time;
+            shakeComponent[j].m_AmplitudeGain = intesity;
+            shakeComponent[j].m_FrequencyGain = time;
         }
     }
 
     private void CameraShakeStop()
     {
-        foreach (CinemachineVirtualCamera cam in camerasOnMap)
+        for (int j = 0; j < shakeComponent.Length; ++j)
         {
-            cam.GetComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0f;
-            cam.GetComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 0f;
+            shakeComponent[j].m_AmplitudeGain = 0f;
+            shakeComponent[j].m_FrequencyGain = 0f;
         }
     }
 
-    IEnumerator CameraShakeTimer(float time)
+    IEnumerator CameraShakeTimer()
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(0.1f);
         CameraShakeStop();
     }
 

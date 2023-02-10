@@ -14,9 +14,11 @@ public class BasicEnemy : MonoBehaviour
     private EnemyAnimator enemyAnimator;
     private KillingSpree killingSpree;
     private PlayerBlinkingAbility blinkingAbility;
+    private CinemaShakes cinemaShakes;
 
     private void Awake()
     {
+        cinemaShakes = FindObjectOfType<CinemaShakes>();
         blinkingAbility = FindObjectOfType<PlayerBlinkingAbility>();
         killingSpree = FindObjectOfType<KillingSpree>();
         enemyAnimator = GetComponent<EnemyAnimator>();
@@ -47,11 +49,13 @@ public class BasicEnemy : MonoBehaviour
 
     public void StartDeathAnimation()
     {
+        cinemaShakes.CameraShakeStart(2, 2f);
         door.enemyKilled();
         firstDMG = false;
         blinkingAbility.AddResources();
         killingSpree.AddEnemyToKillingManager();
         enemyAnimator.StartDeathAnimation();
+
         //StartCoroutine(StopTimeForMomemnt());
         //player.InstaDashRefill();
     }

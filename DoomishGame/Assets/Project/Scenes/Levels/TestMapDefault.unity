@@ -368,8 +368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1
-  m_FrequencyGain: 1
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &311189448
 GameObject:
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1
+  m_AmplitudeGain: 0
   m_FrequencyGain: 0
   mNoiseOffsets: {x: -326.62167, y: -452.76868, z: -925.7765}
 --- !u!1001 &857454016
@@ -1661,8 +1661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1
-  m_FrequencyGain: 1
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &1041519415
 PrefabInstance:
@@ -2383,8 +2383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 1
-  m_FrequencyGain: 1
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!4 &1264170649 stripped
 Transform:
@@ -3010,12 +3010,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startScale: {x: 1, y: 1}
   _endScale: {x: 1, y: 1}
-  _trailLifetime: 0.4
+  _trailLifetime: 0.3
   _spawnType: 0
   _timeBetweenTrailSpawn: 0.2
   _distanceBetweenTrailSpawn: 0.1
   _alphaUpdateOn: 1
-  _maxAlpha: 0.3
+  _maxAlpha: 0.2
   _minAlpha: 0
   _useSolidColors: 0
   _rainbowMode: 0
@@ -3051,7 +3051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1775563232
 Transform:
   m_ObjectHideFlags: 0
@@ -19728,7 +19728,7 @@ PrefabInstance:
     - target: {fileID: 4288630745336709221, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: slashParticle
       value: 
-      objectReference: {fileID: 8272386410410323952, guid: 4c1ee30427f172045b7928dc9c28f34a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4288630745336709221, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: trialRenderer
       value: 
@@ -19893,6 +19893,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4260be1adb548ee47815a535351eeb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camerasOnMap:
+  - {fileID: 1883623667}
+  - {fileID: 1301970497}
+  - {fileID: 1149955918}
+  - {fileID: 148641482}
+  shakeComponent:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &8897905149454823639
 PrefabInstance:
   m_ObjectHideFlags: 0

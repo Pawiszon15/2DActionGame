@@ -181,7 +181,6 @@ public class PlayerMovement  : MonoBehaviour
 
 		if(Input.GetKey(KeyCode.DownArrow))
 		{
-			Debug.Log("ispressed");
 			OnDownArrow();
 		}
 			#endregion

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 114821
+  controlID: 120520
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 114822
+  controlID: 120521
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 114823
+  controlID: 120522
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,7 +228,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 921cf0ff90c2f1ff16c6f1ff42cbf1ff48aaf2ff02d5f2ff343df3ff5a44f3ff8844f3ffc051f3ff525af3ff4407f6ff4607f6ff2213f6ffde14f6ff2415f6ff6c15f6ffc015f6ffcc17f6ff261bf6ff921ef6ff9234f6ff80e7f7ff665bf8ffaa5bf8ff0e5df8ff605df8ffc45df8ff745ef8ff3862f8fff81ffcffd221fcffde21fcffea21fcffec21fcffb224fcff4029fcfff82bfcffa877fcffe458ffff685afffff85affff265bffffb462ffffba65ffff0efbffff56750000cc190100241a0100661a01007c1a0100ae1a0100b81a0100a6ac0100d8ac010034ad01004cad010064ad010052fa0200d6fa0200eafa020006fb0200709903007499030006a2030022a2030026a4030058a403005ca40300c0a40300d6a40300dca4030004a5030030a50300dac705007cc805009e73060020740600
+      m_ExpandedIDs: 881af0ff921cf0ff90c2f1ff16c6f1ff42cbf1ff48aaf2ff02d5f2ff343df3ff5a44f3ff8844f3ffc051f3ff525af3ff4407f6ff4607f6ff2213f6ffde14f6ff2415f6ff6c15f6ffc015f6ffcc17f6ff261bf6ff921ef6ff9234f6ff80e7f7ff665bf8ffaa5bf8ff0e5df8ff605df8ffc45df8ff745ef8ff3862f8fff81ffcffd221fcffde21fcffea21fcffec21fcffb224fcff4029fcfff82bfcffa877fcffe458ffff685afffff85affff265bffffb462ffffba65ffff0efbffff56750000cc190100241a0100661a01007c1a0100ae1a0100b81a0100a6ac0100d8ac010034ad01004cad010064ad010052fa0200d6fa0200eafa020006fb0200709903007499030006a2030022a2030026a4030058a403005ca40300c0a40300d6a40300dca4030004a5030030a50300dac705007cc805009e730600f0730600f87306000674060030740600
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -559,9 +559,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 32.799324, y: 8.545217, z: -0.40883943}
+    m_Target: {x: -41.068817, y: 26.049799, z: 0.4840065}
     speed: 2
-    m_Value: {x: 32.799324, y: 8.545217, z: -0.40883943}
+    m_Value: {x: -41.068817, y: 26.049799, z: 0.4840065}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,9 +612,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 33.48556
+    m_Target: 18.28139
     speed: 2
-    m_Value: 33.48556
+    m_Value: 18.28139
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -707,22 +707,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Project/Scenes
+    - Assets/Project/Prefabs/Enemies/VFXs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Project/Scenes
+  - Assets/Project/Prefabs/Enemies/VFXs
   m_LastFoldersGridSize: 71
   m_LastProjectPath: E:\Projekty\Unseen Silance\Streets of Edo\2DActionGame\DoomishGame
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 235.00006}
-    m_SelectedIDs: b07d0000
-    m_LastClickedID: 32176
-    m_ExpandedIDs: 000000007a7d00007c7d00007e7d0000807d0000827d000000ca9a3b
+    scrollPos: {x: 0, y: 299.00006}
+    m_SelectedIDs: 7a950000
+    m_LastClickedID: 38266
+    m_ExpandedIDs: 000000007a7d00007c7d00007e7d0000807d0000827d0000ae7d00002485000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -775,8 +775,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ba1bf0ff
-    m_LastClickedInstanceID: -1041478
+    m_SelectedInstanceIDs: 347aefff
+    m_LastClickedInstanceID: -1082828
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000cd60000e0880000c8a10000b47b000078a40000507b0000e4a50000
     m_RenameOverlay:
@@ -894,7 +894,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1041478
+  m_LastInspectedObjectInstanceID: -1082828
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

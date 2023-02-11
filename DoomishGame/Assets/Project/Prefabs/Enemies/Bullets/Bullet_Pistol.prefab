@@ -132,6 +132,8 @@ MonoBehaviour:
     m_Bits: 0
   bulletToCreate: {fileID: 3082266481703378707, guid: 2ad7349f0e9957647b89f3ad6503d1dd, type: 3}
   firePoint: {fileID: 3426099406262022269}
+  counterParticle: {fileID: 6355577125590132795, guid: 40fbf0b81fa49d64c8b19b997b8477ee, type: 3}
+  destrBulletParticle: {fileID: 3755740461276206217, guid: 0dbbf6224fc6a8c48bb227f7cde45c41, type: 3}
 --- !u!114 &-6426147970361605908
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] LayerMask layers;
     [SerializeField] GameObject bulletToCreate;
     [SerializeField] Transform firePoint;
+    [SerializeField] GameObject counterParticle;
+    [SerializeField] GameObject destrBulletParticle;
 
     private Rigidbody2D rigidbody2d;
     private GameManger manger;
@@ -43,6 +45,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (!shouldCreateAnotherBullet && collision.gameObject.tag == "Platform")
         {
+            Instantiate(destrBulletParticle, transform.position, Quaternion.identity);
             cinemaShakes.CameraShakeStart(0.8f, 0.2f);
             Destroy(this.gameObject);
         }
@@ -81,6 +84,8 @@ public class EnemyBullet : MonoBehaviour
     {
         if (!wasDeflected)
         {
+            GameObject particleObject = Instantiate(counterParticle, transform.position, Quaternion.identity);
+            Destroy(particleObject,0.25f);
             cinemaShakes.CameraShakeStart(1f, 0.1f);
             wasDeflected = true;
             gameObject.tag = "PlayerBullet";

@@ -31,12 +31,7 @@ public class WaverBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            manger.ResetScene();
-        }
-
-        else if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "Platform")
         {
             Destroy(this.gameObject);
         }

@@ -8,6 +8,7 @@ public class TrapSaw : MonoBehaviour
 {
     [SerializeField] GameObject gameObjectToMove;
     [SerializeField] float sawSpeed;
+    [SerializeField] bool HorizontalSaw;
     [SerializeField] Transform Point1;
     [SerializeField] Transform Point2;
 
@@ -36,8 +37,16 @@ public class TrapSaw : MonoBehaviour
 
     private void AchivedPoint()
     {
-        if (Mathf.Round(gameObjectToMove.transform.position.x) == Mathf.Round(pointToMove.position.x))
-            //|| Mathf.Round(gameObjectToMove.transform.position.y) == Mathf.Round(pointToMove.position.y))
+        if (Mathf.Round(gameObjectToMove.transform.position.x) == Mathf.Round(pointToMove.position.x) && HorizontalSaw)
+        //|| Mathf.Round(gameObjectToMove.transform.position.y) == Mathf.Round(pointToMove.position.y))
+        {
+            Debug.Log("similar pos");
+            tempPoint = pointToMove;
+            pointToMove = secondPoint;
+            secondPoint = tempPoint;
+        }
+
+        else if (Mathf.Round(gameObjectToMove.transform.position.y) == Mathf.Round(pointToMove.position.y) && !HorizontalSaw)
         {
             Debug.Log("similar pos");
             tempPoint = pointToMove;

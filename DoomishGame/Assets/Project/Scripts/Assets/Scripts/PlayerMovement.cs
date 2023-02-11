@@ -22,6 +22,7 @@ public class PlayerMovement  : MonoBehaviour
 	[SerializeField] Transform mousePos;
 	[SerializeField] float wallSlideSpeed;
 	[SerializeField] GameObject dashCollider;
+	[SerializeField] LayerMask wallLayer;
 
 	private GroundSlamWithBonus groundSlamWithBonus;
 	private PlayerBlinkingAbility blikingAbility;
@@ -32,7 +33,7 @@ public class PlayerMovement  : MonoBehaviour
 	public bool isWallSliding { get; private set; }
 	public bool isGroundSlamming { get; set; }
 	public bool recentlyReallyColseToWalls { get; private set; }
-
+	
     #endregion
 
     #region COMPONENTS
@@ -201,15 +202,15 @@ public class PlayerMovement  : MonoBehaviour
             }		
 
 			//Right Wall Check
-			if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)
-					|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)) && !IsWallJumping)
+			if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, wallLayer) && IsFacingRight)
+					|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, wallLayer) && !IsFacingRight)) && !IsWallJumping)
 				LastOnWallRightTime = Data.coyoteTime;
 				
 				
 
 			//Right Wall Check
-			if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)
-				|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)) && !IsWallJumping)
+			if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, wallLayer) && !IsFacingRight)
+				|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, wallLayer) && IsFacingRight)) && !IsWallJumping)
 				LastOnWallLeftTime = Data.coyoteTime;
 
 

@@ -152,8 +152,8 @@ public class PlayerAnimator : MonoBehaviour
     {
         shouldGroundSlam = false;
         anim.SetTrigger("isDashing");
-        GameObject objectSpawned = Instantiate(slashParticle, whereToSpawnSlash.position, whereToSpawnSlash.rotation, whereToSpawnSlash);
-        Destroy(objectSpawned, 0.5f);
+/*        GameObject objectSpawned = Instantiate(slashParticle, whereToSpawnSlash.position, whereToSpawnSlash.rotation, whereToSpawnSlash);
+        Destroy(objectSpawned, 0.5f);*/
     }
 
     private void StartDeflectingLogic()

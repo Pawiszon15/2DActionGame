@@ -21,9 +21,10 @@ public class GroundSlamWithBonus : MonoBehaviour
     PlayerMovement playerMovement;
     PlayerBlinkingAbility playerBlinkingAbility;
     Rigidbody2D rb;
-
+    CinemaShakes cinemaShakes;
     private void Awake()
     {
+        cinemaShakes = GetComponent<CinemaShakes>();
         playerBlinkingAbility = GetComponent<PlayerBlinkingAbility>();
         playerMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody2D>();
@@ -55,6 +56,7 @@ public class GroundSlamWithBonus : MonoBehaviour
         //Additional conditions are needed, when we do some action to break ground slam action
         else if (isGroundSlammingWithBonus && playerMovement.isGrounded)
         {
+            cinemaShakes.CameraShakeStart(2f, 0.15f);
             KillNerbayEnemies();
             isGroundSlammingWithBonus = false;
         }

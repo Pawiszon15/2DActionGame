@@ -22,11 +22,13 @@ public class EnemyBullet : MonoBehaviour
     private GameManger manger;
     private Player player;
     private bool wasDeflected = false;
+    private CinemaShakes cinemaShakes;
 
     private void Awake()
     {
         manger = FindObjectOfType<GameManger>();
         player = FindObjectOfType<Player>();
+        cinemaShakes = FindObjectOfType<CinemaShakes>();
     }
 
     private void Start()
@@ -41,6 +43,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (!shouldCreateAnotherBullet && collision.gameObject.tag == "Platform")
         {
+            cinemaShakes.CameraShakeStart(0.8f, 0.2f);
             Destroy(this.gameObject);
         }
 
@@ -63,6 +66,7 @@ public class EnemyBullet : MonoBehaviour
 
         else if (shouldCreatExplosion)
         {
+            cinemaShakes.CameraShakeStart(2f, 0.15f);
             ExtraShot();
         }
 
@@ -77,6 +81,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (!wasDeflected)
         {
+            cinemaShakes.CameraShakeStart(1f, 0.1f);
             wasDeflected = true;
             gameObject.tag = "PlayerBullet";
             gameObject.layer = 0    ;

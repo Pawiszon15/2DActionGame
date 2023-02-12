@@ -45,7 +45,11 @@ public class EnemyBullet : MonoBehaviour
 
         if (!shouldCreateAnotherBullet && collision.gameObject.tag == "Platform")
         {
-            Instantiate(destrBulletParticle, transform.position, Quaternion.identity);
+            if (destrBulletParticle != null)
+            {
+                Instantiate(destrBulletParticle, transform.position, Quaternion.identity);
+            }
+
             cinemaShakes.CameraShakeStart(0.8f, 0.2f);
             Destroy(this.gameObject);
         }

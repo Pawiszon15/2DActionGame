@@ -23,15 +23,16 @@ public class Enemy_Pistol : MonoBehaviour
         enemyAnimator = GetComponent<EnemyAnimator>();
     }
 
-    private void Start()
-    {
-        StartCoroutine(RechargeAttackAbility());
-    }
+    //private void Start()
+    //{
+    //    StartCoroutine(RechargeAttackAbility());
+    //}
 
     void Update()
     {
         if(enemyActivation.isThereLineOfSightAndInRange && enemyActivation.isEnemyReadyToShoot)
         {
+            Debug.Log("sth");
             enemyActivation.isThereLineOfSightAndInRange = false;
             enemyActivation.isEnemyReadyToShoot = false;
             enemyAnimator.StartAttackAnimation();

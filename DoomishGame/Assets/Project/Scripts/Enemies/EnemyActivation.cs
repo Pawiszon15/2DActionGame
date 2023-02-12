@@ -14,9 +14,9 @@ public class EnemyActivation : MonoBehaviour
     private PlayerMovement player;
 
     [HideInInspector] public float isFacingRight = 1f;
-    [HideInInspector] public bool isEnemyReadyToShoot = false;
-    [HideInInspector] public bool isThereLineOfSightAndInRange = false;
-    [HideInInspector] public bool ongoingShoot = false;
+     public bool isEnemyReadyToShoot = true;
+     public bool isThereLineOfSightAndInRange = false;
+     public bool ongoingShoot = false;
 
     private bool isEnemyActivated = false;
     private float distanceToPlayer = 0f;
@@ -29,6 +29,7 @@ public class EnemyActivation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isEnemyReadyToShoot = true;
         StartCoroutine(CheckDiffrentCondition());
     }
 

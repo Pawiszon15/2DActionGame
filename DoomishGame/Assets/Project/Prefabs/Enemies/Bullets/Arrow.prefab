@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 28
   shouldCreateAnotherBullet: 0
-  shouldCreatExplosion: 1
+  shouldCreatExplosion: 0
   shouldaHaveDelay: 1
   delayDuration: 0.25
   layers:
@@ -198,6 +198,8 @@ MonoBehaviour:
     m_Bits: 0
   bulletToCreate: {fileID: 7569741237248198324, guid: ab4029396d05aba4fa0c6c7efacf9b19, type: 3}
   firePoint: {fileID: 3977718930243766162}
+  counterParticle: {fileID: 0}
+  destrBulletParticle: {fileID: 0}
 --- !u!114 &172789770632169880
 MonoBehaviour:
   m_ObjectHideFlags: 0

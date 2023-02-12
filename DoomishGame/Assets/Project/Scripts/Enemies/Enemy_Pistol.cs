@@ -32,7 +32,6 @@ public class Enemy_Pistol : MonoBehaviour
     {
         if(enemyActivation.isThereLineOfSightAndInRange && enemyActivation.isEnemyReadyToShoot)
         {
-            Debug.Log("sth");
             enemyActivation.isThereLineOfSightAndInRange = false;
             enemyActivation.isEnemyReadyToShoot = false;
             enemyAnimator.StartAttackAnimation();

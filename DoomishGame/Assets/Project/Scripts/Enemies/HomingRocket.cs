@@ -38,16 +38,16 @@ public class HomingRocket : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(collision);
-            Destroy(gameObject);
-            StartCoroutine(WaitBeforeResetingTheLevel());
-            gameManger.ResetScene();             
-        }
+        //if(collision.gameObject.tag == "Player")
+        //{
+        //    Instantiate(explosion, transform.position, transform.rotation);
+        //    Destroy(collision);
+        //    Destroy(gameObject);
+        //    StartCoroutine(WaitBeforeResetingTheLevel());
+        //    gameManger.ResetScene();             
+        //}
 
-        else if(collision.gameObject.tag == "Platform")
+        if(collision.gameObject.tag == "Platform")
         {
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6239212573030545003}
   - component: {fileID: 8239272975896965099}
   - component: {fileID: 5816385503468213791}
+  - component: {fileID: -3381840971151883851}
   m_Layer: 0
   m_Name: RedBulletDestroyed
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 1623881575, guid: d9b511b6357fe82478abf36fcd900092, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,3 +106,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3381840971151883851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7970011495283342555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb284c4c2f28c841b1076591177dc89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

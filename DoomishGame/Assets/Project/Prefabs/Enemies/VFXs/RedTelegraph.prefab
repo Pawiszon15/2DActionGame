@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7976357807012159671}
   - component: {fileID: 7976357807012159670}
   - component: {fileID: 7976357807012159665}
+  - component: {fileID: 2655978033724003199}
   m_Layer: 0
   m_Name: RedTelegraph
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11111
+  m_SortingOrder: 200
   m_Sprite: {fileID: 1930925300, guid: 2aa79870fc9580d45b8ed4a6c794cea9, type: 3}
   m_Color: {r: 0.754717, g: 0.15236738, b: 0.15236738, a: 1}
   m_FlipX: 0
@@ -105,3 +106,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2655978033724003199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976357807012159664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb284c4c2f28c841b1076591177dc89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

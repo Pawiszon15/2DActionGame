@@ -196,7 +196,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 0
-  bulletToCreate: {fileID: 7569741237248198324, guid: ab4029396d05aba4fa0c6c7efacf9b19, type: 3}
+  bulletToCreate: {fileID: 2359785099182225033, guid: 6f3739d52bf130741a2dfdc7935ad084, type: 3}
   firePoint: {fileID: 3977718930243766162}
   counterParticle: {fileID: 0}
   destrBulletParticle: {fileID: 0}

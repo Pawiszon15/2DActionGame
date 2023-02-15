@@ -123,8 +123,8 @@ TextureImporter:
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5511096, y: 0.40726063}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,8 +144,8 @@ TextureImporter:
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.55776525, y: 0.42125466}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,8 +165,8 @@ TextureImporter:
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.55554664, y: 0.40726063}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,8 +186,8 @@ TextureImporter:
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5644211, y: 0.401663}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,8 +207,8 @@ TextureImporter:
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5599838, y: 0.39606538}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,36 +221,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Electric Hit 4_5
+      name: Electric Hit 4_6
       rect:
         serializedVersion: 2
         x: 410
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34f0cee88a1e7a64c84e2ba25a5aa550
-      internalID: 1161643494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Electric Hit 4_6
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 0
-        width: 82
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56442076, y: 0.401663}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -266,12 +245,12 @@ TextureImporter:
       name: Electric Hit 4_7
       rect:
         serializedVersion: 2
-        x: 574
+        x: 492
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5596909, y: 0.40544605}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -287,12 +266,12 @@ TextureImporter:
       name: Electric Hit 4_8
       rect:
         serializedVersion: 2
-        x: 656
+        x: 574
         y: 0
         width: 82
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.564567, y: 0.41774848}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,6 +279,27 @@ TextureImporter:
       bones: []
       spriteID: 8c61450431458584e85b8d67c1dfd6b7
       internalID: 1124890273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Electric Hit 4_9
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 0
+        width: 82
+        height: 65
+      alignment: 9
+      pivot: {x: 0.61820275, y: 0.40237042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d6f96f670aadc48b7c2c9867baf74d
+      internalID: 1908105285
       vertices: []
       indices: 
       edges: []
@@ -321,6 +321,7 @@ TextureImporter:
       Electric Hit 4_0: -1115645023
       Electric Hit 4_3: -1548464632
       Electric Hit 4_6: -451589150
+      Electric Hit 4_9: 1908105285
       Electric Hit 4_7: 132705403
       Electric Hit 4_8: 1124890273
       Electric Hit 4_2: -1332621215

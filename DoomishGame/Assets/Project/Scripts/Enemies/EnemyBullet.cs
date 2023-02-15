@@ -25,6 +25,7 @@ public class EnemyBullet : MonoBehaviour
     private Player player;
     private bool wasDeflected = false;
     private CinemaShakes cinemaShakes;
+    private float timeAfterSpawn;
 
     private void Awake()
     {
@@ -37,6 +38,11 @@ public class EnemyBullet : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         rigidbody2d.velocity = transform.right * speed;
+    }
+
+    private void Update()
+    {
+        timeAfterSpawn += Time.deltaTime;    
     }
 
 
@@ -56,13 +62,12 @@ public class EnemyBullet : MonoBehaviour
 
         if (shouldCreateAnotherBullet)
         {
-            Destroy(this.gameObject, delayDuration + 0.1f);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, firePoint.right, 100f, layers);
-            Debug.Log(hit.collider.gameObject.name);
 
-            if (hit.collider.gameObject.TryGetComponent(out PlayerMovement isthereplayer))
+            if (hit.collider.gameObject.TryGetComponent(out PlayerMovement isthereplayer) && timeAfterSpawn > 0.2f)
             {
                 ExtraShot();
+                Destroy(this.gameObject);
             }
         }
 
@@ -104,5 +109,6 @@ public class EnemyBullet : MonoBehaviour
         rigidbody2d.velocity = Vector2.zero;
         yield return new WaitForSeconds(delayDuration);
         ExtraShot();
+        Destroy(gameObject);
     }    
 }

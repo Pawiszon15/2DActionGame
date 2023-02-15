@@ -7,17 +7,12 @@ public class Explosion : MonoBehaviour
     [SerializeField] float lifeTime;
     GameManger manger;
 
-    private void Start()
-    {
-        manger = FindObjectOfType<GameManger>();
-        Destroy(gameObject, lifeTime);
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            manger.ResetScene();
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        manger.ResetScene();
+    //    }
+    //}
 }

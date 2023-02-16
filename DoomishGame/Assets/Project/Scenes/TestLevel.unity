@@ -123,63 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &85393585
+--- !u!1001 &41159086
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1467294848846779720, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
-      propertyPath: m_Name
-      value: Enemy_OrbMage
-      objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.995
+      value: -29.17941
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.996
+      value: 23.908
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467294848846779734, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+    - target: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1882431542433994259, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
+      propertyPath: m_Name
+      value: Enemy_WaveAttacker
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
 --- !u!1 &85737546
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,6 +9251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1378236375, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4288630745155505747, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: m_RootOrder
       value: 0

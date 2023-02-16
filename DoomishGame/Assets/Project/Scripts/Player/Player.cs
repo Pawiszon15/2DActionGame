@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     private bool isShortTimeAfterInv = false;
     private GameManger manger;
     private SpriteRenderer spriteRenderer;
+    private BoxCollider2D boxCollider2D;
 
     private void Start()
     {
         manger = FindObjectOfType<GameManger>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -83,8 +85,10 @@ public class Player : MonoBehaviour
         spriteRenderer.color = new Color(1f, 1f, 1f, 0.3f);
 
         isPlayerInv = true;
+        boxCollider2D.enabled = false;
         yield return new WaitForSeconds(invTime);
         isPlayerInv = false;
+        boxCollider2D.enabled = true;
 
         spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
 

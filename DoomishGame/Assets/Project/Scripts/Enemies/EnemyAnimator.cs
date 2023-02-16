@@ -55,7 +55,7 @@ public class EnemyAnimator : MonoBehaviour
 
     private void CreatAttackParticle()
     {
-        GameObject obj = Instantiate(attackParticle, posOfAttackParticle.position, Quaternion.identity);
+        GameObject obj = Instantiate(attackParticle, posOfAttackParticle.position, Quaternion.identity, posOfAttackParticle.transform);
         Destroy(obj, 1);
     }
 }

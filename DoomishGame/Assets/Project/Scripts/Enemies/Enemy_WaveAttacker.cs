@@ -17,7 +17,6 @@ public class Enemy_WaveAttacker : MonoBehaviour
     private void Start()
     {
         enemyAnimator = GetComponent<EnemyAnimator>();
-        StartCoroutine(WaitForAnotherShot());
         enemyActivation = GetComponent<EnemyActivation>();
         enemyActivation.isEnemyReadyToShoot = true;
     }
@@ -38,13 +37,11 @@ public class Enemy_WaveAttacker : MonoBehaviour
         {
             Instantiate(pistolBullet, firePoint[i].position, firePoint[i].rotation);
         }
-
         StartCoroutine(WaitForAnotherShot());
     }
 
     IEnumerator WaitForAnotherShot()
     {
-        enemyAnimator.isIdling = true;
         yield return new WaitForSeconds(timeBetweenShots);
         enemyActivation.isEnemyReadyToShoot = true;
     }

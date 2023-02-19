@@ -89,18 +89,18 @@ public class EnemyBullet : MonoBehaviour
         Instantiate(bulletToCreate, firePoint.position, firePoint.rotation);
     }
 
-    public void DeflectBullet(Vector2 mouseDir)
+    public void DeflectBullet(Vector2 playerInput)
     {
         if (!wasDeflected)
         {
+            wasDeflected = true;
             GameObject particleObject = Instantiate(counterParticle, transform.position, Quaternion.identity);
             Destroy(particleObject,0.25f);
-            cinemaShakes.CameraShakeStart(1f, 0.1f);
-            wasDeflected = true;
+            //cinemaShakes.CameraShakeStart(1f, 0.1f);
             gameObject.tag = "PlayerBullet";
-            gameObject.layer = 0    ;
+            gameObject.layer = 0;
             //rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);
-            rigidbody2d.velocity = mouseDir.normalized * (2 * speed);
+            rigidbody2d.velocity = playerInput * (2 * speed);
         }
     }
 

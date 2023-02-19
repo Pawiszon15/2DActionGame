@@ -157,16 +157,15 @@ public class PlayerAnimator : MonoBehaviour
     }
 
     private void StartDeflectingLogic()
-    { 
+    {
         timeFromLastDash = 0;
         dashCollider.SetActive(true);
-        deflectAbility.shouldDeflect = true;
+
     }
 
     private void StopDeflectingLogic()
     {
         dashCollider.SetActive(false);
-        deflectAbility.shouldDeflect = false;
     }
     #endregion
 

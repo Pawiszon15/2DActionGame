@@ -86,7 +86,7 @@ public class PlayerMovement  : MonoBehaviour
     #endregion
 
     #region INPUT PARAMETERS
-    private Vector2 _moveInput;
+    public Vector2 moveInput;
 
 	public float LastPressedJumpTime { get; private set; }
 	public float LastPressedDashTime { get; private set; }
@@ -154,11 +154,11 @@ public class PlayerMovement  : MonoBehaviour
 
 		#region INPUT HANDLER
 
-		_moveInput.x = Input.GetAxisRaw("Horizontal");
-		_moveInput.y = Input.GetAxisRaw("Vertical");
+		moveInput.x = Input.GetAxisRaw("Horizontal");
+		moveInput.y = Input.GetAxisRaw("Vertical");
 
-		if (_moveInput.x != 0)
-			CheckDirectionToFace(_moveInput.x > 0);
+		if (moveInput.x != 0)
+			CheckDirectionToFace(moveInput.x > 0);
 
 		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.J))
         {
@@ -319,8 +319,8 @@ public class PlayerMovement  : MonoBehaviour
 			//Freeze game for split second. Adds juiciness and a bit of forgiveness over directional input
 			Sleep(Data.dashSleepTime);
 			//If not direction pressed, dash forward
-			if (_moveInput != Vector2.zero)
-				_lastDashDir = _moveInput;
+			if (moveInput != Vector2.zero)
+				_lastDashDir = moveInput;
 			else
 				_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
 			//_lastDashDir = mousePos.right;
@@ -336,16 +336,16 @@ public class PlayerMovement  : MonoBehaviour
 		#endregion
 
 		#region ROLL CHECKS
-		if (LastPressedRollTime > 0 && !isGroundSlamming && !_rollRefilling && _rollLeft > 0 && isGrounded && _moveInput.x != 0)
+		if (LastPressedRollTime > 0 && !isGroundSlamming && !_rollRefilling && _rollLeft > 0 && isGrounded && moveInput.x != 0)
 		{
 			Vector2 rollDir = Vector2.zero;
 
-			if (_moveInput.x > 0.75f)
+			if (moveInput.x > 0.75f)
 			{
 				rollDir = Vector2.right;
 			}
 
-			else if(_moveInput.x < -0.75)
+			else if(moveInput.x < -0.75)
 			{
                 rollDir = -Vector2.right;
             }
@@ -367,7 +367,7 @@ public class PlayerMovement  : MonoBehaviour
         #endregion
 
         #region SLIDE CHECKS
-        if (CanSlide() && ((LastOnWallLeftTime > 0 && _moveInput.x < 0) || (LastOnWallRightTime > 0 && _moveInput.x > 0)))
+        if (CanSlide() && ((LastOnWallLeftTime > 0 && moveInput.x < 0) || (LastOnWallRightTime > 0 && moveInput.x > 0)))
 			IsSliding = true;
 		else
 			IsSliding = false;
@@ -381,7 +381,7 @@ public class PlayerMovement  : MonoBehaviour
 			{
 				SetGravityScale(0);
 			}
-			else if (RB.velocity.y < 0 && _moveInput.y < 0)
+			else if (RB.velocity.y < 0 && moveInput.y < 0)
 			{
 				//Much higher gravity if holding down
 				SetGravityScale(Data.gravityScale * Data.fastFallGravityMult);
@@ -521,7 +521,7 @@ public class PlayerMovement  : MonoBehaviour
     private void Run(float lerpAmount)
 	{
 		//Calculate the direction we want to move in and our desired velocity
-		float targetSpeed = _moveInput.x * _currentSpeed;
+		float targetSpeed = moveInput.x * _currentSpeed;
 		//We can reduce are control using Lerp() this smooths changes to are direction and speed
 		targetSpeed = Mathf.Lerp(RB.velocity.x, targetSpeed, lerpAmount);
 

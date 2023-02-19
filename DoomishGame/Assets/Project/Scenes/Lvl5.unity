@@ -7860,7 +7860,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -37981,7 +37981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 284259765686020086, guid: 75897112009d7034c8014d7e8318089a, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 284259765686020086, guid: 75897112009d7034c8014d7e8318089a, type: 3}
       propertyPath: m_AnchorMax.x

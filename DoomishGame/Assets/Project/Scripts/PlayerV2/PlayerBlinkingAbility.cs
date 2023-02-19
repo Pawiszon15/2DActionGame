@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
@@ -13,6 +15,11 @@ public class PlayerBlinkingAbility : MonoBehaviour
     [SerializeField] float multiplayerToPreviewSpeed;
     [SerializeField] float blinkingDistance;
     [SerializeField] float hangTimeAfterBlink;
+    [SerializeField] int howOftenCollisionCheck;
+    [SerializeField] Vector2 sizeOfPlayersBoxCollision;
+    [SerializeField] bool[] wherePlayerCanBeSpawned;
+    [SerializeField] LayerMask layersToCheckWithAbility;
+    private int temp;
 
     [Header("Offensive ability")]
     [SerializeField] GameObject playerBullet;
@@ -31,6 +38,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
     [HideInInspector] public bool ongoingBlink;
     [HideInInspector] public bool afterBlink = false;
     [HideInInspector] public int currentReousrceAmount;
+    public Vector2 whereToSpawnPlayer;
     private GameObject instancesOfBlink;
     private Vector2 moveInput;
 
@@ -57,18 +65,50 @@ public class PlayerBlinkingAbility : MonoBehaviour
     void Update()
     { 
         ongoingBlinkDuration -= Time.deltaTime;
-
         HandleInputs();
-        PrevieOfBlink();
+
+        if (ongoingBlink)
+        {
+            CheckWherePlayerCanBeSpawned();
+            PrevieOfBlink();
+        }
+
     }
+
+    private void CheckWherePlayerCanBeSpawned()
+    {
+        float distanceIntervals = blinkingDistance / howOftenCollisionCheck;
+        Debug.Log(distanceIntervals);
+        //check for point avaialibity
+        for (int i = 0; i < howOftenCollisionCheck; i++)
+        {
+            Debug.Log(1);
+            Vector2 whereToCheckCollision = new Vector2(transform.position.x, transform.position.y) + (moveInput * (i * distanceIntervals));
+            wherePlayerCanBeSpawned[i] = Physics2D.OverlapBox(whereToCheckCollision, sizeOfPlayersBoxCollision, 0f, layersToCheckWithAbility);
+        }
+        
+        Debug.Log(wherePlayerCanBeSpawned);
+        for(int i = wherePlayerCanBeSpawned.Length ; i > 0; i--)
+        {
+            Debug.Log(2);
+            if (wherePlayerCanBeSpawned[i-1] == false)
+            {            
+                whereToSpawnPlayer = new Vector2(transform.position.x, transform.position.y) + (moveInput * (temp * distanceIntervals));
+                Debug.Log(whereToSpawnPlayer);
+                temp = i;
+                break;
+            }
+            
+
+        }
+
+
+    }
+
 
     private void PrevieOfBlink()
     {
-        if(ongoingBlink)
-        {
-            instancesOfBlink.transform.position = new Vector2(transform.position.x, transform.position.y) +
-            moveInput * blinkingDistance;
-        }
+        instancesOfBlink.transform.position = whereToSpawnPlayer;   
     }
 
     private void HandleInputs()
@@ -76,7 +116,10 @@ public class PlayerBlinkingAbility : MonoBehaviour
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
-
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            CheckWherePlayerCanBeSpawned();
+        }
 
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -132,8 +175,7 @@ public class PlayerBlinkingAbility : MonoBehaviour
         ongoingBlink = false;
         afterBlink = true;
 
-        transform.position = new Vector2(transform.position.x, transform.position.y) +
-        (moveInput * blinkingDistance);
+        transform.position = whereToSpawnPlayer;
 
         afterBlinkTransform = transform.position;
         ongoingBlinkDuration = 0f;

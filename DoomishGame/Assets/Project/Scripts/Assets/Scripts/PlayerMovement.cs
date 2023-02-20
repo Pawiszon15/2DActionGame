@@ -118,7 +118,7 @@ public class PlayerMovement  : MonoBehaviour
 	{
 		groundSlamWithBonus = GetComponent<GroundSlamWithBonus>();
 		blikingAbility = GetComponent<PlayerBlinkingAbility>();
-		playerPogJump = GetComponent<PlayerPogJump>();
+		playerPogJump = GetComponentInChildren<PlayerPogJump>();
 		rotateWeaponCollider = GetComponentInChildren<RotateWeaponCollider>();
 		RB = GetComponent<Rigidbody2D>();
 		AnimHandler = GetComponentInChildren<PlayerAnimator>();

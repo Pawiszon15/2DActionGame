@@ -9,10 +9,10 @@ public class PlayerAnimator : MonoBehaviour
     private SpriteRenderer spriteRend;
     public DeflectAbility deflectAbility;
     private Player player;
-    private PlayerPogJump playerPogJump;
 
     private DemoManager demoManager;
-    [Header("References")]
+ [Header("References")]
+    [SerializeField] PlayerPogJump playerPogJump;
     [SerializeField] GameObject SwordGroundSlam;
     [SerializeField] GameObject dashCollider;
     [SerializeField] GameObject slashParticle;
@@ -38,7 +38,6 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Start()
     {
-        playerPogJump = GetComponentInParent<PlayerPogJump>();
         mov = GetComponentInParent<PlayerMovement>();
         spriteRend = GetComponent<SpriteRenderer>();
         anim = spriteRend.GetComponent<Animator>();

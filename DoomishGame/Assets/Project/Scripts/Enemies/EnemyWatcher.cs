@@ -20,21 +20,22 @@ public class EnemyWatcher : MonoBehaviour
     [HideInInspector] public bool shouldUseLaser = false;
     private EnemyAnimator animator;
     private EnemyActivation enemyActivation;
+    private ColliderLineRenderer colliderLineRenderer;
 
     private void Awake()
     {
         enemyActivation = GetComponent<EnemyActivation>();
         animator = GetComponent<EnemyAnimator>();
+        colliderLineRenderer = GetComponent<ColliderLineRenderer>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer = GetComponentInChildren<LineRenderer>();
         //positionDownPoint = new Vector3(downShootPoint.position.x, downShootPoint.position.y, downShootPoint.position.z);
         //positionUpPoint = new Vector3(UpShootPoint.position.x, UpShootPoint.position.y, UpShootPoint.position.z);
         SetBeginingRotation(positionUpPoint.transform.position);
-        StartCoroutine(AbilityCooldown());
     }
 
     // Update is called once per frame
@@ -80,6 +81,7 @@ public class EnemyWatcher : MonoBehaviour
     {
         lineRenderer.SetPosition(0, startPos);
         lineRenderer.SetPosition(1, endPos);
+        colliderLineRenderer.SetEdgeCollider(startPos, endPos);
     }
 
     void SetBeginingRotation(Vector3 lookPoint)

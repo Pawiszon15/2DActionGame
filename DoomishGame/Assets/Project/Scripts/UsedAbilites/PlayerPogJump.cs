@@ -21,7 +21,7 @@ public class PlayerPogJump : MonoBehaviour
     [SerializeField] float rangeOfCircle;
 
     PlayerMovement playerMovement;
-    PlayerAnimator playerAnimator;
+    [SerializeField] PlayerAnimator playerAnimator;
     Rigidbody2D rb;
 
     [HideInInspector] public bool isPlayerTryingToPogJump = false;
@@ -31,8 +31,7 @@ public class PlayerPogJump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
-        playerAnimator = GetComponentInChildren<PlayerAnimator>();
+        playerMovement = GetComponentInParent<PlayerMovement>();
         rb = GetComponent<Rigidbody2D>();
     }
 

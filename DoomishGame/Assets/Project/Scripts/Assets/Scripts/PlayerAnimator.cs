@@ -177,12 +177,12 @@ public class PlayerAnimator : MonoBehaviour
 
     private void StartPogJump()
     {
-        playerPogJump.pogJumpColliderActive = true;
+        playerPogJump.TurnOnCollision();
     }
 
     private void EndPogTime()
     {
-        playerPogJump.pogJumpColliderActive = false;
+        playerPogJump.TurnOffCollision();
     }
     #endregion 
 

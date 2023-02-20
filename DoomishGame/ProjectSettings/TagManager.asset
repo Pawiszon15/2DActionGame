@@ -28,7 +28,7 @@ TagManager:
   - PlayerSpecialTarget
   - OneSidePlatform
   - EnemyBullets
-  - 
+  - PlayerPogCollider
   - 
   - 
   - 

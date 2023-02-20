@@ -82,19 +82,15 @@ public class PlayerBlinkingAbility : MonoBehaviour
         //check for point avaialibity
         for (int i = 0; i < howOftenCollisionCheck; i++)
         {
-            Debug.Log(1);
             Vector2 whereToCheckCollision = new Vector2(transform.position.x, transform.position.y) + (moveInput * (i * distanceIntervals));
             wherePlayerCanBeSpawned[i] = Physics2D.OverlapBox(whereToCheckCollision, sizeOfPlayersBoxCollision, 0f, layersToCheckWithAbility);
         }
         
-        Debug.Log(wherePlayerCanBeSpawned);
         for(int i = wherePlayerCanBeSpawned.Length ; i > 0; i--)
         {
-            Debug.Log(2);
             if (wherePlayerCanBeSpawned[i-1] == false)
             {            
                 whereToSpawnPlayer = new Vector2(transform.position.x, transform.position.y) + (moveInput * (temp * distanceIntervals));
-                Debug.Log(whereToSpawnPlayer);
                 temp = i;
                 break;
             }

@@ -12,10 +12,10 @@ public class PlayerPogJump : MonoBehaviour
     [SerializeField] LayerMask layers;
     [SerializeField] LayerMask forRaycast;
     [SerializeField] float rangeOfRaycast;
-    [HideInInspector] public bool pogJumpColliderActive;
+    [HideInInspector] public bool canPlayerPogJump;
 
     [Header("References")]
-    [SerializeField] Transform PlayersFeet;
+    [SerializeField] CircleCollider2D circleCollider2D;
     [SerializeField] Transform posOfPogJumpCollider;
     [SerializeField] Transform mousePos;
     [SerializeField] float rangeOfCircle;
@@ -39,93 +39,51 @@ public class PlayerPogJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //firstTap -= Time.deltaTime;
-        //secondTap -= Time.deltaTime;
 
-        //if(Input.GetKeyDown(KeyCode.UpArrow))
-        //{
-        //    if(firstTap < 0.01f)
-        //    {
-        //        firstTap = pogJumpBufferTime;
-        //    }
-
-        //    else
-        //    {
-        //        secondTap = pogJumpBufferTime;
-        //    }
-
-        //    if(firstTap > 0f && secondTap > 0f)
-        //    {
-        //        //isPlayerTryingToPogJump = true;
-        //    }
-
-        //}
         if (Input.GetKeyDown(KeyCode.UpArrow) && !playerMovement.IsDashing && playerMovement.LastOnGroundTime != 0
           && !playerMovement.isRolling && !playerMovement.isWallSliding && !playerMovement.IsWallJumping)
         {
-            //firstTap = 0f;
-            //secondTap = 0f;
+
             isPlayerTryingToPogJump = true;
 
             playerAnimator.StartPogJumpAnimation();
             StartCoroutine(PogCooldown());
         }
-
-
-        if (pogJumpColliderActive)
-        {
-            CheckForCollision();
-        }
     }
 
-    private void CheckForCollision()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Collider2D[] OverlapThings = Physics2D.OverlapCircleAll(posOfPogJumpCollider.position, rangeOfCircle, layers);
-
-        foreach (Collider2D overlapThing in OverlapThings)
+        if(collision.TryGetComponent(out PogableThings pogableThing))
         {
-            //if (overlapThing.TryGetComponent(out EnemyBullet enemyBullet))
-            //{
-            //    enemyBullet.DeflectBullet(mousePos.right);
-            //    if (isPlayerTryingToPogJump)
-            //    {
-            //        isPlayerTryingToPogJump = false;
-            //        MakePogJump();
-            //    }
-            //}
-
-            if (overlapThing.TryGetComponent(out PogableThings pogableThing))
+            if (isPlayerTryingToPogJump && canPlayerPogJump)
             {
-                if (isPlayerTryingToPogJump)
-                {
-                    isPlayerTryingToPogJump=false;
-                    MakePogJump();
-                }
+                isPlayerTryingToPogJump = false;
+                MakePogJump();
             }
-
-            // I do not like it. I feel like it is more interesting if you can only kill enemies with dash
-            //if(overlapThing.TryGetComponent(out BasicEnemy enemy))
-            //{
-            //    //enemy.KillEnemy();
-            //    MakePogJump();
-            //}
         }
+        
+    }
 
+    public void TurnOnCollision()
+    {
+        circleCollider2D.enabled = true;
+    }
+
+    public void TurnOffCollision()
+    {
+        circleCollider2D.enabled = false;
     }
 
     private void MakePogJump()
     {
         makingPogJump = true;
-        ////Time.timeScale = 0.1f;
-        //pogJumpColliderActive = false;
-        //rb.velocity = new Vector2(rb.velocity.x, 0f);
-        //rb.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
-        ////playerMovement.Jump();
+        TurnOffCollision();
     }
 
     IEnumerator PogCooldown()
     {
         yield return new WaitForSeconds(pogJumpBufferTime);
+        canPlayerPogJump = true;
     }
 
 }

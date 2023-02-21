@@ -208,7 +208,8 @@ public class PlayerAnimator : MonoBehaviour
     private void AttackOnGroundSlam()
     {
         Debug.Log("sthsthsth");
-        GameObject playerSpawnedBullet = Instantiate(playerBullet, SwordMelee.transform.position, Quaternion.identity);
+        GameObject playerSpawnedBullet = Instantiate(playerBullet, SwordMelee.transform.position, SwordMelee.transform.rotation);
+        Destroy(playerSpawnedBullet, 0.5f);
     }
     #endregion
 }

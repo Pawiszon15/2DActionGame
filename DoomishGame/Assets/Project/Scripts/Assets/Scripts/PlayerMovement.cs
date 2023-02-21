@@ -626,7 +626,7 @@ public class PlayerMovement  : MonoBehaviour
 			Vector2 force;
 			RB.velocity = Vector2.zero;
 
-			if (Input.GetKey(KeyCode.UpArrow))
+			if (Input.GetKey(KeyCode.UpArrow) /*|| LastOnWallRightTime == 0 && Input.GetKey(KeyCode.RightArrow) || LastOnWallLeftTime == 0 && Input.GetKey(KeyCode.LeftArrow)*/)
 			{
 				force = new Vector2(Data.wallJumpUpForce.x, Data.wallJumpUpForce.y);
 			}

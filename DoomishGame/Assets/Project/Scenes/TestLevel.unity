@@ -230,6 +230,37 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &150042326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150042327}
+  m_Layer: 6
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150042327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150042326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0619992, y: 0.004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1603935846}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311189448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,11 +1559,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166651580}
   m_CullTransparentMesh: 1
---- !u!1 &1246424835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5867510763985186575, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
-  m_PrefabInstance: {fileID: 5867510764369776141}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1264170649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8897905150233994742, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}
@@ -1956,6 +1982,11 @@ Transform:
   m_Father: {fileID: 713102035}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1603935846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4288630745336709228, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
+  m_PrefabInstance: {fileID: 5867510764369776141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1775563231
 GameObject:
   m_ObjectHideFlags: 0
@@ -9122,11 +9153,11 @@ PrefabInstance:
     - target: {fileID: 4288630745336709221, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: SwordMelee
       value: 
-      objectReference: {fileID: 1246424835}
+      objectReference: {fileID: 150042326}
     - target: {fileID: 4288630745336709221, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
       propertyPath: playerBullet
       value: 
-      objectReference: {fileID: 2845257928829885074, guid: 407216d6829fcda49a7938b0f7f9ecb0, type: 3}
+      objectReference: {fileID: 2864782047655724118, guid: e5377fed141b13548bf57be31dcae373, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a308fb712421db4bb48bd608a2508ab, type: 3}
 --- !u!4 &7703920648033828958 stripped

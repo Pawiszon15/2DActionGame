@@ -13,7 +13,7 @@ public class EnemyActivation : MonoBehaviour
 
     private PlayerMovement player;
 
-    [HideInInspector] public float isFacingRight = 1f;
+     [HideInInspector] public float isFacingRight = 1f;
      public bool isEnemyReadyToShoot = true;
      public bool isThereLineOfSightAndInRange = false;
      public bool ongoingShoot = false;

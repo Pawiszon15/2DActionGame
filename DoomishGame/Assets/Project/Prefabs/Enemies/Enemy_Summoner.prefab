@@ -340,6 +340,8 @@ GameObject:
   - component: {fileID: 228637583354523608}
   - component: {fileID: 8999774976897829261}
   - component: {fileID: 8999774976897829260}
+  - component: {fileID: 4539625758060436365}
+  - component: {fileID: 8805725613333506845}
   m_Layer: 7
   m_Name: Enemy_Summoner
   m_TagString: Enemy
@@ -672,6 +674,40 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &4539625758060436365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316599622935414899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf300d33e53692448f1b59367aaae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &8805725613333506845
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316599622935414899}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.86875, y: 1.375}
+  - {x: 1.00625, y: 1.375}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2316599623322100495
 GameObject:
   m_ObjectHideFlags: 0

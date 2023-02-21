@@ -291,6 +291,7 @@ public class PlayerMovement  : MonoBehaviour
 				_bonusJumpsLeft--;
 
 				Jump();
+				player.StartInvincibility(0.2f);
 
                 AnimHandler.startedJumping = true;
             }

@@ -22,8 +22,11 @@ public class GroundSlamWithBonus : MonoBehaviour
     PlayerBlinkingAbility playerBlinkingAbility;
     Rigidbody2D rb;
     CinemaShakes cinemaShakes;
+    PlayerAnimator playerAnimator;
+    
     private void Awake()
     {
+        playerAnimator = GetComponentInChildren<PlayerAnimator>();
         cinemaShakes = GetComponent<CinemaShakes>();
         playerBlinkingAbility = GetComponent<PlayerBlinkingAbility>();
         playerMovement = GetComponent<PlayerMovement>();
@@ -56,9 +59,11 @@ public class GroundSlamWithBonus : MonoBehaviour
         //Additional conditions are needed, when we do some action to break ground slam action
         else if (isGroundSlammingWithBonus && playerMovement.isGrounded)
         {
-            cinemaShakes.CameraShakeStart(2f, 0.15f);
+            //cinemaShakes.CameraShakeStart(2f, 0.15f);
+
             KillNerbayEnemies();
             isGroundSlammingWithBonus = false;
+            playerAnimator.StartedGroundSlammingAnimation();
         }
     }
 
@@ -78,7 +83,7 @@ public class GroundSlamWithBonus : MonoBehaviour
     private void KillNerbayEnemies()
     {
         Collider2D[] enemies = Physics2D.OverlapBoxAll(pivotPoint.transform.position, boxSize, 0f, layersToCheck);
-
+        
         foreach(Collider2D enemy in enemies)
         {
             if(enemy.gameObject.TryGetComponent(out BasicEnemy basicEnemy))

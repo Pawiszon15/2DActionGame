@@ -11,12 +11,16 @@ public class PlayerAnimator : MonoBehaviour
     private Player player;
 
     private DemoManager demoManager;
- [Header("References")]
+    [Header("References")]
     [SerializeField] PlayerPogJump playerPogJump;
     [SerializeField] GameObject SwordGroundSlam;
     [SerializeField] GameObject dashCollider;
     [SerializeField] GameObject slashParticle;
     [SerializeField] Transform whereToSpawnSlash;
+
+    [Header("Ground Slam")]
+    [SerializeField] GameObject SwordMelee;
+    [SerializeField] GameObject playerBullet;
 
     [Header("Movement Tilt")]
     [SerializeField] private float maxTilt;
@@ -186,18 +190,25 @@ public class PlayerAnimator : MonoBehaviour
     #endregion 
 
     #region GROUND SLAM
-    private void StartedGroundSlammingAnimation()
+    public void StartedGroundSlammingAnimation()
     {
+        Debug.Log("sthsthsth");
+
         mov.canPlayerMove = false;
-        SwordGroundSlam.SetActive(true);
-        mov.isGroundSlamming = true;    
+        mov.isGroundSlamming = true;
+        anim.SetTrigger("isGroundSlamming");
     }
 
     private void StopGroundSlamingAnimation()
     {
         mov.canPlayerMove = true;
-        SwordGroundSlam.SetActive(false);
         mov.isGroundSlamming = false;
+    }
+
+    private void AttackOnGroundSlam()
+    {
+        Debug.Log("sthsthsth");
+        GameObject playerSpawnedBullet = Instantiate(playerBullet, SwordMelee.transform.position, Quaternion.identity);
     }
     #endregion
 }

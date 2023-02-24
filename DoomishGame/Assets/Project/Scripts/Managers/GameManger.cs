@@ -73,6 +73,8 @@ class GameManger : MonoBehaviour
 
     public void OnLevelWasLoaded(int level)
     {
+        new WaitForSeconds(1f);
+
         if (whichCameraToChose != null)
         {
             FindObjectOfType<TimeDisplay>().setTimerAfter(savedLevelDuration);
@@ -82,6 +84,7 @@ class GameManger : MonoBehaviour
 
             GameObject cameraVirtualAfterRestart = GameObject.Find(whichCameraToChose);
             cameraVirtualAfterRestart.GetComponent<CinemachineVirtualCamera>().Priority = 20;
+            FindObjectOfType<CinemaShakes>().GetHighestPriorityVirtualCamera();
         }
     }
     public void MovePlayer()

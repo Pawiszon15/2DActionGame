@@ -74,6 +74,6 @@ public class CinemaShakes : MonoBehaviour
             }
         }
 
-        currnetActiveCamera = highestPriority;
+        currnetActiveCamera = highestPriorityIndex;
     }
 }

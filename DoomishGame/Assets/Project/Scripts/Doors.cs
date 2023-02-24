@@ -64,6 +64,7 @@ public class Doors : MonoBehaviour
                 currentCamera.Priority = 0;
                 gameManager.SavePlayerPosition(VectorWhereToMovePlayer, cameraToActivate, FindObjectOfType<TimeDisplay>().timeAfterStartingLevel);
                 Time.timeScale = 0.05f;
+                FindObjectOfType<CinemaShakes>().GetHighestPriorityVirtualCamera();
                 StartCoroutine(WaitForCameraChanged());
             }
         }

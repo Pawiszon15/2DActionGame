@@ -28282,6 +28282,36 @@ Transform:
   m_Father: {fileID: 85737547}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0.04, y: 0, z: 0}
+--- !u!1 &1911762778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8897905150233994696, guid: 8742becd3a14bf9429c92c85bcffe8ec, type: 3}
+  m_PrefabInstance: {fileID: 8897905149454823639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1911762780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911762778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4260be1adb548ee47815a535351eeb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camerasOnMap:
+  - {fileID: 1883623667}
+  - {fileID: 1301970497}
+  - {fileID: 1149955918}
+  - {fileID: 148641482}
+  intesity_0: 1.8
+  intesity_1: 3
+  intesity_2: 4
+  shakeComponent:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1984941604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7477647140195065244, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
@@ -29001,6 +29031,9 @@ MonoBehaviour:
   - {fileID: 1301970497}
   - {fileID: 1149955918}
   - {fileID: 148641482}
+  intesity_0: 0
+  intesity_1: 0
+  intesity_2: 0
   shakeComponent:
   - {fileID: 0}
   - {fileID: 0}

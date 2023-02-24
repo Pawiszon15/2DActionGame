@@ -6,40 +6,74 @@ using Cinemachine;
 public class CinemaShakes : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera[] camerasOnMap;
-    [SerializeField] CinemachineBasicMultiChannelPerlin[] shakeComponent;
+    [SerializeField] float intesity_0, intesity_1, intesity_2;
 
-    private void Awake()
+    [SerializeField] CinemachineBasicMultiChannelPerlin[] shakeComponent;
+    private int currnetActiveCamera;
+
+    void Awake()
     {
-        for (int j = 0; j < shakeComponent.Length; ++j)
+        for (int j = 0; j < camerasOnMap.Length; ++j)
         {
             shakeComponent[j] = camerasOnMap[j].GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         }
     }
 
-    public void CameraShakeStart(float intesity, float time)
+    private void Start()
     {
-        StartCoroutine(CameraShakeTimer());
+        currnetActiveCamera = 0;
+    }
 
-        for(int j = 0; j < shakeComponent.Length; ++j)
+    void Update()
+    {
+        if (shakeComponent[currnetActiveCamera].m_AmplitudeGain > 0)
         {
-            shakeComponent[j].m_AmplitudeGain = intesity;
-            shakeComponent[j].m_FrequencyGain = time;
+            shakeComponent[currnetActiveCamera].m_AmplitudeGain -= 4 *Time.deltaTime;
+            shakeComponent[currnetActiveCamera].m_FrequencyGain -= 4 *Time.deltaTime;
         }
     }
 
-    private void CameraShakeStop()
+    public void CameraShakeStart(int switchInt)
     {
-        for (int j = 0; j < shakeComponent.Length; ++j)
+
+        switch(switchInt)
         {
-            shakeComponent[j].m_AmplitudeGain = 0f;
-            shakeComponent[j].m_FrequencyGain = 0f;
+            case 0:
+                shakeComponent[currnetActiveCamera].m_AmplitudeGain = intesity_0;
+                shakeComponent[currnetActiveCamera].m_FrequencyGain = intesity_0 / 2;
+                break;
+
+            case 1:
+                shakeComponent[currnetActiveCamera].m_AmplitudeGain = intesity_1;
+                shakeComponent[currnetActiveCamera].m_FrequencyGain = intesity_1 /2;
+                break;
+
+            case 2:
+                shakeComponent[currnetActiveCamera].m_AmplitudeGain = intesity_2;
+                shakeComponent[currnetActiveCamera].m_FrequencyGain = intesity_2 / 2;
+                break;
         }
     }
 
-    IEnumerator CameraShakeTimer()
-    {
-        yield return new WaitForSeconds(0.1f);
-        CameraShakeStop();
-    }
 
+    public void GetHighestPriorityVirtualCamera()
+    {
+        CinemachineVirtualCamera highestPriorityVirtualCamera = null;
+        int highestPriority = int.MinValue;
+        int highestPriorityIndex = -1;
+
+        for (int i = 0; i < camerasOnMap.Length; i++)
+        {
+            CinemachineVirtualCamera virtualCamera = camerasOnMap[i];
+
+            if (virtualCamera.Priority > highestPriority)
+            {
+                highestPriority = virtualCamera.Priority;
+                highestPriorityVirtualCamera = virtualCamera;
+                highestPriorityIndex = i;
+            }
+        }
+
+        currnetActiveCamera = highestPriority;
+    }
 }

@@ -56,7 +56,7 @@ public class EnemyBullet : MonoBehaviour
                 Instantiate(destrBulletParticle, transform.position, Quaternion.identity);
             }
 
-            cinemaShakes.CameraShakeStart(0.8f, 0.2f);
+            cinemaShakes.CameraShakeStart(0);
             Destroy(this.gameObject);
         }
 
@@ -78,7 +78,7 @@ public class EnemyBullet : MonoBehaviour
 
         else if (shouldCreatExplosion)
         {
-            cinemaShakes.CameraShakeStart(2f, 0.15f);
+            cinemaShakes.CameraShakeStart(2);
             ExtraShot();
         }
 
@@ -87,6 +87,7 @@ public class EnemyBullet : MonoBehaviour
     private void ExtraShot()
     {
         Instantiate(bulletToCreate, firePoint.position, firePoint.rotation);
+        cinemaShakes.CameraShakeStart(1);
     }
 
     public void DeflectBullet(Vector2 playerInput)
@@ -96,7 +97,7 @@ public class EnemyBullet : MonoBehaviour
             wasDeflected = true;
             GameObject particleObject = Instantiate(counterParticle, transform.position, Quaternion.identity);
             Destroy(particleObject,0.25f);
-            //cinemaShakes.CameraShakeStart(1f, 0.1f);
+            cinemaShakes.CameraShakeStart(0);
             gameObject.tag = "PlayerBullet";
             gameObject.layer = 0;
             //rigidbody2d.velocity = new Vector2(-rigidbody2d.velocity.x, -rigidbody2d.velocity.y);

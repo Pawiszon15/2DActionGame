@@ -50,7 +50,7 @@ public class BasicEnemy : MonoBehaviour
 
     public void StartDeathAnimation()
     {
-        cinemaShakes.CameraShakeStart(2, 2f);
+        cinemaShakes.CameraShakeStart(0);
         door.enemyKilled();
         firstDMG = false;
         blinkingAbility.AddResources();

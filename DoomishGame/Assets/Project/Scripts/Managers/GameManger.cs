@@ -18,29 +18,17 @@ class GameManger : MonoBehaviour
     
     [SerializeField] int howManyEnemies;
     [SerializeField] Image image;
-    
+
+    public Doors currentDoors;
 
     private GameObject player;
-
-
-    private void Awake()
-    {
-        // start of new code
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        // end of new code
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+    private Vector2 playerPos;
 
     private void Start()
     {
-        MovePlayer();
         player = FindObjectOfType<PlayerMovement>().gameObject;
+        Time.timeScale = 0f;
+        playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
     }
 
     void Update()
@@ -51,19 +39,22 @@ class GameManger : MonoBehaviour
             ResetScene();
         }
 
-
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void ResetScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerDie();
     }
 
-    public void SavePlayerPosition(Vector3 transform, CinemachineVirtualCamera virtualCamera, float currentTime)
+    public void SavePlayerPosition(Vector2 newPlayerSpawn, Doors nextDoors)
     {
-        Instance.whereToSpawnPlayer = transform;
-        whichCameraToChose = virtualCamera.name;
-        savedLevelDuration = currentTime;
+        playerPos = newPlayerSpawn;
+        currentDoors = nextDoors;
+        
     }
 
     public void WinTheLevel()
@@ -71,24 +62,64 @@ class GameManger : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void OnLevelWasLoaded(int level)
-    {
-        new WaitForSeconds(1f);
+    //public void OnLevelWasLoaded()
+    //{
+    //    StartCoroutine(WaitOnLevelLoaded());
+    //}
 
-        if (whichCameraToChose != null)
+    //IEnumerator WaitOnLevelLoaded()
+    //{
+    //    yield return new WaitForSecondsRealtime(0.2f);
+
+    //    if (whichCameraToChose != null)
+    //    {
+    //        FindObjectOfType<TimeDisplay>().setTimerAfter(savedLevelDuration);
+
+    //        player = FindObjectOfType<PlayerMovement>().gameObject;
+    //        player.transform.position = whereToSpawnPlayer;
+
+    //        GameObject cameraVirtualAfterRestart = GameObject.Find(whichCameraToChose);
+    //        cameraVirtualAfterRestart.GetComponent<CinemachineVirtualCamera>().Priority = 20;
+    //        FindObjectOfType<CinemaShakes>().GetHighestPriorityVirtualCamera();
+    //    }
+    //}
+
+    public void PlayerDie()
+    {
+        RespawnEnemies();
+        SpawnPlayerInRightSpot();
+        DestroyAllBullets();
+        StopTime();
+    }
+
+    private void SpawnPlayerInRightSpot()
+    {
+        player.transform.position = playerPos;
+    }
+
+    private void CloseAllDoors()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void RespawnEnemies()
+    {
+        currentDoors.RestartEnemiesOnLevel();
+    }
+
+    public void DestroyAllBullets()
+    {
+        TempElements[] tempArray = FindObjectsOfType<TempElements>();
+
+        for(int i = 0; i < tempArray.Length; i++)
         {
-            FindObjectOfType<TimeDisplay>().setTimerAfter(savedLevelDuration);
-
-            player = FindObjectOfType<PlayerMovement>().gameObject;
-            player.transform.position = whereToSpawnPlayer;
-
-            GameObject cameraVirtualAfterRestart = GameObject.Find(whichCameraToChose);
-            cameraVirtualAfterRestart.GetComponent<CinemachineVirtualCamera>().Priority = 20;
-            FindObjectOfType<CinemaShakes>().GetHighestPriorityVirtualCamera();
+            Destroy(tempArray[i].gameObject);
         }
-    }
-    public void MovePlayer()
+        StopTime();
+    }    
+    public void StopTime()
     {
-
+        Time.timeScale = 0f;
     }
+
 }

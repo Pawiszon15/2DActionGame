@@ -25,12 +25,6 @@ public class TimeDisplay : MonoBehaviour
         firstInput = false;
     }
 
-    void Start()
-    {
-        shouldTimerBeforeAlarmTick = true;
-        Time.timeScale = 0f;
-    }
-
     private void FixedUpdate()
     {
         if (shouldTimerBeforeAlarmTick)
@@ -61,14 +55,6 @@ public class TimeDisplay : MonoBehaviour
         TimeLeftToStartAlarm = 0;
     }
 
-    private void Update()
-    {
-        if (Input.anyKeyDown && !firstInput)
-        {
-            Time.timeScale = 1;
-            firstInput = true;
-        }
-    }
 
     void updateTimer(float currentTime)
     {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3311649398356717233}
   - component: {fileID: 7480843265258406516}
   - component: {fileID: 461896467808404767}
+  - component: {fileID: -8463121132840786828}
   m_Layer: 12
   m_Name: Bullet_SharpShooter 2
   m_TagString: Bullet
@@ -149,6 +150,8 @@ MonoBehaviour:
     m_Bits: 257
   bulletToCreate: {fileID: 1235635171295464583, guid: ab9e6fa0635db7749be2ccd8569897a9, type: 3}
   firePoint: {fileID: 3426099406262022269}
+  counterParticle: {fileID: 0}
+  destrBulletParticle: {fileID: 0}
 --- !u!114 &7480843265258406516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +184,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-8463121132840786828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235635171295464583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5654a788df0c33540a2b1d209b02ea06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5648773897300054892
 GameObject:
   m_ObjectHideFlags: 0

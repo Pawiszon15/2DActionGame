@@ -24,7 +24,6 @@ public class BasicEnemy : MonoBehaviour
         enemyAnimator = GetComponent<EnemyAnimator>();
         gameManger = FindObjectOfType<GameManger>();
 
-        door.HowManyEnemiesAreThere();
         firstDMG = true;
     }
 

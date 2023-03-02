@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 5232980842370471089}
   - component: {fileID: 3987549731262219805}
   - component: {fileID: 3987549733001179875}
+  - component: {fileID: 5178625446475197964}
   m_Layer: 7
   m_Name: Enemy_OrbMage
   m_TagString: Enemy
@@ -306,6 +307,9 @@ MonoBehaviour:
   dyingParticle: {fileID: 0}
   idleParticle: {fileID: 0}
   posOfAttackParticle: {fileID: 1436809685}
+  attackSound: {fileID: 8300000, guid: 1f4d4bc0bb11c134db73a6b82c15671f, type: 3}
+  chargeSound: {fileID: 0}
+  idleSound: {fileID: 0}
   isAttacking: 0
   isCharging: 0
   isMoving: 0
@@ -355,6 +359,156 @@ MonoBehaviour:
   isEnemyReadyToShoot: 0
   isThereLineOfSightAndInRange: 0
   ongoingShoot: 0
+--- !u!82 &5178625446475197964
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467294848846779720}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0033729672
+      value: 0.6955223
+      inSlope: -0.86926526
+      outSlope: -0.86926526
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.12790032
+      value: 0.5782529
+      inSlope: -0.80419856
+      outSlope: -0.80419856
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.21990737
+      value: 0.49017334
+      inSlope: -0.19637844
+      outSlope: -0.19637844
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.8919177
+    - serializedVersion: 3
+      time: 0.38986892
+      value: 0.3776703
+      inSlope: -0.56926656
+      outSlope: -0.56926656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.6370513
+    - serializedVersion: 3
+      time: 0.5998634
+      value: 0.28704834
+      inSlope: -0.31262448
+      outSlope: -0.31262448
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.760022
+      value: 0.22946167
+      inSlope: -0.07815612
+      outSlope: -0.07815612
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.207135
+      inSlope: -0.05001994
+      outSlope: -0.05001994
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1467294849520741103
 GameObject:
   m_ObjectHideFlags: 0

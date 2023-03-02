@@ -40,6 +40,7 @@ public class Enemy_Pistol : MonoBehaviour
 
     private void Shot()
     {
+        enemyAnimator.PlayEnemySound(1);
         Instantiate(pistolBullet, firePoint.position, firePoint.rotation);
         if (!isCarabine)
         {

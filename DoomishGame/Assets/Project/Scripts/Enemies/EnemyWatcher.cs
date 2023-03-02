@@ -16,6 +16,7 @@ public class EnemyWatcher : MonoBehaviour
     [SerializeField] float rotationSpeed;
     [SerializeField] Transform gunPivot;
     [SerializeField] GameObject positionUpPoint, positionDownPoint;
+    private bool isShootingFromDownPoint;
 
     [HideInInspector] public bool shouldUseLaser = false;
     private EnemyAnimator animator;
@@ -27,15 +28,8 @@ public class EnemyWatcher : MonoBehaviour
         enemyActivation = GetComponent<EnemyActivation>();
         animator = GetComponent<EnemyAnimator>();
         colliderLineRenderer = GetComponent<ColliderLineRenderer>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         lineRenderer = GetComponentInChildren<LineRenderer>();
-        //positionDownPoint = new Vector3(downShootPoint.position.x, downShootPoint.position.y, downShootPoint.position.z);
-        //positionUpPoint = new Vector3(UpShootPoint.position.x, UpShootPoint.position.y, UpShootPoint.position.z);
-        SetBeginingRotation(positionUpPoint.transform.position);
+        isShootingFromDownPoint = true;
     }
 
     // Update is called once per frame
@@ -57,7 +51,10 @@ public class EnemyWatcher : MonoBehaviour
 
     private void ShootLaser()
     {
-        RotateGun(positionDownPoint.transform.position);
+        if(isShootingFromDownPoint)
+            RotateGun(positionUpPoint.transform.position);
+        else
+            RotateGun(positionDownPoint.transform.position);
 
         //Debug.DrawRay(laserFirePoint.position, laserFirePoint.right * 100f, Color.red,  1f);
         if (Physics2D.Raycast(transform.position, transform.right))
@@ -100,14 +97,20 @@ public class EnemyWatcher : MonoBehaviour
 
     void StartOfTheAttack()
     {
-        enemyActivation.ongoingShoot = true;
-        StartCoroutine(StopLaserAttack());
-        shouldUseLaser = true;
+        if(isShootingFromDownPoint)
+            SetBeginingRotation(positionDownPoint.transform.position);
+        else
+            SetBeginingRotation(positionUpPoint.transform.position);
+
+        StartCoroutine(LaserAttack());
     }
 
-    void CheckWhetherItEndedAttack()
+    void ChangDestinationPoint()
     {
-
+        if(isShootingFromDownPoint)
+            isShootingFromDownPoint = false;
+        else
+            isShootingFromDownPoint = true;
     }
 
     IEnumerator AbilityCooldown()
@@ -116,15 +119,17 @@ public class EnemyWatcher : MonoBehaviour
         enemyActivation.isEnemyReadyToShoot = true;
     }
 
-    IEnumerator StopLaserAttack()
+    IEnumerator LaserAttack()
     {
-        SetBeginingRotation(positionUpPoint.transform.position);
+        enemyActivation.ongoingShoot = true;
+        shouldUseLaser = true;
         lineRenderer.enabled = true;
         yield return new WaitForSeconds(durationOfLaserAttack);
         enemyActivation.ongoingShoot = false;
         lineRenderer.enabled = false;
         shouldUseLaser = false;
         StartCoroutine(AbilityCooldown());
+        ChangDestinationPoint();
     }
        
 }

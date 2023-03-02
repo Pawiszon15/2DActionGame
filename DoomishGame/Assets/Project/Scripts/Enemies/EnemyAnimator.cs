@@ -11,6 +11,11 @@ public class EnemyAnimator : MonoBehaviour
     [SerializeField] public GameObject attackParticle, chargeParticle, moveParticle, dyingParticle, idleParticle;
     [SerializeField] Transform posOfAttackParticle;
 
+    [Header("Sounds")]
+    [SerializeField] AudioClip attackSound, chargeSound, idleSound;
+    [HideInInspector] AudioSource audioSource;
+
+    [Header("State of animations")]
     [HideInInspector] public bool isAttacking = false;
     [HideInInspector] public bool isCharging = false;
     [HideInInspector] public bool isMoving = false;
@@ -19,6 +24,7 @@ public class EnemyAnimator : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
@@ -57,5 +63,26 @@ public class EnemyAnimator : MonoBehaviour
     {
         GameObject obj = Instantiate(attackParticle, posOfAttackParticle.position, Quaternion.identity, posOfAttackParticle.transform);
         Destroy(obj, 1);
+    }
+
+    public void PlayEnemySound(int whatSound)
+    {
+        switch (whatSound)
+        {
+            case 0:
+                audioSource.clip = chargeSound;
+                break;
+
+            case 1:
+                audioSource.clip = attackSound;
+                break;
+
+            case 2:
+                audioSource.loop = true;
+                audioSource.clip = idleSound;
+                break;
+        }
+        
+        audioSource.Play();
     }
 }

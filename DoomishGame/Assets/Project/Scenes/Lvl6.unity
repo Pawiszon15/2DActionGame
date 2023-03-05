@@ -633,6 +633,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311189448}
   m_CullTransparentMesh: 1
+--- !u!1 &312817114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882431542433994259, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
+  m_PrefabInstance: {fileID: 174450364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326935318
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,6 +6163,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &357948276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882431542433994259, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
+  m_PrefabInstance: {fileID: 815708082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &389710389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6300,6 +6310,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &646247979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2316599622935414899, guid: a1cb66689972021458696bb3c105da7c, type: 3}
+  m_PrefabInstance: {fileID: 863444962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680096162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6307,6 +6322,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1218686486}
     m_Modifications:
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: nextDoors
+      value: 
+      objectReference: {fileID: 1214155615}
     - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: currentCamera
       value: 
@@ -6319,6 +6338,18 @@ PrefabInstance:
       propertyPath: cameraToActivate
       value: 
       objectReference: {fileID: 148641482}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[0]
+      value: 
+      objectReference: {fileID: 2111632556}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[1]
+      value: 
+      objectReference: {fileID: 646247979}
     - target: {fileID: 7477647140195065244, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6754,6 +6785,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1882431542433994253, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
   m_PrefabInstance: {fileID: 815708082}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &831696709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1467294848846779720, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+  m_PrefabInstance: {fileID: 389710389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &852476630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6819,6 +6855,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2316599622935414893, guid: a1cb66689972021458696bb3c105da7c, type: 3}
   m_PrefabInstance: {fileID: 852476630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &861370489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882431542433994259, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
+  m_PrefabInstance: {fileID: 1821758359}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &863444962
 PrefabInstance:
@@ -7394,6 +7435,11 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+--- !u!1 &1051216488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2316599622935414899, guid: a1cb66689972021458696bb3c105da7c, type: 3}
+  m_PrefabInstance: {fileID: 852476630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1061244082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7463,6 +7509,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1218686486}
     m_Modifications:
     - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: nextDoors
+      value: 
+      objectReference: {fileID: 680096163}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: currentCamera
       value: 
       objectReference: {fileID: 1301970497}
@@ -7474,6 +7524,22 @@ PrefabInstance:
       propertyPath: enemiesToOpenTheDoor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[0]
+      value: 
+      objectReference: {fileID: 1051216488}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[1]
+      value: 
+      objectReference: {fileID: 831696709}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[2]
+      value: 
+      objectReference: {fileID: 1726625466}
     - target: {fileID: 7477647140195065244, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8030,6 +8096,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166651580}
   m_CullTransparentMesh: 1
+--- !u!1 &1195724828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1597604762075719430, guid: 2667b5c0967c06b478b25a4349de82bf, type: 3}
+  m_PrefabInstance: {fileID: 1879354922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1197191081
 GameObject:
   m_ObjectHideFlags: 3
@@ -8157,6 +8228,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1218686486}
     m_Modifications:
     - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: nextDoors
+      value: 
+      objectReference: {fileID: 1904874865}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: currentCamera
       value: 
       objectReference: {fileID: 1149955918}
@@ -8168,6 +8243,22 @@ PrefabInstance:
       propertyPath: cameraToActivate
       value: 
       objectReference: {fileID: 148641482}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[0]
+      value: 
+      objectReference: {fileID: 1383941405}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[1]
+      value: 
+      objectReference: {fileID: 786422650}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[2]
+      value: 
+      objectReference: {fileID: 783137987}
     - target: {fileID: 7477647140195065244, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9121,6 +9212,21 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7477647140195065244, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
   m_PrefabInstance: {fileID: 1087486898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1674038154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882431542433994259, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
+  m_PrefabInstance: {fileID: 1813673043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1682090044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882431542433994259, guid: fe492aacb8e8ae94ebc630dd8b8d783e, type: 3}
+  m_PrefabInstance: {fileID: 1334047589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1726625466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1467294848846779720, guid: a3a5be76ec28eb04cbec841146824820, type: 3}
+  m_PrefabInstance: {fileID: 1111640872}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1766320710
 GameObject:
@@ -37182,6 +37288,26 @@ PrefabInstance:
       propertyPath: cameraToActivate
       value: 
       objectReference: {fileID: 148641482}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[0]
+      value: 
+      objectReference: {fileID: 312817114}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[1]
+      value: 
+      objectReference: {fileID: 861370489}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[2]
+      value: 
+      objectReference: {fileID: 1674038154}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[3]
+      value: 
+      objectReference: {fileID: 357948276}
     - target: {fileID: 7477647140195065244, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -37474,6 +37600,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022045867}
   m_CullTransparentMesh: 1
+--- !u!1 &2111632556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2524970998559066301, guid: 445d1bbd4898c544eb1be8ee9238f2b7, type: 3}
+  m_PrefabInstance: {fileID: 1107044425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2113847679
 GameObject:
   m_ObjectHideFlags: 0
@@ -38018,6 +38149,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1218686486}
     m_Modifications:
     - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: nextDoors
+      value: 
+      objectReference: {fileID: 1087486899}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: currentCamera
       value: 
       objectReference: {fileID: 1883623667}
@@ -38025,6 +38160,18 @@ PrefabInstance:
       propertyPath: cameraToActivate
       value: 
       objectReference: {fileID: 1301970497}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[0]
+      value: 
+      objectReference: {fileID: 1195724828}
+    - target: {fileID: 7477647140195065241, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
+      propertyPath: EnemiesInRoom.Array.data[1]
+      value: 
+      objectReference: {fileID: 1682090044}
     - target: {fileID: 7477647140195065244, guid: cf1c32a60d265f54db195e9692b98ac9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -38128,6 +38275,9 @@ MonoBehaviour:
   - {fileID: 1301970497}
   - {fileID: 1149955918}
   - {fileID: 148641482}
+  intesity_0: 0
+  intesity_1: 0
+  intesity_2: 0
   shakeComponent:
   - {fileID: 0}
   - {fileID: 0}

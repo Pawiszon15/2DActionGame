@@ -8,6 +8,7 @@ public class BasicEnemy : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] bool explosionGuy;
     [SerializeField] Doors door;
+    [SerializeField] GameObject particle;
 
     private GameManger gameManger;
     private bool firstDMG;
@@ -83,5 +84,10 @@ public class BasicEnemy : MonoBehaviour
     {
         spriteRenderer.enabled = false;
         itHasShield = false;
+    }
+
+    private void SpawnGhost()
+    {
+        Instantiate(particle, transform.position, Quaternion.identity);
     }
 }

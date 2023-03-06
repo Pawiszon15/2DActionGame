@@ -8,6 +8,7 @@ public class HomingRocket : MonoBehaviour
     [SerializeField] float rocketSpeed;
     [SerializeField] float rotateSpeed;
     [SerializeField] GameObject explosion;
+    [SerializeField] GameObject smoke;
 
     private Rigidbody2D rb;
     private Transform target;
@@ -62,5 +63,12 @@ public class HomingRocket : MonoBehaviour
     IEnumerator WaitBeforeResetingTheLevel()
     {
         yield return new WaitForSeconds(1f);
+    }
+
+    IEnumerator particleSpawn()
+    {
+        yield return new WaitForSeconds(0.05f);
+        Instantiate(smoke, transform.position, Quaternion.identity);
+        StartCoroutine(particleSpawn());
     }
 }

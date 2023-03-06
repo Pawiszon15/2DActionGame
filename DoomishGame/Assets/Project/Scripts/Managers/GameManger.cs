@@ -104,7 +104,8 @@ class GameManger : MonoBehaviour
 
     private void RespawnEnemies()
     {
-        currentDoors.RestartEnemiesOnLevel();
+        if(currentDoors != null)
+            currentDoors.RestartEnemiesOnLevel();
     }
 
     public void DestroyAllBullets()

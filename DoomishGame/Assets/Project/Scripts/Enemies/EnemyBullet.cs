@@ -69,6 +69,12 @@ public class EnemyBullet : MonoBehaviour
                 ExtraShot();
                 Destroy(this.gameObject);
             }
+
+            else
+            {
+                Instantiate(destrBulletParticle, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
         }
 
         else if (shouldaHaveDelay)

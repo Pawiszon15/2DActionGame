@@ -1,9 +1,11 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Doors : MonoBehaviour
 {
@@ -25,9 +27,12 @@ public class Doors : MonoBehaviour
     private bool doorOpen = false;
     private Animator animator;
     private GameObject playerController;
+    private Image fadeImage;
 
     private void Awake()
     {
+        fadeImage = FindObjectOfType<BlackScreen>().GetComponent<Image>();
+
         poitionOfEnemies = new Transform[EnemiesInRoom.Length];
         enemiesSaver = new GameObject[EnemiesInRoom.Length];
 
@@ -74,9 +79,11 @@ public class Doors : MonoBehaviour
                 nextDoors.currentCamera.Priority = currentCamera.Priority;
                 currentCamera.Priority = 0;
                 gameManager.SavePlayerPosition(new Vector2(whereToMovePlayers.position.x, whereToMovePlayers.position.y), nextDoors);
-                Time.timeScale = 0.05f;
+                //Time.timeScale = 0.05f;
                 FindObjectOfType<CinemaShakes>().GetHighestPriorityVirtualCamera();
                 StartCoroutine(WaitForCameraChanged());
+                StartCoroutine(CameraFadeInTime(255f, 0f));
+
             }
         }
     }
@@ -116,10 +123,29 @@ public class Doors : MonoBehaviour
         SaveEnemiesPostion();
     }
 
+    IEnumerator CameraFadeInTime(float startAlpha, float endAlpha)
+    {
+        float startTime = 0f;
+        float endTime = 0.35f;
+        Debug.Log("startsth");
+
+
+        while (startTime < endTime)
+        {
+            Debug.Log("duringSth");
+            startTime += Time.deltaTime;
+
+            fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(startAlpha, endAlpha, 0.000001f));
+            yield return null;  
+        }
+    }
     IEnumerator WaitForCameraChanged()
     {
-        yield return new WaitForSecondsRealtime(0.7f);
+        yield return new WaitForSecondsRealtime(0.35f);
+        yield return new WaitForSecondsRealtime(0.35f);
+                StartCoroutine(CameraFadeInTime(0, 255f));
+
         playerController.transform.position = whereToMovePlayers.position;
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
     }
 }

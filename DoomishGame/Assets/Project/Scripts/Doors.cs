@@ -28,10 +28,13 @@ public class Doors : MonoBehaviour
     private Animator animator;
     private GameObject playerController;
     private Image fadeImage;
+    private int value = 0;
+    float fadeValue = 1 / 35;
+
 
     private void Awake()
     {
-        fadeImage = FindObjectOfType<BlackScreen>().GetComponent<Image>();
+        fadeImage = FindObjectOfType<BlackScreen>().gameObject.GetComponent<Image>();
 
         poitionOfEnemies = new Transform[EnemiesInRoom.Length];
         enemiesSaver = new GameObject[EnemiesInRoom.Length];
@@ -40,7 +43,6 @@ public class Doors : MonoBehaviour
         animator = GetComponent<Animator>();
         playerController = FindObjectOfType<PlayerMovement>().gameObject;
 
-        Debug.Log(poitionOfEnemies.Length);
         SaveEnemiesPostion();
     }
 
@@ -76,14 +78,11 @@ public class Doors : MonoBehaviour
             else
             {
                 //this need a change
-                nextDoors.currentCamera.Priority = currentCamera.Priority;
-                currentCamera.Priority = 0;
+
                 gameManager.SavePlayerPosition(new Vector2(whereToMovePlayers.position.x, whereToMovePlayers.position.y), nextDoors);
                 //Time.timeScale = 0.05f;
                 FindObjectOfType<CinemaShakes>().GetHighestPriorityVirtualCamera();
                 StartCoroutine(WaitForCameraChanged());
-                StartCoroutine(CameraFadeInTime(255f, 0f));
-
             }
         }
     }
@@ -123,29 +122,54 @@ public class Doors : MonoBehaviour
         SaveEnemiesPostion();
     }
 
-    IEnumerator CameraFadeInTime(float startAlpha, float endAlpha)
+    IEnumerator CameraFadeInTime(float startColorTemp, bool isFadeIn)
     {
-        float startTime = 0f;
-        float endTime = 0.35f;
         Debug.Log("startsth");
 
 
-        while (startTime < endTime)
-        {
-            Debug.Log("duringSth");
-            startTime += Time.deltaTime;
+        Color startColor = fadeImage.color;
+        startColor.a = startColorTemp;
 
-            fadeImage.color = new Color(0, 0, 0, Mathf.Lerp(startAlpha, endAlpha, 0.000001f));
-            yield return null;  
+        Color changeColorValue = fadeImage.color;
+        changeColorValue.a = 0.025f;
+
+        Debug.Log("VALUE OF CHANGE COLOR- " + changeColorValue.a);
+
+        if(!isFadeIn)
+        {
+            changeColorValue.a = -changeColorValue.a;
         }
+
+        Color tempColr = fadeImage.color;
+        tempColr.a = startColorTemp;
+
+
+        for(float i = 0 ; i < 1; i += changeColorValue.a)
+        {
+            Debug.Log(tempColr.a);
+
+            tempColr.a += changeColorValue.a;
+            fadeImage.color = tempColr;
+            yield return new WaitForSecondsRealtime(0.01f);
+        }
+        yield return null;
     }
     IEnumerator WaitForCameraChanged()
     {
-        yield return new WaitForSecondsRealtime(0.35f);
-        yield return new WaitForSecondsRealtime(0.35f);
-                StartCoroutine(CameraFadeInTime(0, 255f));
+        Time.timeScale = 0.1f;
+        StartCoroutine(CameraFadeInTime(0, true));
+        yield return new WaitForSecondsRealtime(0.7f);
+        StartCoroutine(CameraFadeInTime(1, false));
+
+        nextDoors.currentCamera.Priority = currentCamera.Priority;
+        currentCamera.Priority = 0;
 
         playerController.transform.position = whereToMovePlayers.position;
+
+        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 1f;
+
+
         //Time.timeScale = 1f;
     }
 }

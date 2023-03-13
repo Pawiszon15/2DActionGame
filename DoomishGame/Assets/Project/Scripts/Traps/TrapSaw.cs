@@ -40,7 +40,6 @@ public class TrapSaw : MonoBehaviour
         if (Mathf.Round(gameObjectToMove.transform.position.x) == Mathf.Round(pointToMove.position.x) && HorizontalSaw)
         //|| Mathf.Round(gameObjectToMove.transform.position.y) == Mathf.Round(pointToMove.position.y))
         {
-            Debug.Log("similar pos");
             tempPoint = pointToMove;
             pointToMove = secondPoint;
             secondPoint = tempPoint;
@@ -48,7 +47,6 @@ public class TrapSaw : MonoBehaviour
 
         else if (Mathf.Round(gameObjectToMove.transform.position.y) == Mathf.Round(pointToMove.position.y) && !HorizontalSaw)
         {
-            Debug.Log("similar pos");
             tempPoint = pointToMove;
             pointToMove = secondPoint;
             secondPoint = tempPoint;

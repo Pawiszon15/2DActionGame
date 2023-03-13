@@ -48,7 +48,6 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("bullet hit sth");
         if (!shouldCreateAnotherBullet && !shouldaHaveDelay && collision.gameObject.tag == "Platform")
         {
             if (destrBulletParticle != null)

@@ -379,7 +379,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8620803799105261752}
   explosionGuy: 0
   door: {fileID: 0}
-  particle: {fileID: 1408916167051838, guid: db8e5e1cf4c43a4479b6a7ed83ced530, type: 3}
+  particle: {fileID: 0}
 --- !u!114 &1882431542433994251
 MonoBehaviour:
   m_ObjectHideFlags: 0

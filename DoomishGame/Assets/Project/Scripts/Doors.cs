@@ -93,7 +93,7 @@ public class Doors : MonoBehaviour
         animator.SetBool("DoorOpen", true);
     }
 
-    public void SaveEnemiesPostion()
+    private void SaveEnemiesPostion()
     {
         for (int i = 0; i < EnemiesInRoom.Length; i++)
         {
@@ -124,39 +124,37 @@ public class Doors : MonoBehaviour
 
     IEnumerator CameraFadeInTime(float startColorTemp, bool isFadeIn)
     {
-        Debug.Log("startsth");
-
-
         Color startColor = fadeImage.color;
         startColor.a = startColorTemp;
 
         Color changeColorValue = fadeImage.color;
         changeColorValue.a = 0.025f;
 
-        Debug.Log("VALUE OF CHANGE COLOR- " + changeColorValue.a);
-
-        if(!isFadeIn)
+        if (!isFadeIn)
         {
-            changeColorValue.a = -changeColorValue.a;
+            for (float i = 0; i > 0; i += changeColorValue.a)
+            {
+                startColor.a -= 0.025f;
+                fadeImage.color = startColor;
+                yield return new WaitForSecondsRealtime(0.01f);
+            }
+            yield return null;
         }
 
-        Color tempColr = fadeImage.color;
-        tempColr.a = startColorTemp;
-
-
-        for(float i = 0 ; i < 1; i += changeColorValue.a)
+        else
         {
-            Debug.Log(tempColr.a);
-
-            tempColr.a += changeColorValue.a;
-            fadeImage.color = tempColr;
-            yield return new WaitForSecondsRealtime(0.01f);
+            for (float i = 0; i < 1; i += changeColorValue.a)
+            {
+                startColor.a += 0.025f;
+                fadeImage.color = startColor;
+                yield return new WaitForSecondsRealtime(0.01f);
+            }
         }
         yield return null;
     }
     IEnumerator WaitForCameraChanged()
     {
-        Time.timeScale = 0.1f;
+        Time.timeScale = 0.01f;
         StartCoroutine(CameraFadeInTime(0, true));
         yield return new WaitForSecondsRealtime(0.7f);
         StartCoroutine(CameraFadeInTime(1, false));
@@ -168,8 +166,16 @@ public class Doors : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.5f);
         Time.timeScale = 1f;
-
+        ResetColorOnImageFade();
 
         //Time.timeScale = 1f;
     }
+    
+    private void ResetColorOnImageFade()
+    {
+        Color tempColor = fadeImage.color;
+        tempColor.a = 0f;
+        fadeImage.color = tempColor;
+    }
+
 }

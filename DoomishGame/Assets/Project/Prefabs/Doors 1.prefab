@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 90
   m_Sprite: {fileID: 1428488267, guid: 307989c7a9020284b9295ac8a27baf12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,10 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d3ad3ec1252204db4784ba0fd4da8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemiesInRoom: []
   enemiesToOpenTheDoor: 0
+  nextDoors: {fileID: 0}
   currentCamera: {fileID: 0}
-  cameraToActivate: {fileID: 0}
   whereToMovePlayers: {fileID: 7477647140242664902}
+  isThisFinalDoor: 0
 --- !u!61 &7477647140195065240
 BoxCollider2D:
   m_ObjectHideFlags: 0

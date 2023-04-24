@@ -818,7 +818,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: bb9795692e912fc4599b28be1e73173b, type: 3}
-  m_Color: {r: 0.6792453, g: 0.6754005, b: 0.6754005, a: 0.4392157}
+  m_Color: {r: 0.6792453, g: 0.6754005, b: 0.6754005, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10565,7 +10565,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: bb9795692e912fc4599b28be1e73173b, type: 3}
-  m_Color: {r: 0.6792453, g: 0.6754005, b: 0.6754005, a: 0.4392157}
+  m_Color: {r: 0.6792453, g: 0.6754005, b: 0.6754005, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -39148,7 +39148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892570493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.03, y: 60.38, z: 0}
+  m_LocalPosition: {x: -37.3, y: 62.86, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40487,8 +40487,8 @@ Camera:
   m_GameObject: {fileID: 522013066032735797}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.18867922, g: 0.16269132, b: 0.16293563, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.1764706, g: 0.1764706, b: 0.1764706, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
